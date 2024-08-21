@@ -1,0 +1,6 @@
+@KovserHediyyelerApp_HostAddress = http://localhost:5195
+
+GET {{KovserHediyyelerApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
