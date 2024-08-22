@@ -9,7 +9,7 @@ namespace KovserHediyyeler.Core.Repositories.Abstractions
 {
    public interface IWriteRepository<T>: IRepository<T> where T : BaseEntity
     {
-        Task<bool> Add(T entity);
+        Task<bool> AddAsync(T entity);
         bool Delete(T entity);
         bool DeleteSoft(T entity);
         bool Update(T entity);

@@ -3,44 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.core\\repositories\\abstractions\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|solutionrelative:kovserhediyyeler.core\\repositories\\abstractions\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.service\\services\\concretes\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|solutionrelative:kovserhediyyeler.service\\services\\concretes\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.core\\repositories\\abstractions\\ireadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|solutionrelative:kovserhediyyeler.core\\repositories\\abstractions\\ireadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.core\\repositories\\abstractions\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|solutionrelative:kovserhediyyeler.core\\repositories\\abstractions\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.core\\entities\\basemodels\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|solutionrelative:kovserhediyyeler.core\\entities\\basemodels\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.core\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|solutionrelative:kovserhediyyeler.core\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyelerapp\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|solutionrelative:kovserhediyyelerapp\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyelerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|solutionrelative:kovserhediyyelerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8521F64C-E16A-4C44-9296-1C8DFB260A30}|KovserHediyyeler.Data\\KovserHediyyeler.Data.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.data\\context\\kovserhediyyelerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8521F64C-E16A-4C44-9296-1C8DFB260A30}|KovserHediyyeler.Data\\KovserHediyyeler.Data.csproj|solutionrelative:kovserhediyyeler.data\\context\\kovserhediyyelerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.service\\services\\abstractions\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|solutionrelative:kovserhediyyeler.service\\services\\abstractions\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyelerapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|solutionrelative:kovserhediyyelerapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.service\\responses\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|solutionrelative:kovserhediyyeler.service\\responses\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyelerapp\\kovserhediyyeler.app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|solutionrelative:kovserhediyyelerapp\\kovserhediyyeler.app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.service\\responses\\apiresponsewithdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|solutionrelative:kovserhediyyeler.service\\responses\\apiresponsewithdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8521F64C-E16A-4C44-9296-1C8DFB260A30}|KovserHediyyeler.Data\\KovserHediyyeler.Data.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.data\\migrations\\20240821150234_categoryadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8521F64C-E16A-4C44-9296-1C8DFB260A30}|KovserHediyyeler.Data\\KovserHediyyeler.Data.csproj|solutionrelative:kovserhediyyeler.data\\migrations\\20240821150234_categoryadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.service\\profiles\\categorymap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|solutionrelative:kovserhediyyeler.service\\profiles\\categorymap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.service\\validations\\categories\\categoryputdtovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|solutionrelative:kovserhediyyeler.service\\validations\\categories\\categoryputdtovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.service\\validations\\categories\\categorypostdtovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|solutionrelative:kovserhediyyeler.service\\validations\\categories\\categorypostdtovalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.service\\dtos\\categories\\categoryputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|solutionrelative:kovserhediyyeler.service\\dtos\\categories\\categoryputdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.service\\dtos\\categories\\categorypostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|solutionrelative:kovserhediyyeler.service\\dtos\\categories\\categorypostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.service\\dtos\\categories\\categorygetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29211805-D4A5-44B9-8046-AFC8BF329CDA}|KovserHediyyeler.Service\\KovserHediyyeler.Service.csproj|solutionrelative:kovserhediyyeler.service\\dtos\\categories\\categorygetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,130 +58,163 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IWriteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Repositories\\Abstractions\\IWriteRepository.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Repositories\\Abstractions\\IWriteRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Repositories\\Abstractions\\IWriteRepository.cs",
-              "RelativeToolTip": "KovserHediyyeler.Core\\Repositories\\Abstractions\\IWriteRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAgwBAAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T15:19:46.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Repositories\\Abstractions\\IReadRepository.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Repositories\\Abstractions\\IReadRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Repositories\\Abstractions\\IReadRepository.cs",
-              "RelativeToolTip": "KovserHediyyeler.Core\\Repositories\\Abstractions\\IReadRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAgwA4AAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T15:13:40.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Repositories\\Abstractions\\IRepository.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Repositories\\Abstractions\\IRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Repositories\\Abstractions\\IRepository.cs",
-              "RelativeToolTip": "KovserHediyyeler.Core\\Repositories\\Abstractions\\IRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T15:09:28.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20240821150234_categoryadded.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Data\\Migrations\\20240821150234_categoryadded.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Data\\Migrations\\20240821150234_categoryadded.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Data\\Migrations\\20240821150234_categoryadded.cs",
-              "RelativeToolTip": "KovserHediyyeler.Data\\Migrations\\20240821150234_categoryadded.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T15:02:35.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyelerApp\\Program.cs",
               "RelativeDocumentMoniker": "KovserHediyyelerApp\\Program.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyelerApp\\Program.cs",
               "RelativeToolTip": "KovserHediyyelerApp\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAhAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAC8AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T14:55:01.071Z"
+              "WhenOpened": "2024-08-22T08:53:24.318Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "KovserHediyyelerDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Data\\Context\\KovserHediyyelerDbContext.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Data\\Context\\KovserHediyyelerDbContext.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Data\\Context\\KovserHediyyelerDbContext.cs",
-              "RelativeToolTip": "KovserHediyyeler.Data\\Context\\KovserHediyyelerDbContext.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAwAAAA3AAAA",
+              "DocumentIndex": 1,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAA0wCcAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T14:50:06.71Z"
+              "WhenOpened": "2024-08-22T08:46:08.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyelerApp\\appsettings.json",
-              "RelativeDocumentMoniker": "KovserHediyyelerApp\\appsettings.json",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyelerApp\\appsettings.json",
-              "RelativeToolTip": "KovserHediyyelerApp\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-21T14:47:42.912Z"
+              "DocumentIndex": 0,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Services\\Concretes\\CategoryService.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Service\\Services\\Concretes\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Services\\Concretes\\CategoryService.cs",
+              "RelativeToolTip": "KovserHediyyeler.Service\\Services\\Concretes\\CategoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:23:42.772Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "KovserHediyyeler.App.csproj",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyelerApp\\KovserHediyyeler.App.csproj",
-              "RelativeDocumentMoniker": "KovserHediyyelerApp\\KovserHediyyeler.App.csproj",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyelerApp\\KovserHediyyeler.App.csproj",
-              "RelativeToolTip": "KovserHediyyelerApp\\KovserHediyyeler.App.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-21T12:07:34.533Z"
+              "DocumentIndex": 5,
+              "Title": "ApiResponseWithData.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Responses\\ApiResponseWithData.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Service\\Responses\\ApiResponseWithData.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Responses\\ApiResponseWithData.cs",
+              "RelativeToolTip": "KovserHediyyeler.Service\\Responses\\ApiResponseWithData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:16:49.966Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Category.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\Category.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Category.cs",
-              "RelativeToolTip": "KovserHediyyeler.Core\\Entities\\Category.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAcwAsAAAAoAAAA",
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Responses\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Service\\Responses\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Responses\\ApiResponse.cs",
+              "RelativeToolTip": "KovserHediyyeler.Service\\Responses\\ApiResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T12:12:41.579Z"
+              "WhenOpened": "2024-08-22T08:16:03.371Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\BaseModels\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\BaseModels\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\BaseModels\\BaseEntity.cs",
-              "RelativeToolTip": "KovserHediyyeler.Core\\Entities\\BaseModels\\BaseEntity.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAYAAAA",
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Services\\Abstractions\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Service\\Services\\Abstractions\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Services\\Abstractions\\ICategoryService.cs",
+              "RelativeToolTip": "KovserHediyyeler.Service\\Services\\Abstractions\\ICategoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T12:09:32.101Z"
+              "WhenOpened": "2024-08-22T08:15:30.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CategoryMap.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Profiles\\CategoryMap.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Service\\Profiles\\CategoryMap.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Profiles\\CategoryMap.cs",
+              "RelativeToolTip": "KovserHediyyeler.Service\\Profiles\\CategoryMap.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:11:52.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoryPutDtoValidation.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Validations\\Categories\\CategoryPutDtoValidation.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Service\\Validations\\Categories\\CategoryPutDtoValidation.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Validations\\Categories\\CategoryPutDtoValidation.cs",
+              "RelativeToolTip": "KovserHediyyeler.Service\\Validations\\Categories\\CategoryPutDtoValidation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:11:08.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoryPostDtoValidation.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Validations\\Categories\\CategoryPostDtoValidation.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Service\\Validations\\Categories\\CategoryPostDtoValidation.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Validations\\Categories\\CategoryPostDtoValidation.cs",
+              "RelativeToolTip": "KovserHediyyeler.Service\\Validations\\Categories\\CategoryPostDtoValidation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:09:32.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CategoryPutDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Dtos\\Categories\\CategoryPutDto.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Service\\Dtos\\Categories\\CategoryPutDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Dtos\\Categories\\CategoryPutDto.cs",
+              "RelativeToolTip": "KovserHediyyeler.Service\\Dtos\\Categories\\CategoryPutDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:07:58.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CategoryGetDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Dtos\\Categories\\CategoryGetDto.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Service\\Dtos\\Categories\\CategoryGetDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Dtos\\Categories\\CategoryGetDto.cs",
+              "RelativeToolTip": "KovserHediyyeler.Service\\Dtos\\Categories\\CategoryGetDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:07:08.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoryPostDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Dtos\\Categories\\CategoryPostDto.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Service\\Dtos\\Categories\\CategoryPostDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Service\\Dtos\\Categories\\CategoryPostDto.cs",
+              "RelativeToolTip": "KovserHediyyeler.Service\\Dtos\\Categories\\CategoryPostDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:06:32.049Z",
+              "EditorCaption": ""
             }
           ]
         }

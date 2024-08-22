@@ -10,3 +10,4 @@ C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hedi
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\refint\KovserHediyyeler.Core.dll
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.pdb
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\ref\KovserHediyyeler.Core.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.sourcelink.json

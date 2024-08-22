@@ -141,3 +141,8 @@ C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hedi
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.pdb
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.genruntimeconfig.cache
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\ref\KovserHediyyeler.App.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.sourcelink.json

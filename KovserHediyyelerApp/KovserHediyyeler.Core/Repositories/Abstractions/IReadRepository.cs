@@ -11,8 +11,8 @@ namespace KovserHediyyeler.Core.Repositories.Abstractions
     public interface IReadRepository<T>:IRepository<T>where T : BaseEntity
     {
         IQueryable<T> GetAll(bool isTracking = true);
-        IQueryable<T> GetAllWhere(Expression<Func<T, bool>> predicate, bool isTracking = true, params string[] include);
-        Task<T?> GetByIdAsync(int id, bool isTracking = true, params string[] include);
-        Task<T?> GetWhere(Expression<Func<T, bool>> predicate, bool isTracking = true, params string[] include); 
+        IQueryable<T> GetAllWhere(Expression<Func<T, bool>> predicate, bool isTracking = true, params string[] includes);
+        Task<T?> GetByIdAsync(string id, bool isTracking = true, params string[] includes);
+        Task<T?> GetWhere(Expression<Func<T, bool>> predicate, bool isTracking = true, params string[] includes); 
     }
 }
