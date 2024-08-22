@@ -11,6 +11,7 @@ namespace KovserHediyyeler.Data.Context
     public class KovserHediyyelerDbContext:DbContext
     {
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Department> Departments { get; set; }
         public KovserHediyyelerDbContext(DbContextOptions options) : base(options)
         {
             

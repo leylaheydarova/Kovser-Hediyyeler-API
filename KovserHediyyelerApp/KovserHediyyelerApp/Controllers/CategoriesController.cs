@@ -38,14 +38,14 @@ namespace KovserHediyyeler.App.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteTemporarilyAsync(string id)
+        public async Task<IActionResult> DeleteAsync(string id)
         {
             var result = await _service.DeleteAsync(id);
             return Ok(result);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePermanentlyAsync(string id)
+        public async Task<IActionResult> RemoveAsync(string id)
         {
             var result = await _service.RemoveAsync(id);
             return Ok(result);

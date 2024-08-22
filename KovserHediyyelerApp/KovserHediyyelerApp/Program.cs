@@ -1,8 +1,10 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using KovserHediyyeler.Core.Repositories.Abstractions.Categories;
+using KovserHediyyeler.Core.Repositories.Abstractions.Departments;
 using KovserHediyyeler.Data.Context;
 using KovserHediyyeler.Data.Repositories.Concretes.Categories;
+using KovserHediyyeler.Data.Repositories.Concretes.Departments;
 using KovserHediyyeler.Service.Profiles;
 using KovserHediyyeler.Service.Services.Abstractions;
 using KovserHediyyeler.Service.Services.Concretes;
@@ -28,8 +30,10 @@ builder.Services.AddSwaggerGen();
 //Repositories
 builder.Services.AddScoped<ICategoryWriteRepository, CategoryWriteRepository>();
 builder.Services.AddScoped<ICategoryReadRepository, CategoryReadRepository>();
+builder.Services.AddScoped<IDepartmentReadRepository, DepartmentReadRepository>();
 //Services
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IDeparmentService, DepartmentService>();
 //Cors
 builder.Services.AddCors(o => o.AddPolicy("Kovser", builder =>
 {
