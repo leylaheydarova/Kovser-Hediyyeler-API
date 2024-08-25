@@ -16,14 +16,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 //Project.App
 builder.Services.AddControllers();
+//Project.Service
+builder.Services.AddValidatorsFromAssemblyContaining<CategoryPostDtoValidation>().AddFluentValidationClientsideAdapters();
+builder.Services.AddAutoMapper(typeof(CategoryMap));
 //Project.Data
 builder.Services.AddDbContext<KovserHediyyelerDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
-//Project.Service
-builder.Services.AddValidatorsFromAssemblyContaining<CategoryPostDtoValidation>().AddFluentValidationClientsideAdapters();
-builder.Services.AddAutoMapper(typeof(CategoryMap));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -31,9 +31,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICategoryWriteRepository, CategoryWriteRepository>();
 builder.Services.AddScoped<ICategoryReadRepository, CategoryReadRepository>();
 builder.Services.AddScoped<IDepartmentReadRepository, DepartmentReadRepository>();
+builder.Services.AddScoped<IDepartmentWriteRepository, DepartmentWriteRepository>();
 //Services
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<IDeparmentService, DepartmentService>();
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+
 //Cors
 builder.Services.AddCors(o => o.AddPolicy("Kovser", builder =>
 {

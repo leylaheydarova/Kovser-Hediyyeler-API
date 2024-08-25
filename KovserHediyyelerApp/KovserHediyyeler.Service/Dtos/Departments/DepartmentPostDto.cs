@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Service.Dtos.Departments
 {
-    public class DepartmentPostDto
+    public record DepartmentPostDto
     {
         public string Name { get; set; }
         public string Description { get; set; }

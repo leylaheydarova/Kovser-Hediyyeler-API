@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Service.Services.Concretes
 {
-    public class DepartmentService : IDeparmentService
+    public class DepartmentService:IDepartmentService
     {
         private readonly IDepartmentReadRepository _readrepository;
         private readonly IDepartmentWriteRepository _writeRepository;
@@ -36,7 +36,7 @@ namespace KovserHediyyeler.Service.Services.Concretes
         public async Task<ApiResponse> DeleteAsync(string id)
         {
             Department department = await _readrepository.GetWhere(x => x.ID.ToString() == id);
-            if(department == null)
+            if (department == null)
             {
                 return new ApiResponse { StatusCode = 404, StatusMessage = "NOT FOUND!" };
             }
@@ -47,26 +47,28 @@ namespace KovserHediyyeler.Service.Services.Concretes
 
         public async Task<ApiResponseWithData> GetAllAsync()
         {
-            var query =  _readrepository.GetAllWhere(x => !x.isDeleted, false);
+            var query = _readrepository.GetAllWhere(x => !x.isDeleted, false);
             List<DepartmentGetDto> dtos = new List<DepartmentGetDto>();
-            dtos = await query.Select(x => new DepartmentGetDto {
-                Id = x.ID.ToString(), 
-                Name = x.Name, 
-                Description = x.Description, 
-                Phone = x.Phone, 
-                Facebook = x.Facebook, 
-                Instagram = x.Instagram, 
-                YouTube = x.YouTube, 
-                TikTok = x.TikTok })
+            dtos = await query.Select(x => new DepartmentGetDto
+            {
+                Id = x.ID.ToString(),
+                Name = x.Name,
+                Description = x.Description,
+                Phone = x.Phone,
+                Facebook = x.Facebook,
+                Instagram = x.Instagram,
+                YouTube = x.YouTube,
+                TikTok = x.TikTok
+            })
                 .ToListAsync();
             return new ApiResponseWithData { StatusCode = 200, Datas = dtos };
         }
-        
+
 
         public async Task<ApiResponseWithData> GetAsync(string id)
         {
-            Department department =await _readrepository.GetWhere(x=>x.ID.ToString() == id);
-            if(department == null)
+            Department department = await _readrepository.GetWhere(x => x.ID.ToString() == id);
+            if (department == null)
             {
                 return new ApiResponseWithData { StatusCode = 404, StatusMessage = "NOT FOUND!" };
             }

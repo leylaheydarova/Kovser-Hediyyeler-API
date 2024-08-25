@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Service.Services.Abstractions
 {
-    public interface IDeparmentService
+    public interface IDepartmentService
     {
         Task<ApiResponseWithData> GetAllAsync();
         Task<ApiResponse> CreateAsync(DepartmentPostDto dto);
-        Task <ApiResponse> DeleteAsync(string id);
-        Task <ApiResponse> RemoveAsync(string id);
+        Task<ApiResponse> DeleteAsync(string id);
+        Task<ApiResponse> RemoveAsync(string id);
         Task<ApiResponseWithData> GetAsync(string id);
-        Task <ApiResponse> UpdateAsync(string id, DepartmentPutDto dto);
+        Task<ApiResponse> UpdateAsync(string id, DepartmentPutDto dto);
     }
 }

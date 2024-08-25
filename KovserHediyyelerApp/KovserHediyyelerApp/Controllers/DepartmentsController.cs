@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace KovserHediyyeler.App.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/api/[controller]")]
     [ApiController]
     public class DepartmentsController : ControllerBase
     {
-        private readonly IDeparmentService _service;
+        private readonly IDepartmentService _service;
 
-        public DepartmentsController(IDeparmentService service)
+        public DepartmentsController(IDepartmentService service)
         {
             _service = service;
         }
@@ -31,7 +31,7 @@ namespace KovserHediyyeler.App.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromForm]DepartmentPostDto dto)
+        public async Task<IActionResult> CreateAsync([FromForm] DepartmentPostDto dto)
         {
             var result = _service.CreateAsync(dto);
             return Ok(result);
@@ -51,7 +51,7 @@ namespace KovserHediyyeler.App.Controllers
             return Ok(result);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateAsync(string id, DepartmentPutDto dto)
         {
             var result = _service.UpdateAsync(id, dto);
