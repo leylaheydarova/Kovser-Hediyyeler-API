@@ -1,5 +1,4 @@
 ﻿using KovserHediyyeler.Core.Entities.BaseModel;
-using KovserHediyyeler.Core.Entities.BaseModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Core.Entities
 {
-    public class Category:Contact
+    public class Category:BaseEntity
     {
         public string Name { get; set; }
-        List<Category>categories {  get; set; }
     }
 }
