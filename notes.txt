@@ -1,0 +1,23 @@
+-------------------------------------------Modeller-----------------------------------------------------------
+Şöbəl/Department
+Kateqoriya/Category
+SosyalMediya/SocialMedia
+Mağaza/Shop
+Brend/Brand
+Məhsul/Product
+MəhsulŞəkli/ProductImage
+Endirim/Discount
+Kampaniya/Sale
+İstifadəçi/User
+Ünvan/Address
+İstifadəçiBankKartı/UserBancCardInfo
+Səbət/Basket
+SevimliMəhsul/FavouriteProduct
+Rol/Role
+
+
+
+-----------------------------------------Enums---------------------------------------------------------------
+Rəng
+Ölçü
+Endirim faizi
