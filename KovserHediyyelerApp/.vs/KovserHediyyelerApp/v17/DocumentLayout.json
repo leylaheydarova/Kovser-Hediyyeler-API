@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyelerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|solutionrelative:kovserhediyyelerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.core\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|solutionrelative:kovserhediyyeler.core\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyeler.core\\entities\\link.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{259DB4C2-BC02-4444-903A-43823A479B4B}|KovserHediyyeler.Core\\KovserHediyyeler.Core.csproj|solutionrelative:kovserhediyyeler.core\\entities\\link.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyelerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|solutionrelative:kovserhediyyelerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1E95B88-4D62-4209-A09C-AEE73A7FEA91}|KovserHediyyelerApp\\KovserHediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyelerapp\\kovserhediyyelerapp\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,11 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Link.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Link.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\Link.cs",
@@ -66,12 +66,11 @@
               "RelativeToolTip": "KovserHediyyeler.Core\\Entities\\Link.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T20:47:23.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T20:47:23.839Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Department.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Department.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\Department.cs",
@@ -79,12 +78,11 @@
               "RelativeToolTip": "KovserHediyyeler.Core\\Entities\\Department.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T13:40:28.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T13:40:28.547Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Category.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\Category.cs",
@@ -181,15 +179,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyelerApp\\Program.cs",
               "RelativeDocumentMoniker": "KovserHediyyelerApp\\Program.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyelerApp\\KovserHediyyelerApp\\Program.cs",
               "RelativeToolTip": "KovserHediyyelerApp\\Program.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAQwBwAAAAhAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAQwDQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:31:43.082Z"
+              "WhenOpened": "2024-08-22T22:31:43.082Z",
+              "EditorCaption": ""
             }
           ]
         }
