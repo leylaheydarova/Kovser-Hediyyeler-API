@@ -1,29 +1,33 @@
 -------------------------------------------Modeller-----------------------------------------------------------
-+Şöbə/Department 
-+Kateqoriya/Category
-+SosyalMediya/SocialMedia
-+Mağaza/Shop
-+Vəzifə/Position
-+Işçilər/Employees
-+Brend/Brand
-+Məhsul/Product
-+MəhsulXüsusiyyətləri/ProductProperty
-+MəhsulŞəkli/ProductImage
-+Endirim/Discount
+	+Şöbə/Department 
+	+Kateqoriya/Category
+	+SosyalMediya/SocialMedia
+	+Mağaza/Shop
+	+Vəzifə/Position
+	+Işçilər/Employees
+	+Brend/Brand
+	+Məhsul/Product
+	+MəhsulXüsusiyyətləri/ProductProperty
+	+MəhsulŞəkli/ProductImage
+	+Endirim/Discount
 Kampaniya/Sale
 İstifadəçi/User
-+Ünvan/Address
+Rəy/Comment
+	+Ünvan/Address
 İstifadəçiBankKartı/UserBancCardInfo
 Səbət/Basket
 Sifariş/Order
 Sifariş detalları/Order Details
-+SevimliMəhsul/FavouriteProduct
+	+SevimliMəhsul/FavouriteProduct
 Rol/Role
 
 
 
 -----------------------------------------Enums---------------------------------------------------------------
-Rəng
-Ölçü
+	+Ölçü
 Endirim faizi
-Şəhər
+	+Şəhər
+	+Reytinq
+
+
+------------------------------------Suallar-----------------------------------------------------------------

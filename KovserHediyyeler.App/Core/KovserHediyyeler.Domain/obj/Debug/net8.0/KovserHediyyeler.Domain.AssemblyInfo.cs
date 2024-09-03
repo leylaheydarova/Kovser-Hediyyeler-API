@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KovserHediyyeler.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba86b85ec4e52b5f0c598969fb1f6b0a4a270c5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1872bb5ae080fb9850d95f6bcebff8cef9b49c0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("KovserHediyyeler.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KovserHediyyeler.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

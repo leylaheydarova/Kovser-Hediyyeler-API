@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Enums
 {
-    public enum Percentage
+    public enum Raiting
     {
-        five = 5,
-        ten = 10,
-
+        Pis = 1,
+        Kafi,
+        Orta,
+        Yaxşı,
+        Əla
     }
 }

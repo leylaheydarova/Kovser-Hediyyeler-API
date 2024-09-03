@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Enums
 {
-    public enum Colors
+    public enum Sizes
     {
-
+        XS,
+        S,
+        M,
+        L,
+        XL,
+        digər
     }
 }
