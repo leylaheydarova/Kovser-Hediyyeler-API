@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\bin\Debug\net8.0\KovserHediyyeler.Domain.deps.json
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\bin\Debug\net8.0\KovserHediyyeler.Domain.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\bin\Debug\net8.0\KovserHediyyeler.Domain.pdb
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.AssemblyInfo.cs
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.sourcelink.json
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\refint\KovserHediyyeler.Domain.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.pdb
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\ref\KovserHediyyeler.Domain.dll

@@ -1,18 +1,23 @@
 -------------------------------------------Modeller-----------------------------------------------------------
-Şöbəl/Department
-Kateqoriya/Category
-SosyalMediya/SocialMedia
-Mağaza/Shop
-Brend/Brand
-Məhsul/Product
-MəhsulŞəkli/ProductImage
-Endirim/Discount
++Şöbə/Department 
++Kateqoriya/Category
++SosyalMediya/SocialMedia
++Mağaza/Shop
++Vəzifə/Position
++Işçilər/Employees
++Brend/Brand
++Məhsul/Product
++MəhsulXüsusiyyətləri/ProductProperty
++MəhsulŞəkli/ProductImage
++Endirim/Discount
 Kampaniya/Sale
 İstifadəçi/User
-Ünvan/Address
++Ünvan/Address
 İstifadəçiBankKartı/UserBancCardInfo
 Səbət/Basket
-SevimliMəhsul/FavouriteProduct
+Sifariş/Order
+Sifariş detalları/Order Details
++SevimliMəhsul/FavouriteProduct
 Rol/Role
 
 
@@ -21,3 +26,4 @@ Rol/Role
 Rəng
 Ölçü
 Endirim faizi
+Şəhər

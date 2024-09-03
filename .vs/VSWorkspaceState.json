@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\KovserHediyyeler.App",
+    "\\KovserHediyyeler.App\\Core",
+    "\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain",
+    "\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models",
+    "\\KovserHediyyeler.App\\Infrastructure"
   ],
+  "SelectedNode": "\\KovserHediyyeler.App\\KovserHediyyeler.App.sln",
   "PreviewInSolutionExplorer": false
 }

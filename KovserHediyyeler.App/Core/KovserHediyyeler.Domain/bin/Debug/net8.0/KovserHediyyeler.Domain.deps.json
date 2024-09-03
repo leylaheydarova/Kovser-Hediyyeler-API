@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "KovserHediyyeler.Domain/1.0.0": {
+        "runtime": {
+          "KovserHediyyeler.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KovserHediyyeler.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
