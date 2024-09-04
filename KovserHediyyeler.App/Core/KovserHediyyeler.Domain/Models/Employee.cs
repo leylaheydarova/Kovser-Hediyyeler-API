@@ -18,5 +18,6 @@ namespace KovserHediyyeler.Domain.Models
         public Department Department { get; set; }
         public Position Position { get; set; }
         public Shop? Shop { get; set; }
+        public ICollection<Address> Address { get; set; }
     }
 }

@@ -10,3 +10,4 @@ C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hedi
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\refint\KovserHediyyeler.Domain.dll
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.pdb
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\ref\KovserHediyyeler.Domain.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Core\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.csproj.AssemblyReference.cache

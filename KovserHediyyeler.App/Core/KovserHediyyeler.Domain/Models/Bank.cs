@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
-    public class Position:BaseEntity
+    public class Bank:BaseEntity
     {
-        public string Status { get; set; }
+        public string Name { get; set; }
 
         //Relationships
-        public ICollection<Department> Departments { get; set; }
-        public ICollection<Employee> Employees { get; set; }
+        public ICollection<CustomerBankCard> BankCards { get; set; } = new List<CustomerBankCard>();
     }
 }

@@ -19,6 +19,8 @@ namespace KovserHediyyeler.Domain.Models
         public ICollection<SocialMedia> SocialMedias { get; set; }  
         public ICollection<Employee> Employees { get; set; }    
         public ICollection<Product> Products { get; set; }
-
+        public ICollection<Position> Positions { get; set; }
+        public ICollection<NewOrder> NewOrders { get; set; } = new List<NewOrder>();
+        public ICollection<Discount> Discounts { get; set; } = new List<Discount>();
     }
 }

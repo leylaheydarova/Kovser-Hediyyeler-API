@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
-    public class Basket:BaseEntity
+    public class ProductComment:BaseEntity
     {
+        public string CommentText {  get; set; }
+        public Product Product { get; set; }
         [ForeignKey("Customer")]
         public WebUser Customer { get; set; }
-        public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();
-        public double TotalPrice { get; set; }
-        public Discount? Discount { get; set; }
     }
 }

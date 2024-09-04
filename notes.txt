@@ -11,13 +11,13 @@
 	+MəhsulŞəkli/ProductImage
 	+Endirim/Discount
 Kampaniya/Sale
-İstifadəçi/User
+	+İstifadəçi/User
 Rəy/Comment
 	+Ünvan/Address
-İstifadəçiBankKartı/UserBancCardInfo
-Səbət/Basket
-Sifariş/Order
-Sifariş detalları/Order Details
+	+İstifadəçiBankKartı/UserBancCardInfo
+	+Səbət/Basket
+	+Sifariş/Order
+	+Sifariş detalları/Order Details
 	+SevimliMəhsul/FavouriteProduct
 Rol/Role
 
@@ -31,3 +31,4 @@ Endirim faizi
 
 
 ------------------------------------Suallar-----------------------------------------------------------------
+Product-a property elave et - isSingleColor

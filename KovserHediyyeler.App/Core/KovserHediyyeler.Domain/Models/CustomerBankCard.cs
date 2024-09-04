@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
-    public class Basket:BaseEntity
+    public class CustomerBankCard:BaseEntity
     {
+        public string CardNumber { get; set; }
+        public DateTime ExpireMonth { get; set; }
+        public DateTime ExpireYear { get; set; }
+        public string CVV {  get; set; }
         [ForeignKey("Customer")]
         public WebUser Customer { get; set; }
-        public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();
-        public double TotalPrice { get; set; }
-        public Discount? Discount { get; set; }
+        public Bank Bank { get; set; }
+
     }
 }

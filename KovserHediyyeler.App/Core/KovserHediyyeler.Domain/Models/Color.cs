@@ -10,6 +10,10 @@ namespace KovserHediyyeler.Domain.Models
     public class Color:BaseEntity
     {
         public string Name { get; set; }
-        public string Value { get; set; }
+        public string HexCode { get; set; }
+
+        //Relationships
+        public ICollection<ProductProperty> Properties {  get; set; }
+        public ICollection<NewOrder> NewOrders { get; set; }
     }
 }
