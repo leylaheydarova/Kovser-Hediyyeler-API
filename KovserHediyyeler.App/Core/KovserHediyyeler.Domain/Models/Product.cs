@@ -22,8 +22,9 @@ namespace KovserHediyyeler.Domain.Models
         public Discount? Discount { get; set; }
         public ICollection<ProductProperty> Properties { get; set; }
         public ICollection<ProductImage> Images { get; set; }
+        public ICollection<ProductComment> Comments { get; set; }
         public ICollection<Shop> Shops { get; set; } = new List<Shop>();
-        public ICollection<NewOrder> NewOrders { get; set; }
+        public ICollection<NewOrder> NewOrders { get; set; } = new List<NewOrder>();
         
         
     }

@@ -19,6 +19,7 @@ namespace KovserHediyyeler.Domain.Models
 
         //Relationships
         public ICollection<OrderDetail> Details { get; set; }
+        public Shop? Shop { get; set; }
 
     }
 }
