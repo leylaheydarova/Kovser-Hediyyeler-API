@@ -8,7 +8,7 @@ namespace KovserHediyyeler.Domain.Enums
 {
     public enum Cities
     {
-        Astara,
+        Astara = 1,
         Ağcabədi,
         Ağdam,
         Ağdaş,

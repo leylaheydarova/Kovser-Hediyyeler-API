@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
-    public class FavouriteProduct:BaseEntity
+    public class WishList:BaseEntity
     {
-        public ICollection<Product> Products { get; set; }
-        [ForeignKey("Customer")]
+        [ForeignKey(nameof(WebUser))]
+        public string CustomerID { get; set; }
         public WebUser Customer { get; set; }
+        public ICollection<WishListItem> ListItems { get; set; }
     }
 }

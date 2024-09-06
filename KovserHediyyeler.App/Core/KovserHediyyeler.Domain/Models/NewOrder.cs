@@ -9,7 +9,9 @@ namespace KovserHediyyeler.Domain.Models
 {
     public class NewOrder:BaseEntity
     {
+        public string CategoryID { get; set; }
         public Category Category { get; set; }
+        public string DepartmentID { get; set; }
         public Department Department { get; set; }
         //public Product Product { get; set; }
         public ICollection<ProductProperty> ProductProperties { get; set; }

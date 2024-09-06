@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
-    public class BasketItem:BaseEntity
+    public class WishListItem:BaseEntity
     {
-        public int ProductCount { get; set; }
         public string ProductID { get; set; }
         public Product Product { get; set; }
-        public string BasketID { get; set; }
-        public Basket Basket { get; set; }
+        public string WishListID { get; set; }
+        public WishList List { get; set; }
     }
 }

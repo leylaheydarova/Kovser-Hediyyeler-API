@@ -15,6 +15,7 @@ namespace KovserHediyyeler.Domain.Models
         public string Icon { get; set; }
 
         //Relationships
+        public string DepartmentID { get; set; }
         public Department Department { get; set; }
     }
 }

@@ -11,8 +11,10 @@ namespace KovserHediyyeler.Domain.Models
     public class ProductComment:BaseEntity
     {
         public string CommentText {  get; set; }
+        public string ProductID { get; set; }
         public Product Product { get; set; }
-        [ForeignKey("Customer")]
+        [ForeignKey(nameof(WebUser))]
+        public string CustomerID { get; set; }
         public WebUser Customer { get; set; }
     }
 }

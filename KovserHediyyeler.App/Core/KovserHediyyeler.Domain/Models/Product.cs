@@ -16,9 +16,13 @@ namespace KovserHediyyeler.Domain.Models
         public double Price { get; set; }
 
         //Relationships
+        public string DepartmentID { get; set; }
         public Department Department { get; set; }
+        public string CategoryID { get; set; }
         public Category Category { get; set; }
+        public string? BrandID { get; set; }
         public Brand? Brand { get; set; }
+        public string? DiscountID { get; set; }
         public Discount? Discount { get; set; }
         public ICollection<ProductProperty> Properties { get; set; }
         public ICollection<ProductImage> Images { get; set; }

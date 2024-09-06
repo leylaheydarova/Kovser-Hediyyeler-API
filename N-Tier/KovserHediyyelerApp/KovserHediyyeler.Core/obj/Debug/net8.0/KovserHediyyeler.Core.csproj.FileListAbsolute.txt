@@ -11,3 +11,16 @@ C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hedi
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.pdb
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\ref\KovserHediyyeler.Core.dll
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.sourcelink.json
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\bin\Debug\net8.0\KovserHediyyeler.Core.deps.json
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\bin\Debug\net8.0\KovserHediyyeler.Core.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\bin\Debug\net8.0\KovserHediyyeler.Core.pdb
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.AssemblyInfo.cs
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.sourcelink.json
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\refint\KovserHediyyeler.Core.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\KovserHediyyeler.Core.pdb
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyeler.Core\obj\Debug\net8.0\ref\KovserHediyyeler.Core.dll

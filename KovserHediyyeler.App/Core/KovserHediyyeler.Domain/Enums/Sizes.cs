@@ -8,11 +8,14 @@ namespace KovserHediyyeler.Domain.Enums
 {
     public enum Sizes
     {
-        XS,
+        XS = 1,
         S,
         M,
         L,
         XL,
-        digər
+        digər,
+        kiçik,
+        orta,
+        böyük
     }
 }

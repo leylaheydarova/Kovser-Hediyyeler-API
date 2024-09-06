@@ -10,6 +10,8 @@ namespace KovserHediyyeler.Domain.Models
     public class Category:BaseEntity
     {
         public string Name { get; set; }
+        public Guid? ParentId { get; set; }
+        public Category? ParentCategory { get; set; }
 
         //Relationships
         public ICollection<Department> Departments { get; set; }

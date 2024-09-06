@@ -17,8 +17,10 @@ namespace KovserHediyyeler.Domain.Models
 
         //Relationships
         public Shop Shop { get; set; }
+        public string EmployeID {  get; set; }
         public Employee Employee { get; set; }
-        [ForeignKey("Customer")]
+        [ForeignKey(nameof(WebUser))]
+        public string CustomerID {  get; set; }
         public WebUser Customer { get; set; }
     }
 }

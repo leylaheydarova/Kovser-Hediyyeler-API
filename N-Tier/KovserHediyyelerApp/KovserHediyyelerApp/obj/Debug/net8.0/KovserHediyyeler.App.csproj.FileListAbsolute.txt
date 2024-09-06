@@ -146,3 +146,14 @@ C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hedi
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.sourcelink.json
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.AssemblyInfo.cs
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.sourcelink.json
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\refint\KovserHediyyeler.App.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\N-Tier\KovserHediyyelerApp\KovserHediyyelerApp\obj\Debug\net8.0\KovserHediyyeler.App.pdb

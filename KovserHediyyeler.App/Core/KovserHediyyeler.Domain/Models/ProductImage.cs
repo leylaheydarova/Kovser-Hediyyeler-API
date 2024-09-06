@@ -13,6 +13,7 @@ namespace KovserHediyyeler.Domain.Models
         public string FileURL { get; set; }
         
         //Relationships
+        public string ProductID { get; set; }
         public Product Product { get; set; }
     }
 }
