@@ -29,6 +29,8 @@ namespace KovserHediyyeler.Domain.Models
         public ICollection<ProductImage> Images { get; set; }
         public ICollection<ProductComment> Comments { get; set; }
         public ICollection<Shop> Shops { get; set; } = new List<Shop>();
+        public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();
+        public ICollection<WishListItem> WishListItems { get; set; } = new List<WishListItem>();
         //public ICollection<NewOrder> NewOrders { get; set; } = new List<NewOrder>();
         
         

@@ -16,6 +16,6 @@ namespace KovserHediyyeler.Domain.Models
         //Relationships
         public ICollection<Product>Products { get; set; }
         public ICollection<Color>? Colors { get; set; }
-        public ICollection<NewOrder> Orders { get; set; } = new List<NewOrder>();
+        public ICollection<NewOrder> NewOrders { get; set; } = new List<NewOrder>();
     }
 }

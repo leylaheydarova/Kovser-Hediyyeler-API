@@ -10,9 +10,6 @@ namespace KovserHediyyeler.Domain.Models
 {
     public class Order:BaseEntity
     {
-        [ForeignKey(nameof(WebUser))]
-        public string CustomerID { get; set; }
-        public WebUser Customer { get; set; }
         public DateTime OrderDate { get; set; }
         public DateTime RequiredDate { get; set; }
         public DateTime? ShippedDate { get; set; }
@@ -20,6 +17,9 @@ namespace KovserHediyyeler.Domain.Models
         public bool isPaid {  get; set; }
 
         //Relationships
+        [ForeignKey(nameof(WebUser))]
+        public string CustomerID { get; set; }
+        public WebUser Customer { get; set; }
         public string ShippingID { get; set; }
         public Shipping Shipping { get; set; }
         public string ShopID { get; set; }

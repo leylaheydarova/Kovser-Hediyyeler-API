@@ -17,6 +17,7 @@ namespace KovserHediyyeler.Domain.Models
         public ICollection<Address> Address { get; set; }
         public ICollection<Order> Orders { get; set; }
         public ICollection<CustomerBankCard> BankCards { get; set; } = new List<CustomerBankCard>();
+        public ICollection<ProductComment> ProductComments { get; set; } = new List<ProductComment>();
        
     }
 }

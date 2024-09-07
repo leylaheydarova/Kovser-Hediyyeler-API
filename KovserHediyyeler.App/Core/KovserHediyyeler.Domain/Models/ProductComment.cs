@@ -11,6 +11,8 @@ namespace KovserHediyyeler.Domain.Models
     public class ProductComment:BaseEntity
     {
         public string CommentText {  get; set; }
+
+        //Relationship
         public string ProductID { get; set; }
         public Product Product { get; set; }
         [ForeignKey(nameof(WebUser))]
