@@ -13,7 +13,7 @@ namespace KovserHediyyeler.Domain.Models
         public Category Category { get; set; }
         public string DepartmentID { get; set; }
         public Department Department { get; set; }
-        //public Product Product { get; set; }
+        
         public ICollection<ProductProperty> ProductProperties { get; set; }
         public ICollection<Color> Colors { get; set; }
     }

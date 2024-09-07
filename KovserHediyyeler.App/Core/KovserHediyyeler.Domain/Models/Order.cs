@@ -15,10 +15,13 @@ namespace KovserHediyyeler.Domain.Models
         public WebUser Customer { get; set; }
         public DateTime OrderDate { get; set; }
         public DateTime RequiredDate { get; set; }
-        public DateTime ShippedDate { get; set; }
-        public bool isShipping {  get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public double TotalPrice { get; set; }
+        public bool isPaid {  get; set; }
 
         //Relationships
+        public string ShippingID { get; set; }
+        public Shipping Shipping { get; set; }
         public string ShopID { get; set; }
         public Shop? Shop { get; set; }
         public ICollection<OrderDetail> Details { get; set; }

@@ -10,12 +10,13 @@ namespace KovserHediyyeler.Domain.Models
 {
     public class Basket:BaseEntity
     {
+        public int Count { get; set; }
+        public double TotalPrice { get; set; }
+        public string? DiscountID { get; set; }
+        public Discount? Discount { get; set; }
         [ForeignKey(nameof(WebUser))]
         public string CustomerID { get; set; }
         public WebUser Customer { get; set; }
         public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();
-        public double TotalPrice { get; set; }
-        public string? DiscountID { get; set; }
-        public Discount? Discount { get; set; }
     }
 }
