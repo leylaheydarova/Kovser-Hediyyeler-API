@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Domain.Models.BaseModels;
+﻿using KovserHediyyeler.Domain.Enums;
+using KovserHediyyeler.Domain.Models.BaseModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace KovserHediyyeler.Domain.Models
 {
     public class Shipping : BaseEntity
     {
-        public bool isShipping {get; set;}
+        public ShippingType ShippingType { get; set; }
 
         //Relationships
-        public ICollection<Order> Orders { get; set;}
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }

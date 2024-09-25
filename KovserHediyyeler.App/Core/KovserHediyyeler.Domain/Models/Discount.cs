@@ -12,7 +12,7 @@ namespace KovserHediyyeler.Domain.Models
         public double Persentage { get; set; }
 
         //Relationships
-        public ICollection<OrderDetail> OrderDetails { get; set; }  
+        public ICollection<OrderDetail> OrderDetails { get; set; }  = new List<OrderDetail>();
         public ICollection<Product> Products { get; set; } = new List<Product>();
         public ICollection<Category> Categories { get; set; } = new List<Category>();
         public ICollection<Department> Departments { get; set; } = new List<Department>();

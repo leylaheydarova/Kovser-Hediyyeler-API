@@ -12,7 +12,7 @@ namespace KovserHediyyeler.Domain.Models
         public string Status { get; set; }
 
         //Relationships
-        public ICollection<Department> Departments { get; set; }
-        public ICollection<Employee> Employees { get; set; }
+        public ICollection<Department> Departments { get; set; } = new List<Department>();
+        public ICollection<Employee> Employees { get; set; } = new List<Employee>();
     }
 }

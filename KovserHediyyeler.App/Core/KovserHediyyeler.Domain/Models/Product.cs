@@ -16,18 +16,18 @@ namespace KovserHediyyeler.Domain.Models
         public double Price { get; set; }
 
         //Relationships
-        public string DepartmentID { get; set; }
+        public Guid DepartmentID { get; set; }
         public Department Department { get; set; }
-        public string CategoryID { get; set; }
+        public Guid CategoryID { get; set; }
         public Category Category { get; set; }
-        public string? BrandID { get; set; }
+        public Guid? BrandID { get; set; }
         public Brand? Brand { get; set; }
-        public string? DiscountID { get; set; }
+        public Guid? DiscountID { get; set; }
         public Discount? Discount { get; set; }
         public ICollection<OrderDetail> Orders { get; set; } = new List<OrderDetail>();
-        public ICollection<ProductProperty> Properties { get; set; }
-        public ICollection<ProductImage> Images { get; set; }
-        public ICollection<ProductComment> Comments { get; set; }
+        public ICollection<ProductProperty> Properties { get; set; } = new List<ProductProperty>();
+        public ICollection<ProductImage> Images { get; set; } = new List<ProductImage>();
+        public ICollection<ProductComment> Comments { get; set; } = new List<ProductComment>();
         public ICollection<Shop> Shops { get; set; } = new List<Shop>();
         public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();
         public ICollection<WishListItem> WishListItems { get; set; } = new List<WishListItem>();

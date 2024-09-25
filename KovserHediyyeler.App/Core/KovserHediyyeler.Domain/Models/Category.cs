@@ -14,9 +14,8 @@ namespace KovserHediyyeler.Domain.Models
         public Category? ParentCategory { get; set; }
 
         //Relationships
-        public ICollection<Department> Departments { get; set; }
-        public ICollection<Product> Products { get; set; }
-        public ICollection<NewOrder > NewOrders { get; set; }
+        public ICollection<Department> Departments { get; set; } = new List<Department>();
+        public ICollection<Product> Products { get; set; } = new List<Product>();
         public ICollection<Discount> Discounts { get; set; } = new List<Discount>();
     }
 }

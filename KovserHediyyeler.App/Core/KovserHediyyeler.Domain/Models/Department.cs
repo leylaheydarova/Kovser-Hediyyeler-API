@@ -15,12 +15,11 @@ namespace KovserHediyyeler.Domain.Models
         public string LogoImage { get; set; }
         public string LogoImageURL { get; set; }
         //Relationships
-        public ICollection<Category>Categories { get; set; }
-        public ICollection<SocialMedia> SocialMedias { get; set; }  
-        public ICollection<Employee> Employees { get; set; }    
-        public ICollection<Product> Products { get; set; }
-        public ICollection<Position> Positions { get; set; }
-        public ICollection<NewOrder> NewOrders { get; set; } = new List<NewOrder>();
+        public ICollection<Category> Categories { get; set; } = new List<Category>();
+        public ICollection<SocialMedia> SocialMedias { get; set; } = new List<SocialMedia>();
+        public ICollection<Employee> Employees { get; set; } = new List<Employee>();
+        public ICollection<Product> Products { get; set; } = new List<Product>();
+        public ICollection<Position> Positions { get; set; } = new List<Position>();
         public ICollection<Discount> Discounts { get; set; } = new List<Discount>();
     }
 }

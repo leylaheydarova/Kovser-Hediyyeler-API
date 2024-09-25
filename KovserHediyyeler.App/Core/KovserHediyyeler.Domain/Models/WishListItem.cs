@@ -9,9 +9,9 @@ namespace KovserHediyyeler.Domain.Models
 {
     public class WishListItem:BaseEntity
     {
-        public string ProductID { get; set; }
+        public Guid ProductID { get; set; }
         public Product Product { get; set; }
-        public string WishListID { get; set; }
+        public Guid WishListID { get; set; }
         public WishList List { get; set; }
     }
 }

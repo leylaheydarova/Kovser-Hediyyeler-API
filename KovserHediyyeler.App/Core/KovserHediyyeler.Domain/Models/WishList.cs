@@ -10,9 +10,7 @@ namespace KovserHediyyeler.Domain.Models
 {
     public class WishList:BaseEntity
     {
-        [ForeignKey(nameof(WebUser))]
-        public string CustomerID { get; set; }
-        public WebUser Customer { get; set; }
+       public ICollection<WebUser> WebUsers { get; set; }
         public ICollection<WishListItem> ListItems { get; set; }
     }
 }

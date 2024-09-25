@@ -16,11 +16,10 @@ namespace KovserHediyyeler.Domain.Models
         public string PostalCode { get; set; } // F.eg: AZ1038
 
         //Relationships
+        public Guid ShopID { get; set; }
         public Shop Shop { get; set; }
-        public string EmployeID {  get; set; }
+        public Guid EmployeID {  get; set; }
         public Employee Employee { get; set; }
-        [ForeignKey(nameof(WebUser))]
-        public string CustomerID {  get; set; }
-        public WebUser Customer { get; set; }
+       public ICollection<WebUser> WebUsers { get; set; } = new List<WebUser>();
     }
 }

@@ -13,7 +13,6 @@ namespace KovserHediyyeler.Domain.Models
         public string HexCode { get; set; }
 
         //Relationships
-        public ICollection<ProductProperty> Properties {  get; set; }
-        public ICollection<NewOrder> NewOrders { get; set; }
+        public ICollection<ProductProperty> Properties { get; set; } = new List<ProductProperty>();
     }
 }

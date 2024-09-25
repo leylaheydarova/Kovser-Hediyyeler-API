@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Domain.Models.BaseModels;
+﻿using KovserHediyyeler.Domain.Enums;
+using KovserHediyyeler.Domain.Models.BaseModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,17 +15,18 @@ namespace KovserHediyyeler.Domain.Models
         public DateTime RequiredDate { get; set; }
         public DateTime? ShippedDate { get; set; }
         public double TotalPrice { get; set; }
-        public bool isPaid {  get; set; }
 
         //Relationships
-        [ForeignKey(nameof(WebUser))]
-        public string CustomerID { get; set; }
+        public OrderStatus OrderStatus {  get; set; }
+        public PaymentStatus PaymentStatus { get; set; }   
+        [ForeignKey(nameof(Customer))]
+        public Guid CustomerID { get; set; }
         public WebUser Customer { get; set; }
-        public string ShippingID { get; set; }
+        public Guid ShippingID { get; set; }
         public Shipping Shipping { get; set; }
-        public string ShopID { get; set; }
+        public Guid ShopID { get; set; }
         public Shop? Shop { get; set; }
-        public ICollection<OrderDetail> Details { get; set; }
+        public ICollection<OrderDetail> Details { get; set; } = new List<OrderDetail>();
 
     }
 }

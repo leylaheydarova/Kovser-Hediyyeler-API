@@ -13,11 +13,11 @@ namespace KovserHediyyeler.Domain.Models
         public int Quantity { get; set; }
 
         //Relationships
-        public string OrderID { get; set; }
+        public Guid OrderID { get; set; }
         public Order Order { get; set; }
-        public string ProductID { get; set; }
+        public Guid ProductID { get; set; }
         public Product Product { get; set; }
-        public string? DiscountID { get; set; }
+        public Guid? DiscountID { get; set; }
         public Discount? Discount { get; set; }
 
        

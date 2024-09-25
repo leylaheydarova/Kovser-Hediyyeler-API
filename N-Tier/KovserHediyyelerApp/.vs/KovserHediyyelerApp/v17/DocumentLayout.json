@@ -54,56 +54,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Link.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Link.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\Link.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Link.cs",
-              "RelativeToolTip": "KovserHediyyeler.Core\\Entities\\Link.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T20:47:23.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Department.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\Department.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Department.cs",
-              "RelativeToolTip": "KovserHediyyeler.Core\\Entities\\Department.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T13:40:28.547Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Category.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\Category.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Category.cs",
-              "RelativeToolTip": "KovserHediyyeler.Core\\Entities\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T19:02:07.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T12:01:46.612Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 6,
@@ -184,10 +136,58 @@
               "RelativeDocumentMoniker": "KovserHediyyelerApp\\Program.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyelerApp\\Program.cs",
               "RelativeToolTip": "KovserHediyyelerApp\\Program.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAQwDQAAAAAAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAQwDUAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T22:31:43.082Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "KovserHediyyelerApp\\Controllers\\CategoriesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T12:01:46.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\Category.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Category.cs",
+              "RelativeToolTip": "KovserHediyyeler.Core\\Entities\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T19:02:07.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Department.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\Department.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Department.cs",
+              "RelativeToolTip": "KovserHediyyeler.Core\\Entities\\Department.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T13:40:28.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Link.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Link.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Core\\Entities\\Link.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\N-Tier\\KovserHediyyelerApp\\KovserHediyyeler.Core\\Entities\\Link.cs",
+              "RelativeToolTip": "KovserHediyyeler.Core\\Entities\\Link.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T20:47:23.839Z"
             }
           ]
         }

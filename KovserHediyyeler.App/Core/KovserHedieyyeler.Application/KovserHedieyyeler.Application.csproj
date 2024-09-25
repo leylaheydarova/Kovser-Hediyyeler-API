@@ -10,4 +10,8 @@
     <ProjectReference Include="..\KovserHediyyeler.Domain\KovserHediyyeler.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\Addresses\" />
+  </ItemGroup>
+
 </Project>

@@ -13,14 +13,13 @@ namespace KovserHediyyeler.Domain.Models
         public string CardNumber { get; set; }
         public DateTime ExpireMonth { get; set; }
         public DateTime ExpireYear { get; set; }
-        public string CVV {  get; set; }
+        public string CVV { get; set; }
 
         //Relationships
         [ForeignKey(nameof(WebUser))]
-        public string CustomerID { get; set; }
+        public Guid CustomerID { get; set; }
         public WebUser Customer { get; set; }
-        public string BankID { get; set; }
+        public Guid BankID { get; set; }
         public Bank Bank { get; set; }
-
     }
 }

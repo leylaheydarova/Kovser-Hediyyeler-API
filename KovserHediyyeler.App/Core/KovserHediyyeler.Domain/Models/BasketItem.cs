@@ -10,9 +10,9 @@ namespace KovserHediyyeler.Domain.Models
     public class BasketItem:BaseEntity
     {
         public int ProductCount { get; set; }
-        public string ProductID { get; set; }
+        public Guid ProductID { get; set; }
         public Product Product { get; set; }
-        public string BasketID { get; set; }
+        public Guid BasketID { get; set; }
         public Basket Basket { get; set; }
     }
 }

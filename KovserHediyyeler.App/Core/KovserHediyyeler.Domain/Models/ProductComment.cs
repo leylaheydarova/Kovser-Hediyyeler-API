@@ -13,10 +13,10 @@ namespace KovserHediyyeler.Domain.Models
         public string CommentText {  get; set; }
 
         //Relationship
-        public string ProductID { get; set; }
+        public Guid ProductID { get; set; }
         public Product Product { get; set; }
-        [ForeignKey(nameof(WebUser))]
-        public string CustomerID { get; set; }
+        [ForeignKey(nameof(Customer))]
+        public Guid CustomerID { get; set; }
         public WebUser Customer { get; set; }
     }
 }
