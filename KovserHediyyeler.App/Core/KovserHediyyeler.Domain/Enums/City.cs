@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Enums
 {
-    public enum Cities
+    public enum City
     {
         Astara = 1,
         Ağcabədi,

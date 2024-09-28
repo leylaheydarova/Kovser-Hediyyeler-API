@@ -9,6 +9,7 @@ namespace KovserHediyyeler.Domain.Models
 {
     public class ProductImage:BaseEntity
     {
+        public bool IsMain { get; set; }
         public string FileName { get; set; }
         public string FileURL { get; set; }
         

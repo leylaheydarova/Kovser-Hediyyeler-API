@@ -14,9 +14,10 @@ namespace KovserHediyyeler.Domain.Models
         public DateTime ExpireMonth { get; set; }
         public DateTime ExpireYear { get; set; }
         public string CVV { get; set; }
+        public bool IsForPayment { get; set; }
 
         //Relationships
-        [ForeignKey(nameof(WebUser))]
+        [ForeignKey(nameof(Customer))]
         public Guid CustomerID { get; set; }
         public WebUser Customer { get; set; }
         public Guid BankID { get; set; }

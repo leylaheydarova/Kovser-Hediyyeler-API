@@ -14,16 +14,15 @@ namespace KovserHediyyeler.Domain.Models
         public bool isSingleColour { get; set; }
         public int Stock { get; set; }
         public double Price { get; set; }
+        public double DiscountedPrice { get; set; }
 
-        //Relationships
+    //Relationships
         public Guid DepartmentID { get; set; }
         public Department Department { get; set; }
         public Guid CategoryID { get; set; }
         public Category Category { get; set; }
         public Guid? BrandID { get; set; }
         public Brand? Brand { get; set; }
-        public Guid? DiscountID { get; set; }
-        public Discount? Discount { get; set; }
         public ICollection<OrderDetail> Orders { get; set; } = new List<OrderDetail>();
         public ICollection<ProductProperty> Properties { get; set; } = new List<ProductProperty>();
         public ICollection<ProductImage> Images { get; set; } = new List<ProductImage>();

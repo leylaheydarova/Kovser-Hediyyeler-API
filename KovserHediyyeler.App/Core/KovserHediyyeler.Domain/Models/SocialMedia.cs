@@ -12,7 +12,7 @@ namespace KovserHediyyeler.Domain.Models
         public string NickName { get; set; }
         public string Name { get; set; }
         public string URL { get; set; }
-        public string Icon { get; set; }
+        
 
         //Relationships
         public Guid DepartmentID { get; set; }

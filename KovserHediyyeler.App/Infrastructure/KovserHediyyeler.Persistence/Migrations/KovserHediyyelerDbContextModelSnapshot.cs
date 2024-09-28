@@ -52,21 +52,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.ToTable("CategoryDepartment");
                 });
 
-            modelBuilder.Entity("CategoryDiscount", b =>
-                {
-                    b.Property<Guid>("CategoriesID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("DiscountsID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("CategoriesID", "DiscountsID");
-
-                    b.HasIndex("DiscountsID");
-
-                    b.ToTable("CategoryDiscount");
-                });
-
             modelBuilder.Entity("ColorProductProperty", b =>
                 {
                     b.Property<Guid>("ColorsID")
@@ -80,21 +65,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasIndex("PropertiesID");
 
                     b.ToTable("ColorProductProperty");
-                });
-
-            modelBuilder.Entity("DepartmentDiscount", b =>
-                {
-                    b.Property<Guid>("DepartmentsID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("DiscountsID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("DepartmentsID", "DiscountsID");
-
-                    b.HasIndex("DiscountsID");
-
-                    b.ToTable("DepartmentDiscount");
                 });
 
             modelBuilder.Entity("DepartmentPosition", b =>
@@ -118,6 +88,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("City")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -134,8 +107,10 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsCurrentAddress")
+                        .HasColumnType("bit");
+
                     b.Property<string>("PostalCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Region")
@@ -225,8 +200,6 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("CustomerID")
                         .IsUnique();
-
-                    b.HasIndex("DiscountID");
 
                     b.ToTable("Baskets");
                 });
@@ -395,6 +368,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<DateTime>("ExpireYear")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsForPayment")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
@@ -451,32 +427,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Departments");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Discount", b =>
-                {
-                    b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("Persentage")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("isDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Discounts");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Employee", b =>
@@ -600,9 +550,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("DiscountID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("OrderID")
                         .HasColumnType("uniqueidentifier");
 
@@ -622,8 +569,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("DiscountID");
 
                     b.HasIndex("OrderID");
 
@@ -684,8 +629,8 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("DiscountID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<double>("DiscountedPrice")
+                        .HasColumnType("float");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -713,8 +658,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasIndex("CategoryID");
 
                     b.HasIndex("DepartmentID");
-
-                    b.HasIndex("DiscountID");
 
                     b.ToTable("Products");
                 });
@@ -775,6 +718,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<string>("FileURL")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
 
                     b.Property<Guid>("ProductID")
                         .HasColumnType("uniqueidentifier");
@@ -898,10 +844,6 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.Property<Guid>("DepartmentID")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Icon")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -1105,21 +1047,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CategoryDiscount", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Category", null)
-                        .WithMany()
-                        .HasForeignKey("CategoriesID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("KovserHediyyeler.Domain.Models.Discount", null)
-                        .WithMany()
-                        .HasForeignKey("DiscountsID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("ColorProductProperty", b =>
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Color", null)
@@ -1131,21 +1058,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.ProductProperty", null)
                         .WithMany()
                         .HasForeignKey("PropertiesID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("DepartmentDiscount", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Department", null)
-                        .WithMany()
-                        .HasForeignKey("DepartmentsID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("KovserHediyyeler.Domain.Models.Discount", null)
-                        .WithMany()
-                        .HasForeignKey("DiscountsID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -1192,13 +1104,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("KovserHediyyeler.Domain.Models.Discount", "Discount")
-                        .WithMany("Baskets")
-                        .HasForeignKey("DiscountID");
-
                     b.Navigation("Customer");
-
-                    b.Navigation("Discount");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.BasketItem", b =>
@@ -1302,10 +1208,6 @@ namespace KovserHediyyeler.Persistence.Migrations
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.OrderDetail", b =>
                 {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Discount", "Discount")
-                        .WithMany("OrderDetails")
-                        .HasForeignKey("DiscountID");
-
                     b.HasOne("KovserHediyyeler.Domain.Models.Order", "Order")
                         .WithMany("Details")
                         .HasForeignKey("OrderID")
@@ -1317,8 +1219,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Discount");
 
                     b.Navigation("Order");
 
@@ -1343,17 +1243,11 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("KovserHediyyeler.Domain.Models.Discount", "Discount")
-                        .WithMany("Products")
-                        .HasForeignKey("DiscountID");
-
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
 
                     b.Navigation("Department");
-
-                    b.Navigation("Discount");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ProductComment", b =>
@@ -1484,15 +1378,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Products");
 
                     b.Navigation("SocialMedias");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Discount", b =>
-                {
-                    b.Navigation("Baskets");
-
-                    b.Navigation("OrderDetails");
-
-                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Employee", b =>

@@ -13,7 +13,6 @@ namespace KovserHediyyeler.Domain.Models
         public int Count { get; set; }
         public double TotalPrice { get; set; }
         public Guid? DiscountID { get; set; }
-        public Discount? Discount { get; set; }
         [ForeignKey(nameof(Customer))]
         public Guid CustomerID { get; set; }
         public WebUser Customer { get; set; }

@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Domain.Models.BaseModels;
+﻿using KovserHediyyeler.Domain.Enums;
+using KovserHediyyeler.Domain.Models.BaseModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,10 +11,12 @@ namespace KovserHediyyeler.Domain.Models
 {
     public class Address:BaseEntity
     {
+        public City City { get; set; }
         public string Region { get; set; } // F.eg: "Yasamal", "Nizami", etc.
         public string Street { get; set; }
         public string Home { get; set; }
-        public string PostalCode { get; set; } // F.eg: AZ1038
+        public string? PostalCode { get; set; } // F.eg: AZ1038
+        public bool IsCurrentAddress { get; set; }
 
         //Relationships
         public Guid ShopID { get; set; }

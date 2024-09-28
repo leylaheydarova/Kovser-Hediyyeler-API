@@ -22,7 +22,6 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<Color> Colors { get; set; }
         public DbSet<CustomerBankCard> CustomerBankCards { get; set; }
         public DbSet<Department> Departments { get; set; }
-        public DbSet<Discount> Discounts { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
@@ -83,5 +82,50 @@ namespace KovserHediyyeler.Persistence.Contexts
 
             return base.SaveChangesAsync(cancellationToken);
         }
+        public override int SaveChanges()
+        {
+            //Address
+            var currentAddress = ChangeTracker.Entries<Address>()
+                                .FirstOrDefault(e => e.Entity.IsCurrentAddress && (e.State == EntityState.Modified || e.State == EntityState.Added));
+
+            if (currentAddress != null)
+            {
+                var allAddresses = Addresses.Where(ad => ad.ID != currentAddress.Entity.ID && ad.IsCurrentAddress).ToList();
+                foreach (var address in allAddresses)
+                {
+                    address.IsCurrentAddress = false;
+                }
+            }
+
+            //ProductImage
+            var mainImage = ChangeTracker.Entries<ProductImage>()
+                                .FirstOrDefault(e => e.Entity.IsMain && (e.State == EntityState.Modified || e.State == EntityState.Added));
+
+            if (mainImage != null)
+            {
+                var allImages = ProductImages.Where(pi => pi.ID != mainImage.Entity.ID && pi.IsMain).ToList();
+                foreach (var image in allImages)
+                {
+                    image.IsMain = false;
+                }
+            }
+
+            //CustomerbankCard
+            var activeCard = ChangeTracker.Entries<CustomerBankCard>()
+                    .FirstOrDefault(e => e.Entity.IsForPayment && (e.State == EntityState.Modified || e.State == EntityState.Added));
+
+            if (activeCard != null)
+            {
+                var allCards = CustomerBankCards.Where(p => p.ID != activeCard.Entity.ID && p.IsForPayment).ToList();
+                foreach (var card in allCards)
+                {
+                    card.IsForPayment = false;
+                }
+            }
+
+            return base.SaveChanges();
+        }
+
+
     }
 }
