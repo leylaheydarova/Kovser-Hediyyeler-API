@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "RmKkHxDfvdtHQYWo1r7RtmSY96vEih/epdi9rqnlFZw0gOtiFBqnvhh4re79+dIZP7T/dPdsn1uv3bVn06BA2A==",
+  "dgSpecHash": "RNO0qoz8puCCqfDbvyJP8vhYjbf7r0bUT+Q7GnShCmyqYw+CVmZDcwitiivkukbPlQCWBuatJ7gDVH49T9YVBg==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.10.0\\fluentvalidation.dependencyinjectionextensions.11.10.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.8\\microsoft.aspnetcore.cryptography.internal.8.0.8.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.8\\microsoft.aspnetcore.cryptography.keyderivation.8.0.8.nupkg.sha512",

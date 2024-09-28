@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Department
 {
-    public record DepartmentSingleGetDto
+    public record DepartmentGetSingleDto
     {
         public string Id { get; set; }  
         public string Name { get; set; }
