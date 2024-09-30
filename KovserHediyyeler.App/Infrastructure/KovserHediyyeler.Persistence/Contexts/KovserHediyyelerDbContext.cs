@@ -19,7 +19,7 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<BasketItem> BasketItems { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Color> Colors { get; set; }
+        public DbSet<ColorCode> Colors { get; set; }
         public DbSet<CustomerBankCard> CustomerBankCards { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }

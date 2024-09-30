@@ -13,7 +13,7 @@ namespace KovserHedieyyeler.Application.Profiles
     {
         public ColorMapper()
         {
-            CreateMap<ColorDto, Color>().ReverseMap();
+            CreateMap<ColorDto, ColorCode>().ReverseMap();
         }
     }
 }

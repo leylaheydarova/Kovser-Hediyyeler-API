@@ -9,5 +9,6 @@ namespace KovserHedieyyeler.Application.Repositories.Abstractions.WebUsers
 {
     public interface IWebUserWriteRepository:IIdentityWriteRepository<WebUser>
     {
+        bool DeleteTemporarily(WebUser webUser);
     }
 }

@@ -11,6 +11,7 @@ namespace KovserHediyyeler.Domain.Models
 {
     public class WebUser:IdentityUser<Guid>
     {
+        public bool isDeleted { get; set; }
         //Relationships
         public Guid BasketID { get; set; }
         public Basket Basket { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
-    public class Color:BaseEntity
+    public class ColorCode:BaseEntity
     {
         public string Name { get; set; }
         public string HexCode { get; set; }

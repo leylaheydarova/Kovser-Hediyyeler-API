@@ -10,7 +10,6 @@ namespace KovserHedieyyeler.Application.Repositories.Abstractions
     public interface IIdentityWriteRepository<T>:IIdentityRepository<T> where T: IdentityUser<Guid>
     {
         Task<bool> AddAsync(T entity);
-        bool DeleteTemporarily(T entity);
         bool RemovePermanently(T entity);
         bool Update(T entity);
         Task<int> SaveAsync();
