@@ -1,4 +1,5 @@
 ﻿using KovserHedieyyeler.Application.Repositories.Abstractions.Positions;
+using KovserHedieyyeler.Application.Repositories.Interfaces.Positions;
 using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Persistence.Contexts;
 using System;

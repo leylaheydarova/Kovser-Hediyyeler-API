@@ -30,6 +30,7 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<ProductComment> ProductComments { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<ProductProperty> ProductProperties { get; set; }
+        public DbSet<Promotion> Promotions {  get; set; }
         public DbSet<Shipping> Shippings { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }

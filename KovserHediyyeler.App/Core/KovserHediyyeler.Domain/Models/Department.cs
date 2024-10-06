@@ -20,6 +20,7 @@ namespace KovserHediyyeler.Domain.Models
         public ICollection<Employee> Employees { get; set; } = new List<Employee>();
         public ICollection<Product> Products { get; set; } = new List<Product>();
         public ICollection<Position> Positions { get; set; } = new List<Position>();
+        public ICollection<Promotion> Promotions { get; set; } = new List<Promotion>();
         
     }
 }

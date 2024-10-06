@@ -1,0 +1,25 @@
+﻿using KovserHediyyeler.Domain.Enums;
+using KovserHediyyeler.Domain.Models.BaseModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KovserHediyyeler.Domain.Models
+{
+    public class Promotion:BaseEntity
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public double? Price { get; set; }
+        public DiscountPersentage? DiscountPersentage { get; set; }
+        public double? DiscountedPrice { get; set; }
+        public ICollection<Product> Products { get; set; } = new List<Product>();
+        public DateTime? StartDate { get; set; }
+        public DateTime ExpireDate {  get; set; }
+        public ICollection<Department> Departments = new List<Department>();
+        public ICollection<Category> Categories = new List<Category>();
+
+    }
+}

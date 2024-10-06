@@ -16,6 +16,7 @@ namespace KovserHediyyeler.Domain.Models
         //Relationships
         public ICollection<Department> Departments { get; set; } = new List<Department>();
         public ICollection<Product> Products { get; set; } = new List<Product>();
-        
+        public ICollection<Promotion> Promotions { get; set; } = new List<Promotion>();
+
     }
 }

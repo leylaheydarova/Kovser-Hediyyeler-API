@@ -639,6 +639,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
+                    b.Property<Guid>("PromotionID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("Stock")
                         .HasColumnType("int");
 
@@ -658,6 +661,8 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasIndex("CategoryID");
 
                     b.HasIndex("DepartmentID");
+
+                    b.HasIndex("PromotionID");
 
                     b.ToTable("Products");
                 });
@@ -767,6 +772,62 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("ProductProperties");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Promotion", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("CategoryID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DepartmentID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("DiscountPersentage")
+                        .HasColumnType("int");
+
+                    b.Property<double?>("DiscountedPrice")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("ExpireDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double?>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.HasIndex("DepartmentID");
+
+                    b.ToTable("Promotions");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shipping", b =>
@@ -1246,11 +1307,19 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("KovserHediyyeler.Domain.Models.Promotion", "Promotion")
+                        .WithMany("Products")
+                        .HasForeignKey("PromotionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
 
                     b.Navigation("Department");
+
+                    b.Navigation("Promotion");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ProductComment", b =>
@@ -1281,6 +1350,17 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Promotion", b =>
+                {
+                    b.HasOne("KovserHediyyeler.Domain.Models.Category", null)
+                        .WithMany("Promotions")
+                        .HasForeignKey("CategoryID");
+
+                    b.HasOne("KovserHediyyeler.Domain.Models.Department", null)
+                        .WithMany("Promotions")
+                        .HasForeignKey("DepartmentID");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.SocialMedia", b =>
@@ -1372,6 +1452,8 @@ namespace KovserHediyyeler.Persistence.Migrations
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Category", b =>
                 {
                     b.Navigation("Products");
+
+                    b.Navigation("Promotions");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Department", b =>
@@ -1379,6 +1461,8 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Employees");
 
                     b.Navigation("Products");
+
+                    b.Navigation("Promotions");
 
                     b.Navigation("SocialMedias");
                 });
@@ -1409,6 +1493,11 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Orders");
 
                     b.Navigation("WishListItems");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Promotion", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shipping", b =>

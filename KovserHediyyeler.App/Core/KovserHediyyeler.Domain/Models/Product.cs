@@ -17,6 +17,8 @@ namespace KovserHediyyeler.Domain.Models
         public double DiscountedPrice { get; set; }
 
     //Relationships
+        public Guid PromotionID { get; set; }
+        public Promotion Promotion { get; set; }
         public Guid DepartmentID { get; set; }
         public Department Department { get; set; }
         public Guid CategoryID { get; set; }
