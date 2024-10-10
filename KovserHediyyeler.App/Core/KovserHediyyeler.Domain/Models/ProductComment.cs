@@ -20,3 +20,5 @@ namespace KovserHediyyeler.Domain.Models
         public WebUser Customer { get; set; }
     }
 }
+
+//todo: adlarin gizledilmesi ve sekilli deyerlendirme

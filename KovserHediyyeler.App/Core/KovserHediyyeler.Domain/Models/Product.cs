@@ -1,6 +1,7 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,8 @@ namespace KovserHediyyeler.Domain.Models
         public ICollection<ProductComment> Comments { get; set; } = new List<ProductComment>();
         public ICollection<Shop> Shops { get; set; } = new List<Shop>();
         public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();
-        public ICollection<WishListItem> WishListItems { get; set; } = new List<WishListItem>();        
-        
+        public ICollection<WishListItem> WishListItems { get; set; } = new List<WishListItem>();
+        [NotMapped]
+        public string ProductImagePath = "~/Assets/Images/Products";
     }
 }

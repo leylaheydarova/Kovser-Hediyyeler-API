@@ -19,8 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\Services\Commands\" />
-    <Folder Include="Abstractions\Services\Queries\" />
+    <Folder Include="Features\Queries\" />
   </ItemGroup>
 
 </Project>

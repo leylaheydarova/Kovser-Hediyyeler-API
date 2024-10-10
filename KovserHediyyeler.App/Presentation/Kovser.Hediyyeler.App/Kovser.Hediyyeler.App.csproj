@@ -19,4 +19,11 @@
     <ProjectReference Include="..\..\Infrastructure\KovserHediyyeler.Persistence\KovserHediyyeler.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Assets\Images\Departments\" />
+    <Folder Include="wwwroot\Assets\Images\Brands\" />
+    <Folder Include="wwwroot\Assets\Images\SocialMedias\" />
+    <Folder Include="wwwroot\Assets\Images\Products\" />
+  </ItemGroup>
+
 </Project>

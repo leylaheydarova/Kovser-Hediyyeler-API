@@ -1,6 +1,7 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace KovserHediyyeler.Domain.Models
         public ICollection<Product> Products { get; set; } = new List<Product>();
         public ICollection<Position> Positions { get; set; } = new List<Position>();
         public ICollection<Promotion> Promotions { get; set; } = new List<Promotion>();
-        
+        [NotMapped]
+        public string DepartmentImagePath = "~/Assets/Images/Departments";
     }
 }

@@ -1,6 +1,7 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,5 +18,7 @@ namespace KovserHediyyeler.Domain.Models
         //Relationships
         public Guid DepartmentID { get; set; }
         public Department Department { get; set; }
+        [NotMapped]
+        public string SocialMediaImagePath = "~/Assets/Images/SocialMedias";
     }
 }
