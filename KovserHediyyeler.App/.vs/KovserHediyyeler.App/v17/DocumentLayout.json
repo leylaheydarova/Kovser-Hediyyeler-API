@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\brands\\getallbrands\\getallbrandsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\brands\\getallbrands\\getallbrandsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\brands\\getsingle\\getsinglebrandqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\brands\\getsingle\\getsinglebrandqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\brands\\getallbrands\\getallbrandsqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\brands\\getallbrands\\getallbrandsqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\brands\\getsingle\\getsinglebrandqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\brands\\getsingle\\getsinglebrandqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\brands\\getallbrands\\getallbrandsqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\brands\\getallbrands\\getallbrandsqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\brands\\getsingle\\getsinglebrandqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\brands\\getsingle\\getsinglebrandqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\brands\\getall\\getallbrandsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\brands\\getall\\getallbrandsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\brands\\getall\\getallbrandsqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\brands\\getall\\getallbrandsqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\brands\\getall\\getallbrandsqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\brands\\getall\\getallbrandsqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.persistence\\repositories\\concretes\\identityreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:infrastructure\\kovserhediyyeler.persistence\\repositories\\concretes\\identityreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.persistence\\repositories\\concretes\\readrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:infrastructure\\kovserhediyyeler.persistence\\repositories\\concretes\\readrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\repositories\\interfaces\\iidentityreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\repositories\\interfaces\\iidentityreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\repositories\\interfaces\\ireadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\repositories\\interfaces\\ireadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\presentation\\kovser.hediyyeler.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,32 +103,136 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GetSingleBrandQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryHandler.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAApwB8AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T22:41:48.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetSingleBrandQueryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T22:30:48.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "GetAllBrandsQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryHandler.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryHandler.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryHandler.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAApwB0AAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryHandler.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAowCkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T21:58:18.886Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "GetAllBrandsQueryResponse.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryResponse.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryResponse.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryResponse.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABOAAAA",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T21:57:42.106Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "GetSingleBrandQueryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T22:30:58.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetAllBrandsQueryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAll\\GetAllBrandsQueryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T21:09:55.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IdentityReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\IdentityReadRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\IdentityReadRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\IdentityReadRepository.cs",
+              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\IdentityReadRepository.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T22:28:04.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\ReadRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\ReadRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\ReadRepository.cs",
+              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\ReadRepository.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAA5wCQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T22:27:44.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IIdentityReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\IIdentityReadRepository.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\IIdentityReadRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\IIdentityReadRepository.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\IIdentityReadRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T22:27:24.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\IReadRepository.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\IReadRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\IReadRepository.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\IReadRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T22:27:12.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "RegistrationServices.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\RegistrationServices\\RegistrationServices.cs",
               "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\RegistrationServices\\RegistrationServices.cs",
@@ -108,25 +240,11 @@
               "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\RegistrationServices\\RegistrationServices.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T21:22:32.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T21:22:32.294Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetAllBrandsQueryRequest.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryRequest.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryRequest.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryRequest.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Brands\\GetAllBrands\\GetAllBrandsQueryRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T21:09:55.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "File.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\File.cs",
               "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Models\\File.cs",
@@ -134,12 +252,11 @@
               "RelativeToolTip": "Core\\KovserHediyyeler.Domain\\Models\\File.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAUwBYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T18:33:16.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T18:33:16.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "RegistrationServices.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Infrastructure\\RegistrationServices\\RegistrationServices.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Infrastructure\\RegistrationServices\\RegistrationServices.cs",
@@ -147,12 +264,11 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Infrastructure\\RegistrationServices\\RegistrationServices.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T18:14:48.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T18:14:48.247Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Program.cs",
               "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Program.cs",
@@ -160,12 +276,11 @@
               "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T18:28:25.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T18:28:25.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "20241011183427_storagetypeisadded.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241011183427_storagetypeisadded.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241011183427_storagetypeisadded.cs",
@@ -173,12 +288,11 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241011183427_storagetypeisadded.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T18:34:27.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T18:34:27.76Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "StorageType.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Enums\\StorageType.cs",
               "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Enums\\StorageType.cs",
@@ -186,12 +300,11 @@
               "RelativeToolTip": "Core\\KovserHediyyeler.Domain\\Enums\\StorageType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T18:32:06.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T18:32:06.14Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "StorageService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\StorageService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\StorageService.cs",
@@ -199,12 +312,11 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\StorageService.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAgwA8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T18:05:46.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T18:05:46.645Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Storage.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\Storage.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\Storage.cs",
@@ -212,12 +324,11 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\Storage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T18:02:52.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T18:02:52.563Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "LocalStorageService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\Local\\LocalStorageService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\Local\\LocalStorageService.cs",
@@ -225,12 +336,11 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\Local\\LocalStorageService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T18:01:06.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T18:01:06.849Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "IStorage.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\IStorage.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\IStorage.cs",
@@ -238,12 +348,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\IStorage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T17:55:50.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T17:55:50.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "ILocalStorageService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\LocalStorage\\ILocalStorageService.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\LocalStorage\\ILocalStorageService.cs",
@@ -251,12 +360,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\LocalStorage\\ILocalStorageService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T17:31:08.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T17:31:08.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "IStorageService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\IStorageService.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\IStorageService.cs",
@@ -264,8 +372,7 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\IStorageService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T17:30:30.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T17:30:30.14Z"
             }
           ]
         }

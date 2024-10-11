@@ -10,8 +10,8 @@ namespace KovserHedieyyeler.Application.Repositories.Abstractions
 {
     public interface IIdentityReadRepository<T>:IIdentityRepository<T> where T: IdentityUser<Guid>
     {
-        IQueryable GetAll(bool isTracking);
-        IQueryable GetAllWhere(Expression<Func<T, bool>> predicate, bool isTracking, params string[] includes);
+        IQueryable<T> GetAll(bool isTracking);
+        IQueryable<T> GetAllWhere(Expression<Func<T, bool>> predicate, bool isTracking, params string[] includes);
         Task<T> GetByIdAsync(string id, bool isTracking, params string[] includes);
         Task<T> GetWhereAsync(Expression<Func<T, bool>> predicate, bool isTracking, params string[] includes);
     }

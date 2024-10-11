@@ -24,7 +24,7 @@ namespace KovserHediyyeler.Persistence.Repositories.Concretes
 
         public DbSet<T> Table => _context.Set<T>();
 
-        public IQueryable GetAll(bool isTracking)
+        public IQueryable<T> GetAll(bool isTracking)
         {
             var query = Table.AsQueryable();
             if(isTracking == false)
@@ -34,7 +34,7 @@ namespace KovserHediyyeler.Persistence.Repositories.Concretes
             return query;
         }
 
-        public IQueryable GetAllWhere(Expression<Func<T, bool>> predicate, bool isTracking, params string[] includes)
+        public IQueryable<T> GetAllWhere(Expression<Func<T, bool>> predicate, bool isTracking, params string[] includes)
         {
             var query = Table.Where(predicate);
             if(isTracking == false)

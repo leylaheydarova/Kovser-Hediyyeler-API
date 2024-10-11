@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetAllBrands
+namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetAll
 {
     public class GetAllBrandsQueryRequest : IRequest<GetAllBrandsQueryResponse>
     {
