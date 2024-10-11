@@ -10,8 +10,8 @@ namespace KovserHediyyeler.Domain.Models.BaseModels
     {
         public Guid ID { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime? DeletedAt { get; set; }
-        public DateTime? UpdatedAt { get; set; }
-        public bool isDeleted { get; set; }
+        virtual public DateTime? DeletedAt { get; set; }
+        virtual public DateTime? UpdatedAt { get; set; }
+        virtual public bool isDeleted { get; set; }
     }
 }

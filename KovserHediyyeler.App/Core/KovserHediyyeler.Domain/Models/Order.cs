@@ -15,10 +15,16 @@ namespace KovserHediyyeler.Domain.Models
         public DateTime RequiredDate { get; set; }
         public DateTime? ShippedDate { get; set; }
         public double TotalPrice { get; set; }
+        public double DiscountedPrice { get; set; }
+        public double SavingAmount { get; set; }
+        public double? TaxAmount { get; set; } //edv
 
         //Relationships
+        public Guid OrderPaymentID { get; set; }
+        public OrderPayment OrderPayment { get; set; }
+        public Guid InvoiceFileID { get; set; }
+        public InvoiceFile InvoiceFile { get; set; }
         public OrderStatus OrderStatus {  get; set; }
-        public PaymentStatus PaymentStatus { get; set; }   
         [ForeignKey(nameof(Customer))]
         public Guid CustomerID { get; set; }
         public WebUser Customer { get; set; }

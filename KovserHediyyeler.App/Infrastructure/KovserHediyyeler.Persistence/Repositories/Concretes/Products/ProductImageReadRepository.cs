@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Persistence.Repositories.Concretes.Products
 {
-    public class ProductImageReadRepository : ReadRepository<ProductImage>, IProductImageReadRepository
+    public class ProductImageReadRepository : ReadRepository<ProductImageFile>, IProductImageReadRepository
     {
         public ProductImageReadRepository(KovserHediyyelerDbContext context) : base(context)
         {

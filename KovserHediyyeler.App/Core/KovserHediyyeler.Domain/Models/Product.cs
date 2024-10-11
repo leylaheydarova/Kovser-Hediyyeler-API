@@ -28,7 +28,7 @@ namespace KovserHediyyeler.Domain.Models
         public Brand? Brand { get; set; }
         public ICollection<OrderDetail> Orders { get; set; } = new List<OrderDetail>();
         public ICollection<ProductProperty> Properties { get; set; } = new List<ProductProperty>();
-        public ICollection<ProductImage> Images { get; set; } = new List<ProductImage>();
+        public ICollection<ProductImageFile> Images { get; set; } = new List<ProductImageFile>();
         public ICollection<ProductComment> Comments { get; set; } = new List<ProductComment>();
         public ICollection<Shop> Shops { get; set; } = new List<Shop>();
         public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();

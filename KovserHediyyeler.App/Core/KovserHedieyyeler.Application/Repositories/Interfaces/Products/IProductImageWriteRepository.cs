@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.Repositories.Abstractions.Products
 {
-    public interface IProductImageWriteRepository:IWriteRepository<ProductImage>
+    public interface IProductImageWriteRepository:IWriteRepository<ProductImageFile>
     {
     }
 }

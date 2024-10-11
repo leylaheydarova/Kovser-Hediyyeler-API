@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
-    public class ProductImage:BaseEntity
+    public class ProductImageFile:File
     {
         public bool IsMain { get; set; }
         public string FileName { get; set; }

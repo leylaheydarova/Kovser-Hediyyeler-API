@@ -16,7 +16,7 @@ namespace KovserHedieyyeler.Application.Profiles
             CreateMap<ProductCommandDto, Product>().ReverseMap();
             CreateMap<Product, ProductGetAllDto>().ReverseMap();
             CreateMap<Product, ProductGetSingleDto>().ReverseMap();
-            CreateMap<ProductImageDto, ProductImage>().ReverseMap();
+            CreateMap<ProductImageDto, ProductImageFile>().ReverseMap();
             CreateMap<ProductPropertyDto, ProductProperty>().ReverseMap();  
         }
     }

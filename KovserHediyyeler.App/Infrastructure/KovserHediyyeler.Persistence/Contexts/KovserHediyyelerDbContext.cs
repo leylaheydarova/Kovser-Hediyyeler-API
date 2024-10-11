@@ -23,12 +23,15 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<CustomerBankCard> CustomerBankCards { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Domain.Models.File> Files { get; set; }
+        public DbSet<InvoiceFile> InvoiceFiles { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<OrderPayment> OrderPayments { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductComment> ProductComments { get; set; }
-        public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<ProductImageFile> ProductImageFiles { get; set; }
         public DbSet<ProductProperty> ProductProperties { get; set; }
         public DbSet<Promotion> Promotions {  get; set; }
         public DbSet<Shipping> Shippings { get; set; }
@@ -99,17 +102,17 @@ namespace KovserHediyyeler.Persistence.Contexts
             }
 
             //ProductImage
-            var mainImage = ChangeTracker.Entries<ProductImage>()
+            var mainImage = ChangeTracker.Entries<ProductImageFile>()
                                 .FirstOrDefault(e => e.Entity.IsMain && (e.State == EntityState.Modified || e.State == EntityState.Added));
 
-            if (mainImage != null)
-            {
-                var allImages = ProductImages.Where(pi => pi.ID != mainImage.Entity.ID && pi.IsMain).ToList();
-                foreach (var image in allImages)
-                {
-                    image.IsMain = false;
-                }
-            }
+            //if (mainImage != null)
+            //{
+            //    var allImages = ProductImageFile.Where(pi => pi.ID != mainImage.Entity.ID && pi.IsMain).ToList();
+            //    foreach (var image in allImages)
+            //    {
+            //        image.IsMain = false;
+            //    }
+            //}
 
             //CustomerbankCard
             var activeCard = ChangeTracker.Entries<CustomerBankCard>()

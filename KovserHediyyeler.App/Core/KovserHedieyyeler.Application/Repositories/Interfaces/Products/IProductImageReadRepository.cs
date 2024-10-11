@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.Repositories.Abstractions.Products
 {
-    public interface IProductImageReadRepository: IReadRepository<ProductImage>
+    public interface IProductImageReadRepository: IReadRepository<ProductImageFile>
     {
     }
 }
