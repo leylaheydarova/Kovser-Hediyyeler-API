@@ -13,6 +13,8 @@ using KovserHedieyyeler.Application.Repositories.Abstractions.Shops;
 using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
 using KovserHedieyyeler.Application.Repositories.Abstractions.WebUsers;
 using KovserHedieyyeler.Application.Repositories.Abstractions.WishLists;
+using KovserHedieyyeler.Application.Repositories.Interfaces.Files;
+using KovserHedieyyeler.Application.Repositories.Interfaces.Orders;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Positions;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Promotions;
 using KovserHediyyeler.Persistence.Contexts;
@@ -24,6 +26,7 @@ using KovserHediyyeler.Persistence.Repositories.Concretes.Brands;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Categories;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Departments;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Employees;
+using KovserHediyyeler.Persistence.Repositories.Concretes.Files;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Orders;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Positions;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Products;
@@ -84,11 +87,20 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             services.AddScoped<IEmployeeReadRepository, EmployeeReadRepository>();
             services.AddScoped<IEmployeeWriteRepository, EmployeeWriteRepository>();
 
+            services.AddScoped<IFileReadRepository, FileReadRepository>();
+            services.AddScoped<IFileWriteRepository, FileWriteRepository>();
+
+            services.AddScoped<IInvoiceFileReadRepository, InvoiceFileReadRepository>();
+            services.AddScoped<IInvoiceFileWriteRepository, InvoiceFileWriteRepository>();
+
             services.AddScoped<IOrderReadRepository, OrderReadRepository>();
             services.AddScoped<IOrderWriteRepository, OrderWriteRepository>();
 
             services.AddScoped<IOrderDetailReadRepository, OrderDetailReadRepository>();
             services.AddScoped<IOrderDetailWriteRepository, OrderDetailWriteRepository>();
+
+            services.AddScoped<IOrderPaymentReadRepository, OrderPaymentReadRepository>();
+            services.AddScoped<IOrderPaymentWriteRepository, OrderPaymentWriteRepository>();
 
             services.AddScoped<IPositionReadRepository, PositionReadRepository>();
             services.AddScoped<IPositionWriteRepository, PositionWriteRepository>();
@@ -96,8 +108,8 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             services.AddScoped<IProductReadRepository, ProductReadRepository>();
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
 
-            services.AddScoped<IProductImageReadRepository, ProductImageReadRepository>();
-            services.AddScoped<IProductImageWriteRepository, ProductImageWriteRepository>();
+            services.AddScoped<IProductImageFileReadRepository, ProductImageFileReadRepository>();
+            services.AddScoped<IProductImageFileWriteRepository, ProductImageFileWriteRepository>();
 
             services.AddScoped<IProductPropertyReadRepository, ProductPropertyReadRepository>();
             services.AddScoped<IProductPropertyWriteRepository, ProductPropertyWriteRepository>();

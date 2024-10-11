@@ -1,34 +1,7 @@
--------------------------------------------Modeller-----------------------------------------------------------
-	+Şöbə/Department 
-	+Kateqoriya/Category
-	+SosyalMediya/SocialMedia
-	+Mağaza/Shop
-	+Vəzifə/Position
-	+Işçilər/Employees
-	+Brend/Brand
-	+Məhsul/Product
-	+MəhsulXüsusiyyətləri/ProductProperty
-	+MəhsulŞəkli/ProductImage
-	+Endirim/Discount
-Kampaniya/Sale
-	+İstifadəçi/User
-Rəy/Comment
-	+Ünvan/Address
-	+İstifadəçiBankKartı/UserBancCardInfo
-	+Səbət/Basket
-	+Sifariş/Order
-	+Sifariş detalları/Order Details
-	+SevimliMəhsul/FavouriteProduct
-Rol/Role
-
-
-
------------------------------------------Enums---------------------------------------------------------------
-	+Ölçü
-Endirim faizi
-	+Şəhər
-	+Reytinq
-
-
-------------------------------------Suallar-----------------------------------------------------------------
-Product-a property elave et - isSingleColor
+Bu layihə zamanı öyrəndiklərim:
+1. Onion arxitekturası.
+2. Table Per Hierarchy (TPH).
+3. CQRS Pattern.
+4. DbContext-də one-to-one, one-to-many, many-to-many declarations.
+5. Adlandırma (NameOperation)
+6. Storage ayrımı.

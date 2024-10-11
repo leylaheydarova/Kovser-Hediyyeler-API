@@ -22,7 +22,7 @@ namespace KovserHediyyeler.Domain.Models
         //Relationships
         public Guid OrderPaymentID { get; set; }
         public OrderPayment OrderPayment { get; set; }
-        public Guid InvoiceFileID { get; set; }
+        public Guid InvoiceFileId { get; set; }
         public InvoiceFile InvoiceFile { get; set; }
         public OrderStatus OrderStatus {  get; set; }
         [ForeignKey(nameof(Customer))]

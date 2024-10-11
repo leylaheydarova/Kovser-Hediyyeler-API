@@ -1,3 +1,5 @@
+using KovserHedieyyeler.Infrastructure.Services.StorageServices.LocalStorage;
+using KovserHediyyeler.Infrastructure.RegistrationServices;
 using KovserHediyyeler.Persistence.RegistrationServices;
 using Microsoft.Extensions.Configuration;
 
@@ -9,8 +11,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.
-    RegisterDataServices(builder.Configuration);
+builder.Services
+    .RegisterDataServices(builder.Configuration)
+    .RegisterStorageServices()
+    .AddStorage<LocalStorageService>()
+    ;
     
 
 var app = builder.Build();

@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Domain.Models.BaseModels;
+﻿using KovserHediyyeler.Domain.Enums;
+using KovserHediyyeler.Domain.Models.BaseModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,7 +13,7 @@ namespace KovserHediyyeler.Domain.Models
     {
         public string FileName { get; set; }
         public string Path { get; set; }
-        public string Storage { get; set; }
+        public StorageType StorageType { get; set; }
         [NotMapped]
         public override DateTime? UpdatedAt { get => base.UpdatedAt; set => base.UpdatedAt = value; }
         public override DateTime? DeletedAt { get => base.DeletedAt; set => base.DeletedAt = value; }

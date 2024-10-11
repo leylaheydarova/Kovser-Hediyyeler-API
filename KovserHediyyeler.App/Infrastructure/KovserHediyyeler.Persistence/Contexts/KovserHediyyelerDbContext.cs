@@ -58,6 +58,14 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasOne(pc => pc.Customer)  
                 .WithMany(w => w.ProductComments)   
                 .HasForeignKey(pc => pc.CustomerID);
+            modelBuilder.Entity<Order>()
+                .HasOne(i => i.InvoiceFile)
+                .WithOne(o => o.Order)
+                .HasForeignKey<InvoiceFile>(i => i.ID);
+            modelBuilder.Entity<Order>()
+                .HasOne(op => op.OrderPayment)
+                .WithOne(o => o.Order)
+                .HasForeignKey<OrderPayment>(op => op.ID);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
@@ -101,9 +109,9 @@ namespace KovserHediyyeler.Persistence.Contexts
                 }
             }
 
-            //ProductImage
-            var mainImage = ChangeTracker.Entries<ProductImageFile>()
-                                .FirstOrDefault(e => e.Entity.IsMain && (e.State == EntityState.Modified || e.State == EntityState.Added));
+            ////ProductImage
+            //var mainImage = ChangeTracker.Entries<ProductImageFile>()
+            //                    .FirstOrDefault(e => e.Entity.IsMain && (e.State == EntityState.Modified || e.State == EntityState.Added));
 
             //if (mainImage != null)
             //{

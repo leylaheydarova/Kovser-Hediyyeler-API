@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Persistence.Repositories.Concretes.Products
 {
-    public class ProductImageWriteRepository : WriteRepository<ProductImageFile>, IProductImageWriteRepository
+    public class ProductImageFileWriteRepository : WriteRepository<ProductImageFile>, IProductImageFileWriteRepository
     {
-        public ProductImageWriteRepository(KovserHediyyelerDbContext context) : base(context)
+        public ProductImageFileWriteRepository(KovserHediyyelerDbContext context) : base(context)
         {
         }
     }
