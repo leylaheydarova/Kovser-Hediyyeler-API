@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Infrastructure.RegistrationServices
 {
-    public static class StorageRegistrationServices
+    public static class RegistrationServices
     {
         public static IServiceCollection RegisterStorageServices (this IServiceCollection services)
         {

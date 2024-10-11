@@ -47,7 +47,7 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Persistence.RegistrationServices
 {
-    public static class DataRegistrationServices
+    public static class RegistrationServices
     {
         public static IServiceCollection RegisterDataServices(this IServiceCollection services, IConfiguration configuration)
         {

@@ -1,3 +1,4 @@
+using Kovser.Hediyyeler.App.RegistrationServices;
 using KovserHedieyyeler.Infrastructure.Services.StorageServices.LocalStorage;
 using KovserHediyyeler.Infrastructure.RegistrationServices;
 using KovserHediyyeler.Persistence.RegistrationServices;
@@ -15,6 +16,7 @@ builder.Services
     .RegisterDataServices(builder.Configuration)
     .RegisterStorageServices()
     .AddStorage<LocalStorageService>()
+    .RegisterMediaTrServices();
     ;
     
 

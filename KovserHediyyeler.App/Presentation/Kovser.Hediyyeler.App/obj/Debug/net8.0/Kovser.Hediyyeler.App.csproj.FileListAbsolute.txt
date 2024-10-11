@@ -155,3 +155,6 @@ C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hedi
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Presentation\Kovser.Hediyyeler.App\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Presentation\Kovser.Hediyyeler.App\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Presentation\Kovser.Hediyyeler.App\bin\Debug\net8.0\Kovser.Hediyyeler.App.staticwebassets.runtime.json
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Presentation\Kovser.Hediyyeler.App\bin\Debug\net8.0\MediatR.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Presentation\Kovser.Hediyyeler.App\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.App\Presentation\Kovser.Hediyyeler.App\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
