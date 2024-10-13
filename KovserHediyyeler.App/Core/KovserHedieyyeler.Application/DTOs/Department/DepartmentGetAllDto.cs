@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Department
 {
-    public record DepartmentGetAllDto
+    public class DepartmentGetAllDto
     {
         public string Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public IFormFile file { get; set; }
-        public ICollection<ProductImageDto> RandomProductImages { get; set; }
+        public string LogoImage { get; set; }
+        public string LogoImageURL { get; set; }
     }
 }

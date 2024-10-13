@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Products
 {
-    public record ProductCommandDto
+    public class ProductCommandDto
     {
         public string Name { get; set; }
         public string Description { get; set; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Employees
 {
-    public record EmployeeCommandDto
+    public class EmployeeCommandDto
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.SocialMedias
 {
-    public record SocialMediaDto
+    public class SocialMediaDto
     {
         public string NickName { get; set; }
         public string Name { get; set; }

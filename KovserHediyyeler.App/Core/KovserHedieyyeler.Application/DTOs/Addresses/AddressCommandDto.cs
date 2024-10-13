@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Addresses
 {
-    public record AddressCommandDto
+    public class AddressCommandDto
     {
         public City City { get; set; }
         public string Region { get; set; } // F.eg: "Yasamal", "Nizami", etc.

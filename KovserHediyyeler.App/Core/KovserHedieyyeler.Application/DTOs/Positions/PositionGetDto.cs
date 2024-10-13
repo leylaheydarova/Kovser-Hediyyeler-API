@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Positions
 {
-    public record PositionGetDto
+    public class PositionGetDto
     {
         public string Id { get; set; }
         public string Status { get; set; }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Promotion
 {
-    public record PromotionCommandDto
+    public class PromotionCommandDto
     {
         public string Title { get; set; }
         public string Description { get; set; }

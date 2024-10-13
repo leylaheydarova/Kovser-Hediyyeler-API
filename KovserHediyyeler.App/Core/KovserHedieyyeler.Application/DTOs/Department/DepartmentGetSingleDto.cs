@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Department
 {
-    public record DepartmentGetSingleDto
+    public class DepartmentGetSingleDto
     {
         public string Id { get; set; }  
         public string Name { get; set; }
         public string Description { get; set; }
         public string Phone { get; set; }
-        public IFormFile file { get; set; }
+        public string LogoImage { get; set; }
+        public string LogoImageURL { get; set; }
         public ICollection<SocialMediaDto> SocialMedias { get; set;}
     }
 }

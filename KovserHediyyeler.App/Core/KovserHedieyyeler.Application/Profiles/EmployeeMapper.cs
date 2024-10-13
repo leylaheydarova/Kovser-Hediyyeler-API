@@ -14,7 +14,9 @@ namespace KovserHedieyyeler.Application.Profiles
         public EmployeeMapper()
         {
             CreateMap<EmployeeCommandDto, Employee>().ReverseMap();
-            CreateMap<Employee, EmployeeGetDto>().ReverseMap();
+            CreateMap<Employee, EmployeeGetDto>()
+                .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address.FirstOrDefault(y => y.IsCurrentAddress)))
+                .ReverseMap();
         }
     }
 }

@@ -66,6 +66,9 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasOne(op => op.OrderPayment)
                 .WithOne(o => o.Order)
                 .HasForeignKey<OrderPayment>(op => op.ID);
+            modelBuilder.Entity<Department>()
+                .HasMany(d => d.SocialMedias)
+                .WithOne(sm => sm.Department);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

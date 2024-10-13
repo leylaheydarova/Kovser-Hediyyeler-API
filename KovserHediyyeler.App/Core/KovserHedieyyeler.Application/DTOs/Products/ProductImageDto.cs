@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Products
 {
-    public record ProductImageDto
+    public class ProductImageDto
     {
         public bool IsMain { get; set; }
         [MaxFileSize(3)]

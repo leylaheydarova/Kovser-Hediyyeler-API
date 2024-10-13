@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Promotion
 {
-    public record PromotionGetDto
+    public class PromotionGetDto
     {
         public string Title { get; set; }
         public string Description { get; set; }

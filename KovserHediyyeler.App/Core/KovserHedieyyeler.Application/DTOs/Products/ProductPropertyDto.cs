@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Products
 {
-    public record ProductPropertyDto
+    public class ProductPropertyDto
     {
         public string Name { get; set; }
         public string Value { get; set; }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Department
 {
-    public record DepartmentCommandDto
+    public class DepartmentCommandDto
     {
         public string Name { get; set; }
         public string Description { get; set; }

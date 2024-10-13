@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Brands
 {
-    public record BrandCommandDto
+    public class BrandCommandDto
     {
         public string Name { get; set; }
         [MaxFileSize(3)]

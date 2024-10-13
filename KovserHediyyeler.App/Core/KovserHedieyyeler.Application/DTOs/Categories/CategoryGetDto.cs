@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Categories
 {
-    public record CategoryGetDto
+    public class CategoryGetDto
     {
         public string Id { get; set; }
         public string Name { get; set; }

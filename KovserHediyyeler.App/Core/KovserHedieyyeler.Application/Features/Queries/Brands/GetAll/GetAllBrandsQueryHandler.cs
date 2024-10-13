@@ -1,15 +1,7 @@
-﻿using System.Linq;
-using AutoMapper;
-using KovserHedieyyeler.Application.DTOs.Brands;
+﻿using KovserHedieyyeler.Application.DTOs.Brands;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Brands;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Products;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using Microsoft.EntityFrameworkCore;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetAll
@@ -17,18 +9,16 @@ namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetAll
     public class GetAllBrandsQueryHandler : IRequestHandler<GetAllBrandsQueryRequest, GetAllBrandsQueryResponse>
     {
         private readonly IBrandReadRepository _repository;
-        private readonly IMapper _mapper;
 
-        public GetAllBrandsQueryHandler(IBrandReadRepository repository, IMapper mapper)
+        public GetAllBrandsQueryHandler(IBrandReadRepository repository)
         {
             _repository = repository;
-            _mapper = mapper;
         }
 
         public async Task<GetAllBrandsQueryResponse> Handle(GetAllBrandsQueryRequest request, CancellationToken cancellationToken)
         {
-            int TotalCount = _repository.GetAllWhere(x=>!x.isDeleted,false).Count();
             var query = _repository.GetAllWhere(x => !x.isDeleted, false);
+            int TotalCount = query.Count();
             List<BrandGetDto> dtos = new List<BrandGetDto>();
             dtos = await query
                 .Skip(request.Page * request.Size)  
