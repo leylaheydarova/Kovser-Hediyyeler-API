@@ -1,13 +1,9 @@
 ﻿using AutoMapper;
 using KovserHedieyyeler.Application.DTOs.Positions;
+using KovserHedieyyeler.Application.Exceptions;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Positions;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Positions.GetSingle
 {
@@ -25,6 +21,10 @@ namespace KovserHedieyyeler.Application.Features.Queries.Positions.GetSingle
         public async Task<GetSinglePositionQueryResponse> Handle(GetSinglePositionQueryRequest request, CancellationToken cancellationToken)
         {
             Position position = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false);
+            if(position == null)
+            {
+                throw new PositionNotFoundException();
+            }
             PositionGetDto dto = _mapper.Map<PositionGetDto>(position);
             return new GetSinglePositionQueryResponse
             {

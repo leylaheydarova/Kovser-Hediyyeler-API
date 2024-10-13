@@ -9,6 +9,7 @@
       "KovserHediyyeler.Persistence/1.0.0": {
         "dependencies": {
           "KovserHedieyyeler.Application": "1.0.0",
+          "MediatR": "12.4.1",
           "Microsoft.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore.Design": "8.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",

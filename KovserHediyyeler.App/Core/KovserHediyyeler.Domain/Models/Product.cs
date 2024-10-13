@@ -16,6 +16,7 @@ namespace KovserHediyyeler.Domain.Models
         public int Stock { get; set; }
         public double Price { get; set; }
         public double DiscountedPrice { get; set; }
+        public double ProductAverageRating { get; set; }
 
     //Relationships
         public Guid PromotionID { get; set; }

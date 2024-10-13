@@ -1,7 +1,6 @@
-﻿
-
-using AutoMapper;
+﻿using AutoMapper;
 using KovserHedieyyeler.Application.DTOs.Categories;
+using KovserHedieyyeler.Application.Exceptions;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -22,6 +21,10 @@ namespace KovserHedieyyeler.Application.Features.Queries.Categories.GetSingle
         public async Task<GetSingleCategoryQueryResponse> Handle(GetSingleCategoryQueryRequest request, CancellationToken cancellationToken)
         {
             Category category = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, false);
+            if(category == null)
+            {
+                throw new CategoryNotFoundException();
+            }
             CategoryGetDto dto = _mapper.Map<CategoryGetDto>(category);
             return new GetSingleCategoryQueryResponse
             {

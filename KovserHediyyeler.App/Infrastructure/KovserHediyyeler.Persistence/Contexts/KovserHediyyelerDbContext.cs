@@ -1,13 +1,6 @@
 ﻿using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Domain.Models.BaseModels;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Persistence.Contexts
 {
@@ -68,7 +61,8 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey<OrderPayment>(op => op.ID);
             modelBuilder.Entity<Department>()
                 .HasMany(d => d.SocialMedias)
-                .WithOne(sm => sm.Department);
+                .WithOne(sm => sm.Department)
+                .HasForeignKey(fk => fk.DepartmentID);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
@@ -113,17 +107,17 @@ namespace KovserHediyyeler.Persistence.Contexts
             }
 
             ////ProductImage
-            //var mainImage = ChangeTracker.Entries<ProductImageFile>()
-            //                    .FirstOrDefault(e => e.Entity.IsMain && (e.State == EntityState.Modified || e.State == EntityState.Added));
+            var mainImage = ChangeTracker.Entries<ProductImageFile>()
+                                .FirstOrDefault(e => e.Entity.IsMain && (e.State == EntityState.Modified || e.State == EntityState.Added));
 
-            //if (mainImage != null)
-            //{
-            //    var allImages = ProductImageFile.Where(pi => pi.ID != mainImage.Entity.ID && pi.IsMain).ToList();
-            //    foreach (var image in allImages)
-            //    {
-            //        image.IsMain = false;
-            //    }
-            //}
+            if (mainImage != null)
+            {
+                var allImages = Set<ProductImageFile>().Where(pi => pi.ID != mainImage.Entity.ID && pi.IsMain).ToList();
+                foreach (var image in allImages)
+                {
+                    image.IsMain = false;
+                }
+            }
 
             //CustomerbankCard
             var activeCard = ChangeTracker.Entries<CustomerBankCard>()

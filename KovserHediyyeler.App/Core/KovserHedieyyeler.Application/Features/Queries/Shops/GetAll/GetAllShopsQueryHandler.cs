@@ -1,13 +1,8 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Shops;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Shops;
-using KovserHediyyeler.Domain.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace KovserHedieyyeler.Application.Features.Queries.Shops.GetAll
 {

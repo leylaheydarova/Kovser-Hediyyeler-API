@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using KovserHedieyyeler.Application.DTOs.Brands;
+using KovserHedieyyeler.Application.Exceptions;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Brands;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -20,6 +21,10 @@ namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetSingle
         public async Task<GetSingleBrandQueryResponse> Handle(GetSingleBrandQueryRequest request, CancellationToken cancellationToken)
         {
             Brand brand = await _repository.GetWhereAsync(x =>!x.isDeleted && x.ID.ToString() == request.Id, false);
+            if (brand == null)
+            {
+                throw new BrandNotFoundException();
+            }
             BrandGetDto dto = _mapper.Map<BrandGetDto>(brand);
             return new GetSingleBrandQueryResponse
             {

@@ -14,7 +14,9 @@ namespace KovserHedieyyeler.Application.Profiles
         public BrandMapper()
         {
             CreateMap<BrandCommandDto, Brand>().ReverseMap();
-            CreateMap<Brand, BrandGetDto>().ReverseMap();
+            CreateMap<Brand, BrandGetDto>()
+                .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))
+                .ReverseMap();
         }
     }
 }

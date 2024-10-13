@@ -734,6 +734,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
+                    b.Property<double>("ProductAverageRating")
+                        .HasColumnType("float");
+
                     b.Property<Guid>("PromotionID")
                         .HasColumnType("uniqueidentifier");
 
@@ -783,6 +786,9 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.Property<Guid>("ProductID")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("RatingGivenByUser")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");

@@ -1,5 +1,4 @@
-﻿using KovserHedieyyeler.Application.RequestParameter;
-using MediatR;
+﻿using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Categories.GetAll
 {

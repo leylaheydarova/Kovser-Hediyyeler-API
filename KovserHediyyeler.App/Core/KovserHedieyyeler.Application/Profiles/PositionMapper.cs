@@ -14,7 +14,9 @@ namespace KovserHedieyyeler.Application.Profiles
         public PositionMapper()
         {
             CreateMap<PositionCommandDto, Position>().ReverseMap();
-            CreateMap<Position, PositionGetDto>().ReverseMap();
+            CreateMap<Position, PositionGetDto>()
+                .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))
+                .ReverseMap();
         }
     }
 }

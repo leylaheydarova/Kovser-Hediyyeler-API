@@ -15,7 +15,9 @@ namespace KovserHedieyyeler.Application.Profiles
         {
             CreateMap<ShopCommandDto, Shop>().ReverseMap();
             CreateMap<Shop, ShopGetAllDto>().ReverseMap();
-            CreateMap<Shop, ShopGetSingleDto>().ReverseMap();
+            CreateMap<Shop, ShopGetSingleDto>()
+                .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))
+                .ReverseMap();
         }
     }
 }

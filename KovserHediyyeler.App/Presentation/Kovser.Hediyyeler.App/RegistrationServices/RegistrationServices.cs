@@ -6,7 +6,7 @@ namespace Kovser.Hediyyeler.App.RegistrationServices
     {
         public static void RegisterMediaTrServices(this IServiceCollection services)
         {
-            services.AddMediatR(typeof(RegistrationServices));
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly));
         }
     }
 }

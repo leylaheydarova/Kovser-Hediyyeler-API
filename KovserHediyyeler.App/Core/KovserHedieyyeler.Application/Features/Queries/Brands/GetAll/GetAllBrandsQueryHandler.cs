@@ -1,6 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Brands;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Brands;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Products;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

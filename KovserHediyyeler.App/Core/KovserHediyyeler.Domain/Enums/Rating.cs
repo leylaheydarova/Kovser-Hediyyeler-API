@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Enums
 {
-    public enum Raiting
+    public enum Rating
     {
         Pis = 1,
         Kafi,

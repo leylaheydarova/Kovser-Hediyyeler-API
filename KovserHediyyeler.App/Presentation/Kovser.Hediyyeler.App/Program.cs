@@ -17,7 +17,6 @@ builder.Services
     .RegisterStorageServices()
     .AddStorage<LocalStorageService>()
     .RegisterMediaTrServices();
-    ;
     
 
 var app = builder.Build();

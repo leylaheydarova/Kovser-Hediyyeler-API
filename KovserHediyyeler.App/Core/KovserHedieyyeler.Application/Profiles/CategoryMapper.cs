@@ -14,7 +14,10 @@ namespace KovserHedieyyeler.Application.Profiles
         public CategoryMapper()
         {
             CreateMap<CategoryCommandDto, Category>().ReverseMap();
-            CreateMap<Category, CategoryGetDto>().ForMember(x=>x.ParentCategoryName, y=>y.MapFrom(src=>src.ParentCategory.Name)).ReverseMap();
+            CreateMap<Category, CategoryGetDto>()
+                .ForMember(x=>x.ParentCategoryName, y=>y.MapFrom(src=>src.ParentCategory.Name))
+                .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))
+                .ReverseMap();
         }
     }
 }

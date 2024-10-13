@@ -13,10 +13,10 @@ namespace KovserHedieyyeler.Application.DTOs.Products
         public string Description { get; set; }
         public double Price { get; set; }
         public double DiscountedPrice { get; set; }
+        public string ProductAverageRating { get; set; }
 
         //Relationships
         public string DepartmentName { get; set; }
-        public string CategoryName { get; set; }
         public ProductImageDto Image { get; set; }
     }
 }

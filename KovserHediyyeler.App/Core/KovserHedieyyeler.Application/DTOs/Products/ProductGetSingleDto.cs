@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KovserHedieyyeler.Application.DTOs.Shops;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,12 +15,14 @@ namespace KovserHedieyyeler.Application.DTOs.Products
         public int Stock { get; set; }
         public double Price { get; set; }
         public double DiscountPrice { get; set; }
+        public double ProductAverageRating { get; set; }
+
         
         //Relationships
         public string DepartmentName { get; set; }
         public string CategoryName { get; set; }
         public string BrandName { get; set; }
-        public string ShopName { get; set; }
+        public ICollection<ShopGetAllDto> ShopNames { get; set; }
         public ICollection<ProductPropertyDto> Properties {  get; set; } = new List<ProductPropertyDto>();
         public ICollection<ProductImageDto> Images { get; set; } = new List<ProductImageDto>();
     }
