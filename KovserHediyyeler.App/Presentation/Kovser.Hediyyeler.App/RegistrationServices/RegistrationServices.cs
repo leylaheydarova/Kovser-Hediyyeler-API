@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using System.Reflection;
 
 namespace Kovser.Hediyyeler.App.RegistrationServices
 {
@@ -6,7 +7,7 @@ namespace Kovser.Hediyyeler.App.RegistrationServices
     {
         public static void RegisterMediaTrServices(this IServiceCollection services)
         {
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly));
+            services.AddMediatR(Assembly.GetExecutingAssembly());
         }
     }
 }
