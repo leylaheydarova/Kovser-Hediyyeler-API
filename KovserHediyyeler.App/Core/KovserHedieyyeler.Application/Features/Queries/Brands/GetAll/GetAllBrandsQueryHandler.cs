@@ -17,7 +17,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetAll
         public async Task<GetAllBrandsQueryResponse> Handle(GetAllBrandsQueryRequest request, CancellationToken cancellationToken)
         {
             var query = _repository.GetAllWhere(x => !x.isDeleted, false);
-            int TotalCount = query.Count();
+            int totalCount = query.Count();
             List<BrandGetDto> dtos = new List<BrandGetDto>();
             dtos = await query
                 .Skip(request.Page * request.Size)  
@@ -29,7 +29,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetAll
                     Image = x.Image,
                 }).ToListAsync();
 
-            return new GetAllBrandsQueryResponse { Dtos = dtos };
+            return new GetAllBrandsQueryResponse { Dtos = dtos, TotalCount = totalCount };
         }
     }
 }

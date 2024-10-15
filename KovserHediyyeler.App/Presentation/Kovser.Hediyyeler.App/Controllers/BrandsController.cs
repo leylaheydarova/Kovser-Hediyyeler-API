@@ -3,7 +3,6 @@ using KovserHedieyyeler.Application.Features.Commands.Brands.Update;
 using KovserHedieyyeler.Application.Features.Queries.Brands.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Brands.GetSingle;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kovser.Hediyyeler.App.Controllers
@@ -20,8 +19,9 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync([FromBody]GetAllBrandsQueryRequest request)
+        public async Task<IActionResult> GetAllAsync()
         {
+            GetAllBrandsQueryRequest request = new GetAllBrandsQueryRequest();
             GetAllBrandsQueryResponse response = await _mediator.Send(request);
             return StatusCode(200, response.Dtos);
         }
