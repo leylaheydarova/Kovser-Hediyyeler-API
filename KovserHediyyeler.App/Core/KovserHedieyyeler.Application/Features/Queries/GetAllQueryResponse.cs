@@ -4,5 +4,6 @@
     {
         public List<T> Dtos { get; set; }
         public int TotalCount { get; set; }
+        public int StatusCode { get; set; } = 200;
     }
 }

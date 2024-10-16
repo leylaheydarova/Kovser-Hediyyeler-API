@@ -27,7 +27,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Temporar
             await _writeRepository.SaveAsync();
             return new DeleteTemporarilyBrandCommandResponse
             {
-                StatusCode = 200,
                 Message = "Brend müvəqqəti silindi!"
             };
         }

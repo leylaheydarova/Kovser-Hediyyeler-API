@@ -1,4 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Brands;
+using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Create;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Temporarily;
@@ -25,6 +26,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         public async Task<IActionResult> GetAllAsync()
         {
             GetAllBrandsQueryRequest request = new GetAllBrandsQueryRequest();
+            if (request == null) throw new BadRequestException();
             GetAllBrandsQueryResponse response = await _mediator.Send(request);
             return StatusCode(200, response.Dtos);
         }
@@ -65,7 +67,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
 
-        [HttpDelete("DeletePermanently")]
+        [HttpDelete("RemovePermanently")]
         public async Task<IActionResult> RemoveAsync(string id)
         {
             RemovePermanentlyBrandCommandRequest request = new RemovePermanentlyBrandCommandRequest

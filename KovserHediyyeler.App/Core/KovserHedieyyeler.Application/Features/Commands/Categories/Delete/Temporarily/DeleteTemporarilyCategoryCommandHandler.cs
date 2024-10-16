@@ -32,7 +32,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Temp
 
             return new DeleteTemporarilyCategoryCommandResponse
             {
-                StatusCode = 200,
                 Message = "Kateqoriya müvəqqəti silindi!"
             };
         }

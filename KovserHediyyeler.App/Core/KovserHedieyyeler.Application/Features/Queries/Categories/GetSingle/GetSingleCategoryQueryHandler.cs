@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using KovserHedieyyeler.Application.DTOs.Categories;
-using KovserHedieyyeler.Application.Exceptions;
+using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;

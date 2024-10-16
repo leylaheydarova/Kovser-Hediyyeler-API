@@ -20,16 +20,20 @@ namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetAll
             int totalCount = query.Count();
             List<BrandGetDto> dtos = new List<BrandGetDto>();
             dtos = await query
-                .Skip(request.Page * request.Size)  
-                .Take(request.Size)                
+                .Skip(request.Page * request.Size)
+                .Take(request.Size)
                 .Select(x => new BrandGetDto
                 {
-                    Id = x.ID.ToString(), 
+                    Id = x.ID.ToString(),
                     Name = x.Name,
                     Image = x.Image,
                 }).ToListAsync();
 
-            return new GetAllBrandsQueryResponse { Dtos = dtos, TotalCount = totalCount };
+            return new GetAllBrandsQueryResponse
+            {
+                Dtos = dtos,
+                TotalCount = totalCount
+            };
         }
     }
 }

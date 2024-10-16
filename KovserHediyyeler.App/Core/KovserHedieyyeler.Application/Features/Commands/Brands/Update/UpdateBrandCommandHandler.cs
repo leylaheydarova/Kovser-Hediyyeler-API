@@ -27,7 +27,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update
             await _writeRepository.SaveAsync();
             return new UpdateBrandCommandResponse
             {
-                StatusCode = 200,
                 Message = "Məlumatlar uğurla yeniləndi!"
             };
         }

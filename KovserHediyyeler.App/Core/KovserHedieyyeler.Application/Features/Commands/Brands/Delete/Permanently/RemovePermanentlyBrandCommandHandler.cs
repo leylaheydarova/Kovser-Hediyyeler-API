@@ -18,7 +18,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanen
 
         public async Task<RemovePermanentlyBrandCommandResponse> Handle(RemovePermanentlyBrandCommandRequest request, CancellationToken cancellationToken)
         {
-            Brand brand = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), true);
+            Brand brand = await _readRepository.GetWhereAsync(x => x.ID == Guid.Parse(request.Id), true);
             if (brand == null)
             {
                 throw new BrandNotFoundException();
@@ -27,7 +27,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanen
             await _writeRepository.SaveAsync();
             return new RemovePermanentlyBrandCommandResponse
             {
-                StatusCode = 200,
                 Message = "Brend uğurla silindi!"
             };
         }

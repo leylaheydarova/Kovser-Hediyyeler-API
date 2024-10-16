@@ -18,7 +18,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Perm
 
         public async Task<RemovePermanentlyCategoryCommandResponse> Handle(RemovePermanentlyCategoryCommandRequest request, CancellationToken cancellationToken)
         {
-            Category category = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), true);
+            Category category = await _readRepository.GetWhereAsync(x => x.ID == Guid.Parse(request.Id), true);
             if (category == null) throw new CategoryNotFoundException();
             
             _writeRepository.RemovePermanently(category);
@@ -26,7 +26,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Perm
 
             return new RemovePermanentlyCategoryCommandResponse
             {
-                StatusCode = 200,
                 Message = "Kateqoriya uğurla silindi!"
             };
         }
