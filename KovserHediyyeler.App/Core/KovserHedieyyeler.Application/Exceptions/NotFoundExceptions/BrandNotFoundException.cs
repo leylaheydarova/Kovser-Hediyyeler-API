@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KovserHedieyyeler.Application.Exceptions
+namespace KovserHedieyyeler.Application.Exceptions.NotFoundExceptions
 {
-    public class BrandNotFoundException:NotFoundException
+    public class BrandNotFoundException : BaseException
     {
         public BrandNotFoundException() : base("Brend tapılmadı!")
         {

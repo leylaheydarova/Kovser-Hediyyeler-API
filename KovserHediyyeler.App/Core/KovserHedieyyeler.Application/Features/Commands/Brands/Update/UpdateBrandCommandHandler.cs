@@ -1,12 +1,8 @@
-﻿using KovserHedieyyeler.Application.Exceptions;
+﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Brands;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update
 {
@@ -27,6 +23,8 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update
             if (brand == null) throw new BrandNotFoundException();
             brand.Name = request.Dto.Name;
             brand.Image = request.Dto.file.Name;
+            _writeRepository.Update(brand);
+            await _writeRepository.SaveAsync();
             return new UpdateBrandCommandResponse
             {
                 StatusCode = 200,

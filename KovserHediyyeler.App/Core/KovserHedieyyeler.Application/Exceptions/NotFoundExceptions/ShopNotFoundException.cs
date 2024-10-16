@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KovserHedieyyeler.Application.Exceptions
+namespace KovserHedieyyeler.Application.Exceptions.NotFoundExceptions
 {
-    public class ShopNotFoundException:NotFoundException
+    public class ShopNotFoundException : BaseException
     {
         public ShopNotFoundException() : base("Mağaza tapılmadı!")
         {
-            
+
         }
         public ShopNotFoundException(string message) : base(message)
         {
-            
+
         }
     }
 }

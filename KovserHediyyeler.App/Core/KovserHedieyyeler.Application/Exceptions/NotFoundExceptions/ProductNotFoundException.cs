@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KovserHedieyyeler.Application.Exceptions
+namespace KovserHedieyyeler.Application.Exceptions.NotFoundExceptions
 {
-    public class ProductNotFoundException:NotFoundException
+    public class ProductNotFoundException : BaseException
     {
         public ProductNotFoundException() : base("Məhsul tapılmadı!")
         {
