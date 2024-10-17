@@ -13,10 +13,12 @@ namespace KovserHedieyyeler.Application.Profiles
     {
         public DepartmentMapper()
         {
-            CreateMap<DepartmentCommandDto, Department>().ReverseMap();
+            CreateMap<DepartmentCommandDto, Department>()
+                .ForMember(dto => dto.LogoImage, mod => mod.MapFrom(src => src.file.Name))
+                .ReverseMap();
             CreateMap<Department, DepartmentGetAllDto>().ReverseMap();
             CreateMap<Department, DepartmentGetSingleDto>()
-                .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))
+                .ForMember(mod => mod.Id, dto => dto.MapFrom(src => src.ID.ToString()))
                 .ReverseMap();
         }
     }

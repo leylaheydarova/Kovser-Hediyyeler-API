@@ -13,7 +13,8 @@ namespace KovserHedieyyeler.Application.Profiles
     {
         public ProductMapper()
         {
-            CreateMap<ProductCommandDto, Product>().ReverseMap();
+            CreateMap<ProductCommandDto, Product>()
+                .ReverseMap();
             CreateMap<Product, ProductGetAllDto>()
                 .ForMember(dto => dto.Image, mod => mod.MapFrom(src => src.Images.FirstOrDefault(i => i.IsMain)))
                 .ForMember(dto => dto.DepartmentName, mod => mod.MapFrom(src => src.Department.Name))
@@ -27,7 +28,9 @@ namespace KovserHedieyyeler.Application.Profiles
                 .ForMember(dto => dto.Properties, mod => mod.MapFrom(src => src.Properties))
                 .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))
                 .ReverseMap();
-            CreateMap<ProductImageDto, ProductImageFile>().ReverseMap();
+            CreateMap<ProductImageDto, ProductImageFile>()
+                .ForMember(mod => mod.FileName, dto => dto.MapFrom(src => src.file.Name))
+                .ReverseMap();
             CreateMap<ProductPropertyDto, ProductProperty>().ReverseMap();  
         }
     }

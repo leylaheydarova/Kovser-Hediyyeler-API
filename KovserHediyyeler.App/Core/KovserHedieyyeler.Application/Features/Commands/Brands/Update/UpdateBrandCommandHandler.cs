@@ -27,7 +27,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update
             await _writeRepository.SaveAsync();
             return new UpdateBrandCommandResponse
             {
-                Message = "Məlumatlar uğurla yeniləndi!"
+                Message = "Brend məlumatları uğurla yeniləndi!"
             };
         }
     }

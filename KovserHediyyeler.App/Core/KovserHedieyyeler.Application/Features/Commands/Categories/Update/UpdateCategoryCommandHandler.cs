@@ -28,7 +28,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Update
 
             return new UpdateCategoryCommandResponse
             {
-                Message = "Məlumatlar uğurla yeniləndi"
+                Message = "Kateqoriya məlumatları uğurla yeniləndi"
             };
         }
     }

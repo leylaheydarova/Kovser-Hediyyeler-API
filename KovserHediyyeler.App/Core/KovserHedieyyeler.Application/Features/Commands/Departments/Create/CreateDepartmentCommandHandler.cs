@@ -3,6 +3,7 @@ using KovserHedieyyeler.Application.DTOs.Department;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create
 {
@@ -10,11 +11,13 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create
     {
         readonly IDepartmentWriteRepository _repository;
         readonly IMapper _mapper;
+        readonly IHttpContextAccessor _accessor;
 
-        public CreateDepartmentCommandHandler(IDepartmentWriteRepository repository, IMapper mapper)
+        public CreateDepartmentCommandHandler(IDepartmentWriteRepository repository, IMapper mapper, IHttpContextAccessor accessor)
         {
             _repository = repository;
             _mapper = mapper;
+            _accessor = accessor;
         }
 
         public async Task<CreateDepartmentCommandResponse> Handle(CreateDepartmentCommandRequest request, CancellationToken cancellationToken)
@@ -29,8 +32,8 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create
             };
 
             Department department = _mapper.Map<Department>(dto);
-
-
+            department.LogoImageURL = _accessor.HttpContext.Request.Scheme + "/" + _accessor.HttpContext.Request.Host + $"/{department.LogoImage}";
+            
             foreach (var socialMediaDto in dto.SocialMedias)
             {
                 socialMediaDto.Name = request.LinkName;
