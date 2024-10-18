@@ -28,7 +28,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Update
             department.Name = request.Dto.Name;
             department.Description = request.Dto.Description;
             department.LogoImage = request.Dto.file.Name;
-            department.LogoImageURL = _accessor.HttpContext.Request.Scheme + "/" + _accessor.HttpContext.Request.Host + $"/{department.LogoImage}";
+            department.LogoImageURL = _accessor.HttpContext.Request.Scheme + "//" + _accessor.HttpContext.Request.Host + $"/{department.LogoImage}";
             foreach (var socialMediaDto in request.Dto.SocialMedias)
             {
                 var socialMedia = department.SocialMedias.FirstOrDefault(y => y.DepartmentID == Guid.Parse(request.Id) && y.NickName == request.Nickname);

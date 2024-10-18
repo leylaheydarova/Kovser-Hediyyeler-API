@@ -4,6 +4,7 @@ using KovserHediyyeler.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KovserHediyyeler.Persistence.Migrations
 {
     [DbContext(typeof(KovserHediyyelerDbContext))]
-    partial class KovserHediyyelerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241018174942_urladdedtobrand")]
+    partial class urladdedtobrand
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -289,6 +292,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid?>("ParentCategoryID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid?>("ParentId")
                         .HasColumnType("uniqueidentifier");
 
@@ -300,7 +306,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("ParentId");
+                    b.HasIndex("ParentCategoryID");
 
                     b.ToTable("Categories");
                 });
@@ -1292,7 +1298,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Category", "ParentCategory")
                         .WithMany()
-                        .HasForeignKey("ParentId");
+                        .HasForeignKey("ParentCategoryID");
 
                     b.Navigation("ParentCategory");
                 });

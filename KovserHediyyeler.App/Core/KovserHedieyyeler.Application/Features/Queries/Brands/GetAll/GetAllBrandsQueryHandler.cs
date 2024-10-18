@@ -27,6 +27,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetAll
                     Id = x.ID.ToString(),
                     Name = x.Name,
                     Image = x.Image,
+                    ImageURL = x.ImageURL
                 }).ToListAsync();
 
             return new GetAllBrandsQueryResponse

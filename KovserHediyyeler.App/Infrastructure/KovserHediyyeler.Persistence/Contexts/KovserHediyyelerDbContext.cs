@@ -63,6 +63,10 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasMany(d => d.SocialMedias)
                 .WithOne(sm => sm.Department)
                 .HasForeignKey(fk => fk.DepartmentID);
+            modelBuilder.Entity<Category>()
+                .HasOne(c => c.ParentCategory)
+                .WithMany() 
+                .HasForeignKey(c => c.ParentId);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
@@ -79,13 +83,13 @@ namespace KovserHediyyeler.Persistence.Contexts
                 {
                     entry.Entity.CreatedAt = now;
                 }
-                else if (entry.State == EntityState.Modified)
-                {
-                    entry.Entity.UpdatedAt = now;
-                }
                 else if (entry.State == EntityState.Modified && entry.Entity.isDeleted == true)
                 {
                     entry.Entity.DeletedAt = now;
+                }
+                else if (entry.State == EntityState.Modified)
+                {
+                    entry.Entity.UpdatedAt = now;
                 }
             }
 

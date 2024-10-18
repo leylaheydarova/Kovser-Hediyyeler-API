@@ -1,5 +1,4 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
 using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
 using KovserHediyyeler.Domain.Models;

@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Repositories.Abstractions.Categories;
+﻿using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
 using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Persistence.Contexts;
 using System;

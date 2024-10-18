@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using KovserHedieyyeler.Application.DTOs.Department;
-using KovserHedieyyeler.Application.DTOs.SocialMedias;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
 using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
 using KovserHediyyeler.Domain.Models;
@@ -12,14 +11,12 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create
     public class CreateDepartmentCommandHandler : IRequestHandler<CreateDepartmentCommandRequest, CreateDepartmentCommandResponse>
     {
         readonly IDepartmentWriteRepository _repository;
-        readonly IMapper _mapper;
         readonly IHttpContextAccessor _accessor;
         readonly ISocialMediaWriteRepository _smRepository;
 
-        public CreateDepartmentCommandHandler(IDepartmentWriteRepository repository, IMapper mapper, IHttpContextAccessor accessor, ISocialMediaWriteRepository smRepository)
+        public CreateDepartmentCommandHandler(IDepartmentWriteRepository repository, IHttpContextAccessor accessor, ISocialMediaWriteRepository smRepository)
         {
             _repository = repository;
-            _mapper = mapper;
             _accessor = accessor;
             _smRepository = smRepository;
         }
@@ -42,7 +39,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create
                 Description = dto.Description,
                 Phone = dto.Phone,
                 LogoImage = dto.file.Name,
-                LogoImageURL = _accessor.HttpContext.Request.Scheme + "/" + _accessor.HttpContext.Request.Host + $"/{dto.file.Name}"
+                LogoImageURL = _accessor.HttpContext.Request.Scheme + "//" + _accessor.HttpContext.Request.Host + $"/{dto.file.Name}"
             };
             
             

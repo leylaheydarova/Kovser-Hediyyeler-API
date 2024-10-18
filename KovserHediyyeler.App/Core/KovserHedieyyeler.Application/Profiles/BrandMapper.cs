@@ -14,7 +14,7 @@ namespace KovserHedieyyeler.Application.Profiles
         public BrandMapper()
         {
             CreateMap<BrandCommandDto, Brand>()
-                .ForMember(dto => dto.Image, mod => mod.MapFrom(src => src.file.Name))
+                .ForMember(dto => dto.Image, mod => mod.MapFrom(src => src.file.FileName))
                 .ReverseMap();
             CreateMap<Brand, BrandGetDto>()
                 .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))

@@ -2,7 +2,6 @@
 using KovserHedieyyeler.Application.Repositories.Abstractions.Banks;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Baskets;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Brands;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Categories;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Employees;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Orders;
@@ -12,6 +11,7 @@ using KovserHedieyyeler.Application.Repositories.Abstractions.Shops;
 using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
 using KovserHedieyyeler.Application.Repositories.Abstractions.WebUsers;
 using KovserHedieyyeler.Application.Repositories.Abstractions.WishLists;
+using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Files;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Orders;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Positions;

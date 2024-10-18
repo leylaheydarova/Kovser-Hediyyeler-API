@@ -1,6 +1,5 @@
-﻿using AutoMapper;
-using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Categories;
+﻿using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
+using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 
@@ -8,21 +7,26 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Create
 {
     public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommandRequest, CreateCategoryCommandResponse>
     {
-        readonly ICategoryWriteRepository _repository;
-        readonly IMapper _mapper;
+        readonly ICategoryReadRepository _readRepository;
+        readonly ICategoryWriteRepository _writeRepository;
 
-        public CreateCategoryCommandHandler(ICategoryWriteRepository repository, IMapper mapper)
+        public CreateCategoryCommandHandler(ICategoryReadRepository readRepository, ICategoryWriteRepository writeRepository)
         {
-            _repository = repository;
-            _mapper = mapper;
+            _readRepository = readRepository;
+            _writeRepository = writeRepository;
         }
 
         public async Task<CreateCategoryCommandResponse> Handle(CreateCategoryCommandRequest request, CancellationToken cancellationToken)
         {
-            Category category = _mapper.Map<Category>(request.Dto);
+            Category category = new Category
+            {
+                Name = request.Dto.Name,
+                ParentId = request.Dto.ParentId,
+                ParentCategory = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == request.Dto.ParentId, true)
+            };
             if (category == null) throw new BadRequestException();
-            _repository.AddAsync(category);
-            await _repository.SaveAsync();
+            _writeRepository.AddAsync(category);
+            await _writeRepository.SaveAsync();
 
             return new CreateCategoryCommandResponse
             {

@@ -1,14 +1,7 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Permanently;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Categories;
+using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Temporarily
 {
     public class DeleteTemporarilyCategoryCommandHandler : IRequestHandler<DeleteTemporarilyCategoryCommandRequest, DeleteTemporarilyCategoryCommandResponse>

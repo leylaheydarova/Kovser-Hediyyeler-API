@@ -1,6 +1,7 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace KovserHediyyeler.Domain.Models
     public class Category:BaseEntity
     {
         public string Name { get; set; }
+        [ForeignKey(nameof(Category))]
         public Guid? ParentId { get; set; }
         public Category? ParentCategory { get; set; }
 

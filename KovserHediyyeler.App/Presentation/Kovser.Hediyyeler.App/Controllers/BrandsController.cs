@@ -78,20 +78,9 @@ namespace Kovser.Hediyyeler.App.Controllers
 
 
 
-        [HttpPut("{Id}")]
-        public async Task<IActionResult> UpdateAsync([FromForm]BrandCommandDto dto, string id)
+        [HttpPut]
+        public async Task<IActionResult> UpdateAsync([FromForm]UpdateBrandCommandRequest request)
         {
-            if(dto == null)
-            {
-                return BadRequest();
-            }
-
-            UpdateBrandCommandRequest request = new UpdateBrandCommandRequest
-            {
-                Dto = dto,
-                Id = id
-            };
-
             UpdateBrandCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response?.Message);
         }

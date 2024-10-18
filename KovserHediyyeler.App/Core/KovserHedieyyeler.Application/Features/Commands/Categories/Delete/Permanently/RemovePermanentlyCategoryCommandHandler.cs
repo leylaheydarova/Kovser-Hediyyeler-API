@@ -1,7 +1,8 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Categories;
+using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Permanently
 {
@@ -18,12 +19,24 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Perm
 
         public async Task<RemovePermanentlyCategoryCommandResponse> Handle(RemovePermanentlyCategoryCommandRequest request, CancellationToken cancellationToken)
         {
-            Category category = await _readRepository.GetWhereAsync(x => x.ID == Guid.Parse(request.Id), true);
+            Category category = await _readRepository.GetWhereAsync(x => x.ID.ToString() == request.Id, true);
             if (category == null) throw new CategoryNotFoundException();
-            
+
+            var query = _readRepository.GetAllWhere(child => !child.isDeleted && child.ParentId == Guid.Parse(request.Id), true).Include(c => c.ParentCategory);
+            List<Category> categoryChilds = new List<Category>();
+            categoryChilds = await query.ToListAsync();
+            foreach (var categoryChild in categoryChilds)
+            {
+                if (categoryChild != null)
+                {
+                    categoryChild.ParentId = null;
+                    _writeRepository.Update(categoryChild);
+                }
+            }
+
+            await _writeRepository.SaveAsync();
             _writeRepository.RemovePermanently(category);
             await _writeRepository.SaveAsync();
-
             return new RemovePermanentlyCategoryCommandResponse
             {
                 Message = "Kateqoriya uğurla silindi!"
