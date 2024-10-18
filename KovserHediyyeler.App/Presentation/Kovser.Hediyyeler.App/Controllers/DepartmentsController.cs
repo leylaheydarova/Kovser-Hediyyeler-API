@@ -2,6 +2,8 @@
 using KovserHedieyyeler.Application.DTOs.SocialMedias;
 using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Create;
+using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently;
+using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Update;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetSingle;
@@ -53,41 +55,22 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpDelete("DeleteTemporarily")]
-        public async Task<IActionResult> DeleteAsync(string id)
+        public async Task<IActionResult> DeleteAsync(DeleteTemporarilyDepartmentCommandRequest request)
         {
-            var request = new UpdateDepartmentCommandRequest
-            {
-                Id = id
-            };
-            if (request == null) throw new BadRequestException();
-
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
         [HttpDelete("RemovePermanently")]
-        public async Task<IActionResult> RemoveAsync(string id)
+        public async Task<IActionResult> RemoveAsync(RemovePermanentlyDepartmentCommandRequest request)
         {
-            var request = new UpdateDepartmentCommandRequest
-            {
-                Id = id
-            };
-            if (request == null) throw new BadRequestException();
-
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAsync([FromForm]DepartmentCommandDto dto, string id)
+        public async Task<IActionResult> UpdateAsync([FromForm]UpdateDepartmentCommandRequest request)
         {
-            var request = new UpdateDepartmentCommandRequest 
-            { 
-                Id = id,
-                Dto = dto
-            };
-            if (request == null) throw new BadRequestException();
-
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }

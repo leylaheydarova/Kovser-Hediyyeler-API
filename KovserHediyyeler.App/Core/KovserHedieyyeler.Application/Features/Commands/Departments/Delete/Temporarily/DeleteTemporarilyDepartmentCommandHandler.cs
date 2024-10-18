@@ -1,44 +1,41 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
 using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently
+namespace KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Temporarily
 {
-    public class RemovePermanentlyDepartmentCommandHandler : IRequestHandler<RemovePermanentlyDepartmentCommandRequest, RemovePermanentlyDepartmentCommandResponse>
+    public class DeleteTemporarilyDepartmentCommandHandler : IRequestHandler<DeleteTemporarilyDepartmentCommandRequest, DeleteTemporarilyDepartmentCommandResponse>
     {
         readonly IDepartmentReadRepository _readRepository;
         readonly IDepartmentWriteRepository _writeRepository;
         readonly ISocialMediaWriteRepository _socialMediaRepository;
 
-        public RemovePermanentlyDepartmentCommandHandler(IDepartmentReadRepository readRepository, IDepartmentWriteRepository writeRepository)
+        public DeleteTemporarilyDepartmentCommandHandler(IDepartmentReadRepository readRepository, IDepartmentWriteRepository writeRepository, ISocialMediaWriteRepository socialMediaRepository)
         {
             _readRepository = readRepository;
             _writeRepository = writeRepository;
+            _socialMediaRepository = socialMediaRepository;
         }
 
-        public async Task<RemovePermanentlyDepartmentCommandResponse> Handle(RemovePermanentlyDepartmentCommandRequest request, CancellationToken cancellationToken)
+        public async Task<DeleteTemporarilyDepartmentCommandResponse> Handle(DeleteTemporarilyDepartmentCommandRequest request, CancellationToken cancellationToken)
         {
             Department department = await _readRepository.GetWhereAsync(x => x.ID == Guid.Parse(request.Id), true);
             if (department == null) throw new DepartmentNotFoundException();
             foreach (var socialMedia in department.SocialMedias)
             {
                 if (socialMedia.DepartmentID == department.ID)
-                { 
-                    _socialMediaRepository.RemovePermanently(socialMedia);
+                {
+                    _socialMediaRepository.DeleteTemporarily(socialMedia);
                 }
             }
-            _writeRepository.RemovePermanently(department);
+            _writeRepository.DeleteTemporarily(department);
             await _writeRepository.SaveAsync();
-            return new RemovePermanentlyDepartmentCommandResponse
+            return new DeleteTemporarilyDepartmentCommandResponse
             {
-                Message = "Şöbə uğurla silindi!"
+                Message = "Şöbə müvəqqəti silindi!"
             };
         }
     }
