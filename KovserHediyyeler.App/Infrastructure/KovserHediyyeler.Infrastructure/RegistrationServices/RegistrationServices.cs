@@ -1,14 +1,8 @@
 ﻿using KovserHedieyyeler.Application.Abstractions.StorageServices;
-using KovserHedieyyeler.Application.Abstractions.StorageServices.LocalStorage;
 using KovserHedieyyeler.Infrastructure.Services.StorageServices;
 using KovserHedieyyeler.Infrastructure.Services.StorageServices.LocalStorage;
 using KovserHediyyeler.Domain.Enums;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Infrastructure.RegistrationServices
 {

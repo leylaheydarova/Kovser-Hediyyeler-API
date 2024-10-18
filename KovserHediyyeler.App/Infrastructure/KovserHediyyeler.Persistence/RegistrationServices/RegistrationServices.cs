@@ -1,5 +1,4 @@
-﻿using KovserHedieyyeler.Application.Repositories.Abstractions;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Addresses;
+﻿using KovserHedieyyeler.Application.Repositories.Abstractions.Addresses;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Banks;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Baskets;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Brands;
@@ -18,7 +17,6 @@ using KovserHedieyyeler.Application.Repositories.Interfaces.Orders;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Positions;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Promotions;
 using KovserHediyyeler.Persistence.Contexts;
-using KovserHediyyeler.Persistence.Repositories.Concretes;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Addresses;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Banks;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Baskets;
@@ -38,12 +36,6 @@ using KovserHediyyeler.Persistence.Repositories.Concretes.WishLists;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Persistence.RegistrationServices
 {

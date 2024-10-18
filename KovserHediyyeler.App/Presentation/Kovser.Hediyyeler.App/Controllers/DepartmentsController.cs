@@ -1,4 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Department;
+using KovserHedieyyeler.Application.DTOs.SocialMedias;
 using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Create;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Update;
@@ -31,21 +32,8 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromForm]DepartmentCommandDto dto)
+        public async Task<IActionResult> CreateAsync([FromForm]CreateDepartmentCommandRequest request)
         {
-            var request = new CreateDepartmentCommandRequest
-            {
-                Name = dto.Name,
-                Description = dto.Description,
-                Phone = dto.Phone,
-                file = dto.file,
-                //Nickname
-                //Url
-                //LinkName
-            };
-
-            if(request == null) throw new BadRequestException();
-
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }

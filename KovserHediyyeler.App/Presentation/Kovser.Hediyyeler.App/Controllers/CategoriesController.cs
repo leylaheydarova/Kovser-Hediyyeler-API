@@ -1,6 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Categories;
 using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
-using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Create;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Temporarily;

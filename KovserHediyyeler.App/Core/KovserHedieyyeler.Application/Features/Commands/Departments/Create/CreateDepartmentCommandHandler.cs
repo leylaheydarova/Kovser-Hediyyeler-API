@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using KovserHedieyyeler.Application.DTOs.Department;
+using KovserHedieyyeler.Application.DTOs.SocialMedias;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
+using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -12,12 +14,14 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create
         readonly IDepartmentWriteRepository _repository;
         readonly IMapper _mapper;
         readonly IHttpContextAccessor _accessor;
+        readonly ISocialMediaWriteRepository _smRepository;
 
-        public CreateDepartmentCommandHandler(IDepartmentWriteRepository repository, IMapper mapper, IHttpContextAccessor accessor)
+        public CreateDepartmentCommandHandler(IDepartmentWriteRepository repository, IMapper mapper, IHttpContextAccessor accessor, ISocialMediaWriteRepository smRepository)
         {
             _repository = repository;
             _mapper = mapper;
             _accessor = accessor;
+            _smRepository = smRepository;
         }
 
         public async Task<CreateDepartmentCommandResponse> Handle(CreateDepartmentCommandRequest request, CancellationToken cancellationToken)
@@ -27,21 +31,31 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create
                 Name = request.Name,
                 Description = request.Description,
                 Phone = request.Phone,
-                file = request.file,
-                
+                file = request.File,
+                SocialMedias = request.SocialMedias
             };
 
-            Department department = _mapper.Map<Department>(dto);
-            department.LogoImageURL = _accessor.HttpContext.Request.Scheme + "/" + _accessor.HttpContext.Request.Host + $"/{department.LogoImage}";
+            Department department = new Department
+            {
+                ID = Guid.NewGuid(),
+                Name = dto.Name,
+                Description = dto.Description,
+                Phone = dto.Phone,
+                LogoImage = dto.file.Name,
+                LogoImageURL = _accessor.HttpContext.Request.Scheme + "/" + _accessor.HttpContext.Request.Host + $"/{dto.file.Name}"
+            };
+            
             
             foreach (var socialMediaDto in dto.SocialMedias)
             {
-                socialMediaDto.Name = request.LinkName;
-                socialMediaDto.URL = request.URL;
-                socialMediaDto.NickName = request.NickName;
-
-                SocialMedia socialMedia = _mapper.Map<SocialMedia>(socialMediaDto);
-                department.SocialMedias.Add(socialMedia);
+                SocialMedia socialMedia = new SocialMedia()
+                {
+                    Name= socialMediaDto.Name,
+                    Department= department,
+                    NickName = socialMediaDto.NickName,
+                    URL = socialMediaDto.URL
+                };
+                await _smRepository.AddAsync(socialMedia);
             }
 
             await _repository.AddAsync(department);
