@@ -34,7 +34,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetAll
                 .ToListAsync();
             return new GetAllProductsQueryResponse
             {
-                Dtos = dtos,
+                Datas = dtos,
                 TotalCount = totalCount
             };
         }

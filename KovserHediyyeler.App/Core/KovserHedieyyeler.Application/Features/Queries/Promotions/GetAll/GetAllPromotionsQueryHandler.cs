@@ -33,7 +33,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Promotions.GetAll
                 }).ToListAsync();
             return new GetAllPromotionsQueryResponse
             {
-                Dtos = dtos,
+                Datas = dtos,
                 TotalCount = totalCount
             };
         }

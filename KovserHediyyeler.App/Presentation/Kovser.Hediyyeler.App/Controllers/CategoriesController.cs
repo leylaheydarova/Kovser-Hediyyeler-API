@@ -24,12 +24,10 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync()
+        public async Task<IActionResult> GetAllAsync([FromQuery] GetAllCategoriesQueryRequest request)
         {
-            GetAllCategoriesQueryRequest request = new GetAllCategoriesQueryRequest();
-            if (request == null) throw new BadRequestException();
             GetAllCategoriesQueryResponse response = await _mediator.Send(request);
-            return StatusCode(response.StatusCode, response.Dtos);
+            return StatusCode(response.StatusCode, response.Datas);
         }
 
         [HttpPost]

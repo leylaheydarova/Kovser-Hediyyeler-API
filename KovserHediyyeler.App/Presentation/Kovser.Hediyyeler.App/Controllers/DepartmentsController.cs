@@ -27,7 +27,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             var request = new GetAllDepartmentsQueryRequest();
             if (request == null) throw new BadRequestException();
             var response = await _mediator.Send(request);
-            return StatusCode(response.StatusCode, response.Dtos);
+            return StatusCode(response.StatusCode, response.Datas);
         }
 
         [HttpPost]

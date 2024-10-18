@@ -31,7 +31,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetAll
 
             return new GetAllBrandsQueryResponse
             {
-                Dtos = dtos,
+                Datas = dtos,
                 TotalCount = totalCount
             };
         }

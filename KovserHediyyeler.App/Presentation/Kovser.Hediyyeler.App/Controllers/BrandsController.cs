@@ -23,12 +23,10 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync()
+        public async Task<IActionResult> GetAllAsync([FromQuery]GetAllBrandsQueryRequest request)
         {
-            GetAllBrandsQueryRequest request = new GetAllBrandsQueryRequest();
-            if (request == null) throw new BadRequestException();
             GetAllBrandsQueryResponse response = await _mediator.Send(request);
-            return StatusCode(200, response.Dtos);
+            return StatusCode(200, response.Datas);
         }
 
         [HttpPost]

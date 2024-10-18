@@ -31,7 +31,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Shops.GetAll
                 }).ToListAsync();
             return new GetAllShopsQueryResponse
             {
-                Dtos = dtos,
+                Datas = dtos,
                 TotalCount = totalCount
             };
         }

@@ -31,7 +31,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Employees.GetAll
                 .ToListAsync();
             return new GetAllEmployeesQueryResponse
             {
-                Dtos = dtos,
+                Datas = dtos,
                 TotalCount = totalCount
             };
         }

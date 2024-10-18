@@ -31,7 +31,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Categories.GetAll
                 }).ToListAsync();
             return new GetAllCategoriesQueryResponse
             {
-                Dtos = dtos,
+                Datas = dtos,
                 TotalCount = totalCount
             };
         }

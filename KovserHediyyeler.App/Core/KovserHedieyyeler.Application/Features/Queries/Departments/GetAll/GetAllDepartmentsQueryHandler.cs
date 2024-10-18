@@ -32,7 +32,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Departments.GetAll
                 }).ToListAsync();
             return new GetAllDepartmentsQueryResponse
             {
-                Dtos = dtos,
+                Datas = dtos,
                 TotalCount = totalCount
             };
         }

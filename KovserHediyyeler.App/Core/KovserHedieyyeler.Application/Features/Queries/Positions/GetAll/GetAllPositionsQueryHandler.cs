@@ -27,8 +27,8 @@ namespace KovserHedieyyeler.Application.Features.Queries.Positions.GetAll
                     Status  =x.Status
                 }).ToListAsync();
             return new GetAllPositionsQueryResponse 
-            { 
-                Dtos = dtos,
+            {
+                Datas = dtos,
                 TotalCount = totalCount
             };
         }

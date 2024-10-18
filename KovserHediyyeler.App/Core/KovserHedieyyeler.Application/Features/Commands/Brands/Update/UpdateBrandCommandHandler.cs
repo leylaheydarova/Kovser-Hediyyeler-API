@@ -19,7 +19,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update
 
         public async Task<UpdateBrandCommandResponse> Handle(UpdateBrandCommandRequest request, CancellationToken cancellationToken)
         {
-            Brand brand = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), true);
+            Brand brand = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id),true);
             if (brand == null) throw new BrandNotFoundException();
             brand.Name = request.Dto.Name;
             brand.Image = request.Dto.file.Name;
