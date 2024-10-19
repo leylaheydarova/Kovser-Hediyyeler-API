@@ -18,9 +18,4 @@
     <ProjectReference Include="..\KovserHediyyeler.Domain\KovserHediyyeler.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Commands\Positions\Delete\" />
-    <Folder Include="Features\Commands\Positions\Update\" />
-  </ItemGroup>
-
 </Project>

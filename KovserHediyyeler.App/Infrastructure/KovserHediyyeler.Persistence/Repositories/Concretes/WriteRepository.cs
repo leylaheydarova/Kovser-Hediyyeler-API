@@ -34,6 +34,12 @@ namespace KovserHediyyeler.Persistence.Repositories.Concretes
             return _context.Entry(entity).State == EntityState.Modified;
         }
 
+        public bool RecoverData(T entity)
+        {
+            entity.isDeleted = false;
+            return _context.Entry(entity).State == EntityState.Modified;
+        }
+
         public bool RemovePermanently(T entity)
         {
             EntityEntry entry = _context.Remove(entity);

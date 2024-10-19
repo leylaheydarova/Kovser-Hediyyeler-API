@@ -21,7 +21,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Tem
 
         public async Task<DeleteTemporarilyDepartmentCommandResponse> Handle(DeleteTemporarilyDepartmentCommandRequest request, CancellationToken cancellationToken)
         {
-            Department department = await _readRepository.GetWhereAsync(x => x.ID == Guid.Parse(request.Id), true);
+            Department department = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), true);
             if (department == null) throw new DepartmentNotFoundException();
             foreach (var socialMedia in department.SocialMedias)
             {

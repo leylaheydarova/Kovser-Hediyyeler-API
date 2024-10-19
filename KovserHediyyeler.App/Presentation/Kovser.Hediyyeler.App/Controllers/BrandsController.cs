@@ -3,6 +3,7 @@ using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Create;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Temporarily;
+using KovserHedieyyeler.Application.Features.Commands.Brands.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Update;
 using KovserHedieyyeler.Application.Features.Queries.Brands.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Brands.GetSingle;
@@ -83,6 +84,17 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             UpdateBrandCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response?.Message);
+        }
+
+        [HttpPut("RecoverData")]
+        public async Task<IActionResult> RecoverDataAsync(string id)
+        {
+            var request = new RecoverBrandCommandRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
         }
     }
 }

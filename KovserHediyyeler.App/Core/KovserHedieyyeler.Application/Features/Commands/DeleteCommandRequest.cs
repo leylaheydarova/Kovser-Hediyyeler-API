@@ -1,7 +1,6 @@
 ﻿namespace KovserHedieyyeler.Application.Features.Commands
 {
-    public class DeleteCommandRequest
+    public class DeleteCommandRequest:IdRequest
     {
-        public string Id { get; set; }
     }
 }
