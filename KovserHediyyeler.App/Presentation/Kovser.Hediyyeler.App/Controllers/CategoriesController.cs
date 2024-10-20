@@ -3,6 +3,7 @@ using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Create;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Temporarily;
+using KovserHedieyyeler.Application.Features.Commands.Categories.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Update;
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetSingle;
@@ -39,7 +40,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             };
             CreateCategoryCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
-            
+
         }
 
         [HttpGet("{id}")]
@@ -54,25 +55,25 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Dto);
         }
 
-        [HttpDelete("DeleteTemporarily, {id}")]
+        [HttpDelete("DeleteTemporarily/{id}")]
         public async Task<IActionResult> DeleteAsync(string id)
         {
             if (id == null) throw new BadRequestException();
-            DeleteTemporarilyCategoryCommandRequest request = new DeleteTemporarilyCategoryCommandRequest 
-            { 
-                Id = id 
+            DeleteTemporarilyCategoryCommandRequest request = new DeleteTemporarilyCategoryCommandRequest
+            {
+                Id = id
             };
             DeleteTemporarilyCategoryCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpDelete("RemovePermanently, {id}")]
+        [HttpDelete("RemovePermanently/{id}")]
         public async Task<IActionResult> RemoveAsync(string id)
         {
             if (id == null) throw new BadRequestException();
-            RemovePermanentlyCategoryCommandRequest request = new RemovePermanentlyCategoryCommandRequest 
-            { 
-                Id = id 
+            RemovePermanentlyCategoryCommandRequest request = new RemovePermanentlyCategoryCommandRequest
+            {
+                Id = id
             };
             RemovePermanentlyCategoryCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -88,6 +89,13 @@ namespace Kovser.Hediyyeler.App.Controllers
                 Dto = dto
             };
             UpdateCategoryCommandResponse response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpPut("RecoverData/{id}")]
+        public async Task<IActionResult> RecoverDataAsync(RecoverCategoryCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
     }

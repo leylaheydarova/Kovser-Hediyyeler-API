@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KovserHedieyyeler.Application.Features.Commands
+namespace KovserHedieyyeler.Application.Features
 {
     public abstract class IdRequest
     {

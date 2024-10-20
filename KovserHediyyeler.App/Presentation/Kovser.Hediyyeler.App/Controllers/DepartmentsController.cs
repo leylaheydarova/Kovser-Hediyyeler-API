@@ -4,6 +4,7 @@ using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Create;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Temporarily;
+using KovserHedieyyeler.Application.Features.Commands.Departments.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Update;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetSingle;
@@ -54,14 +55,14 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Dto);
         }
 
-        [HttpDelete("DeleteTemporarily")]
+        [HttpDelete("DeleteTemporarily/{id}")]
         public async Task<IActionResult> DeleteAsync(DeleteTemporarilyDepartmentCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpDelete("RemovePermanently")]
+        [HttpDelete("RemovePermanently/{id}")]
         public async Task<IActionResult> RemoveAsync(RemovePermanentlyDepartmentCommandRequest request)
         {
             var response = await _mediator.Send(request);
@@ -71,6 +72,18 @@ namespace Kovser.Hediyyeler.App.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateAsync([FromForm]UpdateDepartmentCommandRequest request)
         {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpPut("RecoverData/{id}")]
+        public async Task<IActionResult> RecoverDataAsync(string id)
+        {
+            var request = new RecoverDepartmentCommandRequest 
+            { 
+                Id = id 
+            };
+
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }

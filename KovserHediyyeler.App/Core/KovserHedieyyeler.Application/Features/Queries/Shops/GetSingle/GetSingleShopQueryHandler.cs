@@ -26,6 +26,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Shops.GetSingle
                 throw new ShopNotFoundException();
             }
             ShopGetSingleDto dto = _mapper.Map<ShopGetSingleDto>(shop);
+            
             return new GetSingleShopQueryResponse
             {
                 Dto = dto

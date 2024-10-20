@@ -1,7 +1,6 @@
 ﻿namespace KovserHedieyyeler.Application.Features.Queries
 {
-    public class GetSingleQueryRequest
+    public class GetSingleQueryRequest:IdRequest
     {
-        public string Id { get; set; }
     }
 }

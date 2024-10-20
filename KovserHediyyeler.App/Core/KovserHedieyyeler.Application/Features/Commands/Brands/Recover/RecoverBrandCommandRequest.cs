@@ -2,7 +2,7 @@
 
 namespace KovserHedieyyeler.Application.Features.Commands.Brands.Recover
 {
-    public class RecoverBrandCommandRequest:RecoverCommandRequest, IRequest<RecoverBrandCommandResponse>
+    public class RecoverCategoryRequest:RecoverCommandRequest, IRequest<RecoverBrandCommandResponse>
     {
     }
 }

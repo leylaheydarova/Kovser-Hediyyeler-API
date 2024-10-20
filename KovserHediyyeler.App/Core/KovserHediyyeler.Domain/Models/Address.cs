@@ -19,10 +19,18 @@ namespace KovserHediyyeler.Domain.Models
         public bool IsCurrentAddress { get; set; }
 
         //Relationships
-        public Guid ShopID { get; set; }
-        public Shop Shop { get; set; }
-        public Guid EmployeID {  get; set; }
-        public Employee Employee { get; set; }
+        public Guid? ShopID { get; set; }
+        public Shop? Shop { get; set; }
+        public Guid? EmployeID {  get; set; }
+        public Employee? Employee { get; set; }
        public ICollection<WebUser> WebUsers { get; set; } = new List<WebUser>();
+
+        public string FullAddress
+        {
+            get
+            {
+                return $"{City.ToString()} şəhəri, {Region} rayonu, {Street}, {Home}, {PostalCode}";
+            }
+        }
     }
 }

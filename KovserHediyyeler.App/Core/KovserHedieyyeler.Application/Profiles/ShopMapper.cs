@@ -17,6 +17,7 @@ namespace KovserHedieyyeler.Application.Profiles
             CreateMap<Shop, ShopGetAllDto>().ReverseMap();
             CreateMap<Shop, ShopGetSingleDto>()
                 .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))
+                .ForMember(dto => dto.Address, mod => mod.MapFrom(src => src.Addresses.FirstOrDefault(ad => ad.IsCurrentAddress).FullAddress))
                 .ReverseMap();
         }
     }

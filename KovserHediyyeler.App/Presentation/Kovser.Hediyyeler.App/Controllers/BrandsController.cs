@@ -54,7 +54,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(200, response.Dto);
         }
 
-        [HttpDelete("DeleteTemporarily")]
+        [HttpDelete("DeleteTemporarily/{id}")]
         public async Task<IActionResult> DeleteAsync(string id)
         {
             DeleteTemporarilyBrandCommandRequest request = new DeleteTemporarilyBrandCommandRequest
@@ -66,7 +66,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
 
-        [HttpDelete("RemovePermanently")]
+        [HttpDelete("RemovePermanently/{id}")]
         public async Task<IActionResult> RemoveAsync(string id)
         {
             RemovePermanentlyBrandCommandRequest request = new RemovePermanentlyBrandCommandRequest
@@ -86,10 +86,10 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response?.Message);
         }
 
-        [HttpPut("RecoverData")]
+        [HttpPut("RecoverData/{id}")]
         public async Task<IActionResult> RecoverDataAsync(string id)
         {
-            var request = new RecoverBrandCommandRequest
+            var request = new RecoverCategoryRequest
             {
                 Id = id
             };

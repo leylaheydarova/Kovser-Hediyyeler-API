@@ -9,6 +9,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanen
     {
         readonly IBrandReadRepository _readRepository;
         readonly IBrandWriteRepository _writeRepository;
+        
 
         public RemovePermanentlyBrandCommandHandler(IBrandReadRepository readRepository, IBrandWriteRepository writeRepository)
         {
@@ -23,6 +24,17 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanen
             {
                 throw new BrandNotFoundException();
             }
+            if (brand.Products.Count > 0)
+            {
+                foreach(var product in brand.Products)
+                {
+                    product.BrandID = Guid.Parse("00000000-0000-0000-0000-000000000000");
+                    product.Brand.Name = "Müəyyən edilməyib";
+                    product.Description = "";
+                }
+                _writeRepository.SaveAsync();
+            }
+
             _writeRepository.RemovePermanently(brand);
             await _writeRepository.SaveAsync();
             return new RemovePermanentlyBrandCommandResponse

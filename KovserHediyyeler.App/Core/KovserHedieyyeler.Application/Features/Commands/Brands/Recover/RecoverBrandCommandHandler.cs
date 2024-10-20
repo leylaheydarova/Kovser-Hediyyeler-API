@@ -5,7 +5,7 @@ using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Brands.Recover
 {
-    public class RecoverBrandCommandHandler : IRequestHandler<RecoverBrandCommandRequest, RecoverBrandCommandResponse>
+    public class RecoverBrandCommandHandler : IRequestHandler<RecoverCategoryRequest, RecoverBrandCommandResponse>
     {
         readonly IBrandReadRepository _readRepository;
         readonly IBrandWriteRepository _writeRepository;
@@ -16,7 +16,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Recover
             _writeRepository = writeRepository;
         }
 
-        public async Task<RecoverBrandCommandResponse> Handle(RecoverBrandCommandRequest request, CancellationToken cancellationToken)
+        public async Task<RecoverBrandCommandResponse> Handle(RecoverCategoryRequest request, CancellationToken cancellationToken)
         {
             Brand brand = await _readRepository.GetWhereAsync(b => b.isDeleted && b.ID.ToString() == request.Id, true);
             if (brand == null) throw new BadRequestException();

@@ -14,7 +14,8 @@ namespace KovserHedieyyeler.Application.DTOs.Shops
         public string Name { get; set; }
         public string Description { get; set; }
         public string Phone { get; set; }
-        public ICollection<EmployeeGetDto> Employees { get; set; }
-        public ICollection<ProductGetAllDto> Products { get; set; }
+        public string Address { get; set; }
+        public ICollection<EmployeeGetDto> Employees { get; set; } = new List<EmployeeGetDto>();
+        public ICollection<ProductGetAllDto> Products { get; set; } = new List<ProductGetAllDto>();
     }
 }

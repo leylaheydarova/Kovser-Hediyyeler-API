@@ -2,6 +2,7 @@
 using KovserHedieyyeler.Application.Features.Commands.Positions.Create;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Delete.Temporarily;
+using KovserHedieyyeler.Application.Features.Commands.Positions.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Update;
 using KovserHedieyyeler.Application.Features.Queries.Positions.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Positions.GetSingle;
@@ -52,7 +53,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Dto);
         }
 
-        [HttpDelete("DeleteTemporarily")]
+        [HttpDelete("DeleteTemporarily/{id}")]
         public async Task<IActionResult> DeleteAsync(string id)
         {
             var request = new DeleteTemporarilyPositionCommandRequest
@@ -63,7 +64,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpDelete("RemovePermanently")]
+        [HttpDelete("RemovePermanently/{id}")]
         public async Task<IActionResult> RemoveAsync(string id)
         {
             var request = new RemovePermanentlyPositionCommandRequest
@@ -80,5 +81,12 @@ namespace Kovser.Hediyyeler.App.Controllers
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
+
+        [HttpPut("RecoverData/{id}")]
+        public async Task<IActionResult> RecoverDataAsync(RecoverPositionCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        } 
     }
 }
