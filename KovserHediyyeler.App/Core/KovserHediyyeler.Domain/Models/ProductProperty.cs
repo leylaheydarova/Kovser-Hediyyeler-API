@@ -1,10 +1,4 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
@@ -14,7 +8,8 @@ namespace KovserHediyyeler.Domain.Models
         public string Value { get; set; }
         
         //Relationships
-        public ICollection<Product> Products { get; set; } = new List<Product>();
-        public ICollection<ColorCode>? Colors { get; set; } = new List<ColorCode>();
+        public Guid ProductID { get; set; }
+        public Product Product { get; set; } 
+        public ICollection<ColorCodeProductProperty> ColorCodeProductProperties { get; set; } = new List<ColorCodeProductProperty>();
     }
 }

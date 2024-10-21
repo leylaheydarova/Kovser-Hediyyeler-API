@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KovserHediyyeler.Domain.Models.BaseModels
+﻿namespace KovserHediyyeler.Domain.Models.BaseModels
 {
     public abstract class BaseEntity
     {

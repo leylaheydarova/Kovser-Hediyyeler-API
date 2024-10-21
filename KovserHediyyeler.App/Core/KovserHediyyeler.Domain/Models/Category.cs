@@ -1,10 +1,5 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
@@ -16,9 +11,11 @@ namespace KovserHediyyeler.Domain.Models
         public Category? ParentCategory { get; set; }
 
         //Relationships
-        public ICollection<Department> Departments { get; set; } = new List<Department>();
         public ICollection<Product> Products { get; set; } = new List<Product>();
-        public ICollection<Promotion> Promotions { get; set; } = new List<Promotion>();
+
+        //Cross-Tables
+        public ICollection<CategoryDepartment> CategoryDepartments { get; set; } = new List<CategoryDepartment>();
+        public ICollection<CategoryPromotion> CategoryPromotions { get; set; } = new List<CategoryPromotion>();
 
     }
 }

@@ -1,11 +1,5 @@
 ﻿using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models.BaseModels;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
@@ -23,7 +17,9 @@ namespace KovserHediyyeler.Domain.Models
         public Shop? Shop { get; set; }
         public Guid? EmployeID {  get; set; }
         public Employee? Employee { get; set; }
-       public ICollection<WebUser> WebUsers { get; set; } = new List<WebUser>();
+
+        //Cross-tables
+        public ICollection<AddressWebUser> AddressWebUsers { get; set; } = new List<AddressWebUser>();
 
         public string FullAddress
         {

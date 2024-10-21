@@ -9,10 +9,12 @@ namespace KovserHediyyeler.Domain.Models
         public string Phone {  get; set; }
 
         //Relationships
-        public ICollection<Product> Products { get; set;} = new List<Product>();
         public ICollection<Employee> Employees { get; set; } = new List<Employee>();
         public ICollection<Address> Addresses { get; set; } = new List<Address>();
         public ICollection<Order> Orders { get; set; } = new List<Order>();
+
+        //Cross-tables
+        public ICollection<ProductShop> ProductShops { get; set; } = new List<ProductShop>();
 
     }
 }

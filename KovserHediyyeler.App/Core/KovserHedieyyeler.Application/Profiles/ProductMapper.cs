@@ -23,7 +23,7 @@ namespace KovserHedieyyeler.Application.Profiles
                 .ForMember(dto => dto.DepartmentName, mod => mod.MapFrom(src => src.Department.Name))
                 .ForMember(dto => dto.CategoryName, mod => mod.MapFrom(src => src.Category.Name))
                 .ForMember(dto => dto.BrandName, mod => mod.MapFrom(src => src.Brand.Name))
-                .ForMember(dto => dto.ShopNames, mod => mod.MapFrom(src => src.Shops))
+                //.ForMember(dto => dto.ShopNames, mod => mod.MapFrom(src => src.Shops))
                 .ForMember(dto => dto.Images, mod => mod.MapFrom(src => src.Images))
                 .ForMember(dto => dto.Properties, mod => mod.MapFrom(src => src.Properties))
                 .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))
@@ -31,7 +31,7 @@ namespace KovserHedieyyeler.Application.Profiles
             CreateMap<ProductImageDto, ProductImageFile>()
                 .ForMember(mod => mod.FileName, dto => dto.MapFrom(src => src.file.Name))
                 .ReverseMap();
-            CreateMap<ProductPropertyDto, ProductProperty>().ReverseMap();  
+            CreateMap<ProductPropertyDto, ColorCodeProductProperty>().ReverseMap();  
         }
     }
 }

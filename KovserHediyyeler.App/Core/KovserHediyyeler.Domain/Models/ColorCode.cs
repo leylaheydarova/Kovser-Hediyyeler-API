@@ -1,9 +1,4 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
@@ -13,6 +8,6 @@ namespace KovserHediyyeler.Domain.Models
         public string HexCode { get; set; }
 
         //Relationships
-        public ICollection<ProductProperty> Properties { get; set; } = new List<ProductProperty>();
+        public ICollection<ColorCodeProductProperty> ColorCodeProductProperties { get; set; } = new List<ColorCodeProductProperty>();
     }
 }

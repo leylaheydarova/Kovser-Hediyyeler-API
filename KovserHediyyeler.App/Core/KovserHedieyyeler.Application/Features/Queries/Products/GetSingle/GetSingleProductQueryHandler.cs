@@ -23,7 +23,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle
             Product product = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, 
                 nameof(Category), 
                 nameof(Department), 
-                nameof(ProductProperty), 
+                nameof(ColorCodeProductProperty), 
                 nameof(ProductImageFile), 
                 nameof(ProductComment),
                 nameof(ColorCode));

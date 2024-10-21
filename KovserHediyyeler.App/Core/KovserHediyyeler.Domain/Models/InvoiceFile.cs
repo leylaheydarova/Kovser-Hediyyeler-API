@@ -1,12 +1,4 @@
-﻿using KovserHediyyeler.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KovserHediyyeler.Domain.Models
+﻿namespace KovserHediyyeler.Domain.Models
 {
     public class InvoiceFile:File
     {
@@ -16,12 +8,53 @@ namespace KovserHediyyeler.Domain.Models
         
 
         //Relationships
-        public Guid OrderID { get; set; }
         public Order Order { get; set; }
-        //CustomerID = Order.Customer.ID
-        //BillingAddress = Order.Webuser.Email
-        //shippingAddress = Order.Webuser.Concat(Address)
-        //TotalAmount = Order.TotalAmount
-        //PaymentStatus = Order.PaymentStatus
+        public string CustomerID
+        {
+            get
+            {
+                return Order.CustomerID.ToString();
+            }
+        }
+
+        public string CustomerName
+        {
+            get
+            {
+                return $"{Order.Customer.FirstName} {Order.Customer.MiddleName} {Order.Customer.LastName}";
+            }
+        }
+
+        public string BillingAddress
+        {
+            get
+            {
+                return Order.Customer.Email;
+            }
+        }
+
+        public string ShippingAddress
+        {
+            get
+            {
+                return Order.Customer.AddressWebUsers.FirstOrDefault(x => x.WebUser.Id == Order.Customer.Id).Address.FullAddress;
+            }
+        }
+
+        public double TotalAmount
+        {
+            get
+            {
+                return Order.TotalPrice;
+            }
+        }
+
+        public string PaymentStatus
+        {
+            get
+            {
+                return Order.OrderPayment.PaymentStatus.ToString();
+            }
+        }
     }
 }

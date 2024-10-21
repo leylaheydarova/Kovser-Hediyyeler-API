@@ -1,26 +1,24 @@
-﻿using KovserHediyyeler.Domain.Models.BaseModels;
-using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace KovserHediyyeler.Domain.Models
 {
     public class WebUser:IdentityUser<Guid>
     {
+        public string FirstName { get; set; }
+        public string? MiddleName { get; set; }
+        public string LastName { get; set; }
         public bool isDeleted { get; set; }
         //Relationships
         public Guid BasketID { get; set; }
         public Basket Basket { get; set; }
         public Guid WishListID { get; set; }
         public WishList WishList { get; set; }
-        public ICollection<Address> Address { get; set; } = new List<Address>();
         public ICollection<Order> Orders { get; set; } = new List<Order>();
         public ICollection<CustomerBankCard> BankCards { get; set; } = new List<CustomerBankCard>();
         public ICollection<ProductComment> ProductComments { get; set; } = new List<ProductComment>();
+
+        //Cross-tables
+        public ICollection<AddressWebUser> AddressWebUsers { get; set; } = new List<AddressWebUser>();
         //todo: Profile Photo
       
     }

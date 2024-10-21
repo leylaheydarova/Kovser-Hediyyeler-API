@@ -17,8 +17,8 @@ namespace KovserHedieyyeler.Application.Profiles
             CreateMap<Promotion, PromotionGetSingleDto>()
                 .ForMember(dto => dto.DiscountPersentage, mod => mod.MapFrom(src => src.DiscountPersentage.ToString()))
                 .ForMember(dto => dto.Products, mod => mod.MapFrom(src => src.Products))
-                .ForMember(dto => dto.DepartmentNames, mod => mod.MapFrom(src => src.Departments))
-                .ForMember(dto => dto.CategoryNames, mod => mod.MapFrom(src => src.Categories))
+                //.ForMember(dto => dto.DepartmentNames, mod => mod.MapFrom(src => src.Departments))
+                //.ForMember(dto => dto.CategoryNames, mod => mod.MapFrom(src => src.Categories))
                 .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))
                 .ReverseMap();
             CreateMap<Promotion, PromotionGetAllDto>()

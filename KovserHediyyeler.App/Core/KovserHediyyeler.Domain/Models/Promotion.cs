@@ -10,11 +10,13 @@ namespace KovserHediyyeler.Domain.Models
         public double? Price { get; set; }
         public DiscountPersentage? DiscountPersentage { get; set; }
         public double? DiscountedPrice { get; set; }
-        public ICollection<Product> Products { get; set; } = new List<Product>();
         public DateTime? StartDate { get; set; }
         public DateTime ExpireDate {  get; set; }
-        public ICollection<Department> Departments = new List<Department>();
-        public ICollection<Category> Categories = new List<Category>();
+        public ICollection<Product> Products { get; set; } = new List<Product>();
+
+        //Cross-tables
+        public ICollection<DepartmentPromotion> DepartmentPromotions = new List<DepartmentPromotion>();
+        public ICollection<CategoryPromotion> CategoryPromotions = new List<CategoryPromotion>();
 
     }
 }

@@ -1,9 +1,4 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
@@ -12,7 +7,9 @@ namespace KovserHediyyeler.Domain.Models
         public string Status { get; set; }
 
         //Relationships
-        public ICollection<Department> Departments { get; set; } = new List<Department>();
         public ICollection<Employee> Employees { get; set; } = new List<Employee>();
+
+        //Cross-tables
+        public ICollection<DepartmentPosition> DepartmentPositions { get; set; } = new List<DepartmentPosition>();
     }
 }
