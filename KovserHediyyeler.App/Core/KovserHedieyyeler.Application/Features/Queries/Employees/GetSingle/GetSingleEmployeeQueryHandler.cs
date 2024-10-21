@@ -20,7 +20,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Employees.GetSingle
 
         public async Task<GetSingleEmployeeQueryResponse> Handle(GetSingleEmployeeQueryRequest request, CancellationToken cancellationToken)
         {
-            Employee employee = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, nameof(Address));
+            Employee employee = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, "Addresses");
             if(employee == null)
             {
                 throw new EmployeeNotFoundException();
@@ -33,3 +33,5 @@ namespace KovserHedieyyeler.Application.Features.Queries.Employees.GetSingle
         }
     }
 }
+
+

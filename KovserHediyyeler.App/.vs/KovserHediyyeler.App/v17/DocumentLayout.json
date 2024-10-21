@@ -3,36 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021130158_modelcreating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021130158_modelcreating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\employees\\delete\\permanently\\removeemployeeaddress\\removeemployeeaddresscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\employees\\delete\\permanently\\removeemployeeaddress\\removeemployeeaddresscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\employees\\getsingle\\getsingleemployeequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\employees\\getsingle\\getsingleemployeequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\employees\\create\\createemployee\\createemployeecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\employees\\create\\createemployee\\createemployeecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\shops\\create\\createshop\\createshopcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\shops\\create\\createshop\\createshopcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\dtos\\addresses\\addresscommanddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\dtos\\addresses\\addresscommanddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhediyyeler.domain\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|solutionrelative:core\\kovserhediyyeler.domain\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.persistence\\contexts\\kovserhediyyelerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:infrastructure\\kovserhediyyeler.persistence\\contexts\\kovserhediyyelerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125440_crosstables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125440_crosstables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\presentation\\kovser.hediyyeler.app\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|solutionrelative:presentation\\kovser.hediyyeler.app\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125212_crosstables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125212_crosstables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\employees\\delete\\permanently\\removeemployeeaddress\\removeemployeeaddresscommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\employees\\delete\\permanently\\removeemployeeaddress\\removeemployeeaddresscommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhediyyeler.domain\\models\\productproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|solutionrelative:core\\kovserhediyyeler.domain\\models\\productproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\employees\\delete\\permanently\\removeemployeeaddress\\removeemployeeaddresscommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\employees\\delete\\permanently\\removeemployeeaddress\\removeemployeeaddresscommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhediyyeler.domain\\models\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|solutionrelative:core\\kovserhediyyeler.domain\\models\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\employees\\getall\\getallemployees\\getallemployeesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\employees\\getall\\getallemployees\\getallemployeesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhediyyeler.domain\\models\\invoicefile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|solutionrelative:core\\kovserhediyyeler.domain\\models\\invoicefile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhediyyeler.domain\\models\\orderpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|solutionrelative:core\\kovserhediyyeler.domain\\models\\orderpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\employees\\delete\\permanently\\removeemployee\\removepermanentlyemployeecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\employees\\delete\\permanently\\removeemployee\\removepermanentlyemployeecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +58,162 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241021130158_modelcreating.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021130158_modelcreating.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021130158_modelcreating.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021130158_modelcreating.cs",
-              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021130158_modelcreating.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA1wAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "GetSingleEmployeeQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Employees\\GetSingle\\GetSingleEmployeeQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Employees\\GetSingle\\GetSingleEmployeeQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Employees\\GetSingle\\GetSingleEmployeeQueryHandler.cs*",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Employees\\GetSingle\\GetSingleEmployeeQueryHandler.cs*",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowCUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T13:01:59.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20241021125440_crosstables.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125440_crosstables.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125440_crosstables.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125440_crosstables.cs",
-              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125440_crosstables.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T12:54:42.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20241021125212_crosstables.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125212_crosstables.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125212_crosstables.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125212_crosstables.cs",
-              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241021125212_crosstables.cs",
-              "ViewState": "AQIAADMBAAAAAAAAAAAgwEEBAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T12:52:12.413Z",
+              "WhenOpened": "2024-10-21T20:08:30.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ProductProperty.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\ProductProperty.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Models\\ProductProperty.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\ProductProperty.cs",
-              "RelativeToolTip": "Core\\KovserHediyyeler.Domain\\Models\\ProductProperty.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABJAAAA",
+              "Title": "AddressCommandDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\DTOs\\Addresses\\AddressCommandDto.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\DTOs\\Addresses\\AddressCommandDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\DTOs\\Addresses\\AddressCommandDto.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\DTOs\\Addresses\\AddressCommandDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T12:36:34.69Z",
+              "WhenOpened": "2024-10-21T19:56:26.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Promotion.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\Promotion.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Models\\Promotion.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\Promotion.cs",
-              "RelativeToolTip": "Core\\KovserHediyyeler.Domain\\Models\\Promotion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABHAAAA",
+              "Title": "Address.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\Address.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Models\\Address.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\Address.cs",
+              "RelativeToolTip": "Core\\KovserHediyyeler.Domain\\Models\\Address.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAUwC4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T12:31:29.262Z",
+              "WhenOpened": "2024-10-21T19:51:27.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateEmployeeCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Create\\CreateEmployee\\CreateEmployeeCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Create\\CreateEmployee\\CreateEmployeeCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Create\\CreateEmployee\\CreateEmployeeCommandHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Create\\CreateEmployee\\CreateEmployeeCommandHandler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:41:12.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateShopCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Create\\CreateShop\\CreateShopCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Create\\CreateShop\\CreateShopCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Create\\CreateShop\\CreateShopCommandHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Create\\CreateShop\\CreateShopCommandHandler.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:41:28.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RemoveEmployeeAddressCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandHandler.cs*",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandHandler.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAACEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:27:42.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RemoveEmployeeAddressCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAB4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:26:36.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "OrderPayment.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\OrderPayment.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Models\\OrderPayment.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\OrderPayment.cs",
-              "RelativeToolTip": "Core\\KovserHediyyeler.Domain\\Models\\OrderPayment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAcwCwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T12:17:59.022Z",
+              "WhenOpened": "2024-10-21T19:25:38.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RemoveEmployeeAddressCommandResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployeeAddress\\RemoveEmployeeAddressCommandResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:25:15.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetAllEmployeesQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Employees\\GetAll\\GetAllEmployees\\GetAllEmployeesQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Employees\\GetAll\\GetAllEmployees\\GetAllEmployeesQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Employees\\GetAll\\GetAllEmployees\\GetAllEmployeesQueryHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Employees\\GetAll\\GetAllEmployees\\GetAllEmployeesQueryHandler.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAA1wBgAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:23:50.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RemovePermanentlyEmployeeCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployee\\RemovePermanentlyEmployeeCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployee\\RemovePermanentlyEmployeeCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployee\\RemovePermanentlyEmployeeCommandHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Employees\\Delete\\Permanently\\RemoveEmployee\\RemovePermanentlyEmployeeCommandHandler.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBcAAAB4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:22:51.383Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "InvoiceFile.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\InvoiceFile.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Models\\InvoiceFile.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\InvoiceFile.cs",
-              "RelativeToolTip": "Core\\KovserHediyyeler.Domain\\Models\\InvoiceFile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T12:17:13.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "KovserHediyyelerDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAqwE0AAAAzAAAA",
+              "ViewState": "AQIAAHABAAAAAAAAAAAqwHgBAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T11:32:23.358Z",
+              "WhenOpened": "2024-10-21T19:21:32.034Z",
               "EditorCaption": ""
             }
           ]

@@ -15,6 +15,6 @@ namespace KovserHediyyeler.Domain.Models
         public Position Position { get; set; }
         public Guid? ShopID { get; set; }
         public Shop? Shop { get; set; }
-        public ICollection<Address> Address { get; set; } = new List<Address>();
+        public ICollection<Address> Addresses { get; set; } = new List<Address>();
     }
 }

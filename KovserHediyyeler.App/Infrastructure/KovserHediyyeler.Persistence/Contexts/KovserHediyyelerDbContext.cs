@@ -162,7 +162,7 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Employee>()
-                .HasMany(e => e.Address)
+                .HasMany(e => e.Addresses)
                 .WithOne(ad => ad.Employee)
                 .HasForeignKey(ad => ad.EmployeID)
                 .OnDelete(DeleteBehavior.NoAction);
@@ -334,10 +334,7 @@ namespace KovserHediyyeler.Persistence.Contexts
                 }
             }
 
-            return base.SaveChangesAsync(cancellationToken);
-        }
-        public override int SaveChanges()
-        {
+            //One column can take only one true value
             //Address
             var currentAddress = ChangeTracker.Entries<Address>()
                                 .FirstOrDefault(e => e.Entity.IsCurrentAddress && (e.State == EntityState.Modified || e.State == EntityState.Added));
@@ -377,9 +374,8 @@ namespace KovserHediyyeler.Persistence.Contexts
                 }
             }
 
-            return base.SaveChanges();
+            return base.SaveChangesAsync(cancellationToken);
         }
-
 
     }
 }

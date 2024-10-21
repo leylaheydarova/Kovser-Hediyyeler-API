@@ -1,8 +1,13 @@
-﻿using KovserHedieyyeler.Application.DTOs.Employees;
-using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
-using KovserHedieyyeler.Application.Features.Commands.Employees.Create;
-using KovserHedieyyeler.Application.Features.Commands.Employees.Update;
-using KovserHedieyyeler.Application.Features.Queries.Employees.GetAll;
+﻿using KovserHedieyyeler.Application.Features.Commands.Employees.Create.CreateEmployee;
+using KovserHedieyyeler.Application.Features.Commands.Employees.Create.CreateEmployeeAddress;
+using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployee;
+using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployeeAddress;
+using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Temporarily;
+using KovserHedieyyeler.Application.Features.Commands.Employees.Recover;
+using KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmployee;
+using KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmployeeAddress;
+using KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAllEmployeeAddresses;
+using KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAllEmployees;
 using KovserHedieyyeler.Application.Features.Queries.Employees.GetSingle;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -20,81 +25,107 @@ namespace Kovser.Hediyyeler.App.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllAsync()
+        [HttpGet("GetAllEmployees")]
+        public async Task<IActionResult> GetAllEmployeesAsync([FromQuery] GetAllEmployeesQueryRequest request)
         {
-            var request = new GetAllEmployeesQueryRequest();
-            if (request == null) throw new BadRequestException();
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Datas);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromForm] EmployeeCommandDto dto)
+        [HttpGet("GetAllEmployeeAddresses")]
+        public async Task<IActionResult> GetAllEmployeeAddressesAsync([FromQuery] GetAllEmployeeAddressesQueryRequest request)
         {
-            var request = new CreateEmployeeCommandRequest
-            {
-                Dto = dto
-            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Datas);
+        }
 
-            if (request == null) throw new BadRequestException();
+        [HttpPost("CreateEmployee")]
+        public async Task<IActionResult> CreateEmployeeAsync([FromForm] CreateEmployeeCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
 
+        [HttpPost("CreateEmployeeAddress")]
+        public async Task<IActionResult> CreateEmployeeAddressAsync([FromForm] CreateEmployeeAddressCommandRequest request)
+        {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetAsync(string id)
+        public async Task<IActionResult> GetAsync([FromRoute] string id)
         {
             var request = new GetSingleEmployeeQueryRequest
             {
                 Id = id
             };
 
-            if (request == null) throw new BadRequestException();
-
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);
         }
 
-        [HttpDelete("DeleteTemporarily")]
-        public async Task<IActionResult> DeleteAsync(string id)
+        [HttpDelete("DeleteTemporarily/{id}")]
+        public async Task<IActionResult> DeleteAsync([FromRoute] string id)
         {
-            var request = new UpdateEmployeeCommandRequest
+            var request = new DeleteTemporarilyEmployeeCommandRequest
             {
                 Id = id
             };
-            if (request == null) throw new BadRequestException();
 
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpDelete("RemovePermanently")]
-        public async Task<IActionResult> RemoveAsync(string id)
+        [HttpDelete("RemovePermanentlyEmployee/{id}")]
+        public async Task<IActionResult> RemoveEmployeeAsync([FromRoute] string id)
         {
-            var request = new UpdateEmployeeCommandRequest
+            var request = new RemovePermanentlyEmployeeCommandRequest
             {
                 Id = id
             };
-            if (request == null) throw new BadRequestException();
 
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAsync([FromForm] EmployeeCommandDto dto, string id)
+        [HttpDelete("RemovePermanentlyEmployeeAddress/{id}")]
+        public async Task<IActionResult> RemoveEmployeeAddressAsync([FromRoute] string id)
         {
-            var request = new UpdateEmployeeCommandRequest
+            var request = new RemoveEmployeeAddressCommandRequest
             {
                 Id = id,
-                Dto = dto
             };
-            if (request == null) throw new BadRequestException();
 
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
+
+        [HttpPut("RecoverData/{id}")]
+        public async Task<IActionResult> RecoverDataAsync([FromRoute] string id)
+        {
+            var request = new RecoverEmployeeCommandRequest
+            {
+                Id = id
+            };
+
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpPut("UpdateEmployee")]
+        public async Task<IActionResult> UpdateEmployeeAsync([FromForm] UpdateEmployeeCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpPut("UpdateEmployeeAddress")]
+        public async Task<IActionResult> UpdateEmployeeAddressAsync([FromForm] UpdateEmployeeAddressCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
     }
 }

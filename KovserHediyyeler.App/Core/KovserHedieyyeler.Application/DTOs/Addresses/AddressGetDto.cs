@@ -9,6 +9,7 @@ namespace KovserHedieyyeler.Application.DTOs.Addresses
 {
     public class AddressGetDto
     {
+        public string Id { get; set; }
         public string City { get; set; }
         public string Region { get; set; } // F.eg: "Yasamal", "Nizami", etc.
         public string Street { get; set; }

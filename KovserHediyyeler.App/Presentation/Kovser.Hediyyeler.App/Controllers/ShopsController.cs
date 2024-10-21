@@ -1,13 +1,15 @@
-﻿using KovserHedieyyeler.Application.Features.Commands.Shops.Create;
-using KovserHedieyyeler.Application.Features.Commands.Shops.Delete.Permanently;
+﻿using KovserHedieyyeler.Application.Features.Commands.Shops.Create.CreateShop;
+using KovserHedieyyeler.Application.Features.Commands.Shops.Create.CreateShopAddress;
+using KovserHedieyyeler.Application.Features.Commands.Shops.Delete.Permanently.RemoveShop;
+using KovserHedieyyeler.Application.Features.Commands.Shops.Delete.Permanently.RemoveShopAddress;
 using KovserHedieyyeler.Application.Features.Commands.Shops.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Shops.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Shops.Update.Shop;
 using KovserHedieyyeler.Application.Features.Commands.Shops.Update.UpdateShopAddress;
-using KovserHedieyyeler.Application.Features.Queries.Shops.GetAll;
+using KovserHedieyyeler.Application.Features.Queries.Shops.GetAll.GetAllShopAddresses;
+using KovserHedieyyeler.Application.Features.Queries.Shops.GetAll.GetAllShops;
 using KovserHedieyyeler.Application.Features.Queries.Shops.GetSingle;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kovser.Hediyyeler.App.Controllers
@@ -23,15 +25,29 @@ namespace Kovser.Hediyyeler.App.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllAsync([FromQuery] GetAllShopsQueryRequest request)
+        [HttpGet("GetAllShops")]
+        public async Task<IActionResult> GetAllShopsAsync([FromQuery] GetAllShopsQueryRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Datas);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromForm]CreateShopCommandRequest request)
+        [HttpGet("GetAllShopAddresses")]
+        public async Task<IActionResult> GetAllShopAddressesAsync([FromQuery] GetAllShopAddressesQueryRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Datas);
+        }
+
+        [HttpPost("CreateShop")]
+        public async Task<IActionResult> CreateShopAsync([FromForm]CreateShopCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpPost("CreateShopAddress")]
+        public async Task<IActionResult> CreateShopAddressAsync([FromForm] CreateShopAddressCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -62,12 +78,24 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpDelete("RemovePermanently/{id}")]
-        public async Task<IActionResult> RemoveAsync([FromRoute] string id)
+        [HttpDelete("RemovePermanentlyShop/{id}")]
+        public async Task<IActionResult> RemoveShopAsync([FromRoute] string id)
         {
             var request = new RemovePermanentlyShopCommandRequest
             {
                 Id = id
+            };
+
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpDelete("RemovePermanentlyShopAddress/{id}")]
+        public async Task<IActionResult> RemoveShopAddressAsync([FromRoute] string id)
+        {
+            var request = new RemovePermanentlyShopAddressCommandRequest
+            {
+                Id = id,
             };
 
             var response = await _mediator.Send(request);
