@@ -13,11 +13,13 @@ namespace KovserHedieyyeler.Application.Profiles
     {
         public ShopMapper()
         {
-            CreateMap<ShopCommandDto, Shop>().ReverseMap();
+            CreateMap<ShopPostDto, Shop>().ReverseMap();
+            CreateMap<ShopPutDto, Shop>().ReverseMap();
             CreateMap<Shop, ShopGetAllDto>().ReverseMap();
             CreateMap<Shop, ShopGetSingleDto>()
                 .ForMember(dto => dto.Id, mod => mod.MapFrom(src => src.ID.ToString()))
                 .ForMember(dto => dto.Address, mod => mod.MapFrom(src => src.Addresses.FirstOrDefault(ad => ad.IsCurrentAddress).FullAddress))
+                .ForMember(dto => dto.AddressID, mod => mod.MapFrom(src => src.Addresses.FirstOrDefault(ad => ad.IsCurrentAddress).GetID))
                 .ReverseMap();
         }
     }

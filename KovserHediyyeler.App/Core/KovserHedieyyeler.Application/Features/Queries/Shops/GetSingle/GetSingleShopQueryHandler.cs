@@ -20,7 +20,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Shops.GetSingle
 
         public async Task<GetSingleShopQueryResponse> Handle(GetSingleShopQueryRequest request, CancellationToken cancellationToken)
         {
-            Shop shop = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, nameof(Employee), nameof(Product));
+            Shop shop = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, "Employees", "Products", "Addresses");
             if(shop == null)
             {
                 throw new ShopNotFoundException();

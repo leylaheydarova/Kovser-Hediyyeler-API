@@ -3,7 +3,7 @@
 
 namespace KovserHedieyyeler.Application.DTOs.Shops
 {
-    public class ShopCommandDto
+    public class ShopPostDto
     {
         public string Name { get; set; }
         public string Description { get; set; }

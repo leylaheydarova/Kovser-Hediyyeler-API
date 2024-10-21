@@ -40,13 +40,16 @@ namespace KovserHediyyeler.Persistence.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Basket>()
-                .HasOne(b => b.Customer)  
-                .WithOne(w => w.Basket)   
+                .HasOne(b => b.Customer)
+                .WithOne(w => w.Basket)
                 .HasForeignKey<Basket>(b => b.CustomerID);
+                
+
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.Customer)  
                 .WithMany(w => w.Orders)   
                 .HasForeignKey(o => o.CustomerID);
+
             modelBuilder.Entity<ProductComment>()
                 .HasOne(pc => pc.Customer)  
                 .WithMany(w => w.ProductComments)   

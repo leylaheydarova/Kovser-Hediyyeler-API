@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.Validation.Shops
 {
-    public class ShopCommandDtoValidation:AbstractValidator<ShopCommandDto>
+    public class ShopPostDtoValidation:AbstractValidator<ShopPostDto>
     {
-        public ShopCommandDtoValidation()
+        public ShopPostDtoValidation()
         {
             RuleFor(x => x.Name)
                 .NotNull()

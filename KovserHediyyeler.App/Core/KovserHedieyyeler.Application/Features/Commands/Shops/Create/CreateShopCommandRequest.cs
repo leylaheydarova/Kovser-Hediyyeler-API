@@ -3,7 +3,7 @@ using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Shops.Create
 {
-    public class CreateShopCommandRequest:CreateCommandRequest<ShopCommandDto>, IRequest<CreateShopCommandResponse>
+    public class CreateShopCommandRequest:CreateCommandRequest<ShopPostDto>, IRequest<CreateShopCommandResponse>
     {
     }
 }

@@ -1,5 +1,6 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Shops;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Shops;
+using KovserHediyyeler.Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +18,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Shops.GetAll
 
         public async Task<GetAllShopsQueryResponse> Handle(GetAllShopsQueryRequest request, CancellationToken cancellationToken)
         {
-            var query = _repository.GetAllWhere(x => !x.isDeleted, false);
+            var query = _repository.GetAllWhere(x => !x.isDeleted, false, "Addresses");
             int totalCount = query.Count();
             List<ShopGetAllDto> dtos = new List<ShopGetAllDto>();
             dtos = await query.Skip(request.Page * request.Size)
@@ -27,7 +28,8 @@ namespace KovserHedieyyeler.Application.Features.Queries.Shops.GetAll
                     Id = x.ID.ToString(),
                     Name = x.Name,
                     Description = x.Description,
-                    Phone = x.Phone
+                    Phone = x.Phone,
+                    City = x.Addresses.FirstOrDefault(ad => ad.IsCurrentAddress).GetCity
                 }).ToListAsync();
             return new GetAllShopsQueryResponse
             {

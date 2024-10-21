@@ -32,5 +32,21 @@ namespace KovserHediyyeler.Domain.Models
                 return $"{City.ToString()} şəhəri, {Region} rayonu, {Street}, {Home}, {PostalCode}";
             }
         }
+
+        public string GetCity
+        {
+            get
+            {
+                return City.ToString();
+            }
+        }
+
+        public string GetID
+        {
+            get
+            {
+                return ID.ToString();
+            }
+        }
     }
 }
