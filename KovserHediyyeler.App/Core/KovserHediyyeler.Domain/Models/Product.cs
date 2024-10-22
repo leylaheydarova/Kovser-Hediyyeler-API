@@ -1,10 +1,5 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models
 {
@@ -16,10 +11,10 @@ namespace KovserHediyyeler.Domain.Models
         public int Stock { get; set; }
         public double Price { get; set; }
         public double DiscountedPrice { get; set; }
-        public double ProductAverageRating { get; set; }
+        public double ProductAverageRating { get; set; } = 5;
 
     //Relationships
-        public Guid PromotionID { get; set; }
+        public Guid? PromotionID { get; set; }
         public Promotion Promotion { get; set; }
         public Guid DepartmentID { get; set; }
         public Department Department { get; set; }

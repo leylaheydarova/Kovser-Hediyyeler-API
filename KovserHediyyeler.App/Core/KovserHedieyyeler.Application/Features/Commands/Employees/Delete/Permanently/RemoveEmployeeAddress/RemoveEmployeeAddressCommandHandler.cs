@@ -1,5 +1,4 @@
-﻿
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Addresses;
 using KovserHediyyeler.Domain.Models;
 using MediatR;

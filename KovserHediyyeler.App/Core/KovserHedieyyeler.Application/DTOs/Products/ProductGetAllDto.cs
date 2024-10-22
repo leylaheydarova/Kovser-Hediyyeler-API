@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
 
 namespace KovserHedieyyeler.Application.DTOs.Products
 {
@@ -17,6 +18,6 @@ namespace KovserHedieyyeler.Application.DTOs.Products
 
         //Relationships
         public string DepartmentName { get; set; }
-        public ProductImageDto Image { get; set; }
+        public ProductImagePostDto Image { get; set; }
     }
 }

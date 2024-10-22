@@ -1,4 +1,6 @@
-﻿using KovserHedieyyeler.Application.DTOs.Shops;
+﻿using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
+using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
+using KovserHedieyyeler.Application.DTOs.Shops;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +25,8 @@ namespace KovserHedieyyeler.Application.DTOs.Products
         public string CategoryName { get; set; }
         public string BrandName { get; set; }
         public ICollection<ShopGetAllDto> ShopNames { get; set; }
-        public ICollection<ProductPropertyDto> Properties {  get; set; } = new List<ProductPropertyDto>();
-        public ICollection<ProductImageDto> Images { get; set; } = new List<ProductImageDto>();
+        public ICollection<ProductPropertyGetDto> Properties {  get; set; } = new List<ProductPropertyGetDto>();
+        public ICollection<ProductImageGetDto> Images { get; set; } = new List<ProductImageGetDto>();
+        public ICollection<ProductCommentGetDto> Comments { get; set; } = new List<ProductCommentGetDto>();
     }
 }

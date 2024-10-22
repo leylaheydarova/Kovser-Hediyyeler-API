@@ -29,7 +29,8 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetAll
                     Description = x.Description,
                     DepartmentName = x.Department.Name,
                     DiscountedPrice = x.DiscountedPrice,
-                    Price = x.Price
+                    Price = x.Price,
+                    ProductAverageRating = x.ProductAverageRating.ToString()
                 })
                 .ToListAsync();
             return new GetAllProductsQueryResponse

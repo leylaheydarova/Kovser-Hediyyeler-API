@@ -1,16 +1,11 @@
 ﻿using FluentValidation;
 using KovserHedieyyeler.Application.DTOs.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.Validation.Products
 {
-    public class ProductCommandDtoValidation:AbstractValidator<ProductCommandDto>
+    public class ProductPostDtoValidation:AbstractValidator<ProductPostDto>
     {
-        public ProductCommandDtoValidation()
+        public ProductPostDtoValidation()
         {
             RuleFor(x => x.Name)
                 .NotNull()
@@ -26,7 +21,6 @@ namespace KovserHedieyyeler.Application.Validation.Products
                 .NotEmpty()
                 .NotNull()
                 .GreaterThanOrEqualTo(0);
-
         }
     }
 }

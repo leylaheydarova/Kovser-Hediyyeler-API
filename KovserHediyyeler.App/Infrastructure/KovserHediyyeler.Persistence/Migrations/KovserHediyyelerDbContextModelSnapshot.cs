@@ -868,7 +868,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<double>("ProductAverageRating")
                         .HasColumnType("float");
 
-                    b.Property<Guid>("PromotionID")
+                    b.Property<Guid?>("PromotionID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Stock")
@@ -1303,10 +1303,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                 {
                     b.HasBaseType("KovserHediyyeler.Domain.Models.File");
 
-                    b.Property<string>("FileURL")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsMain")
                         .HasColumnType("bit");
 
@@ -1321,7 +1317,7 @@ namespace KovserHediyyeler.Persistence.Migrations
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Address", b =>
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Employee", "Employee")
-                        .WithMany("Address")
+                        .WithMany("Addresses")
                         .HasForeignKey("EmployeID")
                         .OnDelete(DeleteBehavior.NoAction);
 
@@ -1607,8 +1603,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Promotion", "Promotion")
                         .WithMany("Products")
                         .HasForeignKey("PromotionID")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Brand");
 
@@ -1781,7 +1776,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Employee", b =>
                 {
-                    b.Navigation("Address");
+                    b.Navigation("Addresses");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
