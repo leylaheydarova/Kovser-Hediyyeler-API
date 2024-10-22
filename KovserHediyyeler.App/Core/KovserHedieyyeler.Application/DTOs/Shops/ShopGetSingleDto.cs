@@ -1,5 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Employees;
-using KovserHedieyyeler.Application.DTOs.Products;
+using KovserHedieyyeler.Application.DTOs.Products.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;

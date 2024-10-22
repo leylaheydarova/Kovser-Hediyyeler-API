@@ -1,8 +1,19 @@
 ﻿using KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProduct;
 using KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProductImage;
 using KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProductProperty;
-using KovserHedieyyeler.Application.Features.Queries.Products.GetAll;
-using KovserHedieyyeler.Application.Features.Queries.Products.GetSingle;
+using KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveImage;
+using KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveProducts;
+using KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveProperty;
+using KovserHedieyyeler.Application.Features.Commands.Products.Delete.Temporarily;
+using KovserHedieyyeler.Application.Features.Commands.Products.Recover;
+using KovserHedieyyeler.Application.Features.Commands.Products.Update.UpdateProductImages;
+using KovserHedieyyeler.Application.Features.Commands.Products.Update.UpdateProductProperties;
+using KovserHedieyyeler.Application.Features.Commands.Products.Update.UpdateProducts;
+using KovserHedieyyeler.Application.Features.Queries.Products.GetAll.GetAllProductImages;
+using KovserHedieyyeler.Application.Features.Queries.Products.GetAll.GetAllProductProperties;
+using KovserHedieyyeler.Application.Features.Queries.Products.GetAll.GetAllProducts;
+using KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProduct;
+using KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProductProperty;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,9 +37,19 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Datas);
         }
 
-        //getAllImages
+        [HttpGet("GetAllProductImagess")]
+        public async Task<IActionResult> GetAllProductImagesAsync([FromQuery] GetAllProductImagesQueryRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Datas);
+        }
 
-        //getAllProperties
+        [HttpGet("GetAllProductProperties")]
+        public async Task<IActionResult> GetAllProductPropertiesAsync([FromQuery] GetAllProductPropertiesQueryRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Datas);
+        }
 
         [HttpPost("CreateProduct")]
         public async Task<IActionResult> CreateProductAsync([FromForm] CreateProductCommandRequest request)
@@ -62,22 +83,103 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Dto);
         }
 
-        //getsingleproperty
+        [HttpGet("GetSingleProductProperty/{id}")]
+        public async Task<IActionResult> GetProductPropertyAsync(string id)
+        {
+            var request = new GetSingleProductPropertyQueryRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Dto);
+        }
 
-        //deleteproduct
+        [HttpDelete("DeleteTemporarilyProduct/{id}")]
+        public async Task<IActionResult> DeleteProductAsync(string id)
+        {
+            var request = new DeleteTemporarilyProductCommandRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
 
-        //recoverproduct
+        [HttpPut("RecoverProductData/{id}")]
+        public async Task<IActionResult> RecoverProductAsync(string id)
+        {
+            var request = new RecoverProductCommandRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
 
-        //removeproduct
+        [HttpDelete("RemovePermanentlyProduct/{id}")]
+        public async Task<IActionResult> RemoveProductAsync(string id)
+        {
+            var request = new RemovePermanentlyProductCommandRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
 
-        //removeimage
+        [HttpDelete("RemovePermanentlyProductImage/{id}")]
+        public async Task<IActionResult> RemoveProductImageAsync(string id)
+        {
+            var request = new RemoveProductImageCommandRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
 
-        //removeproperty
+        [HttpDelete("RemovePermanentlyProductProperty/{id}")]
+        public async Task<IActionResult> RemoveProductPropertyAsync(string id)
+        {
+            var request = new RemoveProductPropertyCommandRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
 
-        //updateproduct
+        [HttpPut("UpdateProductData/{id}")]
+        public async Task<IActionResult> UpdateProductAsync(string id)
+        {
+            var request = new UpdateProductCommandRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
 
-        //updateproperty
+        [HttpPut("UpdateProductPropertyData/{id}")]
+        public async Task<IActionResult> UpdateProductPropertyAsync(string id)
+        {
+            var request = new UpdateProductPropertyCommandRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
 
-        //updateimage
+        [HttpPut("UpdateProductImageData/{id}")]
+        public async Task<IActionResult> UpdateProductImageAsync(string id)
+        {
+            var request = new UpdateProductImageCommandRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
     }
 }

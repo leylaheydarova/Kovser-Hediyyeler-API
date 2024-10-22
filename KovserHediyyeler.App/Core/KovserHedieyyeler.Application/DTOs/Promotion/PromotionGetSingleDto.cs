@@ -1,6 +1,6 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Categories;
 using KovserHedieyyeler.Application.DTOs.Department;
-using KovserHedieyyeler.Application.DTOs.Products;
+using KovserHedieyyeler.Application.DTOs.Products.Products;
 using KovserHediyyeler.Domain.Enums;
 using System;
 using System.Collections.Generic;

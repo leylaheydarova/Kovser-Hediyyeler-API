@@ -27,7 +27,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update
             if (brand == null) throw new BrandNotFoundException();
             brand.Name = request.Dto.Name;
             brand.Image = request.Dto.file.FileName;
-            brand.ImageURL = _accessor.HttpContext.Request.Scheme + "//" + _accessor.HttpContext.Request.Host + $"/{brand.Image}";
+            brand.ImageURL = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{brand.Image}";
 
             _writeRepository.Update(brand);
             await _writeRepository.SaveAsync();

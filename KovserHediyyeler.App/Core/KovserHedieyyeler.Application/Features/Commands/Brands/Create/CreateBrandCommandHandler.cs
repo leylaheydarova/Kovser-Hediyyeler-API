@@ -24,7 +24,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Create
         {
             if(request.Dto == null) throw new BadRequestException();
             Brand brand = _mapper.Map<Brand>(request.Dto);
-            brand.ImageURL = _accessor.HttpContext.Request.Scheme + "//" + _accessor.HttpContext.Request.Host + $"/{brand.Image}";
+            brand.ImageURL = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{brand.Image}";
             if(brand == null) throw new BadRequestException();
             await _repository.AddAsync(brand);
             await _repository.SaveAsync();

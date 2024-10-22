@@ -23,7 +23,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
             {
                 ID = Guid.NewGuid(),
                 FileName = request.Dto.file.FileName,
-                Path = $"{_accessor.HttpContext.Request.Scheme}//{_accessor.HttpContext.Request.Host}/{request.Dto.file.FileName}",
+                Path = $"{_accessor.HttpContext.Request.Scheme}://{_accessor.HttpContext.Request.Host}/{request.Dto.file.FileName}",
                 ProductID = Guid.Parse(request.ProductId)
             };
             await _repository.AddAsync(image);

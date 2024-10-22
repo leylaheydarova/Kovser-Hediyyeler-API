@@ -49,7 +49,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
                 {
                     ID = Guid.NewGuid(),
                     FileName = imageDto.file.FileName,
-                    Path = _accessor.HttpContext.Request.Scheme + "//" + _accessor.HttpContext.Request.Host + $"/{imageDto.file.FileName}",
+                    Path = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{imageDto.file.FileName}",
                     ProductID = product.ID
                 };
                 try

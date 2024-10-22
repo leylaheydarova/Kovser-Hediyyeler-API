@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.DTOs.Products;
+﻿using KovserHedieyyeler.Application.DTOs.Products.Products;
 using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models;
 using Microsoft.Identity.Client;

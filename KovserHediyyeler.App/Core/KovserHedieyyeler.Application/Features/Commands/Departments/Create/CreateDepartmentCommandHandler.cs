@@ -39,7 +39,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create
                 Description = dto.Description,
                 Phone = dto.Phone,
                 LogoImage = dto.file.Name,
-                LogoImageURL = _accessor.HttpContext.Request.Scheme + "//" + _accessor.HttpContext.Request.Host + $"/{dto.file.Name}"
+                LogoImageURL = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{dto.file.Name}"
             };
             
             
