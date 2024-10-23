@@ -7,7 +7,7 @@ namespace KovserHedieyyeler.Application.Abstractions.Services
 {
     public interface IUserService
     {
-        Task<RegisterUserCommandResponse> CreateAsync(RegisterUserCommandRequest model);
+        Task<RegisterUserCommandResponse> CreateAsync(RegisterUserCommandRequest entity);
         Task UpdateRefreshTokenAsync(string refreshToken, WebUser user, DateTime accessTokenDate, int addOnAccessTokenDate);
         Task UpdatePasswordAsync(string userId, string resetToken, string newPassword);
         Task<List<WebUserGetAllDto>> GetAllUsersAsync(int page, int size);

@@ -5,6 +5,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.Register
 {
     public class RegisterUserCommandRequest:IRequest<RegisterUserCommandResponse>
     {
-        public RegisterDto Register {  get; set; }
+        public RegisterDto Dto { get; set; }
     }
 }

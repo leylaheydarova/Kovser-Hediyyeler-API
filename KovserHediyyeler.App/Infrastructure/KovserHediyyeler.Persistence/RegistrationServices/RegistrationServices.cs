@@ -12,8 +12,10 @@ using KovserHedieyyeler.Application.Repositories.Abstractions.Shops;
 using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
 using KovserHedieyyeler.Application.Repositories.Abstractions.WebUsers;
 using KovserHedieyyeler.Application.Repositories.Abstractions.WishLists;
+using KovserHedieyyeler.Application.Repositories.Interfaces;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Files;
+using KovserHedieyyeler.Application.Repositories.Interfaces.Menus;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Orders;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Positions;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Promotions;
@@ -26,6 +28,7 @@ using KovserHediyyeler.Persistence.Repositories.Concretes.Categories;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Departments;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Employees;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Files;
+using KovserHediyyeler.Persistence.Repositories.Concretes.Menus;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Orders;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Positions;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Products;
@@ -87,6 +90,9 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             services.AddScoped<IInvoiceFileReadRepository, InvoiceFileReadRepository>();
             services.AddScoped<IInvoiceFileWriteRepository, InvoiceFileWriteRepository>();
 
+            services.AddScoped<IMenuReadRepository, MenuReadRepository>();
+            services.AddScoped<IMenuWriteRepository, MenuWriteRepository>();
+
             services.AddScoped<IOrderReadRepository, OrderReadRepository>();
             services.AddScoped<IOrderWriteRepository, OrderWriteRepository>();
 
@@ -133,6 +139,7 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             services.AddScoped<IWishListItemWriteRepository, WishListItemWriteRepository>();
 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();
             return services;
         }
     }

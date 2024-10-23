@@ -281,6 +281,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.4.1, )"

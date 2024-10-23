@@ -8,6 +8,8 @@ namespace KovserHediyyeler.Domain.Models.Identity
         public string? MiddleName { get; set; }
         public string LastName { get; set; }
         public bool isDeleted { get; set; }
+        public string? RefreshToken { get; set; }
+        public DateTime? RefreshTokenEndDate { get; set; }
         //Relationships
         public Guid BasketID { get; set; }
         public Basket Basket { get; set; }

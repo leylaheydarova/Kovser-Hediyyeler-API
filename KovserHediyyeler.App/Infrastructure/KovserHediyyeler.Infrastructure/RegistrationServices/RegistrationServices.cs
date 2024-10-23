@@ -1,8 +1,13 @@
-﻿using KovserHedieyyeler.Application.Abstractions.StorageServices;
+﻿using KovserHedieyyeler.Application.Abstractions.Services.Configurations;
+using KovserHedieyyeler.Application.Abstractions.StorageServices;
+using KovserHedieyyeler.Application.Abstractions.Tokens;
 using KovserHedieyyeler.Infrastructure.Services.StorageServices;
 using KovserHedieyyeler.Infrastructure.Services.StorageServices.LocalStorage;
 using KovserHediyyeler.Domain.Enums;
+using KovserHediyyeler.Infrastructure.Services.Configurations;
+using KovserHediyyeler.Infrastructure.Services.Tokens;
 using Microsoft.Extensions.DependencyInjection;
+using System.Runtime.CompilerServices;
 
 namespace KovserHediyyeler.Infrastructure.RegistrationServices
 {
@@ -31,6 +36,14 @@ namespace KovserHediyyeler.Infrastructure.RegistrationServices
                     serviceCollection.AddScoped<IStorage, LocalStorageService>();
                     break;
             }
+        }
+
+        public static IServiceCollection RegisterInfrastructureServices(this IServiceCollection services)
+        {
+            services.AddScoped<ITokenHandler, TokenHandler>();
+            services.AddScoped<IApplicationService, ApplicationService>();
+
+            return services;
         }
     }
 }

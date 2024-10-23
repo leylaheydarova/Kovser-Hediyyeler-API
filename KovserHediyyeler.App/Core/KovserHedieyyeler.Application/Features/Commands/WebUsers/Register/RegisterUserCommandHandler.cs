@@ -1,12 +1,29 @@
-﻿using MediatR;
+﻿using KovserHedieyyeler.Application.Abstractions.Services;
+using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.Register
 {
     public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommandRequest, RegisterUserCommandResponse>
     {
-        public Task<RegisterUserCommandResponse> Handle(RegisterUserCommandRequest request, CancellationToken cancellationToken)
+        readonly IUserService _userService;
+
+        public RegisterUserCommandHandler(IUserService userService)
         {
-            throw new NotImplementedException();
+            _userService = userService;
+        }
+
+        public async Task<RegisterUserCommandResponse> Handle(RegisterUserCommandRequest request, CancellationToken cancellationToken)
+        {
+            RegisterUserCommandResponse response = await _userService.CreateAsync(new()
+            {
+                Dto = request.Dto
+            });
+
+            return new()
+            {
+                Message = response.Message,
+                isSucceeded = response.isSucceeded
+            };
         }
     }
 }

@@ -19,7 +19,8 @@ builder.Services
     .RegisterStorageServices()
     .AddStorage<LocalStorageService>()
     .RegisterLoginServices(builder.Configuration)
-    .RegisterUserServices();
+    .RegisterUserServices()
+    .RegisterInfrastructureServices();
 
 var app = builder.Build();
 
