@@ -1,4 +1,5 @@
-﻿using KovserHedieyyeler.Application.Repositories.Abstractions.Addresses;
+﻿using KovserHedieyyeler.Application.Abstractions.Services;
+using KovserHedieyyeler.Application.Repositories.Abstractions.Addresses;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Banks;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Baskets;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Brands;
@@ -33,6 +34,7 @@ using KovserHediyyeler.Persistence.Repositories.Concretes.Shops;
 using KovserHediyyeler.Persistence.Repositories.Concretes.SocialMedias;
 using KovserHediyyeler.Persistence.Repositories.Concretes.WebUsers;
 using KovserHediyyeler.Persistence.Repositories.Concretes.WishLists;
+using KovserHediyyeler.Persistence.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -129,6 +131,8 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
 
             services.AddScoped<IWishListItemReadRepository, WishListItemReadRepository>();
             services.AddScoped<IWishListItemWriteRepository, WishListItemWriteRepository>();
+
+            services.AddScoped<IUserService, UserService>();
             return services;
         }
     }

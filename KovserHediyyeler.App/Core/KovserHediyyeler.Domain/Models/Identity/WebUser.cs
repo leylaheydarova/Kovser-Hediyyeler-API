@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace KovserHediyyeler.Domain.Models
+namespace KovserHediyyeler.Domain.Models.Identity
 {
-    public class WebUser:IdentityUser<Guid>
+    public class WebUser : IdentityUser<Guid>
     {
         public string FirstName { get; set; }
         public string? MiddleName { get; set; }
@@ -20,6 +20,6 @@ namespace KovserHediyyeler.Domain.Models
         //Cross-tables
         public ICollection<AddressWebUser> AddressWebUsers { get; set; } = new List<AddressWebUser>();
         //todo: Profile Photo
-      
+
     }
 }

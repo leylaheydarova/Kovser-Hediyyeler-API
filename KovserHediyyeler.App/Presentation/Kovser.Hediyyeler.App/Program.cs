@@ -1,4 +1,6 @@
-using KovserHedieyyeler.Application;
+using Kovser.Hediyyeler.App.Configuration;
+using Kovser.Hediyyeler.App.RegistrationServices;
+using KovserHedieyyeler.Application.ServiceRegistrations;
 using KovserHedieyyeler.Infrastructure.Services.StorageServices.LocalStorage;
 using KovserHediyyeler.Infrastructure.RegistrationServices;
 using KovserHediyyeler.Persistence.RegistrationServices;
@@ -15,7 +17,9 @@ builder.Services.AddSwaggerGen();
 builder.Services
     .RegisterDataServices(builder.Configuration)
     .RegisterStorageServices()
-    .AddStorage<LocalStorageService>();
+    .AddStorage<LocalStorageService>()
+    .RegisterLoginServices(builder.Configuration)
+    .RegisterUserServices();
 
 var app = builder.Build();
 
@@ -25,6 +29,10 @@ var app = builder.Build();
         app.UseSwagger();
         app.UseSwaggerUI();
     }
+
+    app.ConfigureExceptionHandler();
+
+    app.UseCors("KovserHediyyeler");
 
     app.UseHttpsRedirection();
 

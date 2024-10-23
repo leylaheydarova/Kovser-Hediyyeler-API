@@ -1,4 +1,5 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
+using KovserHediyyeler.Domain.Models.Identity;
 
 namespace KovserHediyyeler.Domain.Models
 {

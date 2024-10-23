@@ -10,7 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KovserHedieyyeler.Application
+namespace KovserHedieyyeler.Application.ServiceRegistrations
 {
     public static class RegistrationServices
     {

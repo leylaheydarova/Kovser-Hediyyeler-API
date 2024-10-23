@@ -1,5 +1,5 @@
 ﻿using KovserHedieyyeler.Application.Repositories.Abstractions.WebUsers;
-using KovserHediyyeler.Domain.Models;
+using KovserHediyyeler.Domain.Models.Identity;
 using KovserHediyyeler.Persistence.Contexts;
 using System;
 using System.Collections.Generic;

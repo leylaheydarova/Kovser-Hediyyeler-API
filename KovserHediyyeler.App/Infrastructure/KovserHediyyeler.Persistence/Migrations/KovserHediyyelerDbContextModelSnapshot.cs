@@ -73,7 +73,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("ShopID");
 
-                    b.ToTable("Addresses", (string)null);
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.AddressWebUser", b =>
@@ -106,7 +106,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("WebUserID");
 
-                    b.ToTable("AddressWebUsers", (string)null);
+                    b.ToTable("AddressWebUsers");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Bank", b =>
@@ -133,7 +133,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Banks", (string)null);
+                    b.ToTable("Banks");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Basket", b =>
@@ -162,7 +162,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Baskets", (string)null);
+                    b.ToTable("Baskets");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.BasketItem", b =>
@@ -198,7 +198,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("BasketItems", (string)null);
+                    b.ToTable("BasketItems");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Brand", b =>
@@ -231,7 +231,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Category", b =>
@@ -263,7 +263,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("ParentId");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.CategoryDepartment", b =>
@@ -296,7 +296,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("DepartmentID");
 
-                    b.ToTable("CategoryDepartments", (string)null);
+                    b.ToTable("CategoryDepartments");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.CategoryPromotion", b =>
@@ -329,7 +329,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("PromotionID");
 
-                    b.ToTable("CategoryPromotions", (string)null);
+                    b.ToTable("CategoryPromotions");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ColorCode", b =>
@@ -360,7 +360,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Colors", (string)null);
+                    b.ToTable("Colors");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ColorCodeProductProperty", b =>
@@ -393,7 +393,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("ProductPropertyID");
 
-                    b.ToTable("ColorCodeProductProperties", (string)null);
+                    b.ToTable("ColorCodeProductProperties");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.CustomerBankCard", b =>
@@ -443,7 +443,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("CustomerID");
 
-                    b.ToTable("CustomerBankCards", (string)null);
+                    b.ToTable("CustomerBankCards");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Department", b =>
@@ -486,7 +486,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Departments", (string)null);
+                    b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.DepartmentPosition", b =>
@@ -519,7 +519,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("PositionID");
 
-                    b.ToTable("DepartmentPositions", (string)null);
+                    b.ToTable("DepartmentPositions");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.DepartmentPromotion", b =>
@@ -552,7 +552,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("PromotionID");
 
-                    b.ToTable("DepartmentPromotions", (string)null);
+                    b.ToTable("DepartmentPromotions");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Employee", b =>
@@ -605,7 +605,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("ShopID");
 
-                    b.ToTable("Employees", (string)null);
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.File", b =>
@@ -641,7 +641,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Files", (string)null);
+                    b.ToTable("Files");
 
                     b.HasDiscriminator().HasValue("File");
 
@@ -719,7 +719,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("ShopID");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.OrderDetail", b =>
@@ -761,7 +761,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("OrderDetails", (string)null);
+                    b.ToTable("OrderDetails");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.OrderPayment", b =>
@@ -800,7 +800,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("OrderPayments", (string)null);
+                    b.ToTable("OrderPayments");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Position", b =>
@@ -827,7 +827,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Positions", (string)null);
+                    b.ToTable("Positions");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Product", b =>
@@ -893,7 +893,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("PromotionID");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ProductComment", b =>
@@ -933,7 +933,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("ProductComments", (string)null);
+                    b.ToTable("ProductComments");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ProductProperty", b =>
@@ -969,7 +969,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("ProductProperties", (string)null);
+                    b.ToTable("ProductProperties");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ProductShop", b =>
@@ -1002,7 +1002,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("ShopID");
 
-                    b.ToTable("ProductShops", (string)null);
+                    b.ToTable("ProductShops");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Promotion", b =>
@@ -1048,7 +1048,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Promotions", (string)null);
+                    b.ToTable("Promotions");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shipping", b =>
@@ -1074,7 +1074,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Shippings", (string)null);
+                    b.ToTable("Shippings");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shop", b =>
@@ -1109,7 +1109,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Shops", (string)null);
+                    b.ToTable("Shops");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.SocialMedia", b =>
@@ -1149,7 +1149,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("DepartmentID");
 
-                    b.ToTable("SocialMedias", (string)null);
+                    b.ToTable("SocialMedias");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.WebUser", b =>
@@ -1226,7 +1226,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("WishListID");
 
-                    b.ToTable("WebUsers", (string)null);
+                    b.ToTable("WebUser");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishList", b =>
@@ -1249,7 +1249,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("WishLists", (string)null);
+                    b.ToTable("WishLists");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishListItem", b =>
@@ -1282,7 +1282,122 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasIndex("WishListID");
 
-                    b.ToTable("WishListItems", (string)null);
+                    b.ToTable("WishListItems");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RoleClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.ToTable("UserLogins");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.ToTable("UserRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("UserTokens");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.InvoiceFile", b =>

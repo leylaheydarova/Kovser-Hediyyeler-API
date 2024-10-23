@@ -1,11 +1,13 @@
 ﻿using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Domain.Models.BaseModels;
+using KovserHediyyeler.Domain.Models.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Xml.XPath;
 
 namespace KovserHediyyeler.Persistence.Contexts
 {
-    public class KovserHediyyelerDbContext:DbContext
+    public class KovserHediyyelerDbContext:IdentityDbContext<WebUser, IdentityRole<Guid>, Guid>
     {
         public DbSet<Address> Addresses { get; set; }
         public DbSet<AddressWebUser> AddressWebUsers { get; set; }
@@ -41,10 +43,11 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<WebUser> WebUsers { get; set; }
         public DbSet<WishList> WishLists { get; set; }
         public DbSet<WishListItem> WishListItems { get; set; }
+
         public KovserHediyyelerDbContext(DbContextOptions<KovserHediyyelerDbContext> option):base(option)
         {
-            
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Address>()
@@ -182,11 +185,13 @@ namespace KovserHediyyeler.Persistence.Contexts
             modelBuilder.Entity<InvoiceFile>()
                 .HasOne(inf => inf.Order)
                 .WithOne(o => o.InvoiceFile)
+                .HasForeignKey<Order>(o => o.InvoiceFileId)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.OrderPayment)
                 .WithOne(op => op.Order)
+                .HasForeignKey<Order>(o => o.OrderPaymentID)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Order>()
@@ -308,6 +313,18 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .WithOne(wli => wli.List)
                 .HasForeignKey(wli => wli.WishListID)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<IdentityUserToken<Guid>>()
+                .HasKey(x => new { x.UserId, x.LoginProvider, x.Name });
+
+            modelBuilder.Entity<IdentityUserLogin<Guid>>()
+                .HasKey(x => new { x.LoginProvider, x.ProviderKey });
+
+            modelBuilder.Entity<IdentityUserClaim<Guid>>()
+                .HasKey(x => x.Id);
+
+            modelBuilder.Entity<IdentityUserRole<Guid>>()
+                .HasKey(x => new { x.UserId, x.RoleId });
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
