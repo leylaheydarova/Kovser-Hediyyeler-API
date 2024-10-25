@@ -72,7 +72,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetS
                 {
                     Id = comment.ID.ToString(),
                     CommentText = comment.CommentText,
-                    Username = comment.Customer.UserName,
+                    //Username = comment.Customer.UserName,
                     RatingGivenByCustomer = (int)comment.RatingGivenByUser
                 }).ToList()
             };

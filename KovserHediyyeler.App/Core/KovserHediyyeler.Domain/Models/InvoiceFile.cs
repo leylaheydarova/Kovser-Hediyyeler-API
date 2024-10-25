@@ -13,7 +13,7 @@
         {
             get
             {
-                return Order.CustomerID.ToString();
+                return Order.CustomerID;
             }
         }
 
@@ -21,7 +21,7 @@
         {
             get
             {
-                return $"{Order.Customer.FirstName} {Order.Customer.MiddleName} {Order.Customer.LastName}";
+                return Order.Customer.MiddleName == null ? $"{Order.Customer.FirstName} {Order.Customer.LastName}" : $"{Order.Customer.FirstName} {Order.Customer.MiddleName} {Order.Customer.LastName}";
             }
         }
 

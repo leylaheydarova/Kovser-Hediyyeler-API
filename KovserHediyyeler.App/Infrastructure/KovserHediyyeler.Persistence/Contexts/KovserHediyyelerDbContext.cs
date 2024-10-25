@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KovserHediyyeler.Persistence.Contexts
 {
-    public class KovserHediyyelerDbContext:IdentityDbContext
+    public class KovserHediyyelerDbContext:IdentityDbContext<WebUser, UserRole, string>
     {
         public DbSet<Address> Addresses { get; set; }
-        public DbSet<AddressWebUser> AddressWebUsers { get; set; }
+        public DbSet<AddressWebUser> AddressWebUsers { get; set; } 
         public DbSet<Bank> Banks { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
@@ -42,6 +42,7 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<Shipping> Shippings { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<WebUser> WebUsers { get; set; }
         public DbSet<WishList> WishLists { get; set; }
         public DbSet<WishListItem> WishListItems { get; set; }
@@ -178,11 +179,11 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey(ad => ad.EmployeID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            //modelBuilder.Entity<Employee>()
-            //    .HasOne(e => e.Position)
-            //    .WithMany(p => p.Employees)
-            //    .HasForeignKey(e => e.PositionID)
-            //    .OnDelete(DeleteBehavior.ClientCascade);
+            modelBuilder.Entity<Employee>()
+                .HasOne(e => e.Position)
+                .WithMany(p => p.Employees)
+                .HasForeignKey(e => e.PositionID)
+                .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<Employee>()
                 .HasOne(e => e.Shop)
@@ -203,8 +204,8 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Order>()
-                .HasOne(o => o.Customer)  
-                .WithMany(w => w.Orders)   
+                .HasOne(o => o.Customer)
+                .WithMany(w => w.Orders)
                 .HasForeignKey(o => o.CustomerID)
                 .OnDelete(DeleteBehavior.NoAction);
 

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using KovserHedieyyeler.Application.DTOs.Accounts;
 using KovserHedieyyeler.Application.DTOs.WebUsers.Users;
-using KovserHediyyeler.Domain.Models.Identity;
+//using KovserHediyyeler.Domain.Models.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +14,9 @@ namespace KovserHedieyyeler.Application.Profiles
     {
         public WebUserMapper()
         {
-            CreateMap<WebUser, WebUserGetAllDto>().ReverseMap();
-            CreateMap<WebUser, WebUserGetSingleDto>().ReverseMap();
-            CreateMap<RegisterDto, WebUser>().ReverseMap();
+            //CreateMap<WebUser, WebUserGetAllDto>().ReverseMap();
+            //CreateMap<WebUser, WebUserGetSingleDto>().ReverseMap();
+            //CreateMap<RegisterDto, WebUser>().ReverseMap();
         }
     }
 }

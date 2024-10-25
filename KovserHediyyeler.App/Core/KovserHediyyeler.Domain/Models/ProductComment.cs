@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Domain.Models
         public Guid ProductID { get; set; }
         public Product Product { get; set; }
         [ForeignKey(nameof(Customer))]
-        public Guid CustomerID { get; set; }
+        public string CustomerID { get; set; }
         public WebUser Customer { get; set; }
     }
 }

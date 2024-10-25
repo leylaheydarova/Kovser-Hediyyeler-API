@@ -94,8 +94,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("WebUserID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("WebUserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("isDeleted")
                         .HasColumnType("bit");
@@ -416,8 +417,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("CustomerID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("CustomerID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
@@ -648,7 +650,106 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Identity.UserRole", b =>
+                {
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("UserRole");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Identity.WebUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("BasketID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("MiddleName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("RefreshTokenEndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("WishListID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketID");
+
+                    b.HasIndex("WishListID");
+
+                    b.ToTable("WebUser");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Menu", b =>
                 {
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
@@ -657,8 +758,39 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("CustomerID")
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Menus");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BasketID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CustomerID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
@@ -706,6 +838,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("BasketID")
+                        .IsUnique();
 
                     b.HasIndex("CustomerID");
 
@@ -909,8 +1044,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("CustomerID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("CustomerID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
@@ -1152,83 +1288,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.ToTable("SocialMedias");
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.WebUser", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("BasketID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("MiddleName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("WishListID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("isDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BasketID");
-
-                    b.HasIndex("WishListID");
-
-                    b.ToTable("WebUser");
-                });
-
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishList", b =>
                 {
                     b.Property<Guid>("ID")
@@ -1285,27 +1344,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.ToTable("WishListItems");
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NormalizedName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Roles");
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1319,8 +1358,8 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<string>("ClaimValue")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("RoleId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -1346,6 +1385,28 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("IdentityUserClaim<Guid>");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
                     b.ToTable("UserClaims");
                 });
 
@@ -1365,6 +1426,25 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
+                    b.ToTable("IdentityUserLogin<Guid>");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProviderKey")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.ToTable("UserLogins");
                 });
 
@@ -1377,6 +1457,17 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("UserId", "RoleId");
+
+                    b.ToTable("IdentityUserRole<Guid>");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("UserRoles");
                 });
@@ -1396,6 +1487,25 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("IdentityUserToken<Guid>");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("UserTokens");
                 });
@@ -1454,7 +1564,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("KovserHediyyeler.Domain.Models.WebUser", "WebUser")
+                    b.HasOne("KovserHediyyeler.Domain.Models.Identity.WebUser", "WebUser")
                         .WithMany("AddressWebUsers")
                         .HasForeignKey("WebUserID")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -1559,7 +1669,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("KovserHediyyeler.Domain.Models.WebUser", "Customer")
+                    b.HasOne("KovserHediyyeler.Domain.Models.Identity.WebUser", "Customer")
                         .WithMany("BankCards")
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -1634,9 +1744,34 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Shop");
                 });
 
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Identity.WebUser", b =>
+                {
+                    b.HasOne("KovserHediyyeler.Domain.Models.Basket", "Basket")
+                        .WithMany("Customer")
+                        .HasForeignKey("BasketID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("KovserHediyyeler.Domain.Models.WishList", "WishList")
+                        .WithMany("WebUsers")
+                        .HasForeignKey("WishListID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("WishList");
+                });
+
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
                 {
-                    b.HasOne("KovserHediyyeler.Domain.Models.WebUser", "Customer")
+                    b.HasOne("KovserHediyyeler.Domain.Models.Basket", "Basket")
+                        .WithOne("Order")
+                        .HasForeignKey("KovserHediyyeler.Domain.Models.Order", "BasketID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("KovserHediyyeler.Domain.Models.Identity.WebUser", "Customer")
                         .WithMany("Orders")
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -1665,6 +1800,8 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasForeignKey("ShopID")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.Navigation("Basket");
 
                     b.Navigation("Customer");
 
@@ -1731,7 +1868,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ProductComment", b =>
                 {
-                    b.HasOne("KovserHediyyeler.Domain.Models.WebUser", "Customer")
+                    b.HasOne("KovserHediyyeler.Domain.Models.Identity.WebUser", "Customer")
                         .WithMany("ProductComments")
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -1789,25 +1926,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Department");
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.WebUser", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Basket", "Basket")
-                        .WithMany("Customer")
-                        .HasForeignKey("BasketID")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("KovserHediyyeler.Domain.Models.WishList", "WishList")
-                        .WithMany("WebUsers")
-                        .HasForeignKey("WishListID")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("Basket");
-
-                    b.Navigation("WishList");
-                });
-
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishListItem", b =>
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Product", "Product")
@@ -1853,6 +1971,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("BasketItems");
 
                     b.Navigation("Customer");
+
+                    b.Navigation("Order")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Brand", b =>
@@ -1892,6 +2013,17 @@ namespace KovserHediyyeler.Persistence.Migrations
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Employee", b =>
                 {
                     b.Navigation("Addresses");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Identity.WebUser", b =>
+                {
+                    b.Navigation("AddressWebUsers");
+
+                    b.Navigation("BankCards");
+
+                    b.Navigation("Orders");
+
+                    b.Navigation("ProductComments");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
@@ -1957,17 +2089,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Orders");
 
                     b.Navigation("ProductShops");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.WebUser", b =>
-                {
-                    b.Navigation("AddressWebUsers");
-
-                    b.Navigation("BankCards");
-
-                    b.Navigation("Orders");
-
-                    b.Navigation("ProductComments");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishList", b =>

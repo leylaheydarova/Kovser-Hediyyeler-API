@@ -19,6 +19,7 @@ using KovserHedieyyeler.Application.Repositories.Interfaces.Menus;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Orders;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Positions;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Promotions;
+using KovserHediyyeler.Domain.Models.Identity;
 using KovserHediyyeler.Persistence.Contexts;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Addresses;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Banks;
@@ -51,6 +52,16 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             {
                 opt.UseSqlServer(configuration.GetConnectionString("Default"));
             });
+            services.AddIdentity<WebUser, UserRole>(options =>
+            {
+                options.Password.RequiredLength = 8;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequiredUniqueChars = 1;
+                options.User.RequireUniqueEmail = true;
+            }).AddEntityFrameworkStores<KovserHediyyelerDbContext>();
 
             //Repositories
             services.AddScoped<IAddressReadRepository, AddressReadRepository>();

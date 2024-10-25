@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Domain.Models
 
         //Relationships
         [ForeignKey(nameof(Customer))]
-        public Guid CustomerID { get; set; }
+        public string CustomerID { get; set; }
         public WebUser Customer { get; set; }
         public Guid BankID { get; set; }
         public Bank Bank { get; set; }
