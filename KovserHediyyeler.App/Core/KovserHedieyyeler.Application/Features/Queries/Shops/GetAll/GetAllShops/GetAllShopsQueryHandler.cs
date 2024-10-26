@@ -29,7 +29,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Shops.GetAll.GetAllShop
                     Name = x.Name,
                     Description = x.Description,
                     Phone = x.Phone,
-                    City = x.Addresses.FirstOrDefault(ad => ad.IsCurrentAddress).GetCity
+                    City = x.Addresses.FirstOrDefault(ad => ad.IsCurrentAddress && ad.ShopID == x.ID).GetCity
                 }).ToListAsync();
             return new GetAllShopsQueryResponse
             {

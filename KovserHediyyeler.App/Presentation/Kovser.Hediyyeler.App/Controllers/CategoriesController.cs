@@ -5,7 +5,8 @@ using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Permanen
 using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Update;
-using KovserHedieyyeler.Application.Features.Queries.Categories.GetAll;
+using KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAllAbstractParents;
+using KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAllCategories;
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetSingle;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +28,13 @@ namespace Kovser.Hediyyeler.App.Controllers
         public async Task<IActionResult> GetAllAsync([FromQuery] GetAllCategoriesQueryRequest request)
         {
             GetAllCategoriesQueryResponse response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Datas);
+        }
+
+        [HttpGet("GetAllTopCategories")]
+        public async Task<IActionResult> GetAllTopCategoriesAsync([FromQuery] GetAllTopParentsQueryRequest request)
+        {
+            GetAllTopParentsQueryResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Datas);
         }
 

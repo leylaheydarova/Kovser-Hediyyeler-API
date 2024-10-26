@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Domain.Models.Identity
 {
-    public class UserRole : IdentityUser<string>
+    public class UserRole : IdentityRole<string>
     {
-        public ICollection<Endpoint> Endpoints { get; set; }
+        //public ICollection<Endpoint> Endpoints { get; set; }
     }
 }

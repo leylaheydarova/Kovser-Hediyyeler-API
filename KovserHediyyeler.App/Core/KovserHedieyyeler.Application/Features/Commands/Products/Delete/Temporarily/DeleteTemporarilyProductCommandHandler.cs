@@ -26,15 +26,15 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Delete.Tempor
         {
             Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, true);
             if (product == null) throw new ProductNotFoundException();
-            foreach(var image in  product.Images)
+            foreach (var image in product.Images)
             {
                 _productImageFileWriteRepository.DeleteTemporarily(image);
             }
-            foreach(var property in product.Properties)
+            foreach (var property in product.Properties)
             {
                 _productPropertyWriteRepository.DeleteTemporarily(property);
             }
-            foreach(var comment in product.Comments)
+            foreach (var comment in product.Comments)
             {
                 _productCommentWriteRepository.DeleteTemporarily(comment);
             }

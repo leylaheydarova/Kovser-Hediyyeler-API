@@ -1,4 +1,4 @@
-using Kovser.Hediyyeler.App.Configuration;
+
 using Kovser.Hediyyeler.App.RegistrationServices;
 using KovserHedieyyeler.Application.ServiceRegistrations;
 using KovserHedieyyeler.Infrastructure.Services.StorageServices.LocalStorage;
@@ -17,15 +17,15 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.RegisterLibrariesServices();
-builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services
     .RegisterDataServices(builder.Configuration)
     .RegisterStorageServices()
     .AddStorage<LocalStorageService>()
-    .RegisterLoginServices(builder.Configuration)
-    .RegisterUserServices()
-    .RegisterInfrastructureServices();
+    //.RegisterLoginServices(builder.Configuration)
+    //.RegisterUserServices()
+    //.RegisterInfrastructureServices()
+    .AppServiceRegistrationServices();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer("Admin", options =>
@@ -55,7 +55,7 @@ var app = builder.Build();
         app.UseSwaggerUI();
     }
 
-    app.ConfigureExceptionHandler();
+    //app.ConfigureExceptionHandler();
 
     app.UseCors("KovserHediyyeler");
 
@@ -63,9 +63,13 @@ var app = builder.Build();
 
     app.UseRouting();
 
+    app.UseAuthentication();
+
     app.UseAuthorization();
 
+
     app.MapControllers();
+
 
     app.Run();
 

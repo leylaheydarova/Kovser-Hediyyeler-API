@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KovserHediyyeler.Persistence.Contexts
 {
-    public class KovserHediyyelerDbContext:IdentityDbContext<WebUser, IdentityRole<Guid>, Guid>
+    public class KovserHediyyelerDbContext:IdentityDbContext
     {
         public DbSet<Address> Addresses { get; set; }
         public DbSet<AddressWebUser> AddressWebUsers { get; set; }
@@ -25,8 +25,10 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<DepartmentPosition> DepartmentPositions { get; set; }
         public DbSet<DepartmentPromotion> DepartmentPromotions { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        //public DbSet<Endpoint> Endpoint { get; set; }
         public DbSet<Domain.Models.File> Files { get; set; }
         public DbSet<InvoiceFile> InvoiceFiles { get; set; }
+        public DbSet<Menu> Menus { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<OrderPayment> OrderPayments { get; set; }
@@ -78,6 +80,12 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasMany(b => b.Customer)
                 .WithOne(c => c.Basket)
                 .HasForeignKey(c => c.BasketID)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Basket>()
+                .HasOne(b => b.Order)
+                .WithOne(o => o.Basket)
+                .HasForeignKey<Order>(o => o.BasketID)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<BasketItem>()
@@ -170,11 +178,11 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey(ad => ad.EmployeID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Employee>()
-                .HasOne(e => e.Position)
-                .WithMany(p => p.Employees)
-                .HasForeignKey(e => e.PositionID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Employee>()
+            //    .HasOne(e => e.Position)
+            //    .WithMany(p => p.Employees)
+            //    .HasForeignKey(e => e.PositionID)
+            //    .OnDelete(DeleteBehavior.ClientCascade);
 
             modelBuilder.Entity<Employee>()
                 .HasOne(e => e.Shop)
@@ -228,6 +236,11 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasMany(p => p.DepartmentPositions)
                 .WithOne(dp => dp.Position)
                 .HasForeignKey(dp => dp.PositionID)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Position>()
+                .HasMany(p => p.Employees)
+                .WithOne(e => e.Position)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Product>()
@@ -325,6 +338,18 @@ namespace KovserHediyyeler.Persistence.Contexts
 
             modelBuilder.Entity<IdentityUserRole<Guid>>()
                 .HasKey(x => new { x.UserId, x.RoleId });
+
+            modelBuilder.Entity<UserRole>()
+                .HasNoKey();
+
+            modelBuilder.Entity<IdentityUserLogin<string>>().HasNoKey();
+            modelBuilder.Entity<IdentityUserRole<string>>().HasNoKey();
+            modelBuilder.Entity<IdentityUserToken<string>>().HasNoKey();
+
+            //modelBuilder.Entity<Endpoint>()
+            //    .HasMany(e => e.Roles)
+            //    .WithMany(r => r.Endpoints)
+            //    .
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

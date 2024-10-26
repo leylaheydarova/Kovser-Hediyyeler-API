@@ -1,5 +1,4 @@
-﻿using KovserHedieyyeler.Application.Abstractions.Services;
-using KovserHedieyyeler.Application.Abstractions.Services.Authentications;
+﻿
 using KovserHedieyyeler.Application.Repositories.Abstractions.Addresses;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Banks;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Baskets;
@@ -11,11 +10,10 @@ using KovserHedieyyeler.Application.Repositories.Abstractions.Positions;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Products;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Shops;
 using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
-using KovserHedieyyeler.Application.Repositories.Abstractions.WebUsers;
 using KovserHedieyyeler.Application.Repositories.Abstractions.WishLists;
 using KovserHedieyyeler.Application.Repositories.Interfaces;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
-using KovserHedieyyeler.Application.Repositories.Interfaces.Endpoints;
+//using KovserHedieyyeler.Application.Repositories.Interfaces.Endpoints;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Files;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Menus;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Orders;
@@ -29,7 +27,7 @@ using KovserHediyyeler.Persistence.Repositories.Concretes.Brands;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Categories;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Departments;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Employees;
-using KovserHediyyeler.Persistence.Repositories.Concretes.Endpoints;
+//using KovserHediyyeler.Persistence.Repositories.Concretes.Endpoints;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Files;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Menus;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Orders;
@@ -38,9 +36,7 @@ using KovserHediyyeler.Persistence.Repositories.Concretes.Products;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Promotions;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Shops;
 using KovserHediyyeler.Persistence.Repositories.Concretes.SocialMedias;
-using KovserHediyyeler.Persistence.Repositories.Concretes.WebUsers;
 using KovserHediyyeler.Persistence.Repositories.Concretes.WishLists;
-using KovserHediyyeler.Persistence.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -87,8 +83,8 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             services.AddScoped<IEmployeeReadRepository, EmployeeReadRepository>();
             services.AddScoped<IEmployeeWriteRepository, EmployeeWriteRepository>();
 
-            services.AddScoped<IEndpointReadRepository, EndpointReadRepository>();
-            services.AddScoped<IEndpointWriteRepository, EndpointWriteRepository>();
+            //services.AddScoped<IEndpointReadRepository, EndpointReadRepository>();
+            //services.AddScoped<IEndpointWriteRepository, EndpointWriteRepository>();
 
             services.AddScoped<IFileReadRepository, FileReadRepository>();
             services.AddScoped<IFileWriteRepository, FileWriteRepository>();
@@ -135,21 +131,19 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             services.AddScoped<ISocialMediaReadRepository, SocialMediaReadRepository>();
             services.AddScoped<ISocialMediaWriteRepository, SocialMediaWriteRepository>();
 
-            services.AddScoped<IWebUserReadRepository, WebUserReadRepository>();
-            services.AddScoped<IWebUserWriteRepository, WebUserWriteRepository>();
-
             services.AddScoped<IWishListReadRepository, WishListReadRepository>();
             services.AddScoped<IWishListWriteRepository, WishListWriteRepository>();
 
             services.AddScoped<IWishListItemReadRepository, WishListItemReadRepository>();
             services.AddScoped<IWishListItemWriteRepository, WishListItemWriteRepository>();
 
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IAuthService, AuthService>();
-            services.AddScoped<IRoleService, RoleService>();
-            services.AddScoped<IExternalAuthentication, AuthService>();
-            services.AddScoped<IInternalAuthentication, AuthService>();
-            services.AddScoped<IAuthorizationEndpointService, AuthorizationEndpointService>();
+            //services.AddScoped<IUserService, UserService>();
+            //services.AddScoped<IAuthService, AuthService>();
+            //services.AddScoped<IRoleService, RoleService>();
+            //services.AddScoped<IExternalAuthentication, AuthService>();
+            //services.AddScoped<IInternalAuthentication, AuthService>();
+            //services.AddScoped<IAuthorizationEndpointService, AuthorizationEndpointService>();
+            //services.AddScoped<IBasketService, BasketService>();
             return services;
         }
     }

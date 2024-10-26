@@ -25,7 +25,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Recover
 
         public async Task<RecoverProductCommandResponse> Handle(RecoverProductCommandRequest request, CancellationToken cancellationToken)
         {
-            Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, true);
+            Product product = await _productReadRepository.GetWhereAsync(x => x.isDeleted && x.ID.ToString() == request.Id, true);
             if (product == null) throw new ProductNotFoundException();
             foreach (var image in product.Images)
             {

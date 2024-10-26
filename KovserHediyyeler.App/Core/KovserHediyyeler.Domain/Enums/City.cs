@@ -9,6 +9,7 @@
         Ağdərə,
         Ağstafa,
         Ağsu,
+        Bakı,
         Babək,
         Balakən,
         Beyləqan,

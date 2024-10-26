@@ -1,4 +1,7 @@
-﻿using KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProduct;
+﻿using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
+using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
+using KovserHedieyyeler.Application.DTOs.Products.Products;
+using KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProduct;
 using KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProductImage;
 using KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProductProperty;
 using KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveImage;
@@ -59,14 +62,14 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpPost("CreateProductImage")]
-        public async Task<IActionResult> CreateProductImageAsync([FromForm]CreateProductImageCommandRequest request)
+        public async Task<IActionResult> CreateProductImageAsync([FromForm] CreateProductImageCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
         [HttpPost("CreateProductProperty")]
-        public async Task<IActionResult> CreateProductPropertyAsync([FromForm]CreateProductPropertyCommandRequest request)
+        public async Task<IActionResult> CreateProductPropertyAsync([FromForm] CreateProductPropertyCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -150,36 +153,41 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpPut("UpdateProductData/{id}")]
-        public async Task<IActionResult> UpdateProductAsync(string id)
+        public async Task<IActionResult> UpdateProductAsync(string id, ProductPutDto dto)
         {
             var request = new UpdateProductCommandRequest
             {
-                Id = id
+                Id = id,
+                Dto = dto
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
         [HttpPut("UpdateProductPropertyData/{id}")]
-        public async Task<IActionResult> UpdateProductPropertyAsync(string id)
+        public async Task<IActionResult> UpdateProductPropertyAsync(string id, ProductPropertyCommandDto dto)
         {
             var request = new UpdateProductPropertyCommandRequest
             {
-                Id = id
+                Id = id,
+                Dto = dto
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
         [HttpPut("UpdateProductImageData/{id}")]
-        public async Task<IActionResult> UpdateProductImageAsync(string id)
+        public async Task<IActionResult> UpdateProductImageAsync(string id, ProductImageCommandDto dto)
         {
             var request = new UpdateProductImageCommandRequest
             {
-                Id = id
+                Id = id,
+                Dto = dto
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
     }
 }
+
+//todo: RemoveProductProperty partladi. Fix it!

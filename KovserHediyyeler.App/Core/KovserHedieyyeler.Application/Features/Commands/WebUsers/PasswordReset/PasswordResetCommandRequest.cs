@@ -1,14 +1,9 @@
-﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//using MediatR;
 
-namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.PasswordReset
-{
-    public class PasswordResetCommandRequest:IRequest<PasswordResetCommandResponse>
-    {
-        public string Email { get; set; }
-    }
-}
+//namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.PasswordReset
+//{
+//    public class PasswordResetCommandRequest:IRequest<PasswordResetCommandResponse>
+//    {
+//        public string Email { get; set; }
+//    }
+//}

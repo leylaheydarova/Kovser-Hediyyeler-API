@@ -4,7 +4,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace KovserHedieyyeler.Application.Features.Queries.Categories.GetAll
+namespace KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAllCategories
 {
     public class GetAllCategoriesQueryHandler : IRequestHandler<GetAllCategoriesQueryRequest, GetAllCategoriesQueryResponse>
     {

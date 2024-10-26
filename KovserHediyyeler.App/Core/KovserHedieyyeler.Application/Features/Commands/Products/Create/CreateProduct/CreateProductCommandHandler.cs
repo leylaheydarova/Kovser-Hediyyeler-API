@@ -1,32 +1,34 @@
 ﻿
+
 using KovserHedieyyeler.Application.Repositories.Abstractions.Products;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using System;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProduct
 {
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommandRequest, CreateProductCommandResponse>
     {
-        readonly IProductWriteRepository _productWriteRepository;
-        readonly IProductImageFileWriteRepository _productImageFileWriteRepository;
-        readonly IProductPropertyWriteRepository _productPropertyWriteRepository;
-        readonly IColorWriteRepository _colorWriteRepository;
+        readonly IProductWriteRepository _productwriterepository;
+        readonly IProductImageFileWriteRepository _productimagefilewriterepository;
+        readonly IProductPropertyWriteRepository _productpropertywriterepository;
+        readonly IColorWriteRepository _colorwriterepository;
         readonly IHttpContextAccessor _accessor;
 
-        public CreateProductCommandHandler(IProductWriteRepository productWriteRepository, IProductImageFileWriteRepository productImageFileWriteRepository, IHttpContextAccessor accessor, IProductPropertyWriteRepository productPropertyWriteRepository, IColorWriteRepository colorWriteRepository)
+        public CreateProductCommandHandler(IProductWriteRepository productwriterepository, IProductImageFileWriteRepository productimagefilewriterepository, IProductPropertyWriteRepository productpropertywriterepository, IColorWriteRepository colorwriterepository, IHttpContextAccessor accessor)
         {
-            _productWriteRepository = productWriteRepository;
-            _productImageFileWriteRepository = productImageFileWriteRepository;
+            _productwriterepository = productwriterepository;
+            _productimagefilewriterepository = productimagefilewriterepository;
+            _productpropertywriterepository = productpropertywriterepository;
+            _colorwriterepository = colorwriterepository;
             _accessor = accessor;
-            _productPropertyWriteRepository = productPropertyWriteRepository;
-            _colorWriteRepository = colorWriteRepository;
         }
 
         public async Task<CreateProductCommandResponse> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
         {
             var dto = request.Dto;
-            
+
             Product product = new Product
             {
                 ID = Guid.NewGuid(),
@@ -36,25 +38,25 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
                 CategoryID = dto.CategoryID,
                 DepartmentID = dto.DepartmentID,
                 Price = dto.Price,
-                DiscountedPrice = (dto.Price - ((dto.Price*(int)dto.DiscountPercentage)/100)),
+                DiscountedPrice = (dto.Price - ((dto.Price * (int)dto.DiscountPercentage) / 100)),
                 isSingleColour = dto.isSingleColour,
                 Stock = dto.Stock
             };
 
-            foreach(var imageDto in dto.ProductImages)
+            foreach (var imagedto in dto.ProductImages)
             {
-                var res = imageDto.file.FileName;
+                var res = imagedto.file.FileName;
 
                 ProductImageFile image = new ProductImageFile
                 {
                     ID = Guid.NewGuid(),
-                    FileName = imageDto.file.FileName,
-                    Path = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{imageDto.file.FileName}",
+                    FileName = imagedto.file.FileName,
+                    Path = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{imagedto.file.FileName}",
                     ProductID = product.ID
                 };
                 try
                 {
-                    await _productImageFileWriteRepository.AddAsync(image);
+                    await _productimagefilewriterepository.AddAsync(image);
                 }
                 catch (Exception ex)
                 {
@@ -63,61 +65,61 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
                 }
             }
 
-            foreach (var colorDto in request.Dto.Colors)
+            foreach (var colordto in request.Dto.Colors)
             {
                 ColorCode color = new ColorCode
                 {
                     ID = Guid.NewGuid(),
-                    Name = colorDto.Name,
-                    HexCode = colorDto.HexCode,
+                    Name = colordto.Name,
+                    HexCode = colordto.HexCode,
                 };
 
-                var propertyColor = new ProductProperty
+                var propertycolor = new ProductProperty
                 {
                     ID = Guid.NewGuid(),
-                    Name = "Rəng",
+                    Name = "rəng",
                     Value = color.Name,
                     ProductID = product.ID
                 };
-                await _productPropertyWriteRepository.AddAsync(propertyColor);
+                await _productpropertywriterepository.AddAsync(propertycolor);
 
-                ColorCodeProductProperty colorProperty = new ColorCodeProductProperty
+                ColorCodeProductProperty colorproperty = new ColorCodeProductProperty
                 {
                     ID = Guid.NewGuid(),
                     ColorCodeID = color.ID,
-                    ProductPropertyID = propertyColor.ID
+                    ProductPropertyID = propertycolor.ID
                 };
-                color.ColorCodeProductProperties.Add(colorProperty);
-                await _colorWriteRepository.AddAsync(color);
-                
+                color.ColorCodeProductProperties.Add(colorproperty);
+                await _colorwriterepository.AddAsync(color);
+
             }
 
-            foreach (var propertyDto in dto.ProductProperties)
+            foreach (var propertydto in dto.ProductProperties)
             {
                 ProductProperty property = new ProductProperty
                 {
                     ID = Guid.NewGuid(),
-                    Name = propertyDto.Name,
-                    Value = propertyDto.Value,
+                    Name = propertydto.Name,
+                    Value = propertydto.Value,
                     ProductID = product.ID
                 };
 
-                await _productPropertyWriteRepository.AddAsync(property);
+                await _productpropertywriterepository.AddAsync(property);
             }
 
-            foreach(var shopId in request.Dto.ShopIDs)
+            foreach (var shopId in request.Dto.ShopIDs)
             {
-                var ShopProduct = new ProductShop()
+                var shopproduct = new ProductShop()
                 {
                     ProductID = product.ID,
                     ShopID = shopId
                 };
-                product.ProductShops.Add(ShopProduct);
+                product.ProductShops.Add(shopproduct);
             }
 
             try
             {
-                await _productWriteRepository.AddAsync(product);
+                await _productwriterepository.AddAsync(product);
             }
             catch (Exception ex)
             {
@@ -125,14 +127,13 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
                 throw;
             }
 
-            await _productWriteRepository.SaveAsync();
+            await _productwriterepository.SaveAsync();
 
             return new CreateProductCommandResponse
             {
                 StatusCode = 201,
                 Message = "Məhsul uğurla əlavə edildi!"
             };
-            
         }
     }
 }

@@ -11,6 +11,6 @@ namespace KovserHediyyeler.Domain.Models
     {
         public string Name { get; set; }
 
-        public ICollection<Endpoint> Endpoints { get; set; } = new List<Endpoint>();
+        //public ICollection<Endpoint> Endpoints { get; set; } = new List<Endpoint>();
     }
 }

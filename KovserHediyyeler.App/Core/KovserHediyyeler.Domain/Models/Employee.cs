@@ -1,4 +1,5 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModels;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace KovserHediyyeler.Domain.Models
 {
     public class Employee:BaseEntity
@@ -11,6 +12,7 @@ namespace KovserHediyyeler.Domain.Models
         //Relationships
         public Guid DepartmentID { get; set; }
         public Department Department { get; set; }
+        [ForeignKey(nameof(Position))]
         public Guid PositionID { get; set; }
         public Position Position { get; set; }
         public Guid? ShopID { get; set; }
