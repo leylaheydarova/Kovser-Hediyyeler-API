@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\KovserHediyyeler.App.props" />
-</Project>
