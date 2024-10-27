@@ -1,9 +1,9 @@
-﻿//using MediatR;
+﻿using MediatR;
 
-//namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.RefreshTokenLogin
-//{
-//    public class RefreshTokenLoginCommandRequest:IRequest<RefreshTokenLoginCommandResponse>
-//    {
-//        public string RefreshToken { get; set; }
-//    }
-//}
+namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.RefreshTokenLogin
+{
+    public class RefreshTokenLoginCommandRequest : IRequest<RefreshTokenLoginCommandResponse>
+    {
+        public string RefreshToken { get; set; }
+    }
+}

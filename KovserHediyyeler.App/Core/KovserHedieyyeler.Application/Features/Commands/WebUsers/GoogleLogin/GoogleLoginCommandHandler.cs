@@ -1,24 +1,24 @@
-﻿//using KovserHedieyyeler.Application.Abstractions.Services;
-//using MediatR;
+﻿using KovserHedieyyeler.Application.Abstractions.Services;
+using MediatR;
 
-//namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.GoogleLogin
-//{
-//    public class GoogleLoginCommandHandler : IRequestHandler<GoogleLoginCommandRequest, GoogleLoginCommandResponse>
-//    {
-//        readonly IAuthService _authService;
+namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.GoogleLogin
+{
+    public class GoogleLoginCommandHandler : IRequestHandler<GoogleLoginCommandRequest, GoogleLoginCommandResponse>
+    {
+        readonly IAuthService _authService;
 
-//        public GoogleLoginCommandHandler(IAuthService authService)
-//        {
-//            _authService = authService;
-//        }
+        public GoogleLoginCommandHandler(IAuthService authService)
+        {
+            _authService = authService;
+        }
 
-//        public async Task<GoogleLoginCommandResponse> Handle(GoogleLoginCommandRequest request, CancellationToken cancellationToken)
-//        {
-//            var token = await _authService.GoogleLoginAsync(request.IdToken, 900);
-//            return new()
-//            {
-//                Token = token
-//            };
-//        }
-//    }
-//}
+        public async Task<GoogleLoginCommandResponse> Handle(GoogleLoginCommandRequest request, CancellationToken cancellationToken)
+        {
+            var token = await _authService.GoogleLoginAsync(request.IdToken, 900);
+            return new()
+            {
+                Token = token
+            };
+        }
+    }
+}

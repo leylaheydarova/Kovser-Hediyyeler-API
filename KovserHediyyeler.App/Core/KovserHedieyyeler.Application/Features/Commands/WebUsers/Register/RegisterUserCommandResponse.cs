@@ -1,8 +1,9 @@
-﻿namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.Register
+﻿using KovserHedieyyeler.Application.DTOs.Accounts;
+
+namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.Register
 {
     public class RegisterUserCommandResponse
     {
-        public string Message { get; set; }
-        public bool isSucceeded { get; set; }
+        public UserResponse userResponse;
     }
 }

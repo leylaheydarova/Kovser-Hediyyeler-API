@@ -1,4 +1,6 @@
 ﻿
+using KovserHedieyyeler.Application.Abstractions.Services;
+using KovserHedieyyeler.Application.Abstractions.Services.Authentications;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Addresses;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Banks;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Baskets;
@@ -38,6 +40,7 @@ using KovserHediyyeler.Persistence.Repositories.Concretes.Promotions;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Shops;
 using KovserHediyyeler.Persistence.Repositories.Concretes.SocialMedias;
 using KovserHediyyeler.Persistence.Repositories.Concretes.WishLists;
+using KovserHediyyeler.Persistence.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -148,11 +151,11 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             services.AddScoped<IWishListItemReadRepository, WishListItemReadRepository>();
             services.AddScoped<IWishListItemWriteRepository, WishListItemWriteRepository>();
 
-            //services.AddScoped<IUserService, UserService>();
-            //services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IExternalAuthentication, AuthService>();
+            services.AddScoped<IInternalAuthentication, AuthService>();
             //services.AddScoped<IRoleService, RoleService>();
-            //services.AddScoped<IExternalAuthentication, AuthService>();
-            //services.AddScoped<IInternalAuthentication, AuthService>();
             //services.AddScoped<IAuthorizationEndpointService, AuthorizationEndpointService>();
             //services.AddScoped<IBasketService, BasketService>();
             return services;

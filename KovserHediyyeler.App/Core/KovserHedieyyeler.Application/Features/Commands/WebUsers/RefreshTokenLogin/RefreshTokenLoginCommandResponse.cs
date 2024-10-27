@@ -1,9 +1,9 @@
-﻿//using KovserHedieyyeler.Application.DTOs.Tokens;
+﻿using KovserHedieyyeler.Application.DTOs.Tokens;
 
-//namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.RefreshTokenLogin
-//{
-//    public class RefreshTokenLoginCommandResponse
-//    {
-//        public Token Token { get; set; }
-//    }
-//}
+namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.RefreshTokenLogin
+{
+    public class RefreshTokenLoginCommandResponse
+    {
+        public Token Token { get; set; }
+    }
+}

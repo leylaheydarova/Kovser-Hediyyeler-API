@@ -18,6 +18,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.RegisterLibrariesServices();
 builder.Services.AddSwaggerGen();
+//builder.Host.UserSerilog();
 builder.Services
     .RegisterDataServices(builder.Configuration)
     .RegisterStorageServices()
