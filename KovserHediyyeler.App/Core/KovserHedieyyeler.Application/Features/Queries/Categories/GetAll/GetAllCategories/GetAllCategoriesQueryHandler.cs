@@ -21,12 +21,11 @@ namespace KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAl
             var query = _repository.GetAllWhere(x => !x.isDeleted, false);
             int totalCount = query.Count();
             List<CategoryGetDto> dtos = new List<CategoryGetDto>();
-            dtos = await query.Skip(request.Page * request.Size)
-                .Take(request.Size)
-                .Select(x => new CategoryGetDto
+            dtos = await query.Select(x => new CategoryGetDto
                 {
                     Id = x.ID.ToString(),
                     Name = x.Name,
+                    ParentID = x.ParentId.ToString(),
                     ParentCategoryName = x.ParentId != null ? x.ParentCategory.Name : "Ana kateqoriya"
                 }).ToListAsync();
             return new GetAllCategoriesQueryResponse

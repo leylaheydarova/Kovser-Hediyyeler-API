@@ -27,6 +27,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Categories.GetSingle
             {
                 Id = category.ID.ToString(),
                 Name = category.Name,
+                ParentID = category.ParentId.ToString(),
                 ParentCategoryName = category.ParentId != null ? category.ParentCategory.Name : "Ana kateqoriya"
             };
             return new GetSingleCategoryQueryResponse

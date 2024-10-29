@@ -28,7 +28,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Create
                 ID = Guid.NewGuid(),
                 Name = request.Dto.Name,
                 Image = request.Dto.file.FileName,
-                ImageURL = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{request.Dto.file.FileName}"
+                ImageURL = $"{_accessor.HttpContext.Request.Scheme}://{_accessor.HttpContext.Request.Host}/{request.Dto.file.FileName}"
             };
            
             if(brand == null) throw new BadRequestException();

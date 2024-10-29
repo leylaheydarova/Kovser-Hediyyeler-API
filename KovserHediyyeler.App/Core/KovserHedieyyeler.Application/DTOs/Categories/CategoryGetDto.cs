@@ -10,6 +10,7 @@ namespace KovserHedieyyeler.Application.DTOs.Categories
     {
         public string Id { get; set; }
         public string Name { get; set; }
+        public string? ParentID { get; set; }
         public string ParentCategoryName { get; set; }
     }
 }
