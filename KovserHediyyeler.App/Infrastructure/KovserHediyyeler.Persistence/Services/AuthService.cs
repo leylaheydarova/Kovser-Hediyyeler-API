@@ -20,9 +20,8 @@ namespace KovserHediyyeler.Persistence.Services
         readonly IConfiguration _configuration;
         readonly ITokenHandler _tokenHandler;
         readonly IUserService _userService;
-        //readonly IMailService _mailService;
 
-        public AuthService(UserManager<WebUser> userManager, SignInManager<WebUser> signInManager, HttpClient httpClient, IConfiguration configuration, ITokenHandler tokenHandler, IUserService userService)//, IMailService mailService)
+        public AuthService(UserManager<WebUser> userManager, SignInManager<WebUser> signInManager, HttpClient httpClient, IConfiguration configuration, ITokenHandler tokenHandler, IUserService userService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -30,8 +29,11 @@ namespace KovserHediyyeler.Persistence.Services
             _configuration = configuration;
             _tokenHandler = tokenHandler;
             _userService = userService;
-            //_mailService = mailService;
         }
+
+        //readonly IMailService _mailService;
+
+
 
         async Task<Token> CreateUserExternalAsync(WebUser user, string email, string firtsName, string lastName, UserLoginInfo info, int accessTokenLifeTime)
         {

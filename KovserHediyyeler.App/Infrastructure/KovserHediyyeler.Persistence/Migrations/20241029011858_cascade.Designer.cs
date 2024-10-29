@@ -4,6 +4,7 @@ using KovserHediyyeler.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KovserHediyyeler.Persistence.Migrations
 {
     [DbContext(typeof(KovserHediyyelerDbContext))]
-    partial class KovserHediyyelerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241029011858_cascade")]
+    partial class cascade
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -675,7 +678,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<Guid?>("BasketID")
+                    b.Property<Guid>("BasketID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -734,7 +737,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("WishListID")
+                    b.Property<Guid>("WishListID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("isDeleted")
@@ -1747,14 +1750,16 @@ namespace KovserHediyyeler.Persistence.Migrations
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Identity.WebUser", b =>
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Basket", "Basket")
-                        .WithMany("Customers")
+                        .WithMany("Customer")
                         .HasForeignKey("BasketID")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.WishList", "WishList")
                         .WithMany("WebUsers")
                         .HasForeignKey("WishListID")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.Navigation("Basket");
 
@@ -1968,7 +1973,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                 {
                     b.Navigation("BasketItems");
 
-                    b.Navigation("Customers");
+                    b.Navigation("Customer");
 
                     b.Navigation("Order")
                         .IsRequired();

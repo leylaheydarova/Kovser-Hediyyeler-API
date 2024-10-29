@@ -5,7 +5,13 @@ using KovserHedieyyeler.Infrastructure.Services.StorageServices.LocalStorage;
 using KovserHediyyeler.Infrastructure.RegistrationServices;
 using KovserHediyyeler.Persistence.RegistrationServices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using Serilog.Core;
+using Serilog.Sinks.MSSqlServer;
+using System.Collections.ObjectModel;
 using System.Security.Claims;
 using System.Text;
 
@@ -14,7 +20,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddHttpClient();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+AppRegistrationServices.ConfigureLogging(builder.Configuration);
+builder.Host.UseSerilog();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.RegisterLibrariesServices();
 builder.Services.AddSwaggerGen();
@@ -23,29 +32,11 @@ builder.Services
     .RegisterDataServices(builder.Configuration)
     .RegisterStorageServices()
     .AddStorage<LocalStorageService>()
-    //.RegisterLoginServices(builder.Configuration)
-    //.RegisterUserServices()
-    //.RegisterInfrastructureServices()
-    .AppServiceRegistrationServices();
+    .RegisterLoginServices(builder.Configuration)
+    .RegisterInfrastructureServices()
+    .AppServiceRegistrationServices(builder.Configuration);
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer("Admin", options =>
-    {
-        options.TokenValidationParameters = new()
-        {
-            ValidateAudience = true, //Oluþturulacak token deðerini kimlerin/hangi originlerin/sitelerin kullanýcý belirlediðimiz deðerdir. -> www.bilmemne.com
-            ValidateIssuer = true, //Oluþturulacak token deðerini kimin daðýttýný ifade edeceðimiz alandýr. -> www.myapi.com
-            ValidateLifetime = true, //Oluþturulan token deðerinin süresini kontrol edecek olan doðrulamadýr.
-            ValidateIssuerSigningKey = true, //Üretilecek token deðerinin uygulamamýza ait bir deðer olduðunu ifade eden suciry key verisinin doðrulanmasýdýr.
-
-            ValidAudience = builder.Configuration["Token:Audience"],
-            ValidIssuer = builder.Configuration["Token:Issuer"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
-            LifetimeValidator = (notBefore, expires, securityToken, validationParameters) => expires != null ? expires > DateTime.UtcNow : false,
-
-            NameClaimType = ClaimTypes.Name //JWT üzerinde Name claimne karþýlýk gelen deðeri User.Identity.Name propertysinden elde edebiliriz.
-        };
-    });
+//builder.Services
 
 var app = builder.Build();
 
@@ -56,7 +47,8 @@ var app = builder.Build();
         app.UseSwaggerUI();
     }
 
-    //app.ConfigureExceptionHandler();
+//app.ConfigureExceptionHandler();
+    app.UseSerilogRequestLogging();//ozunden sonrakilar loglanir ancaq.
 
     app.UseCors("KovserHediyyeler");
 
@@ -68,9 +60,7 @@ var app = builder.Build();
 
     app.UseAuthorization();
 
-
     app.MapControllers();
-
 
     app.Run();
 

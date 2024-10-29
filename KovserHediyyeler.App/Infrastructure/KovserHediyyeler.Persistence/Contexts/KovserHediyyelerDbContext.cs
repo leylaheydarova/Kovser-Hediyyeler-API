@@ -78,7 +78,7 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Basket>()
-                .HasMany(b => b.Customer)
+                .HasMany(b => b.Customers)
                 .WithOne(c => c.Basket)
                 .HasForeignKey(c => c.BasketID)
                 .OnDelete(DeleteBehavior.NoAction);
@@ -111,7 +111,7 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasMany(c => c.Products)
                 .WithOne(p => p.Category)
                 .HasForeignKey(p => p.CategoryID)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Category>()
                 .HasMany(c => c.CategoryDepartments)

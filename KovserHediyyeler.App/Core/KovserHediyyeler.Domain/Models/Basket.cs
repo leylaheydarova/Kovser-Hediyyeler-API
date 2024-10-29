@@ -8,7 +8,7 @@ namespace KovserHediyyeler.Domain.Models
         public int Count { get; set; }
         public double TotalPrice { get; set; }
         public Order Order { get; set; }
-        public ICollection<WebUser> Customer { get; set; } = new List<WebUser>();   
+        public ICollection<WebUser> Customers { get; set; } = new List<WebUser>();   
         public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();
     }
 }
