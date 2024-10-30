@@ -11,10 +11,8 @@ namespace KovserHediyyeler.Domain.Models.Identity
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenEndDate { get; set; }
         //Relationships
-        public Guid? BasketID { get; set; }
-        public Basket? Basket { get; set; }
-        public Guid? WishListID { get; set; }
-        public WishList? WishList { get; set; }
+        public Basket Basket { get; set; }
+        public WishList WishList { get; set; }
         public ICollection<Order> Orders { get; set; } = new List<Order>();
         public ICollection<CustomerBankCard> BankCards { get; set; } = new List<CustomerBankCard>();
         public ICollection<ProductComment> ProductComments { get; set; } = new List<ProductComment>();

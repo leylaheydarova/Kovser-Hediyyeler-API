@@ -149,6 +149,10 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CustomerID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
@@ -162,6 +166,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("CustomerID")
+                        .IsUnique();
 
                     b.ToTable("Baskets");
                 });
@@ -675,9 +682,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<Guid?>("BasketID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("ConcurrencyStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -734,17 +738,10 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("WishListID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<bool>("isDeleted")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BasketID");
-
-                    b.HasIndex("WishListID");
 
                     b.ToTable("WebUser");
                 });
@@ -1297,6 +1294,10 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("CustomerID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
@@ -1307,6 +1308,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("CustomerID")
+                        .IsUnique();
 
                     b.ToTable("WishLists");
                 });
@@ -1575,6 +1579,17 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("WebUser");
                 });
 
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Basket", b =>
+                {
+                    b.HasOne("KovserHediyyeler.Domain.Models.Identity.WebUser", "Customer")
+                        .WithOne("Basket")
+                        .HasForeignKey("KovserHediyyeler.Domain.Models.Basket", "CustomerID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.BasketItem", b =>
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Basket", "Basket")
@@ -1615,7 +1630,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Department", "Department")
                         .WithMany("CategoryDepartments")
                         .HasForeignKey("DepartmentID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1653,7 +1668,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.ProductProperty", "ProductProperty")
                         .WithMany("ColorCodeProductProperties")
                         .HasForeignKey("ProductPropertyID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ColorCode");
@@ -1685,7 +1700,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Department", "Department")
                         .WithMany("DepartmentPositions")
                         .HasForeignKey("DepartmentID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.Position", "Position")
@@ -1704,7 +1719,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Department", "Department")
                         .WithMany("DepartmentPromotions")
                         .HasForeignKey("DepartmentID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.Promotion", "Promotion")
@@ -1723,7 +1738,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Department", "Department")
                         .WithMany("Employees")
                         .HasForeignKey("DepartmentID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.Position", "Position")
@@ -1742,23 +1757,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Position");
 
                     b.Navigation("Shop");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Identity.WebUser", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Basket", "Basket")
-                        .WithMany("Customers")
-                        .HasForeignKey("BasketID")
-                        .OnDelete(DeleteBehavior.NoAction);
-
-                    b.HasOne("KovserHediyyeler.Domain.Models.WishList", "WishList")
-                        .WithMany("WebUsers")
-                        .HasForeignKey("WishListID")
-                        .OnDelete(DeleteBehavior.NoAction);
-
-                    b.Navigation("Basket");
-
-                    b.Navigation("WishList");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
@@ -1847,7 +1845,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Department", "Department")
                         .WithMany("Products")
                         .HasForeignKey("DepartmentID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.Promotion", "Promotion")
@@ -1869,13 +1867,13 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Identity.WebUser", "Customer")
                         .WithMany("ProductComments")
                         .HasForeignKey("CustomerID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.Product", "Product")
                         .WithMany("Comments")
                         .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Customer");
@@ -1888,7 +1886,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Product", "Product")
                         .WithMany("Properties")
                         .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Product");
@@ -1899,13 +1897,13 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Product", "Product")
                         .WithMany("ProductShops")
                         .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.Shop", "Shop")
                         .WithMany("ProductShops")
                         .HasForeignKey("ShopID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Product");
@@ -1918,10 +1916,21 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Department", "Department")
                         .WithMany("SocialMedias")
                         .HasForeignKey("DepartmentID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Department");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishList", b =>
+                {
+                    b.HasOne("KovserHediyyeler.Domain.Models.Identity.WebUser", "Customer")
+                        .WithOne("WishList")
+                        .HasForeignKey("KovserHediyyeler.Domain.Models.WishList", "CustomerID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishListItem", b =>
@@ -1929,7 +1938,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Product", "Product")
                         .WithMany("WishListItems")
                         .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.WishList", "List")
@@ -1948,7 +1957,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Product");
@@ -1967,8 +1976,6 @@ namespace KovserHediyyeler.Persistence.Migrations
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Basket", b =>
                 {
                     b.Navigation("BasketItems");
-
-                    b.Navigation("Customers");
 
                     b.Navigation("Order")
                         .IsRequired();
@@ -2019,9 +2026,15 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.Navigation("BankCards");
 
+                    b.Navigation("Basket")
+                        .IsRequired();
+
                     b.Navigation("Orders");
 
                     b.Navigation("ProductComments");
+
+                    b.Navigation("WishList")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
@@ -2092,8 +2105,6 @@ namespace KovserHediyyeler.Persistence.Migrations
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishList", b =>
                 {
                     b.Navigation("ListItems");
-
-                    b.Navigation("WebUsers");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.InvoiceFile", b =>

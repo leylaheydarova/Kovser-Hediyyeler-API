@@ -23,10 +23,14 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> RegisterUserAsync(RegisterUserCommandRequest request)
+        public async Task<IActionResult> RegisterUserAsync([FromForm]RegisterUserCommandRequest request)
         {
             var response = await _mediator.Send(request);
-            return Ok(response);
+            if(response.userResponse.isSucceeded == false)
+            {
+                return BadRequest();
+            }
+            return StatusCode(200, response);
         }
 
         //[HttpPost("Update-Password")]

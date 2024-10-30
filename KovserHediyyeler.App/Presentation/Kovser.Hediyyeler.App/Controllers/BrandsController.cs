@@ -69,11 +69,11 @@ namespace Kovser.Hediyyeler.App.Controllers
         [HttpDelete("RemovePermanently/{id}")]
         public async Task<IActionResult> RemoveAsync(string id)
         {
-            RemovePermanentlyBrandCommandRequest request = new RemovePermanentlyBrandCommandRequest
+            var request = new RemovePermanentlyBrandCommandRequest
             {
                 Id = id
             };
-            RemovePermanentlyBrandCommandResponse response = await _mediator.Send(request);
+            var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 

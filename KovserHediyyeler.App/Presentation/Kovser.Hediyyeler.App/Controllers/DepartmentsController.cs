@@ -55,16 +55,18 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Dto);
         }
 
-        [HttpDelete("DeleteTemporarily/{id}")]
-        public async Task<IActionResult> DeleteAsync(DeleteTemporarilyDepartmentCommandRequest request)
+        [HttpDelete("DeleteTemporarily")]
+        public async Task<IActionResult> DeleteAsync(string id)
         {
+            var request = new DeleteTemporarilyDepartmentCommandRequest { Id = id };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpDelete("RemovePermanently/{id}")]
-        public async Task<IActionResult> RemoveAsync(RemovePermanentlyDepartmentCommandRequest request)
+        [HttpDelete("RemovePermanently")]
+        public async Task<IActionResult> RemoveAsync(string id)
         {
+            var request = new RemovePermanentlyDepartmentCommandRequest { Id = id };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
@@ -76,7 +78,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("RecoverData/{id}")]
+        [HttpPut("RecoverData")]
         public async Task<IActionResult> RecoverDataAsync(string id)
         {
             var request = new RecoverDepartmentCommandRequest 

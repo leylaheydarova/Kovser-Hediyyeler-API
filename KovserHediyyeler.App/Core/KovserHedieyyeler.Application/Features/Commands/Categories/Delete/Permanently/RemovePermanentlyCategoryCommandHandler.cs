@@ -34,7 +34,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Perm
                 }
             }
 
-            await _writeRepository.SaveAsync();
             _writeRepository.RemovePermanently(category);
             await _writeRepository.SaveAsync();
             return new RemovePermanentlyCategoryCommandResponse

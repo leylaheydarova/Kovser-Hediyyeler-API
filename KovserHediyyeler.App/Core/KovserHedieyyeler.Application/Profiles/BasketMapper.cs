@@ -14,6 +14,7 @@ namespace KovserHedieyyeler.Application.Profiles
         public BasketMapper()
         {
             CreateMap<BasketItem, BasketItemGetDto>().ReverseMap();
+            CreateMap<Basket, BasketGetDto>().ReverseMap();
         }
     }
 }

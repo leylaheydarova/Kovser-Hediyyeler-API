@@ -2,6 +2,8 @@
 using KovserHedieyyeler.Application.DTOs.Accounts;
 using KovserHedieyyeler.Application.DTOs.WebUsers.Users;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+using KovserHedieyyeler.Application.Repositories.Abstractions.Addresses;
+using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Domain.Models.Identity;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -15,10 +17,12 @@ namespace KovserHediyyeler.Persistence.Services
     public class UserService : IUserService
     {
         readonly UserManager<WebUser> _userManager;
+        readonly IAddressWriteRepository _addressRepository;
 
-        public UserService(UserManager<WebUser> userManager)
+        public UserService(UserManager<WebUser> userManager, IAddressWriteRepository addressRepository)
         {
             _userManager = userManager;
+            _addressRepository = addressRepository;
         }
 
         public int TotalUsersCount => throw new NotImplementedException();
@@ -30,7 +34,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task<UserResponse> CreateAsync(RegisterDto dto)
         {
-            IdentityResult result = await _userManager.CreateAsync(new()
+            var user = new WebUser()
             {
                 Id = Guid.NewGuid().ToString(),
                 FirstName = dto.FirstName,
@@ -38,26 +42,49 @@ namespace KovserHediyyeler.Persistence.Services
                 MiddleName = dto.MiddleName,
                 PhoneNumber = dto.Phone,
                 Email = dto.Email,
-                UserName = dto.Email
-            }, dto.Password);
-
-            var response = new UserResponse
-            {
-                isSucceeded = result.Succeeded
+                UserName = dto.Email,
+                Basket = new(),
+                WishList = new()
             };
-            if (response.isSucceeded)
+            var result = await _userManager.CreateAsync(user, dto.Password);
+            Address address = new Address
             {
-                response.Message = "İstifadəçi qeydiyyatı uğurla başa çatmışdır!";
+                ID = Guid.NewGuid(),
+                City = dto.Address.City,
+                Region = dto.Address.Region,
+                Street = dto.Address.Street,
+                Home = dto.Address.Home,
+                PostalCode = dto.Address.PostalCode,
+                IsCurrentAddress = dto.Address.IsCurrentAddress
+            };
+            AddressWebUser addressUser = new AddressWebUser
+            {
+                AddressID = address.ID,
+                WebUserID = user.Id
+            };
+            try
+            {
+                await _addressRepository.AddAsync(address);
+                await _addressRepository.SaveAsync();
             }
-            else
+            catch (Exception ex)
             {
-                foreach (var error in result.Errors)
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            if (!result.Succeeded)
+            {
+                return new UserResponse
                 {
-                    response.Message += $"{error.Code} - {error.Description}\n";
-                }
+                    Message = "Xəta baş verdi!",
+                    isSucceeded = false
+                };
             }
-
-            return response;
+            return new UserResponse
+            {
+                isSucceeded = true,
+                Message = "Hesab uğurla yaradılmışdır!"
+            };
         }
 
         public Task<List<WebUserGetAllDto>> GetAllUsersAsync(int page, int size)

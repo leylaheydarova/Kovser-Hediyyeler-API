@@ -14,12 +14,22 @@ namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.Login
 
         public async Task<UserLoginCommandResponse> Handle(UserLoginCommandRequest request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
-            //var token = await _authService.LoginAsync(request.Dto.Email, request.Dto.Password, 900);
-            //return new UserLoginSuccessCommandResponse()
-            //{
-            //    Token = token
-            //};
+            var token = await _authService.LoginAsync(request.Dto.Email, request.Dto.Password, 900);
+            if(token != null)
+            {
+                return new UserLoginSuccessCommandResponse()
+                {
+                    Token = token
+                };
+
+            }
+            else
+            {
+                return new UserLoginErrorCommandResponse()
+                {
+                    Message = "Şifrə və ya email ünvanda yalnışlıq var!"
+                };
+            }
         }
     }
 }

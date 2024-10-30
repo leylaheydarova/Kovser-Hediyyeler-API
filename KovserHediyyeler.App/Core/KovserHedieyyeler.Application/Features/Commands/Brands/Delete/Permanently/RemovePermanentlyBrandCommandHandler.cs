@@ -19,7 +19,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanen
 
         public async Task<RemovePermanentlyBrandCommandResponse> Handle(RemovePermanentlyBrandCommandRequest request, CancellationToken cancellationToken)
         {
-            Brand brand = await _readRepository.GetWhereAsync(x => x.ID.ToString() == request.Id, true);
+            var brand = await _readRepository.GetWhereAsync(x => x.ID.ToString() == request.Id, true);
             if (brand == null) throw new BrandNotFoundException();
             
             _writeRepository.RemovePermanently(brand);

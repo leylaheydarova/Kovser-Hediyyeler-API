@@ -45,19 +45,20 @@
 //                List<WebUser> users = await _userManager.Users
 //                    .Include(u => u.Basket)
 //                    .ToListAsync();
-//                foreach(var user in users) {
-//                    //var _basket = from user in users
-//                    //              join basket in _basketReadRepository.Table
-//                    //              on user.BasketID equals basket.ID
-//                    //              join order in _orderReadRepository.Table
-//                    //              on basket.ID equals order. into BasketOrders
-//                    //              from order in BasketOrders.DefaultIfEmpty()
-//                    //              select new
-//                    //              {
-//                    //                  Basket = basket,
-//                    //                  Order = order,
-//                    //                  User = user
-//                    //              };
+//                foreach (var user in users)
+//                {
+//                    var _basket = from user in users
+//                                  join basket in _basketReadRepository.Table
+//                                  on user.BasketID equals basket.ID
+//                                  join order in _orderReadRepository.Table
+//                                  on basket.ID equals order. into BasketOrders
+//                                  from order in BasketOrders.DefaultIfEmpty()
+//                                  select new
+//                                  {
+//                                      Basket = basket,
+//                                      Order = order,
+//                                      User = user
+//                                  };
 
 //                }
 //            }

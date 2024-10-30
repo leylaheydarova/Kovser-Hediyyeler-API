@@ -78,9 +78,9 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Basket>()
-                .HasMany(b => b.Customers)
+                .HasOne(b => b.Customer)
                 .WithOne(c => c.Basket)
-                .HasForeignKey(c => c.BasketID)
+                .HasForeignKey<Basket>(c => c.CustomerID)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Basket>()
@@ -107,11 +107,11 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey(c => c.ParentId)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Category>()
-                .HasMany(c => c.Products)
-                .WithOne(p => p.Category)
-                .HasForeignKey(p => p.CategoryID)
-                .OnDelete(DeleteBehavior.Cascade);
+            //modelBuilder.Entity<Category>()
+            //    .HasMany(c => c.Products)
+            //    .WithOne(p => p.Category)
+            //    .HasForeignKey(p => p.CategoryID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Category>()
                 .HasMany(c => c.CategoryDepartments)
@@ -137,41 +137,41 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey(cbc => cbc.CustomerID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Department>()
-               .HasMany(d => d.SocialMedias)
-               .WithOne(sm => sm.Department)
-               .HasForeignKey(fk => fk.DepartmentID)
-               .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Department>()
+            //   .HasMany(d => d.SocialMedias)
+            //   .WithOne(sm => sm.Department)
+            //   .HasForeignKey(fk => fk.DepartmentID)
+            //   .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Department>()
-                .HasMany(d => d.Employees)
-                .WithOne(e => e.Department)
-                .HasForeignKey(e => e.DepartmentID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Department>()
+            //    .HasMany(d => d.Employees)
+            //    .WithOne(e => e.Department)
+            //    .HasForeignKey(e => e.DepartmentID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Department>()
-                .HasMany(d => d.Products)
-                .WithOne(p => p.Department)
-                .HasForeignKey(p => p.DepartmentID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Department>()
+            //    .HasMany(d => d.Products)
+            //    .WithOne(p => p.Department)
+            //    .HasForeignKey(p => p.DepartmentID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Department>()
-                .HasMany(d => d.CategoryDepartments)
-                .WithOne(cd => cd.Department)
-                .HasForeignKey(cd => cd.DepartmentID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Department>()
+            //    .HasMany(d => d.CategoryDepartments)
+            //    .WithOne(cd => cd.Department)
+            //    .HasForeignKey(cd => cd.DepartmentID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Department>()
-                .HasMany(d => d.DepartmentPositions)
-                .WithOne(dp => dp.Department)
-                .HasForeignKey(dp => dp.DepartmentID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Department>()
+            //    .HasMany(d => d.DepartmentPositions)
+            //    .WithOne(dp => dp.Department)
+            //    .HasForeignKey(dp => dp.DepartmentID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Department>()
-                .HasMany(d => d.DepartmentPromotions)
-                .WithOne(dp => dp.Department)
-                .HasForeignKey(dp => dp.DepartmentID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Department>()
+            //    .HasMany(d => d.DepartmentPromotions)
+            //    .WithOne(dp => dp.Department)
+            //    .HasForeignKey(dp => dp.DepartmentID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Employee>()
                 .HasMany(e => e.Addresses)
@@ -250,47 +250,47 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey(p => p.PromotionID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Product>()
-                .HasMany(p => p.Properties)
-                .WithOne(pp => pp.Product)
-                .HasForeignKey(pp => pp.ProductID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Product>()
+            //    .HasMany(p => p.Properties)
+            //    .WithOne(pp => pp.Product)
+            //    .HasForeignKey(pp => pp.ProductID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Product>()
-                .HasMany(p => p.Images)
-                .WithOne(pi => pi.Product)
-                .HasForeignKey(pi => pi.ProductID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Product>()
+            //    .HasMany(p => p.Images)
+            //    .WithOne(pi => pi.Product)
+            //    .HasForeignKey(pi => pi.ProductID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Product>()
-                .HasMany(p => p.Comments)
-                .WithOne(pc => pc.Product)
-                .HasForeignKey(pc => pc.ProductID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Product>()
+            //    .HasMany(p => p.Comments)
+            //    .WithOne(pc => pc.Product)
+            //    .HasForeignKey(pc => pc.ProductID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Product>()
-                .HasMany(p => p.WishListItems)
-                .WithOne(wli => wli.Product)
-                .HasForeignKey(wli => wli.ProductID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Product>()
+            //    .HasMany(p => p.WishListItems)
+            //    .WithOne(wli => wli.Product)
+            //    .HasForeignKey(wli => wli.ProductID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Product>()
-                .HasMany(p => p.ProductShops)
-                .WithOne(psh => psh.Product)
-                .HasForeignKey(psh => psh.ProductID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Product>()
+            //    .HasMany(p => p.ProductShops)
+            //    .WithOne(psh => psh.Product)
+            //    .HasForeignKey(psh => psh.ProductID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<ProductComment>()
-                .HasOne(pc => pc.Customer)
-                .WithMany(c => c.ProductComments)
-                .HasForeignKey(pc => pc.CustomerID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<ProductComment>()
+            //    .HasOne(pc => pc.Customer)
+            //    .WithMany(c => c.ProductComments)
+            //    .HasForeignKey(pc => pc.CustomerID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<ProductProperty>()
-                .HasMany(pr => pr.ColorCodeProductProperties)
-                .WithOne(cp => cp.ProductProperty)
-                .HasForeignKey(cp => cp.ProductPropertyID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<ProductProperty>()
+            //    .HasMany(pr => pr.ColorCodeProductProperties)
+            //    .WithOne(cp => cp.ProductProperty)
+            //    .HasForeignKey(cp => cp.ProductPropertyID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Promotion>()
                 .HasMany(p => p.DepartmentPromotions)
@@ -304,16 +304,16 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey(cp => cp.PromotionID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Shop>()
-                .HasMany(sh => sh.ProductShops)
-                .WithOne(psh => psh.Shop)
-                .HasForeignKey(psh => psh.ShopID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Shop>()
+            //    .HasMany(sh => sh.ProductShops)
+            //    .WithOne(psh => psh.Shop)
+            //    .HasForeignKey(psh => psh.ShopID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<WebUser>()
                 .HasOne(w => w.WishList)
-                .WithMany(wl => wl.WebUsers)
-                .HasForeignKey(w => w.WishListID)
+                .WithOne(wl => wl.Customer)
+                .HasForeignKey<WishList>(w => w.CustomerID)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<WebUser>()
