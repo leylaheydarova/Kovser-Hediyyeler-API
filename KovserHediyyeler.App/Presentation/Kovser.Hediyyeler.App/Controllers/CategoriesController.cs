@@ -4,7 +4,8 @@ using KovserHedieyyeler.Application.Features.Commands.Categories.Create;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Recover;
-using KovserHedieyyeler.Application.Features.Commands.Categories.Update;
+using KovserHedieyyeler.Application.Features.Commands.Categories.Update.TotalUpdate;
+using KovserHedieyyeler.Application.Features.Commands.Categories.Update.UpdatePartly;
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAllAbstractParents;
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAllCategories;
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetSingle;
@@ -102,6 +103,13 @@ namespace Kovser.Hediyyeler.App.Controllers
 
         [HttpPut("RecoverData/{id}")]
         public async Task<IActionResult> RecoverDataAsync(RecoverCategoryCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpPatch("UpdatePartly")]
+        public async Task<IActionResult> UpdatePartly(UpdatePartlyCategoryCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
