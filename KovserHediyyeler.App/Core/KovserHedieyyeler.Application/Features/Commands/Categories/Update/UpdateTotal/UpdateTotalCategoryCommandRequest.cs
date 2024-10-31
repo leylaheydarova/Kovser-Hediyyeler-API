@@ -3,7 +3,7 @@ using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Categories.Update.TotalUpdate
 {
-    public class UpdateCategoryCommandRequest : UpdateCommandRequest<CategoryCommandDto>, IRequest<UpdateCategoryCommandResponse>
+    public class UpdateTotalCategoryCommandRequest : UpdateCommandRequest<CategoryCommandDto>, IRequest<UpdateTotalCategoryCommandResponse>
     {
     }
 }

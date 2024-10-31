@@ -89,15 +89,15 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAsync(CategoryCommandDto dto, string id)
+        public async Task<IActionResult> UpdateTotalAsync(CategoryCommandDto dto, string id)
         {
             if (dto == null) throw new BadRequestException();
-            UpdateCategoryCommandRequest request = new UpdateCategoryCommandRequest
+            UpdateTotalCategoryCommandRequest request = new UpdateTotalCategoryCommandRequest
             {
                 Id = id,
                 Dto = dto
             };
-            UpdateCategoryCommandResponse response = await _mediator.Send(request);
+            UpdateTotalCategoryCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
@@ -108,8 +108,8 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPatch("UpdatePartly")]
-        public async Task<IActionResult> UpdatePartly(UpdatePartlyCategoryCommandRequest request)
+        [HttpPatch]
+        public async Task<IActionResult> UpdateAsync (UpdateCategoryCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

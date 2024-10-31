@@ -4,7 +4,8 @@ using KovserHedieyyeler.Application.Features.Commands.Brands.Create;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Recover;
-using KovserHedieyyeler.Application.Features.Commands.Brands.Update;
+using KovserHedieyyeler.Application.Features.Commands.Brands.Update.Update;
+using KovserHedieyyeler.Application.Features.Commands.Brands.Update.UpdateAll;
 using KovserHedieyyeler.Application.Features.Queries.Brands.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Brands.GetSingle;
 using MediatR;
@@ -80,9 +81,9 @@ namespace Kovser.Hediyyeler.App.Controllers
 
 
         [HttpPut]
-        public async Task<IActionResult> UpdateAsync([FromForm]UpdateBrandCommandRequest request)
+        public async Task<IActionResult> UpdateAllAsync([FromForm]UpdateTotalBrandCommandRequest request)
         {
-            UpdateBrandCommandResponse response = await _mediator.Send(request);
+            UpdateTotalBrandCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response?.Message);
         }
 
@@ -93,6 +94,13 @@ namespace Kovser.Hediyyeler.App.Controllers
             {
                 Id = id
             };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpPatch]
+        public async Task<IActionResult> UpdateAsync([FromForm]UpdateBrandCommandRequest request)
+        {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }

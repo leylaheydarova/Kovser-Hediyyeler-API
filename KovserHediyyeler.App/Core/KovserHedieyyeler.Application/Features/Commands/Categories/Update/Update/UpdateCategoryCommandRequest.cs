@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Categories.Update.UpdatePartly
 {
-    public class UpdatePartlyCategoryCommandRequest:UpdateCommandRequest<CategoryUpdateDto>, IRequest<UpdatePartlyCategoryCommandResponse>
+    public class UpdateCategoryCommandRequest:UpdateCommandRequest<CategoryUpdateDto>, IRequest<UpdateCategoryCommandResponse>
     {
     }
 }

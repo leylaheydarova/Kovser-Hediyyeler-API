@@ -5,7 +5,7 @@ using KovserHedieyyeler.Application.Features.Commands.Departments.Create;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Recover;
-using KovserHedieyyeler.Application.Features.Commands.Departments.Update;
+using KovserHedieyyeler.Application.Features.Commands.Departments.Update.UpdateDepartment.UpdateTotal;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetSingle;
 using MediatR;
@@ -72,7 +72,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAsync([FromForm]UpdateDepartmentCommandRequest request)
+        public async Task<IActionResult> UpdateAsync([FromForm]UpdateTotalDepartmentCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

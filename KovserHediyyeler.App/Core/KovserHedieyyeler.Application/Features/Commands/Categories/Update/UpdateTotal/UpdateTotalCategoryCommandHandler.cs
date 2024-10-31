@@ -5,18 +5,18 @@ using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Categories.Update.TotalUpdate
 {
-    public class UpdateCategoryCommandHandler : IRequestHandler<UpdateCategoryCommandRequest, UpdateCategoryCommandResponse>
+    public class UpdateTotalCategoryCommandHandler : IRequestHandler<UpdateTotalCategoryCommandRequest, UpdateTotalCategoryCommandResponse>
     {
         readonly ICategoryReadRepository _readRepository;
         readonly ICategoryWriteRepository _writeRepository;
 
-        public UpdateCategoryCommandHandler(ICategoryReadRepository readRepository, ICategoryWriteRepository writeRepository)
+        public UpdateTotalCategoryCommandHandler(ICategoryReadRepository readRepository, ICategoryWriteRepository writeRepository)
         {
             _readRepository = readRepository;
             _writeRepository = writeRepository;
         }
 
-        public async Task<UpdateCategoryCommandResponse> Handle(UpdateCategoryCommandRequest request, CancellationToken cancellationToken)
+        public async Task<UpdateTotalCategoryCommandResponse> Handle(UpdateTotalCategoryCommandRequest request, CancellationToken cancellationToken)
         {
             Category category = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), true);
             if (category == null) throw new CategoryNotFoundException();
@@ -26,7 +26,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Update.Tota
             _writeRepository.Update(category);
             await _writeRepository.SaveAsync();
 
-            return new UpdateCategoryCommandResponse
+            return new UpdateTotalCategoryCommandResponse
             {
                 Message = "Kateqoriya məlumatları uğurla yeniləndi"
             };

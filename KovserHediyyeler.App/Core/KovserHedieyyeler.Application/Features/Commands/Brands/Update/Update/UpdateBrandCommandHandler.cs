@@ -2,38 +2,35 @@
 using KovserHedieyyeler.Application.Repositories.Abstractions.Brands;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
-using Microsoft.AspNetCore.Http;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update
+namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update.Update
 {
     public class UpdateBrandCommandHandler : IRequestHandler<UpdateBrandCommandRequest, UpdateBrandCommandResponse>
     {
         readonly IBrandReadRepository _readRepository;
         readonly IBrandWriteRepository _writeRepository;
-        readonly IHttpContextAccessor _accessor;
 
-        public UpdateBrandCommandHandler(IBrandReadRepository readRepository, IBrandWriteRepository writeRepository, IHttpContextAccessor accessor)
+        public UpdateBrandCommandHandler(IBrandReadRepository readRepository, IBrandWriteRepository writeRepository)
         {
             _readRepository = readRepository;
             _writeRepository = writeRepository;
-            _accessor = accessor;
         }
 
         public async Task<UpdateBrandCommandResponse> Handle(UpdateBrandCommandRequest request, CancellationToken cancellationToken)
         {
-            var id = request.Id.ToString();
-            Brand brand = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id ,true);
+            Brand brand = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, true);
             if (brand == null) throw new BrandNotFoundException();
-            brand.Name = request.Dto.Name;
-            brand.Image = request.Dto.file.FileName;
-            brand.ImageURL = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{brand.Image}";
-
+            brand.Name = request.Dto.Name != null ? request.Dto.Name : brand.Name;
             _writeRepository.Update(brand);
             await _writeRepository.SaveAsync();
             return new UpdateBrandCommandResponse
             {
-                Message = "Brend məlumatları uğurla yeniləndi!"
+                Message = "Məlumat uğurla yeniləndi!"
             };
         }
     }

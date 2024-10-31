@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Categories.Update.UpdatePartly
 {
-    public class UpdatePartlyCategoryCommandResponse:CommandResponse
+    public class UpdateCategoryCommandResponse:CommandResponse
     {
     }
 }
