@@ -1,16 +1,12 @@
 ﻿using FluentValidation;
 using KovserHedieyyeler.Application.DTOs.SocialMedias;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace KovserHedieyyeler.Application.Validation.SocialMedias
 {
-    public class SocialMediaDtoValidation:AbstractValidator<SocialMediaDto>
+    public class SocialMediaCommandDtoValidation:AbstractValidator<SocialMediaCommandDto>
     {
-        public SocialMediaDtoValidation()
+        public SocialMediaCommandDtoValidation()
         {
             RuleFor(x => x.NickName)
                 .NotNull()

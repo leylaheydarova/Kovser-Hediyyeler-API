@@ -40,6 +40,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<Guid?>("EmployeID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("EmployeeID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Home")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -69,7 +72,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("EmployeID");
+                    b.HasIndex("EmployeeID");
 
                     b.HasIndex("ShopID");
 
@@ -1547,8 +1550,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Employee", "Employee")
                         .WithMany("Addresses")
-                        .HasForeignKey("EmployeID")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .HasForeignKey("EmployeeID");
 
                     b.HasOne("KovserHediyyeler.Domain.Models.Shop", "Shop")
                         .WithMany("Addresses")
@@ -1624,7 +1626,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Category", "Category")
                         .WithMany("CategoryDepartments")
                         .HasForeignKey("CategoryID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.Department", "Department")
@@ -1643,7 +1645,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Category", "Category")
                         .WithMany("CategoryPromotions")
                         .HasForeignKey("CategoryID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.Promotion", "Promotion")

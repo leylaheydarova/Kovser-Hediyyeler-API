@@ -13,7 +13,9 @@ namespace KovserHedieyyeler.Application.Profiles
     {
         public SocialMediaMapper()
         {
-            CreateMap<SocialMediaDto, SocialMedia>().ReverseMap();
+            CreateMap<SocialMediaCommandDto, SocialMedia>().ReverseMap();
+            CreateMap<SocialMediaUpdateDto, SocialMedia>().ReverseMap();
+            CreateMap<SocialMedia, SocialMediaGetDto>().ReverseMap();
         }
     }
 }

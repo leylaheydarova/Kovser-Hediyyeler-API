@@ -30,7 +30,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Update.Upd
             if (department == null) throw new DepartmentNotFoundException();
             department.Name = request.Dto.Name != null ? request.Dto.Name : department.Name;
             department.Description = request.Dto.Description != null ? request.Dto.Description : department.Description;
-            department.LogoImage = request.Dto.file.FileName != null ? request.Dto.file.FileName : department.LogoImage;
+            department.LogoImage = request.Dto.file != null ? request.Dto.file.FileName : department.LogoImage;
             department.LogoImageURL = request.Dto.file != null ? _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{department.LogoImage}" : department.LogoImageURL;
             _writeRepository.Update(department);
             await _writeRepository.SaveAsync();

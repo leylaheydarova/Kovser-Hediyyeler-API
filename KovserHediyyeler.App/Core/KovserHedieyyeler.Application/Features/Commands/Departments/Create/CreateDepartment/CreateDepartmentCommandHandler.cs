@@ -6,7 +6,7 @@ using KovserHediyyeler.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create
+namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create.CreateDepartment
 {
     public class CreateDepartmentCommandHandler : IRequestHandler<CreateDepartmentCommandRequest, CreateDepartmentCommandResponse>
     {
@@ -38,17 +38,17 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create
                 Name = dto.Name,
                 Description = dto.Description,
                 Phone = dto.Phone,
-                LogoImage = dto.file.Name,
-                LogoImageURL = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{dto.file.Name}"
+                LogoImage = dto.file.FileName,
+                LogoImageURL = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{dto.file.FileName}"
             };
-            
-            
+
+
             foreach (var socialMediaDto in dto.SocialMedias)
             {
                 SocialMedia socialMedia = new SocialMedia()
                 {
-                    Name= socialMediaDto.Name,
-                    Department= department,
+                    Name = socialMediaDto.Name,
+                    Department = department,
                     NickName = socialMediaDto.NickName,
                     URL = socialMediaDto.URL
                 };

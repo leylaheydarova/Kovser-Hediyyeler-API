@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently
+namespace KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently.RemoveDepartment
 {
     public class RemovePermanentlyDepartmentCommandHandler : IRequestHandler<RemovePermanentlyDepartmentCommandRequest, RemovePermanentlyDepartmentCommandResponse>
     {
@@ -30,7 +30,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Per
             foreach (var socialMedia in department.SocialMedias)
             {
                 if (socialMedia.DepartmentID == department.ID)
-                { 
+                {
                     _socialMediaRepository.RemovePermanently(socialMedia);
                 }
             }

@@ -4,7 +4,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace KovserHedieyyeler.Application.Features.Queries.Departments.GetAll
+namespace KovserHedieyyeler.Application.Features.Queries.Departments.GetAll.GetAllDepartments
 {
     public class GetAllDepartmentsQueryHandler : IRequestHandler<GetAllDepartmentsQueryRequest, GetAllDepartmentsQueryResponse>
     {
@@ -17,7 +17,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Departments.GetAll
 
         public async Task<GetAllDepartmentsQueryResponse> Handle(GetAllDepartmentsQueryRequest request, CancellationToken cancellationToken)
         {
-            var query = _repository.GetAllWhere(x => !x.isDeleted, false);
+            var query = _repository.GetAllWhere(x => !x.isDeleted, false, "SocialMedias");
             int totalCount = query.Count();
             List<DepartmentGetAllDto> dtos = new List<DepartmentGetAllDto>();
             dtos = await query.Skip(request.Page * request.Size)

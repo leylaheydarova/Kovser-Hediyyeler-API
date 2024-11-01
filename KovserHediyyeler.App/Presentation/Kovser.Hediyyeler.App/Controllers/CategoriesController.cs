@@ -26,8 +26,9 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync([FromQuery] GetAllCategoriesQueryRequest request)
+        public async Task<IActionResult> GetAllAsync()
         {
+            var request = new GetAllCategoriesQueryRequest();
             GetAllCategoriesQueryResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Datas);
         }

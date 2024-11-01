@@ -16,6 +16,6 @@ namespace KovserHedieyyeler.Application.DTOs.Department
         public string Phone { get; set; }
         public string LogoImage { get; set; }
         public string LogoImageURL { get; set; }
-        public ICollection<SocialMediaDto> SocialMedias { get; set;}
+        public ICollection<SocialMediaGetDto> SocialMedias { get; set;}
     }
 }

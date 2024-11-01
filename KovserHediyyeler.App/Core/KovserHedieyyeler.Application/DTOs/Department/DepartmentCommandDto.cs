@@ -17,6 +17,6 @@ namespace KovserHedieyyeler.Application.DTOs.Department
         [MaxFileSize(3)]
         [AllowedExtensions(new string[] { ".jpg", ".png" })]
         public IFormFile file { get; set; }
-        public ICollection<SocialMediaDto>? SocialMedias { get; set; }
+        public ICollection<SocialMediaCommandDto>? SocialMedias { get; set; }
     }
 }

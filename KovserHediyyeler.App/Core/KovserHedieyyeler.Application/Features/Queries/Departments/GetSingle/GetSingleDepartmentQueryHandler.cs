@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using KovserHedieyyeler.Application.DTOs.Department;
+using KovserHedieyyeler.Application.DTOs.SocialMedias;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
 using KovserHediyyeler.Domain.Models;
@@ -20,12 +21,30 @@ namespace KovserHedieyyeler.Application.Features.Queries.Departments.GetSingle
 
         public async Task<GetSingleDepartmentQueryResponse> Handle(GetSingleDepartmentQueryRequest request, CancellationToken cancellationToken)
         {
-            Department department = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, nameof(SocialMedia));
+            Department department = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, "SocialMedias");
             if(department == null)
             {
                 throw new DepartmentNotFoundException();
             }
-            DepartmentGetSingleDto dto = _mapper.Map<DepartmentGetSingleDto>(department);
+            DepartmentGetSingleDto dto = new DepartmentGetSingleDto
+            {
+                Id = department.ID.ToString(),
+                Name = department.Name,
+                Description = department.Description,
+                LogoImage = department.LogoImage,
+                LogoImageURL = department.LogoImageURL,
+                Phone = department.Phone,
+                SocialMedias = department.SocialMedias.Select(socialMedia => new SocialMediaGetDto
+                {
+                    Id = socialMedia.ID.ToString(),
+                    Name = socialMedia.Name,
+                    NickName = socialMedia.NickName,
+                    URL = socialMedia.URL,
+                    DepartmenName = socialMedia.Department.Name
+                }).ToList()
+            };
+
+            
             return new GetSingleDepartmentQueryResponse
             {
                 Dto = dto

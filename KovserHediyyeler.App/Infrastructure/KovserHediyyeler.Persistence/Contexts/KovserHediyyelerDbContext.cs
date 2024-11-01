@@ -113,17 +113,17 @@ namespace KovserHediyyeler.Persistence.Contexts
             //    .HasForeignKey(p => p.CategoryID)
             //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Category>()
-                .HasMany(c => c.CategoryDepartments)
-                .WithOne(cd => cd.Category)
-                .HasForeignKey(cd => cd.CategoryID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Category>()
+            //    .HasMany(c => c.CategoryDepartments)
+            //    .WithOne(cd => cd.Category)
+            //    .HasForeignKey(cd => cd.CategoryID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Category>()
-                .HasMany(c => c.CategoryPromotions)
-                .WithOne(cp => cp.Category)
-                .HasForeignKey(cp => cp.CategoryID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Category>()
+            //    .HasMany(c => c.CategoryPromotions)
+            //    .WithOne(cp => cp.Category)
+            //    .HasForeignKey(cp => cp.CategoryID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<ColorCode>()
                 .HasMany(cc => cc.ColorCodeProductProperties)
@@ -173,11 +173,11 @@ namespace KovserHediyyeler.Persistence.Contexts
             //    .HasForeignKey(dp => dp.DepartmentID)
             //    .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Employee>()
-                .HasMany(e => e.Addresses)
-                .WithOne(ad => ad.Employee)
-                .HasForeignKey(ad => ad.EmployeID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Employee>()
+            //    .HasMany(e => e.Addresses)
+            //    .WithOne(ad => ad.Employee)
+            //    .HasForeignKey(ad => ad.EmployeID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Employee>()
                 .HasOne(e => e.Position)
