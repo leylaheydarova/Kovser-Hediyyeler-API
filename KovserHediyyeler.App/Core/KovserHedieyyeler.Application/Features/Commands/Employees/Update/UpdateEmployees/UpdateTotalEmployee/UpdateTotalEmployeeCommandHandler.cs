@@ -3,20 +3,20 @@ using KovserHedieyyeler.Application.Repositories.Abstractions.Employees;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmployee
+namespace KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmployees.UpdateEmployee
 {
-    public class UpdateEmployeeCommandHandler : IRequestHandler<UpdateEmployeeCommandRequest, UpdateEmployeeCommandResponse>
+    public class UpdateTotalEmployeeCommandHandler : IRequestHandler<UpdateTotalEmployeeCommandRequest, UpdateTotalEmployeeCommandResponse>
     {
-        IEmployeeReadRepository _readRepository;
-        IEmployeeWriteRepository _writeRepository;
+        readonly IEmployeeReadRepository _readRepository;
+        readonly IEmployeeWriteRepository _writeRepository;
 
-        public UpdateEmployeeCommandHandler(IEmployeeReadRepository readRepository, IEmployeeWriteRepository writeRepository)
+        public UpdateTotalEmployeeCommandHandler(IEmployeeReadRepository readRepository, IEmployeeWriteRepository writeRepository)
         {
             _readRepository = readRepository;
             _writeRepository = writeRepository;
         }
 
-        public async Task<UpdateEmployeeCommandResponse> Handle(UpdateEmployeeCommandRequest request, CancellationToken cancellationToken)
+        public async Task<UpdateTotalEmployeeCommandResponse> Handle(UpdateTotalEmployeeCommandRequest request, CancellationToken cancellationToken)
         {
             Employee employee = await _readRepository.GetWhereAsync(emp => !emp.isDeleted && emp.ID.ToString() == request.Id, true);
             if (employee == null) throw new EmployeeNotFoundException();
@@ -31,7 +31,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Update.Updat
             _writeRepository.Update(employee);
             await _writeRepository.SaveAsync();
 
-            return new UpdateEmployeeCommandResponse
+            return new UpdateTotalEmployeeCommandResponse
             {
                 Message = "İşçi məlumatları uğurla yeniləndi"
             };

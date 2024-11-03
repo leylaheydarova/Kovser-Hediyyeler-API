@@ -4,8 +4,8 @@ using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Permanent
 using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployeeAddress;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Recover;
-using KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmployee;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmployeeAddress;
+using KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmployees.UpdateEmployee;
 using KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAllEmployeeAddresses;
 using KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAllEmployees;
 using KovserHedieyyeler.Application.Features.Queries.Employees.GetSingle;
@@ -113,8 +113,8 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("UpdateEmployee")]
-        public async Task<IActionResult> UpdateEmployeeAsync([FromForm] UpdateEmployeeCommandRequest request)
+        [HttpPut("UpdateTotalEmployee")]
+        public async Task<IActionResult> UpdateTotalEmployeeAsync([FromForm] UpdateTotalEmployeeCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -127,5 +127,11 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [HttpPatch]
+        public async Task<IActionResult> UpdateEmployeeAsync([FromForm] UpdateEmployeeCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
     }
 }
