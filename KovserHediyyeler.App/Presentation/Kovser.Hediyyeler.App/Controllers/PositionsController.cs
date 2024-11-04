@@ -3,7 +3,8 @@ using KovserHedieyyeler.Application.Features.Commands.Positions.Create;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Recover;
-using KovserHedieyyeler.Application.Features.Commands.Positions.Update;
+using KovserHedieyyeler.Application.Features.Commands.Positions.Update.Update;
+using KovserHedieyyeler.Application.Features.Commands.Positions.Update.UpdateTotalPosition;
 using KovserHedieyyeler.Application.Features.Queries.Positions.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Positions.GetSingle;
 using MediatR;
@@ -76,7 +77,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateAsync(UpdatePositionCommandRequest request)
+        public async Task<IActionResult> UpdateTotalAsync(UpdateTotalPositionCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -87,6 +88,18 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
-        } 
+        }
+
+        [HttpPatch]
+        public async Task<IActionResult> UpdateAsync(string id, PositionUpdateDto dto)
+        {
+            var request = new UpdatePositionCommandRequest
+            {
+                Id = id,
+                Dto = dto
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
     }
 }

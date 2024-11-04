@@ -16,6 +16,6 @@ namespace KovserHedieyyeler.Application.DTOs.WebUsers.Users
         public string Email { get; set; }
         public string Phone { get; set; }
         //public string UserName { get; set; }
-        public AddressCommandDto Address { get; set; }
+        public AddressUpdateDto Address { get; set; }
     }
 }

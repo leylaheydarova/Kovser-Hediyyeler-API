@@ -1,9 +1,9 @@
-﻿//using MediatR;
+﻿using MediatR;
 
-//namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.PasswordReset
-//{
-//    public class PasswordResetCommandRequest:IRequest<PasswordResetCommandResponse>
-//    {
-//        public string Email { get; set; }
-//    }
-//}
+namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.PasswordReset
+{
+    public class PasswordResetCommandRequest : IRequest<PasswordResetCommandResponse>
+    {
+        public string Email { get; set; }
+    }
+}

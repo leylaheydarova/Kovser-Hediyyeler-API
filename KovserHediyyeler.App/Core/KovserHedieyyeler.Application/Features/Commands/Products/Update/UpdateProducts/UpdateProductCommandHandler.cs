@@ -21,12 +21,12 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Update.Update
             Product product = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, true);
             if (product == null) throw new ProductNotFoundException();
             var dto = request.Dto;
-            var discountprice = dto.Price - ((dto.Price * (int)dto.DiscountPercentage) / 100);
+            var discountprice = dto.Price - dto.Price * (int)dto.DiscountPercentage / 100;
             product.Name = dto.Name != null ? dto.Name : product.Name;
             product.Description = dto.Description != null ? dto.Description : product.Description;
             product.Stock = dto.Stock != null ? dto.Stock : product.Stock;
             product.Price = dto.Price != null ? dto.Price : product.Price;
-            product.DiscountedPrice = dto.DiscountPercentage == 0 ? product.DiscountedPrice : discountprice;
+            product.DiscountedPrice = dto.DiscountPercentage == null ? product.DiscountedPrice : discountprice;
             product.isSingleColour = dto.isSingleColour != null ? dto.isSingleColour : product.isSingleColour;
             product.BrandID = dto.BrandID != null ? dto.BrandID : product.BrandID;
             product.DepartmentID = dto.DepartmentID != null ? (Guid)dto.DepartmentID : product.DepartmentID;

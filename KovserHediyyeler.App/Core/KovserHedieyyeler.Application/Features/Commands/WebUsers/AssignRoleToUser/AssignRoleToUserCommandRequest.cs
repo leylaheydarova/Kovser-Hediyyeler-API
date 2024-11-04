@@ -1,10 +1,10 @@
-﻿//using MediatR;
+﻿using MediatR;
 
-//namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.AssignRoleToUser
-//{
-//    public class AssignRoleToUserCommandRequest:IRequest<AssignRoleToUserCommandResponse>
-//    {
-//        public string UserId { get; set; }
-//        public string[] Roles { get; set; }
-//    }
-//}
+namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.AssignRoleToUser
+{
+    public class AssignRoleToUserCommandRequest : IRequest<AssignRoleToUserCommandResponse>
+    {
+        public string UserId { get; set; }
+        public string[] Roles { get; set; }
+    }
+}

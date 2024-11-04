@@ -1,7 +1,6 @@
-﻿
-namespace KovserHedieyyeler.Application.Features.Commands.Products.Update.UpdateProducts
+﻿namespace KovserHedieyyeler.Application.Features.Commands.Products.Update.UpdateProducts
 {
-    public class UpdateProductCommandResponse:CommandResponse
+    public class UpdateProductCommandResponse : CommandResponse
     {
     }
 }

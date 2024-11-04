@@ -120,14 +120,14 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("UpdateEmployeeAddress")]
+        [HttpPatch("UpdateEmployeeAddress")]
         public async Task<IActionResult> UpdateEmployeeAddressAsync([FromForm] UpdateEmployeeAddressCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPatch]
+        [HttpPatch("UpdateEmployee")]
         public async Task<IActionResult> UpdateEmployeeAsync([FromForm] UpdateEmployeeCommandRequest request)
         {
             var response = await _mediator.Send(request);

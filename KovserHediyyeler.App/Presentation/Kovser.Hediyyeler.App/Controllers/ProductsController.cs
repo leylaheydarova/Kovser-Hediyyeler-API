@@ -152,7 +152,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("UpdateProductData/{id}")]
+        [HttpPatch("UpdateProductData/{id}")]
         public async Task<IActionResult> UpdateProductAsync(string id, ProductPutDto dto)
         {
             var request = new UpdateProductCommandRequest
@@ -164,7 +164,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("UpdateProductPropertyData/{id}")]
+        [HttpPatch("UpdateProductPropertyData/{id}")]
         public async Task<IActionResult> UpdateProductPropertyAsync(string id, ProductPropertyCommandDto dto)
         {
             var request = new UpdateProductPropertyCommandRequest
@@ -176,7 +176,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("UpdateProductImageData/{id}")]
+        [HttpPatch("UpdateProductImageData/{id}")]
         public async Task<IActionResult> UpdateProductImageAsync(string id, ProductImageCommandDto dto)
         {
             var request = new UpdateProductImageCommandRequest

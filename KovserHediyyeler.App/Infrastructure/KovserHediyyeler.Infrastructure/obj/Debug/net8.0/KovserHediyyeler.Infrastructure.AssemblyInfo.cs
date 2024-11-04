@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KovserHediyyeler.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2327ae80b283f53a5d45e1c3893f1d3d51a66165")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bb5c22e7bb79f64b66cf1ad6cc7adcdfe7f4861")]
 [assembly: System.Reflection.AssemblyProductAttribute("KovserHediyyeler.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KovserHediyyeler.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

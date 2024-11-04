@@ -2,7 +2,7 @@
 
 //namespace KovserHedieyyeler.Application.Features.Commands.AssignRoleEndpoint
 //{
-//    public class AssignRoleEndpointCommandRequest:IRequest<AssignRoleEndpointCommandResponse>
+//    public class AssignRoleEndpointCommandRequest : IRequest<AssignRoleEndpointCommandResponse>
 //    {
 //        public string[] Roles { get; set; }
 //        public string Code { get; set; }

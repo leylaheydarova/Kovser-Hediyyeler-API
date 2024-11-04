@@ -13,7 +13,7 @@ namespace KovserHedieyyeler.Application.Profiles
     {
         public AddressMapper()
         {
-            CreateMap<AddressCommandDto, Address>().ReverseMap();
+            CreateMap<AddressUpdateDto, Address>().ReverseMap();
             CreateMap<Address, AddressGetDto>().ReverseMap();
         }
     }

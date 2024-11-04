@@ -3,7 +3,7 @@
 
 //namespace KovserHedieyyeler.Application.Features.Commands.AssignRoleEndpoint
 //{
-//    public class AssignRoleEndpointCommandHandler:IRequestHandler<AssignRoleEndpointCommandRequest, AssignRoleEndpointCommandResponse>
+//    public class AssignRoleEndpointCommandHandler : IRequestHandler<AssignRoleEndpointCommandRequest, AssignRoleEndpointCommandResponse>
 //    {
 //        readonly IAuthorizationEndpointService _authorizationEndpointService;
 

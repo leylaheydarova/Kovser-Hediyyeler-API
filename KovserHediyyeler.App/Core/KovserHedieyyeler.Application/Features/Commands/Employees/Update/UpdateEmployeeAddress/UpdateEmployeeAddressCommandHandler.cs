@@ -1,5 +1,6 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Addresses;
+using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 
@@ -20,12 +21,13 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Update.Updat
         {
             Address address = await _readRepository.GetWhereAsync(a => !a.isDeleted && a.ID.ToString() == request.Id && a.EmployeID.ToString() == request.EmployeeId, true);
             if (address == null) throw new AddressNotFoundException();
-            address.City = request.Dto.City;
-            address.Region = request.Dto.Region;
-            address.Street = request.Dto.Street;
-            address.Home = request.Dto.Home;
-            address.PostalCode = request.Dto.PostalCode;
-            address.IsCurrentAddress = request.Dto.IsCurrentAddress;
+            var dto = request.Dto;
+            address.City = dto.City != null ? (City)dto.City : address.City;
+            address.Region = dto.Region != null ? dto.Region : address.Region;
+            address.Street = dto.Street != null ? dto.Street : address.Street;
+            address.Home = dto.Home != null ? dto.Home : address.Home;
+            address.PostalCode = dto.PostalCode != null ? dto.PostalCode : address.PostalCode;
+            address.IsCurrentAddress = dto.IsCurrentAddress != null ? (bool)dto.IsCurrentAddress : address.IsCurrentAddress;
 
             _writeRepository.Update(address);
             await _writeRepository.SaveAsync();

@@ -23,11 +23,11 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Update.Update
         {
             ProductImageFile image = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, true);
             if (image == null) throw new ProductImageNotFoundException();
-            image.FileName = request.Dto.file.FileName != null ? request.Dto.file.FileName : image.FileName;
-            image.Path = request.Dto.file.FileName != null
+            image.FileName = request.Dto.file != null ? request.Dto.file.FileName : image.FileName;
+            image.Path = request.Dto.file != null
                 ? $"{_accessor.HttpContext.Request.Scheme}://{_accessor.HttpContext.Request.Host}/{request.Dto.file.FileName}"
                 : image.Path;
-            image.IsMain = request.Dto.IsMain;
+            image.IsMain = request.Dto.IsMain != null ? request.Dto.IsMain : image.IsMain;
 
             _writeRepository.Update(image);
             await _writeRepository.SaveAsync();

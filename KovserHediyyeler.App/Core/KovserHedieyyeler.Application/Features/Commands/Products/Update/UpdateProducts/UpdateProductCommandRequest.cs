@@ -3,7 +3,7 @@ using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Update.UpdateProducts
 {
-    public class UpdateProductCommandRequest:UpdateCommandRequest<ProductPutDto>, IRequest<UpdateProductCommandResponse>
+    public class UpdateProductCommandRequest : UpdateCommandRequest<ProductPutDto>, IRequest<UpdateProductCommandResponse>
     {
     }
 }

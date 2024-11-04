@@ -12,13 +12,13 @@ namespace KovserHedieyyeler.Application.Validation.Addresses
     {
         public AddressCommandDtoValidation()
         {
-            RuleFor(x=>x.City)
-                .NotEmpty()
-                .NotNull();
             RuleFor(x => x.Region)
                 .NotEmpty()
                 .NotNull();
-            RuleFor(x=>x.Street)
+            RuleFor(x => x.City)
+                .NotEmpty()
+                .NotNull();
+            RuleFor(x => x.Street)
                 .NotEmpty()
                 .NotNull();
         }
