@@ -22,7 +22,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-AppRegistrationServices.ConfigureLogging(builder.Configuration);
+//AppRegistrationServices.ConfigureLogging(builder.Configuration);
 builder.Host.UseSerilog();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.RegisterLibrariesServices();

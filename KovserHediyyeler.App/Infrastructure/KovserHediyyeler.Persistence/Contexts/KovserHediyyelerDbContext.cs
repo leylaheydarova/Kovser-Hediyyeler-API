@@ -83,11 +83,11 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey<Basket>(c => c.CustomerID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Basket>()
-                .HasOne(b => b.Order)
-                .WithOne(o => o.Basket)
-                .HasForeignKey<Order>(o => o.BasketID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Basket>()
+            //    .HasOne(b => b.Order)
+            //    .WithOne(o => o.Basket)
+            //    .HasForeignKey<Order>(o => o.BasketID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<BasketItem>()
                 .HasOne(b => b.Product)
@@ -304,11 +304,11 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey(cp => cp.PromotionID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            //modelBuilder.Entity<Shop>()
-            //    .HasMany(sh => sh.ProductShops)
-            //    .WithOne(psh => psh.Shop)
-            //    .HasForeignKey(psh => psh.ShopID)
-            //    .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<Shop>()
+                .HasMany(sh => sh.ProductShops)
+                .WithOne(psh => psh.Shop)
+                .HasForeignKey(psh => psh.ShopID)
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<WebUser>()
                 .HasOne(w => w.WishList)

@@ -170,7 +170,7 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             services.AddScoped<IInternalAuthentication, AuthService>();
             //services.AddScoped<IRoleService, RoleService>();
             //services.AddScoped<IAuthorizationEndpointService, AuthorizationEndpointService>();
-            //services.AddScoped<IBasketService, BasketService>();
+            services.AddScoped<IBasketService, BasketService>();
             return services;
         }
     }

@@ -24,10 +24,9 @@ namespace KovserHedieyyeler.Application.DTOs.Products.Products
         public Guid CategoryID { get; set; }
         public Guid? BrandID { get; set; }
 
-        public ICollection<Guid> ShopIDs { get; set; }
+        public ICollection<Guid> ShopIDs { get; set; } = new List<Guid>();
         public ICollection<ProductPropertyCommandDto> ProductProperties { get; set; } = new List<ProductPropertyCommandDto>();
         public ICollection<ProductImageCommandDto> ProductImages { get; set; } = new List<ProductImageCommandDto>();
         public ICollection<ColorDto> Colors { get; set; } = new List<ColorDto>();
-        //public ICollection<Shop> Shops { get; set; } = new List<Shop>();
     }
 }

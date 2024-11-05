@@ -8,7 +8,8 @@ namespace KovserHediyyeler.Domain.Models
     {
         public int Count { get; set; }
         public double TotalPrice { get; set; }
-        public Order Order { get; set; }
+       // public double? DiscountedPrice { get; set; } 
+        //public Order? Order { get; set; }
         [ForeignKey(nameof(Customer))]
         public string CustomerID { get; set; } 
         public WebUser Customer { get; set; }

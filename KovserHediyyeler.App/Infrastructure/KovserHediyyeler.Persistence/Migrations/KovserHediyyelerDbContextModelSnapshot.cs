@@ -782,9 +782,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("BasketID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -838,9 +835,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("BasketID")
-                        .IsUnique();
 
                     b.HasIndex("CustomerID");
 
@@ -1763,12 +1757,6 @@ namespace KovserHediyyeler.Persistence.Migrations
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
                 {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Basket", "Basket")
-                        .WithOne("Order")
-                        .HasForeignKey("KovserHediyyeler.Domain.Models.Order", "BasketID")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
                     b.HasOne("KovserHediyyeler.Domain.Models.Identity.WebUser", "Customer")
                         .WithMany("Orders")
                         .HasForeignKey("CustomerID")
@@ -1798,8 +1786,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasForeignKey("ShopID")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.Navigation("Basket");
 
                     b.Navigation("Customer");
 
@@ -1905,7 +1891,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Shop", "Shop")
                         .WithMany("ProductShops")
                         .HasForeignKey("ShopID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Product");
@@ -1978,9 +1964,6 @@ namespace KovserHediyyeler.Persistence.Migrations
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Basket", b =>
                 {
                     b.Navigation("BasketItems");
-
-                    b.Navigation("Order")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Brand", b =>

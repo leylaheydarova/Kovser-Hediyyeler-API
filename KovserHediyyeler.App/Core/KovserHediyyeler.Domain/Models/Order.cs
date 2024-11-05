@@ -28,8 +28,8 @@ namespace KovserHediyyeler.Domain.Models
         public Shipping Shipping { get; set; }
         public Guid ShopID { get; set; }
         public Shop? Shop { get; set; }
-        public Guid BasketID { get; set; }
-        public Basket Basket { get; set; }
+        //public Guid BasketID { get; set; }
+        //public Basket Basket { get; set; }
         public ICollection<OrderDetail> Details { get; set; } = new List<OrderDetail>();
 
     }
