@@ -11,7 +11,7 @@ namespace KovserHedieyyeler.Application.Abstractions.Services
     {
         public Task AddItemToBasketAsync(Guid productId, int count, string customerId);
         public Task RemoveItemFromBasketAsync(Guid productId, string customerId);
-        public Task RemoveItemFromBasketAddWishListAsyn(Guid productId, string customerId);
+        public Task RemoveItemFromBasketAddWishListAsync(Guid productId, string customerId);
         public Task UpdateItemCountAsync(Guid productId, int newCount, string customerId);
         public Task<Basket> GetBasketAsync(string customerId);
         public Task ClearBasketAsync(string customerId);
