@@ -33,13 +33,13 @@
             }
         }
 
-        public string ShippingAddress
-        {
-            get
-            {
-                return Order.Customer.AddressWebUsers.FirstOrDefault(x => x.WebUser.Id == Order.Customer.Id).Address.FullAddress;
-            }
-        }
+        //public string ShippingAddress
+        //{
+        //    get
+        //    {
+        //        return Order.Customer.Addresses.FirstOrDefault(x => x.WebUser.Id == Order.Customer.Id).Address.FullAddress;
+        //    }
+        //}
 
         public double TotalAmount
         {

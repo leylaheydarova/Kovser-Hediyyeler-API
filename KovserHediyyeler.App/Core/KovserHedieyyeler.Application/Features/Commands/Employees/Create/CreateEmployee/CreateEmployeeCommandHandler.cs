@@ -41,7 +41,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Create.Creat
                     Home = addressDto.Home,
                     PostalCode = addressDto.PostalCode,
                     IsCurrentAddress = addressDto.IsCurrentAddress,
-                    EmployeID = employee.ID
+                    EmployeeID = employee.ID
                 };
                 //shop.Addresses.Add(address);
                 try

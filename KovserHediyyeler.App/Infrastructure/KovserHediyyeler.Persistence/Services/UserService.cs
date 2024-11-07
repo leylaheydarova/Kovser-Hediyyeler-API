@@ -6,11 +6,6 @@ using KovserHedieyyeler.Application.Repositories.Abstractions.Addresses;
 using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Domain.Models.Identity;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Persistence.Services
 {
@@ -46,7 +41,6 @@ namespace KovserHediyyeler.Persistence.Services
                 Basket = new(),
                 WishList = new()
             };
-            var result = await _userManager.CreateAsync(user, dto.Password);
             Address address = new Address
             {
                 ID = Guid.NewGuid(),
@@ -57,11 +51,8 @@ namespace KovserHediyyeler.Persistence.Services
                 PostalCode = dto.Address.PostalCode,
                 IsCurrentAddress = dto.Address.IsCurrentAddress
             };
-            AddressWebUser addressUser = new AddressWebUser
-            {
-                AddressID = address.ID,
-                WebUserID = user.Id
-            };
+
+            var result = await _userManager.CreateAsync(user, dto.Password);
             try
             {
                 await _addressRepository.AddAsync(address);

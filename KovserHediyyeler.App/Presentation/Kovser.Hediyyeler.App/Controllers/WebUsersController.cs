@@ -6,7 +6,6 @@ using KovserHedieyyeler.Application.Features.Commands.WebUsers.Register;
 //using KovserHedieyyeler.Application.Features.Queries.WebUsers.GetAllUsers;
 //using KovserHedieyyeler.Application.Features.Queries.WebUsers.GetRolesToUsers;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kovser.Hediyyeler.App.Controllers
@@ -22,11 +21,11 @@ namespace Kovser.Hediyyeler.App.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> RegisterUserAsync([FromForm]RegisterUserCommandRequest request)
+        [HttpPost("register")]
+        public async Task<IActionResult> RegisterUserAsync(RegisterUserCommandRequest request)
         {
             var response = await _mediator.Send(request);
-            if(response.userResponse.isSucceeded == false)
+            if (response.userResponse.isSucceeded == false)
             {
                 return BadRequest();
             }

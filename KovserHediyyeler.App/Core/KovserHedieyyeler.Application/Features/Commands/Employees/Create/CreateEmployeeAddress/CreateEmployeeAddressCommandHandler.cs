@@ -24,7 +24,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Create.Creat
                 Home = request.Dto.Home,
                 PostalCode = request.Dto.PostalCode,
                 IsCurrentAddress = request.Dto.IsCurrentAddress,
-                EmployeID = Guid.Parse(request.EmployeeId)
+                EmployeeID = Guid.Parse(request.EmployeeId)
             };
 
             await _repository.AddAsync(address);

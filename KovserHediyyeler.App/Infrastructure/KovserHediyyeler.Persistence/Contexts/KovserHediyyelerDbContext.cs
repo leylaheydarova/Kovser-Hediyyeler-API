@@ -10,7 +10,7 @@ namespace KovserHediyyeler.Persistence.Contexts
     public class KovserHediyyelerDbContext:IdentityDbContext<WebUser, UserRole, string>
     {
         public DbSet<Address> Addresses { get; set; }
-        public DbSet<AddressWebUser> AddressWebUsers { get; set; } 
+
         public DbSet<Bank> Banks { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
@@ -59,11 +59,6 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey(ad => ad.ShopID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Address>()
-                .HasMany(ad => ad.AddressWebUsers)
-                .WithOne(adw => adw.Address)
-                .HasForeignKey(ad => ad.AddressID)
-                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Bank>()
                 .HasMany(b => b.BankCards)
@@ -314,12 +309,6 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasOne(w => w.WishList)
                 .WithOne(wl => wl.Customer)
                 .HasForeignKey<WishList>(w => w.CustomerID)
-                .OnDelete(DeleteBehavior.NoAction);
-
-            modelBuilder.Entity<WebUser>()
-                .HasMany(wu => wu.AddressWebUsers)
-                .WithOne(aw => aw.WebUser)
-                .HasForeignKey(aw => aw.WebUserID)
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<WishList>()

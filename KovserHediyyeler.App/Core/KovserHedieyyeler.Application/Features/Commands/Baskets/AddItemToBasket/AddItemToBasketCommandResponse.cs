@@ -3,4 +3,5 @@
     public class AddItemToBasketCommandResponse:CommandResponse
     {
     }
+    //basket id vere bilerem
 }

@@ -1,5 +1,7 @@
 ﻿using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models.BaseModels;
+using KovserHediyyeler.Domain.Models.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KovserHediyyeler.Domain.Models
 {
@@ -15,11 +17,13 @@ namespace KovserHediyyeler.Domain.Models
         //Relationships
         public Guid? ShopID { get; set; }
         public Shop? Shop { get; set; }
-        public Guid? EmployeID {  get; set; }
+        [ForeignKey(nameof(Employee))]
+        public Guid? EmployeeID {  get; set; }
         public Employee? Employee { get; set; }
 
-        //Cross-tables
-        public ICollection<AddressWebUser> AddressWebUsers { get; set; } = new List<AddressWebUser>();
+        //Relations
+        public ICollection<WebUser> WebUsers { get; set; } = new List<WebUser>();
+        
 
         public string FullAddress
         {

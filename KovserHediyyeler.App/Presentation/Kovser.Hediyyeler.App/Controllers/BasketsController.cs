@@ -48,5 +48,8 @@ namespace Kovser.Hediyyeler.App.Controllers
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
+
+        //[HttpPatch("UpdateProductCount")]
+        //public Task<IActionResult> UpdateProductCountAsync()
     }
 }

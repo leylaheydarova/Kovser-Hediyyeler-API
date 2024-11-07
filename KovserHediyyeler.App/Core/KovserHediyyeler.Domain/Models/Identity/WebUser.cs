@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KovserHediyyeler.Domain.Models.Identity
 {
@@ -16,10 +17,15 @@ namespace KovserHediyyeler.Domain.Models.Identity
         public ICollection<Order> Orders { get; set; } = new List<Order>();
         public ICollection<CustomerBankCard> BankCards { get; set; } = new List<CustomerBankCard>();
         public ICollection<ProductComment> ProductComments { get; set; } = new List<ProductComment>();
-
-        //Cross-tables
-        public ICollection<AddressWebUser> AddressWebUsers { get; set; } = new List<AddressWebUser>();
+        public ICollection<Address> Addresses { get; set; } = new List<Address>();
+        
         //todo: Profile Photo
-
+        public string FullName
+        {
+            get
+            {
+                return MiddleName == null ? $"{FirstName} {LastName}" : $"{FirstName} {MiddleName} {LastName}";
+            }
+        }
     }
 }

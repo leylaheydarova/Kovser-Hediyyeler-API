@@ -17,7 +17,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAll
 
         public async Task<GetAllEmployeeAddressesQueryResponse> Handle(GetAllEmployeeAddressesQueryRequest request, CancellationToken cancellationToken)
         {
-            var query = _repository.GetAllWhere(x => !x.isDeleted && x.EmployeID.ToString() == request.EmployeId, false);
+            var query = _repository.GetAllWhere(x => !x.isDeleted && x.EmployeeID.ToString() == request.EmployeId, false);
             int totalCount = query.Count();
             List<AddressGetDto> dtos = new List<AddressGetDto>();
             dtos = await query.Skip(request.Page * request.Size)
