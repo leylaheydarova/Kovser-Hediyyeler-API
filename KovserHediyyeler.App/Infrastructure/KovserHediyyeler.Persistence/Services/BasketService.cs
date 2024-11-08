@@ -1,11 +1,12 @@
 ﻿using KovserHedieyyeler.Application.Abstractions.Services;
 using KovserHedieyyeler.Application.DTOs.Baskets;
-using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Baskets;
+using KovserHedieyyeler.Application.Repositories.Abstractions.Products;
 using KovserHedieyyeler.Application.Repositories.Abstractions.WishLists;
 using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Domain.Models.Identity;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,9 +19,11 @@ namespace KovserHediyyeler.Persistence.Services
         readonly IBasketItemReadRepository _itemReadRepository;
         readonly IBasketItemWriteRepository _itemWriteRepository;
         readonly IWishListItemWriteRepository _wishListItemWriteRepository;
+        readonly IProductReadRepository _productReadRepository;
+        readonly IHttpContextAccessor _accessor;
         readonly UserManager<WebUser> _userManager;
 
-        public BasketService(IBasketReadRepository basketReadRepository, IBasketWriteRepository basketWriteRepository, IBasketItemReadRepository itemReadRepository, IBasketItemWriteRepository itemWriteRepository, IWishListItemWriteRepository wishListItemWriteRepository, UserManager<WebUser> userManager)
+        public BasketService(IBasketReadRepository basketReadRepository, IBasketWriteRepository basketWriteRepository, IBasketItemReadRepository itemReadRepository, IBasketItemWriteRepository itemWriteRepository, IWishListItemWriteRepository wishListItemWriteRepository, UserManager<WebUser> userManager, IProductReadRepository productReadRepository, IHttpContextAccessor accessor)
         {
             _basketReadRepository = basketReadRepository;
             _basketWriteRepository = basketWriteRepository;
@@ -28,13 +31,18 @@ namespace KovserHediyyeler.Persistence.Services
             _itemWriteRepository = itemWriteRepository;
             _wishListItemWriteRepository = wishListItemWriteRepository;
             _userManager = userManager;
+            _productReadRepository = productReadRepository;
+            _accessor = accessor;
         }
 
         public async Task AddItemToBasketAsync(Guid productId, int count, string customerId)
         {
             var user = await _userManager.FindByIdAsync(customerId);
             if (user == null) throw new UserNotFoundException();
-            var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == customerId, true);
+            var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == customerId, true, "BasketItems");
+            var product = await _productReadRepository.GetWhereAsync(p => p.ID == productId, false);
+            if (product is null)
+                throw new ProductNotFoundException();
             if (basket.BasketItems == null)
             {
                 basket.BasketItems = new List<BasketItem>();
@@ -42,27 +50,39 @@ namespace KovserHediyyeler.Persistence.Services
 
             try
             {
-                var item = await _itemReadRepository.GetWhereAsync(x => x.ProductID == productId && x.BasketID == basket.ID, true);
+                var item = await _itemReadRepository.GetWhereAsync(x => x.ProductID == product.ID && x.BasketID == basket.ID, true, "Product", "Basket");
                 if (item == null)
                 {
                     item = new BasketItem
                     {
                         ID = Guid.NewGuid(),
+                        ProductCount = count,
+                        ProductID = product.ID,
                         BasketID = basket.ID,
-                        ProductID = productId,
-                        ProductCount = count
+
                     };
                     await _itemWriteRepository.AddAsync(item);
+                    basket.BasketItems.Add(item);
+                    product.BasketItems.Add(item);
                 }
                 else
                 {
                     item.ProductCount += count;
                     _itemWriteRepository.Update(item);
                 }
+
                 await _itemWriteRepository.SaveAsync();
 
-                basket.TotalPrice = basket.BasketItems.Sum(i => i.Product.Price * i.ProductCount);
-                basket.Count = basket.BasketItems.Sum(i => i.ProductCount);
+                try
+                {
+                    basket.TotalPrice = basket.BasketItems.Sum(i => i.Product.Price * i.ProductCount);
+                    basket.Count = basket.BasketItems.Sum(i => i.ProductCount);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    throw;
+                }
                 _basketWriteRepository.Update(basket);
                 await _basketWriteRepository.SaveAsync();
             }
@@ -87,7 +107,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task<BasketGetDto> GetBasketAsync(string customerId)
         {
-            var query = _itemReadRepository.GetAllWhere(x => !x.isDeleted && x.Basket.CustomerID == customerId, false);
+            var query = _itemReadRepository.GetAllWhere(x => !x.isDeleted && x.Basket.CustomerID == customerId, false, "Product");
             List<BasketItemGetDto> items = await query.Select(x => new BasketItemGetDto()
             {
                 Id = x.ID.ToString(),
@@ -97,7 +117,7 @@ namespace KovserHediyyeler.Persistence.Services
                 DiscountedPrice = x.Product.DiscountedPrice,
                 ProductPrice = x.Product.Price
             }).ToListAsync();
-            var basket = await _basketReadRepository.GetWhereAsync(x => !x.isDeleted && x.CustomerID == customerId, false);
+            var basket = await _basketReadRepository.GetWhereAsync(x => !x.isDeleted && x.CustomerID == customerId, false, "Customer");
             var dto = new BasketGetDto
             {
                 Id = basket.ID.ToString(),
@@ -109,14 +129,18 @@ namespace KovserHediyyeler.Persistence.Services
             return dto;
         }
 
-        public Task<int> GetTotalItemCountAsync(string customerId)
+        public async Task<int> GetTotalItemCountAsync(string customerId)
         {
-            throw new NotImplementedException();
+            var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == customerId, false);
+            int Count = basket.Count;
+            return Count;
         }
 
-        public Task<double> GetTotalPriceAsync(string customerId)
+        public async Task<double> GetTotalPriceAsync(string customerId)
         {
-            throw new NotImplementedException();
+            var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == customerId, false);
+            double TotalPrice = basket.TotalPrice;
+            return TotalPrice;
         }
 
         public async Task RemoveItemFromBasketAddWishListAsync(Guid productId, string customerId)
@@ -163,10 +187,20 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task UpdateItemCountAsync(Guid productId, int newCount, string customerId)
         {
-            var item = await _itemReadRepository.GetWhereAsync(x => x.ProductID == productId && x.Basket.CustomerID == customerId && !x.isDeleted, true);
-            if (item == null) throw new BadRequestException();
+            var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == customerId, true, "BasketItems");
+            if (basket.BasketItems == null)
+            {
+                basket.BasketItems = new List<BasketItem>();
+            }
+
+            var item = await _itemReadRepository.GetWhereAsync(x => x.ProductID == productId && !x.isDeleted, true, "Product");
+            basket.Count = (basket.Count - item.ProductCount) + newCount;
+            basket.TotalPrice = (basket.TotalPrice - (item.ProductCount * item.Product.Price)) + (newCount * item.Product.Price);
             item.ProductCount = newCount;
+            basket = item.Basket;
             _itemWriteRepository.Update(item);
+            _basketWriteRepository.Update(basket);
+            await _basketWriteRepository.SaveAsync();
             await _itemWriteRepository.SaveAsync();
         }
     }
