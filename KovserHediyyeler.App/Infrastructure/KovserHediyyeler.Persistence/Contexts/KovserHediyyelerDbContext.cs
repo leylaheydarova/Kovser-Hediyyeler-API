@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KovserHediyyeler.Persistence.Contexts
 {
-    public class KovserHediyyelerDbContext:IdentityDbContext<WebUser, UserRole, string>
+    public class KovserHediyyelerDbContext : IdentityDbContext<WebUser, Role, string>
     {
         public DbSet<Address> Addresses { get; set; }
 
@@ -38,16 +38,17 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<ProductImageFile> ProductImageFiles { get; set; }
         public DbSet<ProductProperty> ProductProperties { get; set; }
         public DbSet<ProductShop> ProductShops { get; set; }
-        public DbSet<Promotion> Promotions {  get; set; }
+        public DbSet<Promotion> Promotions { get; set; }
         public DbSet<Shipping> Shippings { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
-        public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<Role> Roles { get; set; }
         public DbSet<WebUser> WebUsers { get; set; }
+        //public DbSet<WebUserRole> UserRoles { get; set; }
         public DbSet<WishList> WishLists { get; set; }
         public DbSet<WishListItem> WishListItems { get; set; }
 
-        public KovserHediyyelerDbContext(DbContextOptions<KovserHediyyelerDbContext> option):base(option)
+        public KovserHediyyelerDbContext(DbContextOptions<KovserHediyyelerDbContext> option) : base(option)
         {
         }
 
@@ -65,7 +66,7 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .WithOne(bc => bc.Bank)
                 .HasForeignKey(bc => bc.BankID)
                 .OnDelete(DeleteBehavior.NoAction);
-            
+
             modelBuilder.Entity<Basket>()
                 .HasMany(b => b.BasketItems)
                 .WithOne(bi => bi.Basket)
@@ -126,11 +127,11 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey(cp => cp.ColorCodeID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<CustomerBankCard>()
-                .HasOne(cbc => cbc.Customer)
-                .WithMany(c => c.BankCards)
-                .HasForeignKey(cbc => cbc.CustomerID)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<CustomerBankCard>()
+            //    .HasOne(cbc => cbc.Customer)
+            //    .WithMany(c => c.BankCards)
+            //    .HasForeignKey(cbc => cbc.CustomerID)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
             //modelBuilder.Entity<Department>()
             //   .HasMany(d => d.SocialMedias)
@@ -311,6 +312,17 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey<WishList>(w => w.CustomerID)
                 .OnDelete(DeleteBehavior.NoAction);
 
+            //modelBuilder.Entity<WebUser>()
+            //    .HasMany(w => w.UserRoles)
+            //    .WithOne(ur => ur.User)
+            //    .HasForeignKey(ur => ur.UserId);
+
+            //modelBuilder.Entity<WebUserRole>()
+            //    .HasOne(wur => wur.Role)
+            //    .WithMany(r => r.UserRoles)
+            //    .HasForeignKey(wur => wur.RoleId);
+
+
             modelBuilder.Entity<WishList>()
                 .HasMany(wl => wl.ListItems)
                 .WithOne(wli => wli.List)
@@ -329,8 +341,8 @@ namespace KovserHediyyeler.Persistence.Contexts
             modelBuilder.Entity<IdentityUserRole<Guid>>()
                 .HasKey(x => new { x.UserId, x.RoleId });
 
-            modelBuilder.Entity<UserRole>()
-                .HasNoKey();
+            //modelBuilder.Entity<Role>()
+            //    .HasNoKey();
 
             modelBuilder.Entity<IdentityUserLogin<string>>().HasNoKey();
             modelBuilder.Entity<IdentityUserRole<string>>().HasNoKey();

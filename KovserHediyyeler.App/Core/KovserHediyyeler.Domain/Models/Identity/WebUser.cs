@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KovserHediyyeler.Domain.Models.Identity
 {
@@ -18,8 +17,7 @@ namespace KovserHediyyeler.Domain.Models.Identity
         public ICollection<CustomerBankCard> BankCards { get; set; } = new List<CustomerBankCard>();
         public ICollection<ProductComment> ProductComments { get; set; } = new List<ProductComment>();
         public ICollection<Address> Addresses { get; set; } = new List<Address>();
-        
-        //todo: Profile Photo
+
         public string FullName
         {
             get
@@ -29,3 +27,5 @@ namespace KovserHediyyeler.Domain.Models.Identity
         }
     }
 }
+
+//todo: Profile Photo

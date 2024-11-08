@@ -15,8 +15,8 @@ namespace KovserHedieyyeler.Application.Features.Commands.Baskets.AddItemToBaske
 
         public async Task<AddItemToBasketCommandResponse> Handle(AddItemToBasketCommandRequest request, CancellationToken cancellationToken)
         {
-            if (request.Count == null || request.CustomerId == null || request.ProductId == null) throw new BadRequestException();
-            await _service.AddItemToBasketAsync(request.ProductId, request.Count, request.CustomerId);
+            if (request == null) throw new BadRequestException();
+            await _service.AddItemToBasketAsync(request.ProductId, request.Count);
             return new AddItemToBasketCommandResponse()
             {
                 Message = "Məhsul səbətə uğurla əlavə edildi!"

@@ -638,12 +638,12 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Identity.UserRole", b =>
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Identity.Role", b =>
                 {
-                    b.Property<string>("ConcurrencyStamp")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -652,7 +652,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<string>("NormalizedName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("UserRole");
+                    b.HasKey("Id");
+
+                    b.ToTable("Role");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Identity.WebUser", b =>
@@ -1657,7 +1659,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasOne("KovserHediyyeler.Domain.Models.Identity.WebUser", "Customer")
                         .WithMany("BankCards")
                         .HasForeignKey("CustomerID")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Bank");

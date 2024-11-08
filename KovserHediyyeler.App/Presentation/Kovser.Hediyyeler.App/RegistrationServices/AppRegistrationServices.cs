@@ -1,9 +1,8 @@
-﻿using Serilog.Sinks.MSSqlServer;
-using Serilog;
-using Microsoft.Extensions.Logging;
-using Serilog.Core;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using Serilog.Core;
+using Serilog.Sinks.MSSqlServer;
 using System.Security.Claims;
 using System.Text;
 
@@ -41,7 +40,7 @@ namespace Kovser.Hediyyeler.App.RegistrationServices
             return services;
         }
 
-        public static void ConfigureLogging (this IConfiguration configuration)
+        public static void ConfigureLogging(this IConfiguration configuration)
         {
             Logger log = new LoggerConfiguration()
                 .WriteTo.Console()
@@ -53,6 +52,9 @@ namespace Kovser.Hediyyeler.App.RegistrationServices
                     )
                 .CreateLogger();
         }
+
+
+
     }
 }
 

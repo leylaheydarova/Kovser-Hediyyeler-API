@@ -4,16 +4,8 @@ using KovserHedieyyeler.Application.ServiceRegistrations;
 using KovserHedieyyeler.Infrastructure.Services.StorageServices.LocalStorage;
 using KovserHediyyeler.Infrastructure.RegistrationServices;
 using KovserHediyyeler.Persistence.RegistrationServices;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Tokens;
 using Serilog;
-using Serilog.Core;
-using Serilog.Sinks.MSSqlServer;
-using System.Collections.ObjectModel;
-using System.Security.Claims;
-using System.Text;
+using Store.App.ServiceRegistrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,33 +26,38 @@ builder.Services
     .AddStorage<LocalStorageService>()
     .RegisterLoginServices(builder.Configuration)
     .RegisterInfrastructureServices()
-    .AppServiceRegistrationServices(builder.Configuration);
+    .AppServiceRegistrationServices(builder.Configuration)
+    .RegisterSwaggerServices();
 
 //builder.Services
 
 var app = builder.Build();
 
-    // Configure the HTTP request pipeline.
-    if (app.Environment.IsDevelopment())
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
     {
-        app.UseSwagger();
-        app.UseSwaggerUI();
-    }
+        c.SwaggerEndpoint("/swagger/admin_v1/swagger.json", "My API - V1");
+        c.SwaggerEndpoint("/swagger/client_v1/swagger.json", "My API - V2");
+    });
+}
 
 //app.ConfigureExceptionHandler();
-    app.UseSerilogRequestLogging();//ozunden sonrakilar loglanir ancaq.
+app.UseSerilogRequestLogging();//ozunden sonrakilar loglanir ancaq.
 
-    app.UseCors("KovserHediyyeler");
+app.UseCors("KovserHediyyeler");
 
-    app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
-    app.UseRouting();
+app.UseRouting();
 
-    app.UseAuthentication();
+app.UseAuthentication();
 
-    app.UseAuthorization();
+app.UseAuthorization();
 
-    app.MapControllers();
+app.MapControllers();
 
-    app.Run();
+app.Run();
 

@@ -41,6 +41,7 @@ using KovserHediyyeler.Persistence.Repositories.Concretes.Shops;
 using KovserHediyyeler.Persistence.Repositories.Concretes.SocialMedias;
 using KovserHediyyeler.Persistence.Repositories.Concretes.WishLists;
 using KovserHediyyeler.Persistence.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -55,7 +56,7 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             {
                 opt.UseSqlServer(configuration.GetConnectionString("Default"));
             });
-            services.AddIdentity<WebUser, UserRole>(options =>
+            services.AddIdentity<WebUser, Role>(options =>
             {
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;
@@ -77,7 +78,10 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
                 options.User.AllowedUserNameCharacters =
                         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = false;
-            }).AddEntityFrameworkStores<KovserHediyyelerDbContext>();
+            })
+                .AddEntityFrameworkStores<KovserHediyyelerDbContext>()
+                .AddRoleManager<RoleManager<Role>>()
+                .AddDefaultTokenProviders();
 
             //Repositories
             services.AddScoped<IAddressReadRepository, AddressReadRepository>();

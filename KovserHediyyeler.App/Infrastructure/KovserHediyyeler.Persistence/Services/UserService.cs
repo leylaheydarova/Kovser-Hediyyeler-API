@@ -63,6 +63,8 @@ namespace KovserHediyyeler.Persistence.Services
                 Console.WriteLine(ex.Message);
                 throw;
             }
+
+
             if (!result.Succeeded)
             {
                 return new UserResponse
