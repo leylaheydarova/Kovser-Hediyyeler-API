@@ -1,9 +1,9 @@
-﻿//using MediatR;
+﻿using MediatR;
 
-//namespace KovserHedieyyeler.Application.Features.Commands.Role.DeleteRole
-//{
-//    public class DeleteRoleCommandRequest : IRequest<DeleteRoleCommandResponse>
-//    {
-//        public string Id { get; set; }
-//    }
-//}
+namespace KovserHedieyyeler.Application.Features.Commands.Role.DeleteRole
+{
+    public class DeleteRoleCommandRequest : IRequest<DeleteRoleCommandResponse>
+    {
+        public string Id { get; set; }
+    }
+}

@@ -25,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\Admin\" />
+    <Folder Include="Controllers\Moderator\" />
+    <Folder Include="Controllers\Client\" />
     <Folder Include="wwwroot\Assets\Images\Departments\" />
     <Folder Include="wwwroot\Assets\Images\Brands\" />
     <Folder Include="wwwroot\Assets\Images\SocialMedias\" />
