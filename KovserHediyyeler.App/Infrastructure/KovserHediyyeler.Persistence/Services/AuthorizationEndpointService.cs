@@ -22,7 +22,7 @@
 //        readonly IEndpointWriteRepository _endpointWriteRepository;
 //        readonly IMenuReadRepository _menuReadRepository;
 //        readonly IMenuWriteRepository _menuWriteRepository;
-//        readonly RoleManager<UserRole> _roleManager;
+//        readonly RoleManager<Role> _roleManager;
 
 //        public AuthorizationEndpointService(IApplicationService applicationService, IEndpointReadRepository endpointReadRepository, IEndpointWriteRepository endpointWriteRepository, IMenuReadRepository menuReadRepository, IMenuWriteRepository menuWriteRepository, RoleManager<UserRole> roleManager)
 //        {

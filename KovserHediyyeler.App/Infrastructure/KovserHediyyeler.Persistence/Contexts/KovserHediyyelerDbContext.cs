@@ -25,7 +25,7 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<DepartmentPosition> DepartmentPositions { get; set; }
         public DbSet<DepartmentPromotion> DepartmentPromotions { get; set; }
         public DbSet<Employee> Employees { get; set; }
-        //public DbSet<Endpoint> Endpoint { get; set; }
+        public DbSet<Endpoint> Endpoint { get; set; }
         public DbSet<Domain.Models.File> Files { get; set; }
         public DbSet<InvoiceFile> InvoiceFiles { get; set; }
         public DbSet<Menu> Menus { get; set; }
@@ -44,7 +44,6 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<WebUser> WebUsers { get; set; }
-        //public DbSet<WebUserRole> UserRoles { get; set; }
         public DbSet<WishList> WishLists { get; set; }
         public DbSet<WishListItem> WishListItems { get; set; }
 

@@ -1,4 +1,6 @@
-﻿using KovserHedieyyeler.Application.Enums;
+﻿using KovserHedieyyeler.Application.Const;
+using KovserHedieyyeler.Application.CustomAttributes;
+using KovserHedieyyeler.Application.Enums;
 using KovserHedieyyeler.Application.Features.Commands.Role.CreateRole;
 using KovserHedieyyeler.Application.Features.Commands.Role.DeleteRole;
 using KovserHedieyyeler.Application.Features.Commands.Role.UpdateRole;
@@ -19,24 +21,24 @@ namespace Kovser.Hediyyeler.App.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
-        [AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get Roles", Menu = "Roles")]
-        public async Task<IActionResult> GetRoles([FromQuery] GetRolesQueryRequest getRolesQueryRequest)
-        {
-            GetRolesQueryResponse response = await _mediator.Send(getRolesQueryRequest);
-            return Ok(response);
-        }
+        //[HttpGet]
+        //[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get Roles", Menu = AuthorizeDefinitionConstants.Roles)]
+        //public async Task<IActionResult> GetRoles([FromQuery] GetRolesQueryRequest getRolesQueryRequest)
+        //{
+        //    GetRolesQueryResponse response = await _mediator.Send(getRolesQueryRequest);
+        //    return Ok(response);
+        //}
 
-        [HttpGet("{Id}")]
-        [AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get Role By Id", Menu = "Roles")]
-        public async Task<IActionResult> GetRoles([FromRoute] GetRoleByIdQueryRequest getRoleByIdQueryRequest)
-        {
-            GetRoleByIdQueryResponse response = await _mediator.Send(getRoleByIdQueryRequest);
-            return Ok(response);
-        }
+        //[HttpGet("{Id}")]
+        //[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get Role By Id", Menu = AuthorizeDefinitionConstants.Roles)]
+        //public async Task<IActionResult> GetRoles([FromRoute] GetRoleByIdQueryRequest getRoleByIdQueryRequest)
+        //{
+        //    GetRoleByIdQueryResponse response = await _mediator.Send(getRoleByIdQueryRequest);
+        //    return Ok(response);
+        //}
 
         [HttpPost()]
-        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Create Role", Menu = "Roles")]
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Create Role", Menu = AuthorizeDefinitionConstants.Roles)]
         public async Task<IActionResult> CreateRole([FromBody] CreateRoleCommandRequest createRoleCommandRequest)
         {
             CreateRoleCommandResponse response = await _mediator.Send(createRoleCommandRequest);
@@ -44,7 +46,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpPut("{Id}")]
-        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Role", Menu = "Roles")]
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Role", Menu = AuthorizeDefinitionConstants.Roles)]
         public async Task<IActionResult> UpdateRole([FromBody, FromRoute] UpdateRoleCommandRequest updateRoleCommandRequest)
         {
             UpdateRoleCommandResponse response = await _mediator.Send(updateRoleCommandRequest);
@@ -52,7 +54,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpDelete("{Id}")]
-        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Delete Role", Menu = "Roles")]
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Delete Role", Menu = AuthorizeDefinitionConstants.Roles)]
         public async Task<IActionResult> DeleteRole([FromRoute] DeleteRoleCommandRequest deleteRoleCommandRequest)
         {
             DeleteRoleCommandResponse response = await _mediator.Send(deleteRoleCommandRequest);

@@ -1,22 +1,18 @@
 ﻿using KovserHedieyyeler.Application.Features.Commands.WebUsers.Register;
-using KovserHediyyeler.Domain.Models.Identity;
 using MediatR;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kovser.Hediyyeler.App.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     [ApiController]
     public class WebUsersController : ControllerBase
     {
         readonly IMediator _mediator;
-        readonly RoleManager<Role> _roleManager;
 
-        public WebUsersController(IMediator mediator, RoleManager<Role> roleManager)
+        public WebUsersController(IMediator mediator)
         {
             _mediator = mediator;
-            _roleManager = roleManager;
         }
 
         [HttpPost("register")]
