@@ -1,6 +1,9 @@
 ﻿using KovserHedieyyeler.Application.Abstractions.Services;
+using KovserHedieyyeler.Application.DTOs.Roles;
+using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Domain.Models.Identity;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace KovserHediyyeler.Persistence.Services
 {
@@ -22,12 +25,22 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task<bool> DeleteRole(string id)
         {
-            Role role = await _roleManager.FindByIdAsync(id);
-            IdentityResult result = await _roleManager.DeleteAsync(role);
-            return result.Succeeded;
+            try
+            {
+                Role? role = await _roleManager.FindByIdAsync(id);
+                if (role == null) throw new RoleNotFoundException();
+                IdentityResult result = await _roleManager.DeleteAsync(role);
+                return result.Succeeded;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Rol silinərkən xəta baş verdi!");
+            }
         }
 
-        public (object, int) GetAllRoles(int page, int size)
+
+
+        public async Task<(List<RoleGetDto>, int)> GetAllRolesAsync(int page, int size)
         {
             var query = _roleManager.Roles;
 
@@ -38,7 +51,14 @@ namespace KovserHediyyeler.Persistence.Services
             else
                 rolesQuery = query;
 
-            return (rolesQuery.Select(r => new { r.Id, r.Name }), query.Count());
+            var datas = new List<RoleGetDto>();
+            datas = await rolesQuery.Select(r => new RoleGetDto
+            {
+                Id = r.Id,
+                Name = r.Name
+            }).ToListAsync();
+            var count = query.Count();
+            return (datas, count);
         }
 
         public async Task<(string id, string name)> GetRoleById(string id)

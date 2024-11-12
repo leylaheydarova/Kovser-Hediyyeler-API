@@ -1,8 +1,9 @@
-﻿//namespace KovserHedieyyeler.Application.Features.Queries.Role.GetRoleById
-//{
-//    public class GetRoleByIdQueryResponse
-//    {
-//        public string Id { get; set; }
-//        public string Name { get; set; }
-//    }
-//}
+﻿using KovserHedieyyeler.Application.DTOs.Roles;
+
+namespace KovserHedieyyeler.Application.Features.Queries.Role.GetRoleById
+{
+    public class GetRoleByIdQueryResponse : GetSingleQueryResponse<RoleGetDto>
+    {
+
+    }
+}

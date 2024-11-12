@@ -1,4 +1,5 @@
 ﻿using KovserHedieyyeler.Application.Abstractions.Services;
+using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Role.UpdateRole
@@ -15,9 +16,10 @@ namespace KovserHedieyyeler.Application.Features.Commands.Role.UpdateRole
         public async Task<UpdateRoleCommandResponse> Handle(UpdateRoleCommandRequest request, CancellationToken cancellationToken)
         {
             var result = await _roleService.UpdateRole(request.Id, request.Name);
-            return new()
+            if (result == false) throw new BadRequestException();
+            return new UpdateRoleCommandResponse
             {
-                Succeeded = result
+                Message = "Rol uğurla yenilənmişdir!"
             };
         }
     }

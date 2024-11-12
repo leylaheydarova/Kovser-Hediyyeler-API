@@ -1,4 +1,5 @@
 ﻿using KovserHedieyyeler.Application.Abstractions.Services;
+using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Role.DeleteRole
@@ -15,9 +16,10 @@ namespace KovserHedieyyeler.Application.Features.Commands.Role.DeleteRole
         public async Task<DeleteRoleCommandResponse> Handle(DeleteRoleCommandRequest request, CancellationToken cancellationToken)
         {
             var result = await _roleService.DeleteRole(request.Id);
-            return new()
+            if (result == false) throw new BadRequestException();
+            return new DeleteRoleCommandResponse
             {
-                Succeeded = result,
+                Message = "Rol uğurla silinmişdir!"
             };
         }
     }

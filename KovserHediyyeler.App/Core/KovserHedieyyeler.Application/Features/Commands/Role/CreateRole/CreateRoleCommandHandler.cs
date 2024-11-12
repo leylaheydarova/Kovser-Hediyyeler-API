@@ -1,4 +1,5 @@
 ﻿using KovserHedieyyeler.Application.Abstractions.Services;
+using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Role.CreateRole
@@ -15,9 +16,11 @@ namespace KovserHedieyyeler.Application.Features.Commands.Role.CreateRole
         public async Task<CreateRoleCommandResponse> Handle(CreateRoleCommandRequest request, CancellationToken cancellationToken)
         {
             var result = await _roleService.CreateRole(request.Name);
-            return new()
+            if (result == false) throw new BadRequestException();
+            return new CreateRoleCommandResponse
             {
-                Succeeded = result
+                StatusCode = 201,
+                Message = "Rol uğurla yaradılmışdır!"
             };
         }
     }

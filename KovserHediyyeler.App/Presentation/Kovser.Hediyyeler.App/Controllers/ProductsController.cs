@@ -190,4 +190,3 @@ namespace Kovser.Hediyyeler.App.Controllers
     }
 }
 
-//todo: RemoveProductProperty partladi. Fix it!

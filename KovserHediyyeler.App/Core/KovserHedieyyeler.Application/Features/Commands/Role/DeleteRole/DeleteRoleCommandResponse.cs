@@ -1,7 +1,6 @@
 ﻿namespace KovserHedieyyeler.Application.Features.Commands.Role.DeleteRole
 {
-    public class DeleteRoleCommandResponse
+    public class DeleteRoleCommandResponse : CommandResponse
     {
-        public bool Succeeded { get; set; }
     }
 }

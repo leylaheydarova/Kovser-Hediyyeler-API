@@ -1,8 +1,10 @@
-﻿namespace KovserHedieyyeler.Application.Abstractions.Services
+﻿using KovserHedieyyeler.Application.DTOs.Roles;
+
+namespace KovserHedieyyeler.Application.Abstractions.Services
 {
     public interface IRoleService
     {
-        (object, int) GetAllRoles(int page, int size);
+        Task<(List<RoleGetDto>, int)> GetAllRolesAsync(int page, int size);
         Task<(string id, string name)> GetRoleById(string id);
         Task<bool> CreateRole(string name);
         Task<bool> DeleteRole(string id);

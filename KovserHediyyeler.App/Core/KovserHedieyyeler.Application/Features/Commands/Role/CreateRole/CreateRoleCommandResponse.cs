@@ -1,7 +1,6 @@
 ﻿namespace KovserHedieyyeler.Application.Features.Commands.Role.CreateRole
 {
-    public class CreateRoleCommandResponse
+    public class CreateRoleCommandResponse : CommandResponse
     {
-        public bool Succeeded { get; set; }
     }
 }

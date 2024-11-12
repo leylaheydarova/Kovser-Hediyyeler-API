@@ -1,8 +1,9 @@
-﻿//namespace KovserHedieyyeler.Application.Features.Queries.Role.GetRoles
-//{
-//    public class GetRolesQueryResponse
-//    {
-//        public object Datas { get; set; }
-//        public int TotalCount { get; set; }
-//    }
-//}
+﻿using KovserHedieyyeler.Application.DTOs.Roles;
+
+namespace KovserHedieyyeler.Application.Features.Queries.Role.GetRoles
+{
+    public class GetRolesQueryResponse : GetAllQueryResponse<RoleGetDto>
+    {
+
+    }
+}
