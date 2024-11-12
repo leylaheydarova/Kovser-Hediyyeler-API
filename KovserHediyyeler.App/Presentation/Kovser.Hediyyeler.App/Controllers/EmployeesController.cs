@@ -1,4 +1,7 @@
-﻿using KovserHedieyyeler.Application.Features.Commands.Employees.Create.CreateEmployee;
+﻿using KovserHedieyyeler.Application.Const;
+using KovserHedieyyeler.Application.CustomAttributes;
+using KovserHedieyyeler.Application.Enums;
+using KovserHedieyyeler.Application.Features.Commands.Employees.Create.CreateEmployee;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Create.CreateEmployeeAddress;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployee;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployeeAddress;
@@ -39,6 +42,8 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Datas);
         }
 
+
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Create Employee", Menu = AuthorizeDefinitionConstants.Empoyees)]
         [HttpPost("CreateEmployee")]
         public async Task<IActionResult> CreateEmployeeAsync([FromForm] CreateEmployeeCommandRequest request)
         {
@@ -46,6 +51,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Add Employee's Address", Menu = AuthorizeDefinitionConstants.Empoyees)]
         [HttpPost("CreateEmployeeAddress")]
         public async Task<IActionResult> CreateEmployeeAddressAsync([FromForm] CreateEmployeeAddressCommandRequest request)
         {
@@ -65,6 +71,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Dto);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Delete Temporarily Employee", Menu = AuthorizeDefinitionConstants.Empoyees)]
         [HttpDelete("DeleteTemporarily/{id}")]
         public async Task<IActionResult> DeleteAsync([FromRoute] string id)
         {
@@ -77,6 +84,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Remove Permanently Employee", Menu = AuthorizeDefinitionConstants.Empoyees)]
         [HttpDelete("RemovePermanentlyEmployee/{id}")]
         public async Task<IActionResult> RemoveEmployeeAsync([FromRoute] string id)
         {
@@ -89,6 +97,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Remove Permanently Employee's Address", Menu = AuthorizeDefinitionConstants.Empoyees)]
         [HttpDelete("RemovePermanentlyEmployeeAddress/{id}")]
         public async Task<IActionResult> RemoveEmployeeAddressAsync([FromRoute] string id)
         {
@@ -101,7 +110,8 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("RecoverData/{id}")]
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Recover Deleted Employee", Menu = AuthorizeDefinitionConstants.Empoyees)]
+        [HttpPatch("RecoverData/{id}")]
         public async Task<IActionResult> RecoverDataAsync([FromRoute] string id)
         {
             var request = new RecoverEmployeeCommandRequest
@@ -113,6 +123,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Total Employee", Menu = AuthorizeDefinitionConstants.Empoyees)]
         [HttpPut("UpdateTotalEmployee")]
         public async Task<IActionResult> UpdateTotalEmployeeAsync([FromForm] UpdateTotalEmployeeCommandRequest request)
         {
@@ -120,6 +131,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Employee", Menu = AuthorizeDefinitionConstants.Empoyees)]
         [HttpPatch("UpdateEmployeeAddress")]
         public async Task<IActionResult> UpdateEmployeeAddressAsync([FromForm] UpdateEmployeeAddressCommandRequest request)
         {
@@ -127,6 +139,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Employee's Address", Menu = AuthorizeDefinitionConstants.Empoyees)]
         [HttpPatch("UpdateEmployee")]
         public async Task<IActionResult> UpdateEmployeeAsync([FromForm] UpdateEmployeeCommandRequest request)
         {

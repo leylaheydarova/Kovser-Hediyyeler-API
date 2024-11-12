@@ -1,9 +1,8 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Features.Commands.Shops.Update.Shop;
 using KovserHedieyyeler.Application.Repositories.Abstractions.Shops;
 using MediatR;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Shops.Update
+namespace KovserHedieyyeler.Application.Features.Commands.Shops.Update.UpdateShop.Update
 {
     public class UpdateShopCommandHandler : IRequestHandler<UpdateShopCommandRequest, UpdateShopCommandResponse>
     {
@@ -20,9 +19,10 @@ namespace KovserHedieyyeler.Application.Features.Commands.Shops.Update
         {
             KovserHediyyeler.Domain.Models.Shop shop = await _readRepository.GetWhereAsync(sh => !sh.isDeleted && sh.ID.ToString() == request.Id, true);
             if (shop == null) throw new ShopNotFoundException();
-            shop.Name = request.Dto.Name;
-            shop.Description = request.Dto.Description;
-            shop.Phone = request.Dto.Phone;
+            var dto = request.Dto;
+            shop.Name = dto.Name is not null ? dto.Name : shop.Name;
+            shop.Description = dto.Description is not null ? dto.Description : shop.Description;
+            shop.Phone = dto.Phone is not null ? dto.Phone : shop.Phone;
 
             _writeRepository.Update(shop);
             await _writeRepository.SaveAsync();

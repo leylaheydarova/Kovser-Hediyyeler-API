@@ -1,5 +1,7 @@
-﻿using KovserHedieyyeler.Application.DTOs.Brands;
-using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
+﻿using KovserHedieyyeler.Application.Const;
+using KovserHedieyyeler.Application.CustomAttributes;
+using KovserHedieyyeler.Application.DTOs.Brands;
+using KovserHedieyyeler.Application.Enums;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Create;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Temporarily;
@@ -25,14 +27,15 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync([FromQuery]GetAllBrandsQueryRequest request)
+        public async Task<IActionResult> GetAllAsync([FromQuery] GetAllBrandsQueryRequest request)
         {
             GetAllBrandsQueryResponse response = await _mediator.Send(request);
             return StatusCode(200, response.Datas);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateAsync([FromForm]BrandCommandDto dto)
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Create Brand", Menu = AuthorizeDefinitionConstants.Brands)]
+        [HttpPost("CreateBrand")]
+        public async Task<IActionResult> CreateAsync([FromForm] BrandCommandDto dto)
         {
             if (dto == null)
             {
@@ -43,18 +46,19 @@ namespace Kovser.Hediyyeler.App.Controllers
             {
                 Dto = dto
             };
-            
+
             CreateBrandCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
         [HttpGet("{Id}")]
-        public async Task<IActionResult> GetByIdAsync([FromRoute]GetSingleBrandQueryRequest request)
+        public async Task<IActionResult> GetByIdAsync([FromRoute] GetSingleBrandQueryRequest request)
         {
             GetSingleBrandQueryResponse response = await _mediator.Send(request);
             return StatusCode(200, response.Dto);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Delete Temporarily Brand", Menu = AuthorizeDefinitionConstants.Brands)]
         [HttpDelete("DeleteTemporarily/{id}")]
         public async Task<IActionResult> DeleteAsync(string id)
         {
@@ -67,6 +71,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Remove Permanently Brand", Menu = AuthorizeDefinitionConstants.Brands)]
         [HttpDelete("RemovePermanently/{id}")]
         public async Task<IActionResult> RemoveAsync(string id)
         {
@@ -80,14 +85,16 @@ namespace Kovser.Hediyyeler.App.Controllers
 
 
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateAllAsync([FromForm]UpdateTotalBrandCommandRequest request)
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Total Brand", Menu = AuthorizeDefinitionConstants.Brands)]
+        [HttpPut("UpdateTotalBrand")]
+        public async Task<IActionResult> UpdateAllAsync([FromForm] UpdateTotalBrandCommandRequest request)
         {
             UpdateTotalBrandCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response?.Message);
         }
 
-        [HttpPut("RecoverData/{id}")]
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Recover Deleted Brand", Menu = AuthorizeDefinitionConstants.Brands)]
+        [HttpPatch("RecoverData/{id}")]
         public async Task<IActionResult> RecoverDataAsync(string id)
         {
             var request = new RecoverCategoryRequest
@@ -98,8 +105,9 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPatch]
-        public async Task<IActionResult> UpdateAsync([FromForm]UpdateBrandCommandRequest request)
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Brand", Menu = AuthorizeDefinitionConstants.Brands)]
+        [HttpPatch("UpdateBrand")]
+        public async Task<IActionResult> UpdateAsync([FromForm] UpdateBrandCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

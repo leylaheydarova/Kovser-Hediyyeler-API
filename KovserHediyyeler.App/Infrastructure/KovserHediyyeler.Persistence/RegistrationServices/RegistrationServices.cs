@@ -15,6 +15,8 @@ using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
 using KovserHedieyyeler.Application.Repositories.Abstractions.WishLists;
 using KovserHedieyyeler.Application.Repositories.Interfaces;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
+using KovserHedieyyeler.Application.Repositories.Interfaces.Endpoints;
+
 //using KovserHedieyyeler.Application.Repositories.Interfaces.Endpoints;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Files;
 using KovserHedieyyeler.Application.Repositories.Interfaces.Menus;
@@ -30,6 +32,8 @@ using KovserHediyyeler.Persistence.Repositories.Concretes.Brands;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Categories;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Departments;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Employees;
+using KovserHediyyeler.Persistence.Repositories.Concretes.Endpoints;
+
 //using KovserHediyyeler.Persistence.Repositories.Concretes.Endpoints;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Files;
 using KovserHediyyeler.Persistence.Repositories.Concretes.Menus;
@@ -114,8 +118,8 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             services.AddScoped<IEmployeeReadRepository, EmployeeReadRepository>();
             services.AddScoped<IEmployeeWriteRepository, EmployeeWriteRepository>();
 
-            //services.AddScoped<IEndpointReadRepository, EndpointReadRepository>();
-            //services.AddScoped<IEndpointWriteRepository, EndpointWriteRepository>();
+            services.AddScoped<IEndpointReadRepository, EndpointReadRepository>();
+            services.AddScoped<IEndpointWriteRepository, EndpointWriteRepository>();
 
             services.AddScoped<IFileReadRepository, FileReadRepository>();
             services.AddScoped<IFileWriteRepository, FileWriteRepository>();
@@ -173,7 +177,7 @@ namespace KovserHediyyeler.Persistence.RegistrationServices
             services.AddScoped<IExternalAuthentication, AuthService>();
             services.AddScoped<IInternalAuthentication, AuthService>();
             services.AddScoped<IRoleService, RoleService>();
-            //services.AddScoped<IAuthorizationEndpointService, AuthorizationEndpointService>();
+            services.AddScoped<IAuthorizationEndpointService, AuthorizationEndpointService>();
             services.AddScoped<IBasketService, BasketService>();
             return services;
         }

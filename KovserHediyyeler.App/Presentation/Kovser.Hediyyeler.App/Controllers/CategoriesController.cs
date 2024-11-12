@@ -1,4 +1,7 @@
-﻿using KovserHedieyyeler.Application.DTOs.Categories;
+﻿using KovserHedieyyeler.Application.Const;
+using KovserHedieyyeler.Application.CustomAttributes;
+using KovserHedieyyeler.Application.DTOs.Categories;
+using KovserHedieyyeler.Application.Enums;
 using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Create;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Permanently;
@@ -40,7 +43,8 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Datas);
         }
 
-        [HttpPost]
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Create Category", Menu = AuthorizeDefinitionConstants.Categories)]
+        [HttpPost("CreateCategory")]
         public async Task<IActionResult> CreateAsync(CategoryCommandDto dto)
         {
             if (dto == null) throw new BadRequestException();
@@ -65,6 +69,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Dto);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Delete Temporarily Category", Menu = AuthorizeDefinitionConstants.Categories)]
         [HttpDelete("DeleteTemporarily/{id}")]
         public async Task<IActionResult> DeleteAsync(string id)
         {
@@ -77,6 +82,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Remove Permanently Category", Menu = AuthorizeDefinitionConstants.Categories)]
         [HttpDelete("RemovePermanently/{id}")]
         public async Task<IActionResult> RemoveAsync(string id)
         {
@@ -89,6 +95,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Total Category", Menu = AuthorizeDefinitionConstants.Categories)]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTotalAsync(CategoryCommandDto dto, string id)
         {
@@ -102,15 +109,17 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("RecoverData/{id}")]
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Recover Deleted Category", Menu = AuthorizeDefinitionConstants.Categories)]
+        [HttpPatch("RecoverData/{id}")]
         public async Task<IActionResult> RecoverDataAsync(RecoverCategoryCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPatch]
-        public async Task<IActionResult> UpdateAsync (UpdateCategoryCommandRequest request)
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Category", Menu = AuthorizeDefinitionConstants.Categories)]
+        [HttpPatch("UpdateCategory")]
+        public async Task<IActionResult> UpdateAsync(UpdateCategoryCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

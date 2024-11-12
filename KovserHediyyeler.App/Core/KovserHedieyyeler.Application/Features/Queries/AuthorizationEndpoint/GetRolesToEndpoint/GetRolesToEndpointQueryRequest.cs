@@ -1,10 +1,10 @@
-﻿//using MediatR;
+﻿using MediatR;
 
-//namespace KovserHedieyyeler.Application.Features.Queries.AuthorizationEndpoint.GetRolesToEndpoint
-//{
-//    public class GetRolesToEndpointQueryRequest:IRequest<GetRolesToEndpointQueryResponse>
-//    {
-//        public string Code { get; set; }
-//        public string Menu { get; set; }
-//    }
-//}
+namespace KovserHedieyyeler.Application.Features.Queries.AuthorizationEndpoint.GetRolesToEndpoint
+{
+    public class GetRolesToEndpointQueryRequest : IRequest<GetRolesToEndpointQueryResponse>
+    {
+        public string Code { get; set; }
+        public string Menu { get; set; }
+    }
+}

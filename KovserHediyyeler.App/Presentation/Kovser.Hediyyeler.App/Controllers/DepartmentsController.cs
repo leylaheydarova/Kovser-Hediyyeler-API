@@ -1,9 +1,10 @@
-﻿using KovserHedieyyeler.Application.DTOs.Department;
-using KovserHedieyyeler.Application.DTOs.SocialMedias;
+﻿using KovserHedieyyeler.Application.Const;
+using KovserHedieyyeler.Application.CustomAttributes;
+using KovserHedieyyeler.Application.DTOs.Department;
+using KovserHedieyyeler.Application.Enums;
 using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Create.CreateDepartment;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Create.CreateSocialMedia;
-using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently.RemoveDepartment;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently.RemoveSocialMedia;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Temporarily;
@@ -11,7 +12,6 @@ using KovserHedieyyeler.Application.Features.Commands.Departments.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Update.UpdateDepartment.Update;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Update.UpdateDepartment.UpdateTotal;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Update.UpdateSocialMedia;
-using KovserHedieyyeler.Application.Features.Queries.Departments.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetAll.GetAllDepartments;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetAll.GetAllSocialMedias;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetSingle;
@@ -39,7 +39,9 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Datas);
         }
 
-        [HttpPost("Department")]
+
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Create Department", Menu = AuthorizeDefinitionConstants.Departments)]
+        [HttpPost("CreateDepartment")]
         public async Task<IActionResult> CreateDepartmentAsync([FromForm] CreateDepartmentCommandRequest request)
         {
             var response = await _mediator.Send(request);
@@ -59,7 +61,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Datas);
         }
 
-
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Add Department's SocialMedia", Menu = AuthorizeDefinitionConstants.Departments)]
         [HttpPost("SocialMedia")]
         public async Task<IActionResult> CreateSocialMediaAsync([FromForm] CreateSocialMediaCommandRequest request)
         {
@@ -81,6 +83,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Dto);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Delete Temporarily Department", Menu = AuthorizeDefinitionConstants.Departments)]
         [HttpDelete("DeleteTemporarily")]
         public async Task<IActionResult> DeleteAsync(string id)
         {
@@ -89,6 +92,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Remove Permanently Department", Menu = AuthorizeDefinitionConstants.Departments)]
         [HttpDelete("RemoveDepartment")]
         public async Task<IActionResult> RemoveDepartmentAsync(string id)
         {
@@ -97,6 +101,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Remove Permanently Department's Social Media", Menu = AuthorizeDefinitionConstants.Departments)]
         [HttpDelete("RemoveSocialMedia")]
         public async Task<IActionResult> RemoveSocialMediaAsync(string id)
         {
@@ -105,8 +110,9 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Total Department", Menu = AuthorizeDefinitionConstants.Departments)]
         [HttpPut]
-        public async Task<IActionResult> UpdateTotalAsync([FromForm]DepartmentCommandDto dto, string id, string nickName)
+        public async Task<IActionResult> UpdateTotalAsync([FromForm] DepartmentCommandDto dto, string id, string nickName)
         {
             var request = new UpdateTotalDepartmentCommandRequest
             {
@@ -118,25 +124,28 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("RecoverData")]
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Recover Deleted Department", Menu = AuthorizeDefinitionConstants.Departments)]
+        [HttpPatch("RecoverData")]
         public async Task<IActionResult> RecoverDataAsync(string id)
         {
-            var request = new RecoverDepartmentCommandRequest 
-            { 
-                Id = id 
+            var request = new RecoverDepartmentCommandRequest
+            {
+                Id = id
             };
 
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Department", Menu = AuthorizeDefinitionConstants.Departments)]
         [HttpPatch("Department")]
-        public async Task<IActionResult> UpdateAsync([FromForm]UpdateDepartmentCommandRequest request)
+        public async Task<IActionResult> UpdateAsync([FromForm] UpdateDepartmentCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Department's Social Media", Menu = AuthorizeDefinitionConstants.Departments)]
         [HttpPatch("SocialMedia")]
         public async Task<IActionResult> UpdateSocialMediaAsync(UpdateSocialMediaCommandRequest request)
         {

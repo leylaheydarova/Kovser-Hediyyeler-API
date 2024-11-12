@@ -26,8 +26,10 @@
 
   <ItemGroup>
     <Folder Include="Controllers\Admin\" />
-    <Folder Include="Controllers\Moderator\" />
+    <Folder Include="Controllers\BijuModerator\" />
     <Folder Include="Controllers\Client\" />
+    <Folder Include="Controllers\HandmadeModerator\" />
+    <Folder Include="Controllers\ParfumeModerator\" />
     <Folder Include="wwwroot\Assets\Images\Departments\" />
     <Folder Include="wwwroot\Assets\Images\Brands\" />
     <Folder Include="wwwroot\Assets\Images\SocialMedias\" />

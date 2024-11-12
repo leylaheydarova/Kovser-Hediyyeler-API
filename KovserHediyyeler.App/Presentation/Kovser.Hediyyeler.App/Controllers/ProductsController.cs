@@ -1,6 +1,9 @@
-﻿using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
+﻿using KovserHedieyyeler.Application.Const;
+using KovserHedieyyeler.Application.CustomAttributes;
+using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
 using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
 using KovserHedieyyeler.Application.DTOs.Products.Products;
+using KovserHedieyyeler.Application.Enums;
 using KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProduct;
 using KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProductImage;
 using KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProductProperty;
@@ -54,6 +57,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Datas);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Create Product", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpPost("CreateProduct")]
         public async Task<IActionResult> CreateProductAsync([FromForm] CreateProductCommandRequest request)
         {
@@ -61,6 +65,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Create Product Image", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpPost("CreateProductImage")]
         public async Task<IActionResult> CreateProductImageAsync([FromForm] CreateProductImageCommandRequest request)
         {
@@ -68,6 +73,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Create Product Property", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpPost("CreateProductProperty")]
         public async Task<IActionResult> CreateProductPropertyAsync([FromForm] CreateProductPropertyCommandRequest request)
         {
@@ -97,6 +103,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Dto);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Delete Temporarily Product", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpDelete("DeleteTemporarilyProduct/{id}")]
         public async Task<IActionResult> DeleteProductAsync(string id)
         {
@@ -108,7 +115,8 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPut("RecoverProductData/{id}")]
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Recover Deleted Product", Menu = AuthorizeDefinitionConstants.Products)]
+        [HttpPatch("RecoverProductData/{id}")]
         public async Task<IActionResult> RecoverProductAsync(string id)
         {
             var request = new RecoverProductCommandRequest
@@ -119,6 +127,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Remove Permanently Product", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpDelete("RemovePermanentlyProduct/{id}")]
         public async Task<IActionResult> RemoveProductAsync(string id)
         {
@@ -130,6 +139,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Remove Permanently Product Image", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpDelete("RemovePermanentlyProductImage/{id}")]
         public async Task<IActionResult> RemoveProductImageAsync(string id)
         {
@@ -141,6 +151,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Remove Permanently Product Property", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpDelete("RemovePermanentlyProductProperty/{id}")]
         public async Task<IActionResult> RemoveProductPropertyAsync(string id)
         {
@@ -152,6 +163,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Product", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpPatch("UpdateProductData/{id}")]
         public async Task<IActionResult> UpdateProductAsync(string id, ProductPutDto dto)
         {
@@ -164,6 +176,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Product Property", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpPatch("UpdateProductPropertyData/{id}")]
         public async Task<IActionResult> UpdateProductPropertyAsync(string id, ProductPropertyCommandDto dto)
         {
@@ -176,6 +189,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Product Image", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpPatch("UpdateProductImageData/{id}")]
         public async Task<IActionResult> UpdateProductImageAsync(string id, ProductImageCommandDto dto)
         {
