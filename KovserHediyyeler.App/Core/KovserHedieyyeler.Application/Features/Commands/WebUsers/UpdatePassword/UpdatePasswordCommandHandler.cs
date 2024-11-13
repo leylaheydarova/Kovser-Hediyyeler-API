@@ -17,8 +17,11 @@ namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.UpdatePasswor
         {
             if (!request.Password.Equals(request.PasswordConfirm))
                 throw new PasswordChangeFailedException("Zəhmət olmasa şifrəni hər iki xanaya eyni qeyd edin!");
-            await _userService.UpdatePasswordAsync(request.UserId, request.ResetToken, request.Password);
-            return new();
+            await _userService.UpdatePasswordAsync(request.UserIdOrEmail, request.ResetToken, request.Password);
+            return new UpdatePasswordCommandResponse
+            {
+                Message = "Şifrə uğurla yenilənmişdir!"
+            };
         }
     }
 }

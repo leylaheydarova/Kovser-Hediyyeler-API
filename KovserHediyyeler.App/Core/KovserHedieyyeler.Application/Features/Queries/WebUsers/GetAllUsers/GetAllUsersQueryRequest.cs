@@ -1,13 +1,8 @@
-﻿//using MediatR;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using MediatR;
 
-//namespace KovserHedieyyeler.Application.Features.Queries.WebUsers.GetAllUsers
-//{
-//    public class GetAllUsersQueryRequest:GetAllQueryRequest, IRequest<GetAllUsersQueryResponse>
-//    {
-//    }
-//}
+namespace KovserHedieyyeler.Application.Features.Queries.WebUsers.GetAllUsers
+{
+    public class GetAllUsersQueryRequest : GetAllQueryRequest, IRequest<GetAllUsersQueryResponse>
+    {
+    }
+}

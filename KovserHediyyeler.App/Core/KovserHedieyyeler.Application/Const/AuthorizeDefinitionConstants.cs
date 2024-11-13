@@ -12,6 +12,7 @@
         public const string Positions = "Positions";
         public const string Empoyees = "Employees";
         public const string Shops = "Shops";
+        public const string WebUsers = "WebUsers";
     }
 }
 //todo: add controller names

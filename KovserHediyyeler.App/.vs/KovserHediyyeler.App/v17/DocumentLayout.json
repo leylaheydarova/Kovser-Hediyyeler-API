@@ -3,12 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\presentation\\kovser.hediyyeler.app\\controllers\\authorizationendpointscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|solutionrelative:presentation\\kovser.hediyyeler.app\\controllers\\authorizationendpointscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.persistence\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:infrastructure\\kovserhediyyeler.persistence\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\presentation\\kovser.hediyyeler.app\\controllers\\webuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|solutionrelative:presentation\\kovser.hediyyeler.app\\controllers\\webuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\webusers\\updatepassword\\updatepasswordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\webusers\\updatepassword\\updatepasswordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\webusers\\updatepassword\\updatepasswordcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\webusers\\updatepassword\\updatepasswordcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\webusers\\updatepassword\\updatepasswordcommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\webusers\\updatepassword\\updatepasswordcommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.persistence\\services\\authorizationendpointservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:infrastructure\\kovserhediyyeler.persistence\\services\\authorizationendpointservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\abstractions\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\abstractions\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getsingleuser\\getsingleuserqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getsingleuser\\getsingleuserqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getsingleuser\\getsingleuserqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getsingleuser\\getsingleuserqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getsingleuser\\getsingleuserqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getsingleuser\\getsingleuserqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getallusers\\getallusersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getallusers\\getallusersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getallusers\\getallusersqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getallusers\\getallusersqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getallusers\\getallusersqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getallusers\\getallusersqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getrolestousers\\getrolestouserqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getrolestousers\\getrolestouserqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getrolestousers\\getrolestouserqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getrolestousers\\getrolestouserqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getrolestousers\\getrolestouserqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\queries\\webusers\\getrolestousers\\getrolestouserqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\webusers\\assignroletouser\\assignroletousercommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\webusers\\assignroletouser\\assignroletousercommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\const\\authorizedefinitionconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\const\\authorizedefinitionconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\webusers\\assignroletouser\\assignroletousercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\webusers\\assignroletouser\\assignroletousercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\commands\\webusers\\assignroletouser\\assignroletousercommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\features\\commands\\webusers\\assignroletouser\\assignroletousercommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\presentation\\kovser.hediyyeler.app\\controllers\\authorizationendpointscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|solutionrelative:presentation\\kovser.hediyyeler.app\\controllers\\authorizationendpointscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\features\\queries\\authorizationendpoint\\getrolestoendpoint\\getrolestoendpointqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +133,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\repositories\\interfaces\\endpoints\\iendpointreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\repositories\\interfaces\\endpoints\\iendpointreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.persistence\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:infrastructure\\kovserhediyyeler.persistence\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\presentation\\kovser.hediyyeler.app\\controllers\\applicationservicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -129,14 +201,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\presentation\\kovser.hediyyeler.app\\controllers\\positionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|solutionrelative:presentation\\kovser.hediyyeler.app\\controllers\\positionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\presentation\\kovser.hediyyeler.app\\controllers\\webuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C09D1ED0-61D0-4008-AB06-9B76EE721F98}|Presentation\\Kovser.Hediyyeler.App\\Kovser.Hediyyeler.App.csproj|solutionrelative:presentation\\kovser.hediyyeler.app\\controllers\\webuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\const\\authorizedefinitionconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\const\\authorizedefinitionconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\enums\\actiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -262,60 +326,114 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "RolesController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\RolesController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\RolesController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\RolesController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\RolesController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwA8AAAAyAAAA",
+              "DocumentIndex": 1,
+              "Title": "WebUsersController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\WebUsersController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\WebUsersController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\WebUsersController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\WebUsersController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAUwCkAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:14:56.33Z",
+              "WhenOpened": "2024-11-09T21:59:40.89Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthorizationEndpointsController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\AuthorizationEndpointsController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\AuthorizationEndpointsController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\AuthorizationEndpointsController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\AuthorizationEndpointsController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wBoAAABaAAAA",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
+              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAIA3wIQAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:27:49.915Z",
+              "WhenOpened": "2024-11-12T17:12:50.802Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetRolesToEndpointQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryHandler.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryHandler.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "DocumentIndex": 6,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IUserService.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:27:38.8Z",
+              "WhenOpened": "2024-11-13T14:10:17.197Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GetRolesToEndpointQueryRequest.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryRequest.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryRequest.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryRequest.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Title": "UpdatePasswordCommandResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:27:34.769Z",
+              "WhenOpened": "2024-11-13T15:02:00.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "UpdatePasswordCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:01:36.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdatePasswordCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\UpdatePassword\\UpdatePasswordCommandRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:01:22.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetSingleUserQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T14:46:12.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetSingleUserQueryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T14:45:30.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AuthorizationEndpointService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Services\\AuthorizationEndpointService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Services\\AuthorizationEndpointService.cs",
@@ -328,371 +446,150 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetRolesToEndpointQueryResponse.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryResponse.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryResponse.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryResponse.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:27:29.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AssignRoleEndpointCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandHandler.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandHandler.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:24:39.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "AssignRoleEndpointCommandRequest.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandRequest.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandRequest.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandRequest.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
+              "Title": "GetSingleUserQueryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetSingleUser\\GetSingleUserQueryResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:23:57.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AssignRoleEndpointCommandResponse.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandResponse.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandResponse.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandResponse.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:23:35.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IAuthorizationEndpointService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IAuthorizationEndpointService.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IAuthorizationEndpointService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IAuthorizationEndpointService.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IAuthorizationEndpointService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:18:00.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RegistrationServices.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\RegistrationServices\\RegistrationServices.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\RegistrationServices\\RegistrationServices.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\RegistrationServices\\RegistrationServices.cs",
-              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\RegistrationServices\\RegistrationServices.cs",
-              "ViewState": "AQIAAKQAAAAAAAAAAAAgwLMAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:14:14.831Z",
+              "WhenOpened": "2024-11-13T14:45:01.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "EndpointWriteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointWriteRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointWriteRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointWriteRepository.cs",
-              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointWriteRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Title": "GetAllUsersQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:17:05.446Z",
+              "WhenOpened": "2024-11-13T14:17:52.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "EndpointReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointReadRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointReadRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointReadRepository.cs",
-              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointReadRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Title": "GetAllUsersQueryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:17:01.898Z",
+              "WhenOpened": "2024-11-13T14:17:47.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "IEndpointWriteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointWriteRepository.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointWriteRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointWriteRepository.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointWriteRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Title": "GetAllUsersQueryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetAllUsers\\GetAllUsersQueryResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:16:44.904Z",
+              "WhenOpened": "2024-11-13T14:17:42.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "IEndpointReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointReadRepository.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointReadRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointReadRepository.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointReadRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Title": "GetRolesToUserQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:16:40.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UpdateShopAddressCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandHandler.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandHandler.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandHandler.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwCQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:06:59.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UpdateShopAddressCommandRequest.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandRequest.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandRequest.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandRequest.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:06:52.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ShopsController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ShopsController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ShopsController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ShopsController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ShopsController.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAJQAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:54:13.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ApplicationServicesController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ApplicationServicesController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ApplicationServicesController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ApplicationServicesController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ApplicationServicesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:14:15.178Z",
+              "WhenOpened": "2024-11-13T14:08:43.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
-              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBoAAAAwAAAA",
+              "Title": "GetRolesToUserQueryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T17:12:50.802Z",
+              "WhenOpened": "2024-11-13T14:08:34.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UpdateShopCommandRequest.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandRequest.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandRequest.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandRequest.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "DocumentIndex": 15,
+              "Title": "GetRolesToUserQueryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\WebUsers\\GetRolesToUsers\\GetRolesToUserQueryResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:04:03.917Z",
+              "WhenOpened": "2024-11-13T14:08:25.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UpdateTotalShopCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandHandler.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandHandler.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAA/AAAA",
+              "DocumentIndex": 16,
+              "Title": "AssignRoleToUserCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:01:26.971Z",
+              "WhenOpened": "2024-11-13T14:01:28.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "UpdateTotalShopCommandRequest.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandRequest.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandRequest.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandRequest.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAB6AAAA",
+              "DocumentIndex": 18,
+              "Title": "AssignRoleToUserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:00:30.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ShopPatchDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\DTOs\\Shops\\ShopPatchDto.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\DTOs\\Shops\\ShopPatchDto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\DTOs\\Shops\\ShopPatchDto.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\DTOs\\Shops\\ShopPatchDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:59:52.457Z",
+              "WhenOpened": "2024-11-13T13:50:02.34Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "UpdateShopCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandHandler.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandHandler.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandHandler.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandHandler.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBgAAABIAAAA",
+              "Title": "AssignRoleToUserCommandResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\AssignRoleToUser\\AssignRoleToUserCommandResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:58:21.087Z",
+              "WhenOpened": "2024-11-13T13:49:43.571Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "UpdateTotalShopCommandResponse.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandResponse.cs",
-              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandResponse.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandResponse.cs",
-              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABBAAAA",
+              "DocumentIndex": 20,
+              "Title": "AuthorizationEndpointsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\AuthorizationEndpointsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\AuthorizationEndpointsController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\AuthorizationEndpointsController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\AuthorizationEndpointsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:59:12.466Z",
+              "WhenOpened": "2024-11-12T22:27:49.915Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "PositionsController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\PositionsController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\PositionsController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\PositionsController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\PositionsController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAowFsAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:44:20.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "EmployeesController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAuwH0AAACTAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:40:30.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ProductsController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAL8AAABhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T15:22:45.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "DepartmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\DepartmentsController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\DepartmentsController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\DepartmentsController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\DepartmentsController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAwwH8AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T17:12:50.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\CategoriesController.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAuwHAAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:31:34.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "BrandsController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\BrandsController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\BrandsController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\BrandsController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\BrandsController.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAmwGAAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:21:38.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "WebUsersController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\WebUsersController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\WebUsersController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\WebUsersController.cs",
-              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\WebUsersController.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T21:59:40.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 17,
               "Title": "AuthorizeDefinitionConstants.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Const\\AuthorizeDefinitionConstants.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Const\\AuthorizeDefinitionConstants.cs",
@@ -705,7 +602,355 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "GetRolesToEndpointQueryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:27:29.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "RolesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\RolesController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\RolesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\RolesController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\RolesController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwA8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T22:14:56.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GetRolesToEndpointQueryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:27:34.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GetRolesToEndpointQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\AuthorizationEndpoint\\GetRolesToEndpoint\\GetRolesToEndpointQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:27:38.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AssignRoleEndpointCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:24:39.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AssignRoleEndpointCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:23:57.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AssignRoleEndpointCommandResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\AuthorizationEndpoint\\AssignRoleEndpoint\\AssignRoleEndpointCommandResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:23:35.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IAuthorizationEndpointService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IAuthorizationEndpointService.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IAuthorizationEndpointService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IAuthorizationEndpointService.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IAuthorizationEndpointService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:18:00.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RegistrationServices.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\RegistrationServices\\RegistrationServices.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\RegistrationServices\\RegistrationServices.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\RegistrationServices\\RegistrationServices.cs",
+              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\RegistrationServices\\RegistrationServices.cs",
+              "ViewState": "AQIAAKQAAAAAAAAAAAAgwLMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T22:14:14.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "EndpointWriteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointWriteRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointWriteRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointWriteRepository.cs",
+              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointWriteRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:17:05.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EndpointReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointReadRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointReadRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointReadRepository.cs",
+              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Repositories\\Concretes\\Endpoints\\EndpointReadRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:17:01.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IEndpointWriteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointWriteRepository.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointWriteRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointWriteRepository.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointWriteRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:16:44.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IEndpointReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointReadRepository.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointReadRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointReadRepository.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Repositories\\Interfaces\\Endpoints\\IEndpointReadRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:16:40.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UpdateShopAddressCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandHandler.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:06:59.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UpdateShopAddressCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShopAddress\\UpdateShopAddressCommandRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:06:52.522Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 34,
+              "Title": "ShopsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ShopsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ShopsController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ShopsController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ShopsController.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAJQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:54:13.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ApplicationServicesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ApplicationServicesController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ApplicationServicesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ApplicationServicesController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ApplicationServicesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:14:15.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UpdateShopCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:04:03.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UpdateTotalShopCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:01:26.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "UpdateTotalShopCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandRequest.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandRequest.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAB6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:00:30.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ShopPatchDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\DTOs\\Shops\\ShopPatchDto.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\DTOs\\Shops\\ShopPatchDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\DTOs\\Shops\\ShopPatchDto.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\DTOs\\Shops\\ShopPatchDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:59:52.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UpdateShopCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandHandler.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\Update\\UpdateShopCommandHandler.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwBgAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:58:21.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UpdateTotalShopCommandResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandResponse.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandResponse.cs",
+              "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Shops\\Update\\UpdateShop\\UpdateTotal\\UpdateTotalShopCommandResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:59:12.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "PositionsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\PositionsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\PositionsController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\PositionsController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\PositionsController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAowFsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:44:20.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\EmployeesController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAuwH0AAACTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:40:30.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAL8AAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T15:22:45.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "DepartmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\DepartmentsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\DepartmentsController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\DepartmentsController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\DepartmentsController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAwwH8AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T17:12:50.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\CategoriesController.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAuwHAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:31:34.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "BrandsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\BrandsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\BrandsController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Presentation\\Kovser.Hediyyeler.App\\Controllers\\BrandsController.cs",
+              "RelativeToolTip": "Presentation\\Kovser.Hediyyeler.App\\Controllers\\BrandsController.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAmwGAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T21:21:38.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
               "Title": "ActionType.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Enums\\ActionType.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Enums\\ActionType.cs",
@@ -713,12 +958,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Enums\\ActionType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:25:20.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T21:25:20.474Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 52,
               "Title": "RegistrationServices.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Infrastructure\\RegistrationServices\\RegistrationServices.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Infrastructure\\RegistrationServices\\RegistrationServices.cs",
@@ -726,12 +970,11 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Infrastructure\\RegistrationServices\\RegistrationServices.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAA9wCwAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:15:06.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T21:15:06.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 51,
               "Title": "AuthorizeDefinitionAttribute.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\CustomAttributes\\AuthorizeDefinitionAttribute.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\CustomAttributes\\AuthorizeDefinitionAttribute.cs",
@@ -739,12 +982,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\CustomAttributes\\AuthorizeDefinitionAttribute.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T11:24:35.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T11:24:35.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 53,
               "Title": "ApplicationService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\Configurations\\ApplicationService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\Configurations\\ApplicationService.cs",
@@ -752,12 +994,11 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\Configurations\\ApplicationService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:08:30.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T21:08:30.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 54,
               "Title": "IApplicationService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\Configurations\\IApplicationService.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\Configurations\\IApplicationService.cs",
@@ -765,12 +1006,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\Configurations\\IApplicationService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T21:07:18.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T21:07:18.382Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 55,
               "Title": "GetRoleByIdQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoleById\\GetRoleByIdQueryHandler.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoleById\\GetRoleByIdQueryHandler.cs",
@@ -778,12 +1018,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoleById\\GetRoleByIdQueryHandler.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAwwBUAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:23:35.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T19:23:35.199Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 56,
               "Title": "GetRoleByIdQueryRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoleById\\GetRoleByIdQueryRequest.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoleById\\GetRoleByIdQueryRequest.cs",
@@ -791,12 +1030,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoleById\\GetRoleByIdQueryRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:22:47.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T19:22:47.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 57,
               "Title": "GetRoleByIdQueryResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoleById\\GetRoleByIdQueryResponse.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoleById\\GetRoleByIdQueryResponse.cs",
@@ -804,12 +1042,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoleById\\GetRoleByIdQueryResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:22:41.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T19:22:41.968Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 58,
               "Title": "GetRolesQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoles\\GetRolesQueryHandler.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoles\\GetRolesQueryHandler.cs",
@@ -817,12 +1054,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoles\\GetRolesQueryHandler.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAawBYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:07:19.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T19:07:19.411Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 61,
               "Title": "GetRolesQueryRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoles\\GetRolesQueryRequest.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoles\\GetRolesQueryRequest.cs",
@@ -830,12 +1066,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoles\\GetRolesQueryRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:07:11.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T19:07:11.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 63,
               "Title": "RoleGetDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\DTOs\\Roles\\RoleGetDto.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\DTOs\\Roles\\RoleGetDto.cs",
@@ -843,12 +1078,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\DTOs\\Roles\\RoleGetDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:06:33.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T19:06:33.735Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 62,
               "Title": "GetRolesQueryResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoles\\GetRolesQueryResponse.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoles\\GetRolesQueryResponse.cs",
@@ -856,12 +1090,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Queries\\Role\\GetRoles\\GetRolesQueryResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T19:05:47.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T19:05:47.992Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 60,
               "Title": "IRoleService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IRoleService.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IRoleService.cs",
@@ -869,12 +1102,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Abstractions\\Services\\IRoleService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:09:18.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:09:18.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 59,
               "Title": "RoleService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Services\\RoleService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Services\\RoleService.cs",
@@ -882,12 +1114,11 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Services\\RoleService.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAwwCgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:09:40.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:09:40.487Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 64,
               "Title": "DeleteRoleCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\DeleteRole\\DeleteRoleCommandHandler.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\DeleteRole\\DeleteRoleCommandHandler.cs",
@@ -895,12 +1126,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\DeleteRole\\DeleteRoleCommandHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:11:46.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:11:46.07Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 65,
               "Title": "UpdateRoleCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\UpdateRole\\UpdateRoleCommandHandler.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\UpdateRole\\UpdateRoleCommandHandler.cs",
@@ -908,12 +1138,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\UpdateRole\\UpdateRoleCommandHandler.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAQwBUAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:14:04.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:14:04.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 67,
               "Title": "DeleteRoleCommandRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\DeleteRole\\DeleteRoleCommandRequest.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\DeleteRole\\DeleteRoleCommandRequest.cs",
@@ -921,12 +1150,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\DeleteRole\\DeleteRoleCommandRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:11:43.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:11:43.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 66,
               "Title": "DeleteRoleCommandResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\DeleteRole\\DeleteRoleCommandResponse.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\DeleteRole\\DeleteRoleCommandResponse.cs",
@@ -934,12 +1162,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\DeleteRole\\DeleteRoleCommandResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:11:36.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:11:36.768Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 68,
               "Title": "UpdateRoleCommandRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\UpdateRole\\UpdateRoleCommandRequest.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\UpdateRole\\UpdateRoleCommandRequest.cs",
@@ -947,12 +1174,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\UpdateRole\\UpdateRoleCommandRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:14:01.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:14:01.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 69,
               "Title": "UpdateRoleCommandResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\UpdateRole\\UpdateRoleCommandResponse.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\UpdateRole\\UpdateRoleCommandResponse.cs",
@@ -960,12 +1186,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\UpdateRole\\UpdateRoleCommandResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:13:57.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:13:57.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 70,
               "Title": "CreateRoleCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\CreateRole\\CreateRoleCommandHandler.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\CreateRole\\CreateRoleCommandHandler.cs",
@@ -973,12 +1198,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\CreateRole\\CreateRoleCommandHandler.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAQwBIAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:11:17.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:11:17.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 71,
               "Title": "CreateRoleCommandRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\CreateRole\\CreateRoleCommandRequest.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\CreateRole\\CreateRoleCommandRequest.cs",
@@ -986,12 +1210,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\CreateRole\\CreateRoleCommandRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:11:11.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:11:11.529Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 72,
               "Title": "CreateRoleCommandResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\CreateRole\\CreateRoleCommandResponse.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\CreateRole\\CreateRoleCommandResponse.cs",
@@ -999,12 +1222,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\Role\\CreateRole\\CreateRoleCommandResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T22:11:06.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:11:06.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 73,
               "Title": "20241111110514_Endpoint.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241111110514_Endpoint.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241111110514_Endpoint.cs",
@@ -1012,12 +1234,11 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Migrations\\20241111110514_Endpoint.cs",
               "ViewState": "AQIAAEYAAAAAAAAAAAAgwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T15:14:26.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T15:14:26.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 74,
               "Title": "KovserHediyyelerDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
@@ -1025,12 +1246,11 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAzwBsAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T11:02:47.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T11:02:47.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 76,
               "Title": "Endpoint.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\Endpoint.cs",
               "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Models\\Endpoint.cs",
@@ -1042,7 +1262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 77,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\Identity\\Role.cs",
               "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Models\\Identity\\Role.cs",
@@ -1054,7 +1274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 75,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\Menu.cs",
               "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Models\\Menu.cs",

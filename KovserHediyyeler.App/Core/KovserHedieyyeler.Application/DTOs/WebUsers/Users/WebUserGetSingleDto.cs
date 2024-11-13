@@ -1,9 +1,4 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Addresses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.WebUsers.Users
 {
@@ -16,6 +11,6 @@ namespace KovserHedieyyeler.Application.DTOs.WebUsers.Users
         public string Email { get; set; }
         public string Phone { get; set; }
         //public string UserName { get; set; }
-        public AddressUpdateDto Address { get; set; }
+        public AddressGetDto Address { get; set; }
     }
 }

@@ -1,9 +1,10 @@
-﻿//using MediatR;
+﻿using MediatR;
 
-//namespace KovserHedieyyeler.Application.Features.Queries.WebUsers.GetRolesToUsers
-//{
-//    public class GetRolesToUserQueryRequest:IRequest<GetRolesToUserQueryResponse>
-//    {
-//        public string UserId { get; set; }
-//    }
-//}
+namespace KovserHedieyyeler.Application.Features.Queries.WebUsers.GetRolesToUsers
+{
+    public class GetRolesToUserQueryRequest : IRequest<GetRolesToUserQueryResponse>
+    {
+        public string? UserIdOrEmail { get; set; }
+
+    }
+}

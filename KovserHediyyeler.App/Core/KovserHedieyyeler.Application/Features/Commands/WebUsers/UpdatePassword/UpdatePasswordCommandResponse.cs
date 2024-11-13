@@ -1,6 +1,6 @@
 ﻿namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.UpdatePassword
 {
-    public class UpdatePasswordCommandResponse
+    public class UpdatePasswordCommandResponse : CommandResponse
     {
     }
 }

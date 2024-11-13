@@ -1,4 +1,12 @@
-﻿using KovserHedieyyeler.Application.Features.Commands.WebUsers.Register;
+﻿using KovserHedieyyeler.Application.Const;
+using KovserHedieyyeler.Application.CustomAttributes;
+using KovserHedieyyeler.Application.Enums;
+using KovserHedieyyeler.Application.Features.Commands.WebUsers.AssignRoleToUser;
+using KovserHedieyyeler.Application.Features.Commands.WebUsers.Register;
+using KovserHedieyyeler.Application.Features.Commands.WebUsers.UpdatePassword;
+using KovserHedieyyeler.Application.Features.Queries.WebUsers.GetAllUsers;
+using KovserHedieyyeler.Application.Features.Queries.WebUsers.GetRolesToUsers;
+using KovserHedieyyeler.Application.Features.Queries.WebUsers.GetSingleUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,38 +35,47 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
 
-        //[HttpPost("Update-Password")]
-        //public async Task<IActionResult> UpdatePassword([FromBody] UpdatePasswordCommandRequest updatePasswordCommandRequest)
-        //{
-        //    UpdatePasswordCommandResponse response = await _mediator.Send(updatePasswordCommandRequest);
-        //    return Ok(response);
-        //}
+        [HttpPost("Update-Password")]
+        public async Task<IActionResult> UpdatePasswordAsync([FromBody] UpdatePasswordCommandRequest updatePasswordCommandRequest)
+        {
+            UpdatePasswordCommandResponse response = await _mediator.Send(updatePasswordCommandRequest);
+            return StatusCode(response.StatusCode, response.Message);
+        }
 
-        //[HttpGet]
         //[Authorize(AuthenticationSchemes = "Admin")]
-        //[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get All Users", Menu = "Users")]
-        //public async Task<IActionResult> GetAllUsers([FromQuery] GetAllUsersQueryRequest getAllUsersQueryRequest)
-        //{
-        //    GetAllUsersQueryResponse response = await _mediator.Send(getAllUsersQueryRequest);
-        //    return Ok(response);
-        //}
+        [AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get All Users", Menu = AuthorizeDefinitionConstants.WebUsers)]
+        [HttpGet("get-all-users")]
+        public async Task<IActionResult> GetAllUsersAsync([FromQuery] GetAllUsersQueryRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Datas);
+        }
 
-        //[HttpGet("get-roles-to-user/{UserId}")]
-        //[Authorize(AuthenticationSchemes = "Admin")]
-        //[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get Roles To Users", Menu = "Users")]
-        //public async Task<IActionResult> GetRolesToUser([FromRoute] GetRolesToUserQueryRequest getRolesToUserQueryRequest)
-        //{
-        //    GetRolesToUserQueryResponse response = await _mediator.Send(getRolesToUserQueryRequest);
-        //    return Ok(response);
-        //}
 
-        //[HttpPost("assign-role-to-user")]
+        [AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get Single Users", Menu = AuthorizeDefinitionConstants.WebUsers)]
+        [HttpGet("get-single-user")]
+        public async Task<IActionResult> GetUserAsync([FromQuery] GetSingleUserQueryRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Dto);
+        }
+
+        // [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Get Roles To Users", Menu = AuthorizeDefinitionConstants.WebUsers)]
+        [HttpGet("get-roles-to-user/{UserId}")]
+        public async Task<IActionResult> GetRolesToUserAsync([FromRoute] GetRolesToUserQueryRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.UserRoles);
+        }
+
         //[Authorize(AuthenticationSchemes = "Admin")]
-        //[AuthorizeDefinition(ActionType = ActionType.Reading, Definition = "Assign Role To User", Menu = "Users")]
-        //public async Task<IActionResult> AssignRoleToUser(AssignRoleToUserCommandRequest assignRoleToUserCommandRequest)
-        //{
-        //    AssignRoleToUserCommandResponse response = await _mediator.Send(assignRoleToUserCommandRequest);
-        //    return Ok(response);
-        //}
+        [AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Assign Role To User", Menu = AuthorizeDefinitionConstants.WebUsers)]
+        [HttpPost("assign-role-to-user")]
+        public async Task<IActionResult> AssignRoleToUserAsync(AssignRoleToUserCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
     }
 }

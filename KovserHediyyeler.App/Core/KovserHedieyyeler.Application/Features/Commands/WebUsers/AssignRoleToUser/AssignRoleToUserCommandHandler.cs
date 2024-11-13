@@ -14,7 +14,10 @@ namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.AssignRoleToU
         public async Task<AssignRoleToUserCommandResponse> Handle(AssignRoleToUserCommandRequest request, CancellationToken cancellationToken)
         {
             await _userService.AssignRoleToUserAsnyc(request.UserId, request.Roles);
-            return new();
+            return new AssignRoleToUserCommandResponse
+            {
+                Message = "İstifadəçiyə rol(lar) uğurla mənimsədilmişdir!"
+            };
         }
     }
 }

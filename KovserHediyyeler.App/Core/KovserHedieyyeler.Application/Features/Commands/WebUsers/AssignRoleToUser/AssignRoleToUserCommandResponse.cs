@@ -1,6 +1,6 @@
 ﻿namespace KovserHedieyyeler.Application.Features.Commands.WebUsers.AssignRoleToUser
 {
-    public class AssignRoleToUserCommandResponse
+    public class AssignRoleToUserCommandResponse : CommandResponse
     {
     }
 }

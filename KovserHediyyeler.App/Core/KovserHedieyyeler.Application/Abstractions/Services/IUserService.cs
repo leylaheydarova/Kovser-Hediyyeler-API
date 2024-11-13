@@ -1,7 +1,6 @@
 ﻿
 using KovserHedieyyeler.Application.DTOs.Accounts;
 using KovserHedieyyeler.Application.DTOs.WebUsers.Users;
-using KovserHedieyyeler.Application.Features.Commands.WebUsers.Register;
 using KovserHediyyeler.Domain.Models.Identity;
 
 namespace KovserHedieyyeler.Application.Abstractions.Services
@@ -10,11 +9,12 @@ namespace KovserHedieyyeler.Application.Abstractions.Services
     {
         Task<UserResponse> CreateAsync(RegisterDto dto);
         Task UpdateRefreshTokenAsync(string refreshToken, WebUser user, DateTime accessTokenDate, int addOnAccessTokenDate);
-        Task UpdatePasswordAsync(string userId, string resetToken, string newPassword);
+        Task UpdatePasswordAsync(string userIdOrEmail, string resetToken, string newPassword);
         Task<List<WebUserGetAllDto>> GetAllUsersAsync(int page, int size);
+        Task<WebUserGetSingleDto> GetUserAsync(string userIdOrEmail);
         int TotalUsersCount { get; }
-        Task AssignRoleToUserAsnyc(string userId, string[] roles);
-        Task<string[]> GetRolesToUserAsync(string userIdOrName);
+        Task AssignRoleToUserAsnyc(string userIdOrEmail, string[] roles);
+        Task<string[]> GetRolesToUserAsync(string userIdOrEmail);
         Task<bool> HasRolePermissionToEndpointAsync(string name, string code);
     }
 }
