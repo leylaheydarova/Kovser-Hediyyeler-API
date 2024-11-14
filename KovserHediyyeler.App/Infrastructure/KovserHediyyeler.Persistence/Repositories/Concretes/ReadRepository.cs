@@ -1,15 +1,8 @@
-﻿using KovserHedieyyeler.Application.Exceptions;
-using KovserHedieyyeler.Application.Repositories.Abstractions;
+﻿using KovserHedieyyeler.Application.Repositories.Abstractions;
 using KovserHediyyeler.Domain.Models.BaseModels;
 using KovserHediyyeler.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHediyyeler.Persistence.Repositories.Concretes
 {
@@ -27,7 +20,7 @@ namespace KovserHediyyeler.Persistence.Repositories.Concretes
         public IQueryable<T> GetAll(bool isTracking)
         {
             var query = Table.AsQueryable();
-            if(isTracking == false)
+            if (isTracking == false)
             {
                 query = query.AsNoTracking();
             }
@@ -37,7 +30,7 @@ namespace KovserHediyyeler.Persistence.Repositories.Concretes
         public IQueryable<T> GetAllWhere(Expression<Func<T, bool>> predicate, bool isTracking, params string[] includes)
         {
             var query = Table.Where(predicate);
-            if(isTracking == false)
+            if (isTracking == false)
             {
                 query = query.AsNoTracking();
             }
