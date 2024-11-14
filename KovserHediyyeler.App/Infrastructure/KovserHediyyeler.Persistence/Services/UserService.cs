@@ -85,7 +85,7 @@ namespace KovserHediyyeler.Persistence.Services
                 throw;
             }
 
-            await AssignRoleToUserAsnyc(user.Id, new[] { "Client" });
+            await _userManager.AddToRoleAsync(user, "Client");
 
             if (!result.Succeeded)
             {
@@ -178,6 +178,23 @@ namespace KovserHediyyeler.Persistence.Services
                 await _userManager.UpdateAsync(user);
             }
             else throw new UserNotFoundException();
+        }
+
+        public async Task AddAddressToUserAsync(string userIdOrEmail, AddressCommandDto dto)
+        {
+            var webUser = await FindUserAsync(userIdOrEmail);
+            var address = new Address
+            {
+                ID = Guid.NewGuid(),
+                City = dto.City,
+                Region = dto.Region,
+                Street = dto.Street,
+                Home = dto.Home,
+                PostalCode = dto.PostalCode,
+                IsCurrentAddress = dto.IsCurrentAddress
+            };
+            webUser.Addresses.Add(address);
+            await _addressRepository.SaveAsync();
         }
     }
 }

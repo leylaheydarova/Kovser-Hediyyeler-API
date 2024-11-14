@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Commands\WebUsers\AddAddressToUser\" />
     <Folder Include="Features\Queries\Products\GetAll\GetAllComments\" />
   </ItemGroup>
 

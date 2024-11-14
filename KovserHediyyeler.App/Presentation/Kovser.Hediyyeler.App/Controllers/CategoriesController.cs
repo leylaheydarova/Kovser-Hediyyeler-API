@@ -13,6 +13,7 @@ using KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAllAbs
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAllCategories;
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetSingle;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kovser.Hediyyeler.App.Controllers
@@ -29,6 +30,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Client")]
         public async Task<IActionResult> GetAllAsync()
         {
             var request = new GetAllCategoriesQueryRequest();

@@ -2,7 +2,7 @@
 
 namespace KovserHediyyeler.Domain.Models.Identity
 {
-    public class WebUser : IdentityUser<string>
+    public class WebUser : IdentityUser
     {
         public string FirstName { get; set; }
         public string? MiddleName { get; set; }

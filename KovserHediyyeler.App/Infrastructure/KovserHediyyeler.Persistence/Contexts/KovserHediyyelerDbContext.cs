@@ -7,10 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KovserHediyyeler.Persistence.Contexts
 {
-    public class KovserHediyyelerDbContext : IdentityDbContext<WebUser, Role, string>
+    public class KovserHediyyelerDbContext : IdentityDbContext<WebUser>
     {
         public DbSet<Address> Addresses { get; set; }
-
         public DbSet<Bank> Banks { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
@@ -25,7 +24,6 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<DepartmentPosition> DepartmentPositions { get; set; }
         public DbSet<DepartmentPromotion> DepartmentPromotions { get; set; }
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<Endpoint> Endpoint { get; set; }
         public DbSet<Domain.Models.File> Files { get; set; }
         public DbSet<InvoiceFile> InvoiceFiles { get; set; }
         public DbSet<Menu> Menus { get; set; }
@@ -42,7 +40,6 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<Shipping> Shippings { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
-        public DbSet<Role> Roles { get; set; }
         public DbSet<WebUser> WebUsers { get; set; }
         public DbSet<WishList> WishLists { get; set; }
         public DbSet<WishListItem> WishListItems { get; set; }
@@ -311,46 +308,32 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasForeignKey<WishList>(w => w.CustomerID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            //modelBuilder.Entity<WebUser>()
-            //    .HasMany(w => w.UserRoles)
-            //    .WithOne(ur => ur.User)
-            //    .HasForeignKey(ur => ur.UserId);
-
-            //modelBuilder.Entity<WebUserRole>()
-            //    .HasOne(wur => wur.Role)
-            //    .WithMany(r => r.UserRoles)
-            //    .HasForeignKey(wur => wur.RoleId);
-
-
             modelBuilder.Entity<WishList>()
                 .HasMany(wl => wl.ListItems)
                 .WithOne(wli => wli.List)
                 .HasForeignKey(wli => wli.WishListID)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<IdentityUserToken<Guid>>()
+            modelBuilder.Entity<IdentityUserToken<string>>()
                 .HasKey(x => new { x.UserId, x.LoginProvider, x.Name });
 
-            modelBuilder.Entity<IdentityUserLogin<Guid>>()
+            modelBuilder.Entity<IdentityUserLogin<string>>()
                 .HasKey(x => new { x.LoginProvider, x.ProviderKey });
 
-            modelBuilder.Entity<IdentityUserClaim<Guid>>()
+            modelBuilder.Entity<IdentityUserClaim<string>>()
                 .HasKey(x => x.Id);
 
-            modelBuilder.Entity<IdentityUserRole<Guid>>()
+            modelBuilder.Entity<IdentityUserRole<string>>()
                 .HasKey(x => new { x.UserId, x.RoleId });
 
             //modelBuilder.Entity<Role>()
             //    .HasNoKey();
 
-            modelBuilder.Entity<IdentityUserLogin<string>>().HasNoKey();
-            modelBuilder.Entity<IdentityUserRole<string>>().HasNoKey();
-            modelBuilder.Entity<IdentityUserToken<string>>().HasNoKey();
+            //modelBuilder.Entity<IdentityUserLogin<string>>().HasNoKey();
+            //modelBuilder.Entity<IdentityUserRole<string>>().HasNoKey();
+            //modelBuilder.Entity<IdentityUserToken<string>>().HasNoKey();
 
-            //modelBuilder.Entity<Endpoint>()
-            //    .HasMany(e => e.Roles)
-            //    .WithMany(r => r.Endpoints)
-            //    .
+
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

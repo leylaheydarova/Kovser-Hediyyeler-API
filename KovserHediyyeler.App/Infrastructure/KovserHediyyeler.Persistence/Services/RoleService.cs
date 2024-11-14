@@ -1,7 +1,6 @@
 ﻿using KovserHedieyyeler.Application.Abstractions.Services;
 using KovserHedieyyeler.Application.DTOs.Roles;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Domain.Models.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,9 +8,9 @@ namespace KovserHediyyeler.Persistence.Services
 {
     public class RoleService : IRoleService
     {
-        readonly RoleManager<Role> _roleManager;
+        readonly RoleManager<IdentityRole> _roleManager;
 
-        public RoleService(RoleManager<Role> roleManager)
+        public RoleService(RoleManager<IdentityRole> roleManager)
         {
             _roleManager = roleManager;
         }
@@ -27,7 +26,7 @@ namespace KovserHediyyeler.Persistence.Services
         {
             try
             {
-                Role? role = await _roleManager.FindByIdAsync(id);
+                var role = await _roleManager.FindByIdAsync(id);
                 if (role == null) throw new RoleNotFoundException();
                 IdentityResult result = await _roleManager.DeleteAsync(role);
                 return result.Succeeded;
@@ -44,7 +43,7 @@ namespace KovserHediyyeler.Persistence.Services
         {
             var query = _roleManager.Roles;
 
-            IQueryable<Role> rolesQuery = null;
+            IQueryable<IdentityRole> rolesQuery = null;
 
             if (page != -1 && size != -1)
                 rolesQuery = query.Skip(page * size).Take(size);
@@ -69,7 +68,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task<bool> UpdateRole(string id, string name)
         {
-            Role role = await _roleManager.FindByIdAsync(id);
+            var role = await _roleManager.FindByIdAsync(id);
             role.Name = name;
             IdentityResult result = await _roleManager.UpdateAsync(role);
             return result.Succeeded;

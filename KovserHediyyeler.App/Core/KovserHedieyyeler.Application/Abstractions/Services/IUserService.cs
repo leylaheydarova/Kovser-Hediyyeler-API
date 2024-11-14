@@ -1,5 +1,6 @@
 ﻿
 using KovserHedieyyeler.Application.DTOs.Accounts;
+using KovserHedieyyeler.Application.DTOs.Addresses;
 using KovserHedieyyeler.Application.DTOs.WebUsers.Users;
 using KovserHediyyeler.Domain.Models.Identity;
 
@@ -16,5 +17,6 @@ namespace KovserHedieyyeler.Application.Abstractions.Services
         Task AssignRoleToUserAsnyc(string userIdOrEmail, string[] roles);
         Task<string[]> GetRolesToUserAsync(string userIdOrEmail);
         Task<bool> HasRolePermissionToEndpointAsync(string name, string code);
+        Task AddAddressToUserAsync(string userIdOrEmail, AddressCommandDto dto);
     }
 }
