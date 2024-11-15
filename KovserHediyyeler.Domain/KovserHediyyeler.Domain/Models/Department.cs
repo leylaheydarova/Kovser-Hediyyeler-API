@@ -14,9 +14,6 @@ namespace KovserHediyyeler.Domain.Models
         public ICollection<SocialMedia> SocialMedias { get; set; } = new List<SocialMedia>();
         public ICollection<Product> Products { get; set; } = new List<Product>();
 
-        ////Cross-tables
-        //public ICollection<DepartmentPromotion> DepartmentPromotions { get; set; } = new List<DepartmentPromotion>();
-
         [NotMapped]
         public string DepartmentImagePath = "~/Assets/Images/Departments";
     }

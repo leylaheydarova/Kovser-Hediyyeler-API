@@ -1,6 +1,6 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Products;
+using KovserHediyyeler.Application.Repositories.Products;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProductProperty

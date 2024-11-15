@@ -11,7 +11,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Delete.Perman
         readonly IProductWriteRepository _productWriteRepository;
         readonly IProductPropertyWriteRepository _productPropertyWriteRepository;
         readonly IProductImageFileWriteRepository _productImageFileWriteRepository;
-        //readonly IProductCommentWriteRepository _productCommentWriteRepository;
 
         public RemovePermanentlyProductCommandHandler(IProductReadRepository productReadRepository, IProductWriteRepository productWriteRepository, IProductPropertyWriteRepository productPropertyWriteRepository, IProductImageFileWriteRepository productImageFileWriteRepository)
         {

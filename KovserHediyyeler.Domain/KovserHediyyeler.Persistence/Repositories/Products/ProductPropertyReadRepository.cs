@@ -4,7 +4,7 @@ using KovserHediyyeler.Persistence.Contexts;
 
 namespace KovserHediyyeler.Persistence.Repositories.Products
 {
-    public class ProductPropertyReadRepository : WriteRepository<ProductProperty>, IProductPropertyWriteRepository
+    public class ProductPropertyReadRepository : ReadRepository<ProductProperty>, IProductPropertyReadRepository
     {
         public ProductPropertyReadRepository(KovserHediyyelerDbContext context) : base(context)
         {

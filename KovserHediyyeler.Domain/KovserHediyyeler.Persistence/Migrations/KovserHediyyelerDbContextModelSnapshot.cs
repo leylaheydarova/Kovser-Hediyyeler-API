@@ -52,6 +52,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("District")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid?>("EmployeeID")
                         .HasColumnType("uniqueidentifier");
 
@@ -176,11 +179,11 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.Property<string>("HexCode")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -189,6 +192,12 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("HexCode")
+                        .IsUnique();
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("Colors");
                 });
@@ -394,6 +403,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<double>("ProductAverageRating")
                         .HasColumnType("float");
 
+                    b.Property<Guid?>("PromotionID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("Stock")
                         .HasColumnType("int");
 
@@ -413,6 +425,8 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasIndex("CategoryID");
 
                     b.HasIndex("DepartmentID");
+
+                    b.HasIndex("PromotionID");
 
                     b.ToTable("Products");
                 });
@@ -451,6 +465,52 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasIndex("ProductID");
 
                     b.ToTable("ProductProperties");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Promotion", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("DiscountPersentage")
+                        .HasColumnType("int");
+
+                    b.Property<double?>("DiscountedPrice")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("ExpireDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double?>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Promotions");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shop", b =>
@@ -641,11 +701,17 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("KovserHediyyeler.Domain.Models.Promotion", "Promotion")
+                        .WithMany("Products")
+                        .HasForeignKey("PromotionID");
+
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
 
                     b.Navigation("Department");
+
+                    b.Navigation("Promotion");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ProductProperty", b =>
@@ -728,6 +794,11 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("Properties");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Promotion", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shop", b =>

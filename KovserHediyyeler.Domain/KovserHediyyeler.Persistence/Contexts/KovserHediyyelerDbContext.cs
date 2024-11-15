@@ -17,6 +17,7 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImageFile> ProductImagesFiles { get; set; }
         public DbSet<ProductProperty> ProductProperties { get; set; }
+        public DbSet<Promotion> Promotions { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
 
@@ -46,6 +47,14 @@ namespace KovserHediyyeler.Persistence.Contexts
 
             modelBuilder.Entity<Position>()
                 .HasIndex(p => p.Status)
+                .IsUnique();
+
+            modelBuilder.Entity<ColorCode>()
+                .HasIndex(c => c.HexCode)
+                .IsUnique();
+
+            modelBuilder.Entity<ColorCode>()
+                .HasIndex(c => c.Name)
                 .IsUnique();
 
             base.OnModelCreating(modelBuilder);

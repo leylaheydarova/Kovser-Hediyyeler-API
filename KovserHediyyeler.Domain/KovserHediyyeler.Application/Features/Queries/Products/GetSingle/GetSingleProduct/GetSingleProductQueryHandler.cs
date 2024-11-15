@@ -1,8 +1,9 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
 using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
 using KovserHedieyyeler.Application.DTOs.Products.Products;
+using KovserHedieyyeler.Application.DTOs.Shops;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Products;
+using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 
@@ -25,7 +26,8 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetS
                 "Brand",
                 "Properties",
                 "Images",
-                "Comments");
+                "Comments",
+                "Shops");
             if (product == null)
             {
                 throw new ProductNotFoundException();
@@ -55,14 +57,14 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetS
                     Name = property.Name,
                     Value = property.Value
                 }).ToList(),
-                //ShopNames = product.ProductShops.Select(shop => new ShopGetAllDto
-                //{
-                //    Id = shop.ID.ToString(),
-                //    Name = shop.Shop.Name,
-                //    City = shop.Shop.Addresses.FirstOrDefault(x => x.IsCurrentAddress).GetCity,
-                //    Description = shop.Shop.Description,
-                //    Phone = shop.Shop.Phone
-                //}).ToList(),
+                ShopNames = product.Shops.Select(shop => new ShopGetAllDto
+                {
+                    Id = shop.ID.ToString(),
+                    Name = shop.Name,
+                    City = shop.Addresses.FirstOrDefault(x => x.IsCurrentAddress).GetCity,
+                    Description = shop.Description,
+                    Phone = shop.Phone
+                }).ToList(),
                 //Comments = product.Comments.Select(comment => new ProductCommentGetDto
                 //{
                 //    Id = comment.ID.ToString(),

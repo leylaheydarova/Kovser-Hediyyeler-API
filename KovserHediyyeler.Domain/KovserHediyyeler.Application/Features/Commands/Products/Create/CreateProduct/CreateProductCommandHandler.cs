@@ -1,7 +1,5 @@
-﻿
-
-
-using KovserHediyyeler.Application.Repositories.Products;
+﻿using KovserHediyyeler.Application.Repositories.Products;
+using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -14,15 +12,17 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
         readonly IProductImageFileWriteRepository _productimagefilewriterepository;
         readonly IProductPropertyWriteRepository _productpropertywriterepository;
         readonly IColorWriteRepository _colorwriterepository;
+        readonly IShopReadRepository _shopRepository;
         readonly IHttpContextAccessor _accessor;
 
-        public CreateProductCommandHandler(IProductWriteRepository productwriterepository, IProductImageFileWriteRepository productimagefilewriterepository, IProductPropertyWriteRepository productpropertywriterepository, IColorWriteRepository colorwriterepository, IHttpContextAccessor accessor)
+        public CreateProductCommandHandler(IProductWriteRepository productwriterepository, IProductImageFileWriteRepository productimagefilewriterepository, IProductPropertyWriteRepository productpropertywriterepository, IColorWriteRepository colorwriterepository, IHttpContextAccessor accessor, IShopReadRepository shopRepository)
         {
             _productwriterepository = productwriterepository;
             _productimagefilewriterepository = productimagefilewriterepository;
             _productpropertywriterepository = productpropertywriterepository;
             _colorwriterepository = colorwriterepository;
             _accessor = accessor;
+            _shopRepository = shopRepository;
         }
 
         public async Task<CreateProductCommandResponse> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
@@ -71,7 +71,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
                 {
                     ID = Guid.NewGuid(),
                     Name = colordto.Name,
-                    HexCode = colordto.HexCode,
+                    HexCode = colordto.HexCode
                 };
 
                 var propertycolor = new ProductProperty
@@ -82,16 +82,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
                     ProductID = product.ID
                 };
                 await _productpropertywriterepository.AddAsync(propertycolor);
-
-                //ColorCodeProductProperty colorproperty = new ColorCodeProductProperty
-                //{
-                //    ID = Guid.NewGuid(),
-                //    ColorCodeID = color.ID,
-                //    ProductPropertyID = propertycolor.ID
-                //};
-                //color.ColorCodeProductProperties.Add(colorproperty);
-                //await _colorwriterepository.AddAsync(color);
-
             }
 
             foreach (var propertydto in dto.ProductProperties)
@@ -107,15 +97,12 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
                 await _productpropertywriterepository.AddAsync(property);
             }
 
-            //foreach (var shopId in request.Dto.ShopIDs)
-            //{
-            //    var shopproduct = new ProductShop()
-            //    {
-            //        ProductID = product.ID,
-            //        ShopID = shopId
-            //    };
-            //    product.ProductShops.Add(shopproduct);
-            //}
+            foreach (var shopId in request.Dto.ShopIDs)
+            {
+                var shop = product.Shops.FirstOrDefault(sh => sh.ID == shopId && !sh.isDeleted);
+                product.Shops.Add(shop);
+            }
+
 
             try
             {

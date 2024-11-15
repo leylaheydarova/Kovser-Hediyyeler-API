@@ -1,5 +1,4 @@
-﻿
-using KovserHediyyeler.Application.Repositories.Addresses;
+﻿using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Brands;
 using KovserHediyyeler.Application.Repositories.Categories;
 using KovserHediyyeler.Application.Repositories.Departments;
@@ -7,6 +6,7 @@ using KovserHediyyeler.Application.Repositories.Employees;
 using KovserHediyyeler.Application.Repositories.Files;
 using KovserHediyyeler.Application.Repositories.Positions;
 using KovserHediyyeler.Application.Repositories.Products;
+using KovserHediyyeler.Application.Repositories.Promotions;
 using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Application.Repositories.SocialMedias;
 using KovserHediyyeler.Persistence.Contexts;
@@ -18,6 +18,7 @@ using KovserHediyyeler.Persistence.Repositories.Employees;
 using KovserHediyyeler.Persistence.Repositories.Files;
 using KovserHediyyeler.Persistence.Repositories.Positions;
 using KovserHediyyeler.Persistence.Repositories.Products;
+using KovserHediyyeler.Persistence.Repositories.Promotions;
 using KovserHediyyeler.Persistence.Repositories.Shops;
 using KovserHediyyeler.Persistence.Repositories.SocialMedias;
 using Microsoft.EntityFrameworkCore;
@@ -58,15 +59,20 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<IFileReadRepository, FileReadRepository>();
             services.AddScoped<IFileWriteRepository, FileWriteRepository>();
 
-            //services.AddScoped<Application.Repositories.Products.IProductReadRepository, ProductReadRepository>();
+            services.AddScoped<IProductReadRepository, ProductReadRepository>();
+            services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
 
             services.AddScoped<IProductImageFileReadRepository, ProductImageFileReadRepository>();
             services.AddScoped<IProductImageFileWriteRepository, ProductImageFileWriteRepository>();
 
-            //services.AddScoped<IProductPropertyReadRepository, ProductPropertyReadRepository>();
+            services.AddScoped<IProductPropertyReadRepository, ProductPropertyReadRepository>();
+            services.AddScoped<IProductPropertyWriteRepository, ProductPropertyWriteRepository>();
 
             services.AddScoped<IPositionReadRepository, PositionReadRepository>();
             services.AddScoped<IPositionWriteRepository, PositionWriteRepository>();
+
+            services.AddScoped<IPromotionReadRepository, PromotionReadRepository>();
+            services.AddScoped<IPromotionWriteRepository, PromotionWriteRepository>();
 
             services.AddScoped<IShopReadRepository, ShopReadRepository>();
             services.AddScoped<IShopWriteRepository, ShopWriteRepository>();

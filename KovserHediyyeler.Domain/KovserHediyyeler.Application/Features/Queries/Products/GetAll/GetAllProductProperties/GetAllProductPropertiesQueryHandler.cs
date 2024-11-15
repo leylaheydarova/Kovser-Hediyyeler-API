@@ -1,6 +1,5 @@
-﻿using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
-using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Products;
+﻿using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
+using KovserHediyyeler.Application.Repositories.Products;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

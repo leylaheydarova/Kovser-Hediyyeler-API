@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Repositories.Abstractions.Products;
+﻿using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Persistence.Contexts;
 
