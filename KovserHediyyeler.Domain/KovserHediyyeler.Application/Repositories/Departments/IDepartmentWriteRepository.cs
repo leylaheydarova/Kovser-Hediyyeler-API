@@ -1,7 +1,6 @@
-﻿using KovserHediyyeler.Application.Repositories;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Domain.Models;
 
-namespace KovserHedieyyeler.Application.Repositories.Abstractions.Departments
+namespace KovserHediyyeler.Application.Repositories.Departments
 {
     public interface IDepartmentWriteRepository : IWriteRepository<Department>
     {

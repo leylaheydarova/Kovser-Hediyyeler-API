@@ -1,5 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Department;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
+using KovserHediyyeler.Application.Repositories.Departments;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

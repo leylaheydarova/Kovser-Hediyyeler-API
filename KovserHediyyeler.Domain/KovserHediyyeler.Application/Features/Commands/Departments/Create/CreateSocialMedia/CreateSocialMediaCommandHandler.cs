@@ -1,5 +1,4 @@
-﻿
-using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
+﻿using KovserHediyyeler.Application.Repositories.SocialMedias;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 

@@ -12,11 +12,9 @@ namespace KovserHediyyeler.Domain.Models
         public string LogoImageURL { get; set; }
         //Relationships
         public ICollection<SocialMedia> SocialMedias { get; set; } = new List<SocialMedia>();
-        //public ICollection<Employee> Employees { get; set; } = new List<Employee>();
-        //public ICollection<Product> Products { get; set; } = new List<Product>();
+        public ICollection<Product> Products { get; set; } = new List<Product>();
 
         ////Cross-tables
-        //public ICollection<DepartmentPosition> DepartmentPositions { get; set; } = new List<DepartmentPosition>();
         //public ICollection<DepartmentPromotion> DepartmentPromotions { get; set; } = new List<DepartmentPromotion>();
 
         [NotMapped]

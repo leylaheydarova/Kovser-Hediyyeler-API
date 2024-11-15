@@ -11,6 +11,7 @@ namespace KovserHediyyeler.Domain.Models
 
 
         //Relationships
+        [ForeignKey(nameof(Department))]
         public Guid DepartmentID { get; set; }
         public Department Department { get; set; }
         [NotMapped]

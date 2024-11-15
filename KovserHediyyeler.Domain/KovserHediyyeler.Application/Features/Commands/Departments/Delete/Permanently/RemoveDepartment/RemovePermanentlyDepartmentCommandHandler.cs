@@ -1,13 +1,8 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
-using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
+using KovserHediyyeler.Application.Repositories.Departments;
+using KovserHediyyeler.Application.Repositories.SocialMedias;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently.RemoveDepartment
 {

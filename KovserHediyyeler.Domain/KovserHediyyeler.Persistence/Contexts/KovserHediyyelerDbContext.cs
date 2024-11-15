@@ -6,10 +6,20 @@ namespace KovserHediyyeler.Persistence.Contexts
 {
     public class KovserHediyyelerDbContext : DbContext
     {
+        public DbSet<Address> Addresses { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ColorCode> Colors { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Domain.Models.File> Files { get; set; }
+        public DbSet<Position> Positions { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductImageFile> ProductImagesFiles { get; set; }
+        public DbSet<ProductProperty> ProductProperties { get; set; }
+        public DbSet<Shop> Shops { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
+
         public KovserHediyyelerDbContext(DbContextOptions<KovserHediyyelerDbContext> options) : base(options)
         {
         }
@@ -32,6 +42,10 @@ namespace KovserHediyyeler.Persistence.Contexts
 
             modelBuilder.Entity<Department>()
                 .HasIndex(d => d.Name)
+                .IsUnique();
+
+            modelBuilder.Entity<Position>()
+                .HasIndex(p => p.Status)
                 .IsUnique();
 
             base.OnModelCreating(modelBuilder);

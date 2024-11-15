@@ -1,13 +1,8 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
+using KovserHediyyeler.Application.Repositories.Departments;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Departments.Update.UpdateDepartment.Update
 {

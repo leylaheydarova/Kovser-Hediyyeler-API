@@ -1,5 +1,5 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
-using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
+using KovserHediyyeler.Application.Repositories.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 

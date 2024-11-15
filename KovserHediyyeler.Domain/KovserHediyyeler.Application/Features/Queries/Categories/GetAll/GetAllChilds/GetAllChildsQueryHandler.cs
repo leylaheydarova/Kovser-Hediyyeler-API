@@ -1,5 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Categories;
-using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
+using KovserHediyyeler.Application.Repositories.Categories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

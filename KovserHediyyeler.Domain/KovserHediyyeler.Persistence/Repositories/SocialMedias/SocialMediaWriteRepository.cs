@@ -1,8 +1,8 @@
-﻿using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
+﻿using KovserHediyyeler.Application.Repositories.SocialMedias;
 using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Persistence.Contexts;
 
-namespace KovserHediyyeler.Persistence.Repositories.Concretes.SocialMedias
+namespace KovserHediyyeler.Persistence.Repositories.SocialMedias
 {
     public class SocialMediaWriteRepository : WriteRepository<SocialMedia>, ISocialMediaWriteRepository
     {

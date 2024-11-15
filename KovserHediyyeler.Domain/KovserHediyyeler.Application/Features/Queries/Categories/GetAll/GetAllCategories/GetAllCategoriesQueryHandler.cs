@@ -1,5 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Categories;
-using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
+using KovserHediyyeler.Application.Repositories.Categories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,12 +22,12 @@ namespace KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAl
             int totalCount = query.Count();
             List<CategoryGetDto> dtos = new List<CategoryGetDto>();
             dtos = await query.Select(x => new CategoryGetDto
-                {
-                    Id = x.ID.ToString(),
-                    Name = x.Name,
-                    ParentID = x.ParentId.ToString(),
-                    ParentCategoryName = x.ParentId != null ? x.ParentCategory.Name : "Ana kateqoriya"
-                }).ToListAsync();
+            {
+                Id = x.ID.ToString(),
+                Name = x.Name,
+                ParentID = x.ParentId.ToString(),
+                ParentCategoryName = x.ParentId != null ? x.ParentCategory.Name : "Ana kateqoriya"
+            }).ToListAsync();
             return new GetAllCategoriesQueryResponse
             {
                 Datas = dtos,

@@ -1,8 +1,7 @@
-﻿using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
-using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
+﻿using KovserHediyyeler.Application.Repositories.Departments;
+using KovserHediyyeler.Application.Repositories.SocialMedias;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
-using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Departments.Recover
 {

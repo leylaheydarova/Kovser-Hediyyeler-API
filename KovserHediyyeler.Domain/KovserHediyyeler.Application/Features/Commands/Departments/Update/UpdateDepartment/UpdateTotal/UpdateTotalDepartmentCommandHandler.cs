@@ -1,6 +1,5 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
-using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
+using KovserHediyyeler.Application.Repositories.Departments;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Http;

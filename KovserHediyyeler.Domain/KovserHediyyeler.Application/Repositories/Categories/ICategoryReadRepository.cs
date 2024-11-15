@@ -1,7 +1,6 @@
-﻿using KovserHediyyeler.Application.Repositories;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Domain.Models;
 
-namespace KovserHedieyyeler.Application.Repositories.Interfaces.Categories
+namespace KovserHediyyeler.Application.Repositories.Categories
 {
     public interface ICategoryReadRepository : IReadRepository<Category>
     {

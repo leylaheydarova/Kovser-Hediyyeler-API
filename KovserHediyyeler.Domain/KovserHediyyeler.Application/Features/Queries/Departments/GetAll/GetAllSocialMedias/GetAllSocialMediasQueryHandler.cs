@@ -1,6 +1,6 @@
 ﻿using KovserHedieyyeler.Application.DTOs.SocialMedias;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Repositories.Abstractions.SocialMedias;
+using KovserHediyyeler.Application.Repositories.SocialMedias;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

@@ -1,5 +1,5 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Repositories.Interfaces.Categories;
+using KovserHediyyeler.Application.Repositories.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 namespace KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Temporarily

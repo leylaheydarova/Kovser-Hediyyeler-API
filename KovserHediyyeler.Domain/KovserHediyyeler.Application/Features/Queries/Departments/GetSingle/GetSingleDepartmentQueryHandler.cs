@@ -1,7 +1,7 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Department;
 using KovserHedieyyeler.Application.DTOs.SocialMedias;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHedieyyeler.Application.Repositories.Abstractions.Departments;
+using KovserHediyyeler.Application.Repositories.Departments;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 
