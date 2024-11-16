@@ -1,5 +1,6 @@
 ﻿using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models.BaseModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KovserHediyyeler.Domain.Models
 {
@@ -12,10 +13,11 @@ namespace KovserHediyyeler.Domain.Models
         public double? DiscountedPrice { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime ExpireDate { get; set; }
+        public ICollection<ProductImageFile> Images { get; set; } = new List<ProductImageFile>();
 
-        //Relations
-        public ICollection<Product> Products { get; set; } = new List<Product>();
 
+        [NotMapped]
+        public string PromotionPath = "~/Assets/Images/Departments";
 
     }
 }

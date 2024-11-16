@@ -403,9 +403,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<double>("ProductAverageRating")
                         .HasColumnType("float");
 
-                    b.Property<Guid?>("PromotionID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<int>("Stock")
                         .HasColumnType("int");
 
@@ -425,8 +422,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasIndex("CategoryID");
 
                     b.HasIndex("DepartmentID");
-
-                    b.HasIndex("PromotionID");
 
                     b.ToTable("Products");
                 });
@@ -613,7 +608,12 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<Guid>("ProductID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("PromotionID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasIndex("ProductID");
+
+                    b.HasIndex("PromotionID");
 
                     b.HasDiscriminator().HasValue("ProductImageFile");
                 });
@@ -701,17 +701,11 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("KovserHediyyeler.Domain.Models.Promotion", "Promotion")
-                        .WithMany("Products")
-                        .HasForeignKey("PromotionID");
-
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
 
                     b.Navigation("Department");
-
-                    b.Navigation("Promotion");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ProductProperty", b =>
@@ -759,6 +753,10 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("KovserHediyyeler.Domain.Models.Promotion", null)
+                        .WithMany("Images")
+                        .HasForeignKey("PromotionID");
+
                     b.Navigation("Product");
                 });
 
@@ -798,7 +796,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Promotion", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("Images");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shop", b =>

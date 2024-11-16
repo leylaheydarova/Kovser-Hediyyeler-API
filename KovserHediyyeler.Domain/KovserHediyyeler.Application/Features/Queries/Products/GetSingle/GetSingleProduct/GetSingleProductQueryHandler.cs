@@ -26,7 +26,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetS
                 "Brand",
                 "Properties",
                 "Images",
-                "Comments",
+                //"Comments",
                 "Shops");
             if (product == null)
             {

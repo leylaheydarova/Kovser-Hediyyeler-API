@@ -13,7 +13,7 @@ namespace KovserHediyyeler.Persistence.Migrations
         {
             migrationBuilder.AddColumn<Guid>(
                 name: "PromotionID",
-                table: "Products",
+                table: "Files",
                 type: "uniqueidentifier",
                 nullable: true);
 
@@ -62,8 +62,8 @@ namespace KovserHediyyeler.Persistence.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_PromotionID",
-                table: "Products",
+                name: "IX_Files_PromotionID",
+                table: "Files",
                 column: "PromotionID");
 
             migrationBuilder.CreateIndex(
@@ -79,8 +79,8 @@ namespace KovserHediyyeler.Persistence.Migrations
                 unique: true);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Products_Promotions_PromotionID",
-                table: "Products",
+                name: "FK_Files_Promotions_PromotionID",
+                table: "Files",
                 column: "PromotionID",
                 principalTable: "Promotions",
                 principalColumn: "ID");
@@ -90,15 +90,15 @@ namespace KovserHediyyeler.Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Products_Promotions_PromotionID",
-                table: "Products");
+                name: "FK_Files_Promotions_PromotionID",
+                table: "Files");
 
             migrationBuilder.DropTable(
                 name: "Promotions");
 
             migrationBuilder.DropIndex(
-                name: "IX_Products_PromotionID",
-                table: "Products");
+                name: "IX_Files_PromotionID",
+                table: "Files");
 
             migrationBuilder.DropIndex(
                 name: "IX_Colors_HexCode",
@@ -110,7 +110,7 @@ namespace KovserHediyyeler.Persistence.Migrations
 
             migrationBuilder.DropColumn(
                 name: "PromotionID",
-                table: "Products");
+                table: "Files");
 
             migrationBuilder.DropColumn(
                 name: "District",

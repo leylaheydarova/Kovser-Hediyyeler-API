@@ -1,4 +1,8 @@
-﻿using KovserHediyyeler.Application.Repositories.Products;
+﻿using KovserHediyyeler.Application.Exceptions.BadRequestExceptions;
+using KovserHediyyeler.Application.Repositories.Brands;
+using KovserHediyyeler.Application.Repositories.Categories;
+using KovserHediyyeler.Application.Repositories.Departments;
+using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -13,9 +17,12 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
         readonly IProductPropertyWriteRepository _productpropertywriterepository;
         readonly IColorWriteRepository _colorwriterepository;
         readonly IShopReadRepository _shopRepository;
+        readonly ICategoryReadRepository _categoryRepository;
+        readonly IDepartmentReadRepository _departmentRepository;
+        readonly IBrandReadRepository _brandRepository;
         readonly IHttpContextAccessor _accessor;
 
-        public CreateProductCommandHandler(IProductWriteRepository productwriterepository, IProductImageFileWriteRepository productimagefilewriterepository, IProductPropertyWriteRepository productpropertywriterepository, IColorWriteRepository colorwriterepository, IHttpContextAccessor accessor, IShopReadRepository shopRepository)
+        public CreateProductCommandHandler(IProductWriteRepository productwriterepository, IProductImageFileWriteRepository productimagefilewriterepository, IProductPropertyWriteRepository productpropertywriterepository, IColorWriteRepository colorwriterepository, IHttpContextAccessor accessor, IShopReadRepository shopRepository, ICategoryReadRepository categoryRepository, IDepartmentReadRepository departmentRepository, IBrandReadRepository brandRepository)
         {
             _productwriterepository = productwriterepository;
             _productimagefilewriterepository = productimagefilewriterepository;
@@ -23,25 +30,41 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
             _colorwriterepository = colorwriterepository;
             _accessor = accessor;
             _shopRepository = shopRepository;
+            _categoryRepository = categoryRepository;
+            _departmentRepository = departmentRepository;
+            _brandRepository = brandRepository;
         }
 
         public async Task<CreateProductCommandResponse> Handle(CreateProductCommandRequest request, CancellationToken cancellationToken)
         {
             var dto = request.Dto;
+            var category = await _categoryRepository.GetWhereAsync(c => c.ID == request.Dto.CategoryID, false);
+            if (category == null) throw new InvalidInputException("Category");
+
+            var department = await _departmentRepository.GetWhereAsync(d => d.ID == request.Dto.DepartmentID, false);
+            if (department == null) throw new InvalidInputException("Department");
+
+            var brand = request.Dto.BrandID is not null
+                ? await _brandRepository.GetWhereAsync(b => b.ID == request.Dto.BrandID, false)
+                : null;
+
+            if (brand == null && request.Dto.BrandID is not null)
+                throw new InvalidInputException("Brand");
 
             Product product = new Product
             {
                 ID = Guid.NewGuid(),
                 Name = dto.Name,
                 Description = dto.Description,
-                BrandID = dto.BrandID,
-                CategoryID = dto.CategoryID,
-                DepartmentID = dto.DepartmentID,
+                BrandID = brand.ID,
+                CategoryID = category.ID,
+                DepartmentID = department.ID,
                 Price = dto.Price,
                 DiscountedPrice = (dto.Price - ((dto.Price * (int)dto.DiscountPercentage) / 100)),
                 isSingleColour = dto.isSingleColour,
                 Stock = dto.Stock
             };
+
 
             foreach (var imagedto in dto.ProductImages)
             {
@@ -52,7 +75,8 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
                     ID = Guid.NewGuid(),
                     FileName = imagedto.file.FileName,
                     Path = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{imagedto.file.FileName}",
-                    ProductID = product.ID
+                    ProductID = product.ID,
+                    IsMain = imagedto.IsMain
                 };
                 try
                 {
@@ -82,6 +106,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
                     ProductID = product.ID
                 };
                 await _productpropertywriterepository.AddAsync(propertycolor);
+                await _colorwriterepository.AddAsync(color);
             }
 
             foreach (var propertydto in dto.ProductProperties)
@@ -99,11 +124,17 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.Create
 
             foreach (var shopId in request.Dto.ShopIDs)
             {
-                var shop = product.Shops.FirstOrDefault(sh => sh.ID == shopId && !sh.isDeleted);
-                product.Shops.Add(shop);
+                var shop = await _shopRepository.GetWhereAsync(sh => sh.ID == shopId && !sh.isDeleted, false);
+                if (shop != null)
+                {
+                    shop.Products.Add(product);
+                }
+                else throw new InvalidInputException("Shop");
             }
 
-
+            category.Products.Add(product);
+            department.Products.Add(product);
+            if (brand is not null) brand.Products.Add(product);
             try
             {
                 await _productwriterepository.AddAsync(product);
