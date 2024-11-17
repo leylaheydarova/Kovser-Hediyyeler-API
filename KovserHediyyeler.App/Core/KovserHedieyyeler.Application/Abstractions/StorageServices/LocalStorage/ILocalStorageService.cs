@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KovserHedieyyeler.Application.Abstractions.StorageServices.LocalStorage
+﻿namespace KovserHedieyyeler.Application.Abstractions.StorageServices.LocalStorage
 {
     public interface ILocalStorageService : IStorage
     {

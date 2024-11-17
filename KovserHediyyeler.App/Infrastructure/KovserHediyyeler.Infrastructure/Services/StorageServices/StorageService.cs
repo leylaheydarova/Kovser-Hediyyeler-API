@@ -1,10 +1,5 @@
 ﻿using KovserHedieyyeler.Application.Abstractions.StorageServices;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Infrastructure.Services.StorageServices
 {
