@@ -57,6 +57,14 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasIndex(c => c.Name)
                 .IsUnique();
 
+            modelBuilder.Entity<Product>()
+                .HasMany(p => p.Shops)
+                .WithMany(sh => sh.Products)
+                .UsingEntity<Dictionary<string, object>>(
+                "ProductShop",
+                sh => sh.HasOne<Shop>().WithMany().HasForeignKey("ShopID"),
+                p => p.HasOne<Product>().WithMany().HasForeignKey("ProductID"));
+
             base.OnModelCreating(modelBuilder);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

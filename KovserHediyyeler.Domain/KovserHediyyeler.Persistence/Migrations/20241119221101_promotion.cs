@@ -11,11 +11,28 @@ namespace KovserHediyyeler.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<Guid>(
-                name: "PromotionID",
-                table: "Files",
-                type: "uniqueidentifier",
-                nullable: true);
+            migrationBuilder.DropForeignKey(
+                name: "FK_ProductShop_Products_ProductsID",
+                table: "ProductShop");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_ProductShop_Shops_ShopsID",
+                table: "ProductShop");
+
+            migrationBuilder.RenameColumn(
+                name: "ShopsID",
+                table: "ProductShop",
+                newName: "ShopID");
+
+            migrationBuilder.RenameColumn(
+                name: "ProductsID",
+                table: "ProductShop",
+                newName: "ProductID");
+
+            migrationBuilder.RenameIndex(
+                name: "IX_ProductShop_ShopsID",
+                table: "ProductShop",
+                newName: "IX_ProductShop_ShopID");
 
             migrationBuilder.AlterColumn<string>(
                 name: "Name",
@@ -47,8 +64,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: true),
-                    DiscountPersentage = table.Column<int>(type: "int", nullable: true),
                     DiscountedPrice = table.Column<double>(type: "float", nullable: true),
+                    ImageName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ExpireDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -60,11 +78,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_Promotions", x => x.ID);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Files_PromotionID",
-                table: "Files",
-                column: "PromotionID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Colors_HexCode",
@@ -79,26 +92,35 @@ namespace KovserHediyyeler.Persistence.Migrations
                 unique: true);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Files_Promotions_PromotionID",
-                table: "Files",
-                column: "PromotionID",
-                principalTable: "Promotions",
-                principalColumn: "ID");
+                name: "FK_ProductShop_Products_ProductID",
+                table: "ProductShop",
+                column: "ProductID",
+                principalTable: "Products",
+                principalColumn: "ID",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_ProductShop_Shops_ShopID",
+                table: "ProductShop",
+                column: "ShopID",
+                principalTable: "Shops",
+                principalColumn: "ID",
+                onDelete: ReferentialAction.Cascade);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Files_Promotions_PromotionID",
-                table: "Files");
+                name: "FK_ProductShop_Products_ProductID",
+                table: "ProductShop");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_ProductShop_Shops_ShopID",
+                table: "ProductShop");
 
             migrationBuilder.DropTable(
                 name: "Promotions");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Files_PromotionID",
-                table: "Files");
 
             migrationBuilder.DropIndex(
                 name: "IX_Colors_HexCode",
@@ -109,12 +131,23 @@ namespace KovserHediyyeler.Persistence.Migrations
                 table: "Colors");
 
             migrationBuilder.DropColumn(
-                name: "PromotionID",
-                table: "Files");
-
-            migrationBuilder.DropColumn(
                 name: "District",
                 table: "Addresses");
+
+            migrationBuilder.RenameColumn(
+                name: "ShopID",
+                table: "ProductShop",
+                newName: "ShopsID");
+
+            migrationBuilder.RenameColumn(
+                name: "ProductID",
+                table: "ProductShop",
+                newName: "ProductsID");
+
+            migrationBuilder.RenameIndex(
+                name: "IX_ProductShop_ShopID",
+                table: "ProductShop",
+                newName: "IX_ProductShop_ShopsID");
 
             migrationBuilder.AlterColumn<string>(
                 name: "Name",
@@ -131,6 +164,22 @@ namespace KovserHediyyeler.Persistence.Migrations
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "nvarchar(450)");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_ProductShop_Products_ProductsID",
+                table: "ProductShop",
+                column: "ProductsID",
+                principalTable: "Products",
+                principalColumn: "ID",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_ProductShop_Shops_ShopsID",
+                table: "ProductShop",
+                column: "ShopsID",
+                principalTable: "Shops",
+                principalColumn: "ID",
+                onDelete: ReferentialAction.Cascade);
         }
     }
 }

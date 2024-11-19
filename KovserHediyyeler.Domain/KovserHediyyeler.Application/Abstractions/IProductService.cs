@@ -11,6 +11,7 @@ namespace KovserHediyyeler.Application.Abstractions
         public Task CreateProductImageAsync(string productId, ProductImageCommandDto dto);
         public Task CreateProductPropertyAsync(string productId, ProductPropertyCommandDto dto);
         public Task AddProductShopAsync(string productId, string shopId);
+
         //Delete
         public Task RemovePermanentlyProductAsync(string id);
         public Task RemovePermanentlyProductImageFileAsync(string id);
@@ -18,6 +19,7 @@ namespace KovserHediyyeler.Application.Abstractions
         public Task RemovePermanentlyProductShopAsync(string prodcutId, string shopId);
         public Task DeleteTemporarilyProductAsync(string id);
         public Task RecoverProductDataAsync(string id);
+
         //Patch
         public Task UpdateProductAsync(string id, ProductPutDto dto);
         public Task UpdateProductImageFileAsync(string id, ProductImageCommandDto dto);
@@ -27,7 +29,7 @@ namespace KovserHediyyeler.Application.Abstractions
         public Task<List<ProductGetAllDto>> GetAllProductsAsync(int page, int size);
         public Task<List<ProductImageGetDto>> GetAllProductImagesAsync(int page, int size, string productId);
         public Task<List<ProductPropertyGetAllDto>> GetAllProductPropertiesAsync(int page, int size, string productId);
-        public Task<List<ProductGetAllDto>> GetAllFilteredProductsAsync(int page, int size, string filterId);
+        public Task<List<ProductGetAllDto>> GetAllFilteredProductsAsync(int page, int size, string BrandIdOrCategoryIdOrDepartmentIdOrShopId);
 
 
 

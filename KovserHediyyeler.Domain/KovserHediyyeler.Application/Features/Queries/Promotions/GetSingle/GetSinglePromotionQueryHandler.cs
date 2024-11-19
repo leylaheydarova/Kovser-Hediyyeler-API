@@ -17,7 +17,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Promotions.GetSingle
 
         public async Task<GetSinglePromotionQueryResponse> Handle(GetSinglePromotionQueryRequest request, CancellationToken cancellationToken)
         {
-            Promotion promotion = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, "Products.Department");
+            Promotion promotion = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false);
             if (promotion == null)
             {
                 throw new PromotionNotFoundException();
@@ -28,11 +28,11 @@ namespace KovserHedieyyeler.Application.Features.Queries.Promotions.GetSingle
                 Id = promotion.ID.ToString(),
                 Title = promotion.Title,
                 Description = promotion.Description,
-                DiscountedPrice = promotion.DiscountedPrice,
-                DiscountPersentage = promotion.DiscountPersentage.ToString(),
+                DiscountedPrice = (double)promotion.DiscountedPrice,
+                DiscountPersentage = (double)(1 - ((promotion.DiscountedPrice * 100) / promotion.Price)) * 100,
                 ExpireDate = promotion.ExpireDate,
                 StartDate = (DateTime)promotion.StartDate,
-                Price = promotion.Price,
+                Price = (double)promotion.Price,
                 //Products = promotion.Products.Select(p => new ProductGetAllDto
                 //{
                 //    Id = p.ID.ToString(),
@@ -53,8 +53,8 @@ namespace KovserHedieyyeler.Application.Features.Queries.Promotions.GetSingle
                 //        ?? new ProductImageGetDto // Default şəkil qaytar
                 //        {
                 //            Id = Guid.Empty.ToString(),
-                //            ImageName = "DefaultProductImage.png",
-                //            ImageURL = "https://localhost:7232/DefaultProductImage.png",
+                //            ImageName = ,
+                //            ImageURL = BaseURLs.DefaultImageURL,
                 //            isMain = true
                 //        },
                 //    DepartmentName = p.Department.Name,

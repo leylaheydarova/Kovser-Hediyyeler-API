@@ -87,6 +87,7 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
 
             //Services
             services.AddScoped<IProductService, ProductService>();
+
             return services;
         }
     }

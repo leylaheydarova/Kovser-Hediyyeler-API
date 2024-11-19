@@ -1,5 +1,4 @@
-﻿using KovserHediyyeler.Domain.Enums;
-using KovserHediyyeler.Domain.Models.BaseModel;
+﻿using KovserHediyyeler.Domain.Models.BaseModel;
 
 namespace KovserHediyyeler.Domain.Models
 {
@@ -8,10 +7,10 @@ namespace KovserHediyyeler.Domain.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public double? Price { get; set; }
-        public DiscountPersentage? DiscountPersentage { get; set; }
         public double? DiscountedPrice { get; set; }
+        public string ImageName { get; set; }
+        public string ImageURL { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime ExpireDate { get; set; }
-        public ICollection<ProductImageFile> Images { get; set; } = new List<ProductImageFile>();
     }
 }

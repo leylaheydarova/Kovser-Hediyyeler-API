@@ -25,9 +25,8 @@ namespace KovserHedieyyeler.Application.Features.Queries.Promotions.GetAll
                     Id = x.ID.ToString(),
                     Title = x.Title,
                     Description = x.Description,
-                    Price = x.Price,
+                    Price = (double)x.Price,
                     DiscountedPrice = x.DiscountedPrice,
-                    DiscountPersentage = x.DiscountPersentage.ToString(),
                     StartDate = x.StartDate,
                     ExpireDate = x.ExpireDate
                 }).ToListAsync();

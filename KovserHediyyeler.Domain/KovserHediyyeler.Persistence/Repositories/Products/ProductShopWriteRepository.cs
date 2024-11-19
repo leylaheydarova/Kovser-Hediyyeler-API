@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
@@ -17,20 +17,18 @@ namespace KovserHediyyeler.Persistence.Repositories.Products
         public async Task RemovePermanentlyProductShopAsync(string productId, string shopId)
         {
 
-            var product = await _context.Products.Include(p => p.Shops).FirstOrDefaultAsync(p => p.ID.ToString() == productId);
-            if (product == null) throw new ProductNotFoundException();
+            var productShop = await _context.Set<Dictionary<string, object>>("ProductShop")
+                                    .FirstOrDefaultAsync(ps =>
+                                        ps["ProductID"].ToString() == productId &&
+                                        ps["ShopID"].ToString() == shopId);
 
-            try
-            {
-                var shop = product.Shops.FirstOrDefault(sh => sh.ID.ToString() == shopId);
-                product.Shops.Remove(shop);
-            }
-            catch
-            {
-                throw new ShopNotFoundException();
-            }
+            if (productShop == null)
+                throw new InvalidInputException("əlaqə");
 
+            // Əlaqəni silirik.
+            _context.Set<Dictionary<string, object>>("ProductShop").Remove(productShop);
 
+            // Dəyişiklikləri saxlamaq.
             await _context.SaveChangesAsync();
         }
     }

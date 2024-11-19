@@ -4,8 +4,6 @@ using KovserHediyyeler.Application.Extentions;
 using KovserHediyyeler.Application.Repositories.Departments;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Departments.Update.UpdateDepartment.Update
 {
@@ -13,28 +11,25 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Update.Upd
     {
         readonly IDepartmentReadRepository _readRepository;
         readonly IDepartmentWriteRepository _writeRepository;
-        readonly IHttpContextAccessor _accessor;
-        readonly IWebHostEnvironment _env;
 
-        public UpdateDepartmentCommandHandler(IDepartmentReadRepository readRepository, IDepartmentWriteRepository writeRepository, IHttpContextAccessor accessor, IWebHostEnvironment env)
+        public UpdateDepartmentCommandHandler(IDepartmentReadRepository readRepository, IDepartmentWriteRepository writeRepository)
         {
             _readRepository = readRepository;
             _writeRepository = writeRepository;
-            _accessor = accessor;
-            _env = env;
         }
 
         public async Task<UpdateDepartmentCommandResponse> Handle(UpdateDepartmentCommandRequest request, CancellationToken cancellationToken)
         {
+            FileConstants constant = new FileConstants();
             Department department = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, true, "SocialMedias");
             if (department == null) throw new DepartmentNotFoundException();
             department.Name = request.Dto.Name != null ? request.Dto.Name : department.Name;
             department.Description = request.Dto.Description != null ? request.Dto.Description : department.Description;
             department.LogoImage = request.Dto.file != null ?
-                request.Dto.file.UploadFile(_env.WebRootPath, FilePaths.DepartmentImagePath)
+                request.Dto.file.UploadFile(constant.root, FilePaths.DepartmentImagePath)
                 : department.LogoImage;
             department.LogoImageURL = request.Dto.file != null ?
-                _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{department.LogoImage}"
+                $"{constant.scheme}://{constant.host}/{department.LogoImage}"
                 : department.LogoImageURL;
             _writeRepository.Update(department);
             await _writeRepository.SaveAsync();

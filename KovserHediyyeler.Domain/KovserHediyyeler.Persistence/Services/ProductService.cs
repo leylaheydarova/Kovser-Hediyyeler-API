@@ -12,8 +12,6 @@ using KovserHediyyeler.Application.Repositories.Departments;
 using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Domain.Models;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -34,10 +32,9 @@ namespace KovserHediyyeler.Persistence.Services
         readonly ICategoryReadRepository _categoryRepository;
         readonly IDepartmentReadRepository _departmentRepository;
         readonly IBrandReadRepository _brandRepository;
-        readonly IHttpContextAccessor _accessor;
-        readonly IWebHostEnvironment _env;
 
-        public ProductService(IProductWriteRepository productWriteRepository, IProductImageFileWriteRepository productImageFileWriteRepository, IProductPropertyWriteRepository productPropertyWriteRepository, IColorWriteRepository colorWriteRepository, IShopReadRepository shopReadRepository, ICategoryReadRepository categoryRepository, IDepartmentReadRepository departmentRepository, IBrandReadRepository brandRepository, IHttpContextAccessor accessor, IWebHostEnvironment env, IProductReadRepository productReadRepository, IProductImageFileReadRepository productImageFileReadRepository, IProductPropertyReadRepository productPropertyReadRepository, IShopWriteRepository shopWriteRepository, IProductShopWriteRepository productShopWriteRepository)
+
+        public ProductService(IProductWriteRepository productWriteRepository, IProductImageFileWriteRepository productImageFileWriteRepository, IProductPropertyWriteRepository productPropertyWriteRepository, IColorWriteRepository colorWriteRepository, IShopReadRepository shopReadRepository, ICategoryReadRepository categoryRepository, IDepartmentReadRepository departmentRepository, IBrandReadRepository brandRepository, IProductReadRepository productReadRepository, IProductImageFileReadRepository productImageFileReadRepository, IProductPropertyReadRepository productPropertyReadRepository, IShopWriteRepository shopWriteRepository, IProductShopWriteRepository productShopWriteRepository)
         {
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
@@ -52,13 +49,11 @@ namespace KovserHediyyeler.Persistence.Services
             _categoryRepository = categoryRepository;
             _departmentRepository = departmentRepository;
             _brandRepository = brandRepository;
-            _accessor = accessor;
-            _env = env;
         }
-
+        FileConstants constant = new FileConstants();
         private IQueryable<ProductGetAllDto> GetFilteredProductsQuery(Expression<Func<Product, bool>> filter)
         {
-            return _productReadRepository.GetAllWhere(filter, false, "Department")
+            return _productReadRepository.GetAllWhere(filter, false, "Department", "Shops")
                 .Select(x => new ProductGetAllDto
                 {
                     Id = x.ID.ToString(),
@@ -81,8 +76,8 @@ namespace KovserHediyyeler.Persistence.Services
                         ?? new ProductImageGetDto
                         {
                             Id = Guid.NewGuid().ToString(),
-                            ImageName = "DefaultProductImage.png",
-                            ImageURL = "https://localhost:7232/DefaultProductImage.png",
+                            ImageName = ConstantPaths.DefaultImage,
+                            ImageURL = ConstantPaths.DefaultImageURL,
                             isMain = true
                         }
                 });
@@ -99,10 +94,10 @@ namespace KovserHediyyeler.Persistence.Services
         public async Task AddProductShopAsync(string productId, string shopId)
         {
             if (!Guid.TryParse(productId, out Guid productGuid))
-                throw new InvalidInputException("Product");
+                throw new InvalidInputException("məhsul");
 
             if (!Guid.TryParse(shopId, out Guid shopGuid))
-                throw new InvalidInputException("Shop");
+                throw new InvalidInputException("mağaza");
 
             var product = await _productReadRepository.GetWhereAsync(p => p.ID == productGuid && !p.isDeleted, true);
             if (product == null) throw new ProductNotFoundException();
@@ -118,16 +113,16 @@ namespace KovserHediyyeler.Persistence.Services
         public async Task CreateProductAsync(ProductPostDto dto)
         {
             var category = await _categoryRepository.GetWhereAsync(c => c.ID == dto.CategoryID, false, "ParentCategory");
-            if (category == null) throw new InvalidInputException("Category");
+            if (category == null) throw new InvalidInputException("kateqoriya");
 
             var department = await _departmentRepository.GetWhereAsync(d => d.ID == dto.DepartmentID, false);
-            if (department == null) throw new InvalidInputException("Department");
+            if (department == null) throw new InvalidInputException("şöbə");
             var brand = dto.BrandID is not null
                 ? await _brandRepository.GetWhereAsync(b => b.ID == dto.BrandID, false)
                 : null;
 
             if (brand == null && dto.BrandID is not null)
-                throw new InvalidInputException("Brand");
+                throw new InvalidInputException("brend");
 
             Product product = new Product
             {
@@ -151,8 +146,8 @@ namespace KovserHediyyeler.Persistence.Services
                 ProductImageFile image = new ProductImageFile
                 {
                     ID = Guid.NewGuid(),
-                    FileName = imagedto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath),
-                    Path = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{imagedto.file.FileName}",
+                    FileName = imagedto.file.UploadFile(constant.root, FilePaths.ProuctImageFilePath),
+                    Path = $"{constant.scheme}://{constant.host}/{imagedto.file.FileName}",
                     ProductID = product.ID,
                     IsMain = imagedto.IsMain
                 };
@@ -207,7 +202,7 @@ namespace KovserHediyyeler.Persistence.Services
                 {
                     product.Shops.Add(shop);
                 }
-                else throw new InvalidInputException("Shop");
+                else throw new InvalidInputException("mağaza");
             }
 
             category.Products.Add(product);
@@ -231,8 +226,8 @@ namespace KovserHediyyeler.Persistence.Services
             ProductImageFile image = new ProductImageFile
             {
                 ID = Guid.NewGuid(),
-                FileName = dto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath),
-                Path = $"{_accessor.HttpContext.Request.Scheme}://{_accessor.HttpContext.Request.Host}/{dto.file.FileName}",
+                FileName = dto.file.UploadFile(constant.root, FilePaths.ProuctImageFilePath),
+                Path = $"{constant.scheme}://{constant.host}/{dto.file.FileName}",
                 ProductID = Guid.Parse(productId),
                 IsMain = dto.IsMain
             };
@@ -277,8 +272,8 @@ namespace KovserHediyyeler.Persistence.Services
                 .Select(x => new ProductImageGetDto
                 {
                     Id = x.ID.ToString(),
-                    ImageName = x.FileName,
-                    ImageURL = x.Path,
+                    ImageName = x.FileName != null ? x.FileName : ConstantPaths.DefaultImage,
+                    ImageURL = x.FileName != null ? x.Path : ConstantPaths.DefaultImageURL,
                     isMain = x.IsMain
                 });
 
@@ -388,10 +383,10 @@ namespace KovserHediyyeler.Persistence.Services
         {
             ProductImageFile image = await _productImageFileReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
             if (image == null) throw new ProductImageNotFoundException();
-            image.FileName = dto.file != null ? dto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath) : image.FileName;
+            image.FileName = dto.file != null ? dto.file.UploadFile(constant.root, FilePaths.ProuctImageFilePath) : image.FileName != null ? image.FileName : ConstantPaths.DefaultImage;
             image.Path = dto.file != null
-                ? $"{_accessor.HttpContext.Request.Scheme}://{_accessor.HttpContext.Request.Host}/{dto.file.FileName}"
-                : image.Path;
+                ? $"{constant.scheme}://{constant.host}/{dto.file.FileName}"
+                : image.Path != null ? image.Path : ConstantPaths.DefaultImageURL;
             image.IsMain = dto.IsMain != null ? (bool)dto.IsMain : image.IsMain;
 
             _productImageFileWriteRepository.Update(image);
@@ -410,13 +405,14 @@ namespace KovserHediyyeler.Persistence.Services
 
         }
 
-        public async Task<List<ProductGetAllDto>> GetAllFilteredProductsAsync(int page, int size, string filterId)
+        public async Task<List<ProductGetAllDto>> GetAllFilteredProductsAsync(int page, int size, string BrandIdOrCategoryIdOrDepartmentIdOrShopId)
         {
             var query = GetFilteredProductsQuery(
                 x => !x.isDeleted &&
-                     (x.BrandID.ToString() == filterId ||
-                      x.CategoryID.ToString() == filterId ||
-                      x.DepartmentID.ToString() == filterId)
+                     (x.BrandID.ToString() == BrandIdOrCategoryIdOrDepartmentIdOrShopId ||
+                      x.CategoryID.ToString() == BrandIdOrCategoryIdOrDepartmentIdOrShopId ||
+                      x.DepartmentID.ToString() == BrandIdOrCategoryIdOrDepartmentIdOrShopId ||
+                      x.Shops.Any(sh => sh.ID.ToString() == BrandIdOrCategoryIdOrDepartmentIdOrShopId))
             );
 
             return await PaginateAsync(query, page, size);

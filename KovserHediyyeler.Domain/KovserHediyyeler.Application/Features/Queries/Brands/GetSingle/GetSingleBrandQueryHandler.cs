@@ -1,5 +1,6 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Brands;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+using KovserHediyyeler.Application.Constants;
 using KovserHediyyeler.Application.Repositories.Brands;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -26,8 +27,8 @@ namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetSingle
             {
                 Id = brand.ID.ToString(),
                 Name = brand.Name,
-                Image = brand.Image,
-                ImageURL = brand.ImageURL
+                Image = brand.Image is not null ? brand.Image : ConstantPaths.DefaultImage,
+                ImageURL = brand.Image is not null ? brand.Image : ConstantPaths.DefaultImageURL
             };
 
             return new GetSingleBrandQueryResponse

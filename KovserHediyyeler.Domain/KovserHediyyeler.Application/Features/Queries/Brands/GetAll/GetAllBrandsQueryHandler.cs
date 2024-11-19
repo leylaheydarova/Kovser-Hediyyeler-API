@@ -1,4 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Brands;
+using KovserHediyyeler.Application.Constants;
 using KovserHediyyeler.Application.Repositories.Brands;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -24,8 +25,8 @@ namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetAll
                 {
                     Id = x.ID.ToString(),
                     Name = x.Name,
-                    Image = x.Image,
-                    ImageURL = x.ImageURL
+                    Image = x.Image != null ? x.Image : ConstantPaths.DefaultImage,
+                    ImageURL = x.Image != null ? x.ImageURL : ConstantPaths.DefaultImageURL
                 })
                 .OrderBy(b => b.Name)
                 .Skip(request.Page * request.Size)

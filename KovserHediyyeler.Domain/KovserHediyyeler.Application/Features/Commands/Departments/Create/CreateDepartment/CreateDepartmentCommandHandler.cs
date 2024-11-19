@@ -5,28 +5,23 @@ using KovserHediyyeler.Application.Repositories.Departments;
 using KovserHediyyeler.Application.Repositories.SocialMedias;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create.CreateDepartment
 {
     public class CreateDepartmentCommandHandler : IRequestHandler<CreateDepartmentCommandRequest, CreateDepartmentCommandResponse>
     {
         readonly IDepartmentWriteRepository _repository;
-        readonly IHttpContextAccessor _accessor;
         readonly ISocialMediaWriteRepository _smRepository;
-        readonly IWebHostEnvironment _env;
 
-        public CreateDepartmentCommandHandler(IDepartmentWriteRepository repository, IHttpContextAccessor accessor, ISocialMediaWriteRepository smRepository, IWebHostEnvironment env)
+        public CreateDepartmentCommandHandler(IDepartmentWriteRepository repository, ISocialMediaWriteRepository smRepository)
         {
             _repository = repository;
-            _accessor = accessor;
             _smRepository = smRepository;
-            _env = env;
         }
 
         public async Task<CreateDepartmentCommandResponse> Handle(CreateDepartmentCommandRequest request, CancellationToken cancellationToken)
         {
+            FileConstants constant = new FileConstants();
             DepartmentCommandDto dto = new DepartmentCommandDto
             {
                 Name = request.Name,
@@ -42,8 +37,8 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create.Cre
                 Name = dto.Name,
                 Description = dto.Description,
                 Phone = dto.Phone,
-                LogoImage = dto.file.UploadFile(_env.WebRootPath, FilePaths.DepartmentImagePath),
-                LogoImageURL = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{dto.file.FileName}"
+                LogoImage = dto.file.UploadFile(constant.root, FilePaths.DepartmentImagePath),
+                LogoImageURL = $"{constant.scheme}://{constant.host}/{dto.file.FileName}"
             };
 
 

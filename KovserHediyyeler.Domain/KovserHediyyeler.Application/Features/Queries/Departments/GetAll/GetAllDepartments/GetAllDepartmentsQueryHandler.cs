@@ -1,4 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Department;
+using KovserHediyyeler.Application.Constants;
 using KovserHediyyeler.Application.Repositories.Departments;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -27,8 +28,8 @@ namespace KovserHedieyyeler.Application.Features.Queries.Departments.GetAll.GetA
                     Id = x.ID.ToString(),
                     Name = x.Name,
                     Description = x.Description,
-                    LogoImage = x.LogoImage,
-                    LogoImageURL = x.LogoImageURL
+                    LogoImage = x.LogoImage != null ? x.LogoImage : ConstantPaths.DefaultImage,
+                    LogoImageURL = x.LogoImage != null ? x.LogoImageURL : ConstantPaths.DefaultImageURL
                 }).ToListAsync();
             return new GetAllDepartmentsQueryResponse
             {

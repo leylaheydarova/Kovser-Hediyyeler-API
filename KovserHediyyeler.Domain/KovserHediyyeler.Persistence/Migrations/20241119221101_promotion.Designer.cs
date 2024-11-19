@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KovserHediyyeler.Persistence.Migrations
 {
     [DbContext(typeof(KovserHediyyelerDbContext))]
-    [Migration("20241116191501_promotion")]
+    [Migration("20241119221101_promotion")]
     partial class promotion
     {
         /// <inheritdoc />
@@ -481,14 +481,19 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("DiscountPersentage")
-                        .HasColumnType("int");
-
                     b.Property<double?>("DiscountedPrice")
                         .HasColumnType("float");
 
                     b.Property<DateTime>("ExpireDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double?>("Price")
                         .HasColumnType("float");
@@ -588,15 +593,15 @@ namespace KovserHediyyeler.Persistence.Migrations
 
             modelBuilder.Entity("ProductShop", b =>
                 {
-                    b.Property<Guid>("ProductsID")
+                    b.Property<Guid>("ProductID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ShopsID")
+                    b.Property<Guid>("ShopID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("ProductsID", "ShopsID");
+                    b.HasKey("ProductID", "ShopID");
 
-                    b.HasIndex("ShopsID");
+                    b.HasIndex("ShopID");
 
                     b.ToTable("ProductShop");
                 });
@@ -611,12 +616,7 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Property<Guid>("ProductID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("PromotionID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasIndex("ProductID");
-
-                    b.HasIndex("PromotionID");
 
                     b.HasDiscriminator().HasValue("ProductImageFile");
                 });
@@ -737,13 +737,13 @@ namespace KovserHediyyeler.Persistence.Migrations
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Product", null)
                         .WithMany()
-                        .HasForeignKey("ProductsID")
+                        .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("KovserHediyyeler.Domain.Models.Shop", null)
                         .WithMany()
-                        .HasForeignKey("ShopsID")
+                        .HasForeignKey("ShopID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -755,10 +755,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("KovserHediyyeler.Domain.Models.Promotion", null)
-                        .WithMany("Images")
-                        .HasForeignKey("PromotionID");
 
                     b.Navigation("Product");
                 });
@@ -795,11 +791,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("Properties");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Promotion", b =>
-                {
-                    b.Navigation("Images");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shop", b =>
