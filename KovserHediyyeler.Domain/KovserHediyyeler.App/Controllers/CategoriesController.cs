@@ -42,7 +42,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Datas);
         }
 
-        [HttpGet("GetAllChuldCategories")]
+        [HttpGet("GetAllChildCategories")]
         public async Task<IActionResult> GetAllChildCategoriesAsync([FromQuery] GetAllChildsQueryRequest request)
         {
             var response = await _mediator.Send(request);

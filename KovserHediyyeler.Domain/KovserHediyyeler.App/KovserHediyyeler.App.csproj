@@ -19,4 +19,17 @@
     <ProjectReference Include="..\KovserHediyyeler.Persistence\KovserHediyyeler.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Assets\Files\InvoiceFiles\" />
+    <Folder Include="wwwroot\Assets\Images\Brands\" />
+    <Folder Include="wwwroot\Assets\Images\Departments\" />
+    <Folder Include="wwwroot\Assets\Images\Promotions\" />
+    <Folder Include="wwwroot\Assets\Images\SocialMedias\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Assets\Images\Products\e5d53172-04a5-4bac-9224-abe22d4734b9png-transparent-paper-stationery-office-supplies-school-supplies-retail-school-pencil-retail-school-supplies-t.png" />
+    <None Include="wwwroot\Assets\Images\Products\f0e1bc4c-4265-4674-a8c9-8c5da8afb35cpng-transparent-paper-stationery-office-supplies-school-supplies-retail-school-pencil-retail-school-supplies-t.png" />
+  </ItemGroup>
+
 </Project>

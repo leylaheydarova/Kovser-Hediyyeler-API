@@ -83,6 +83,84 @@ namespace KovserHediyyeler.Persistence.Contexts
                     entry.Entity.UpdatedAt = now;
                 }
             }
+
+            //One column can take only one true value
+            //Address
+            var currentAddress = ChangeTracker.Entries<Address>()
+                                .FirstOrDefault(e => e.Entity.IsCurrentAddress &&
+                                 (e.State == EntityState.Modified || e.State == EntityState.Added));
+
+            if (currentAddress != null)
+            {
+                var shopId = currentAddress.Entity.ShopID;
+                var employeeId = currentAddress.Entity.EmployeeID;
+
+                // Shop üçün digər cari ünvanları false et
+                if (shopId.HasValue)
+                {
+                    var shopAddresses = Set<Address>()
+                        .Where(a => a.ShopID == shopId && a.ID != currentAddress.Entity.ID && a.IsCurrentAddress)
+                        .ToList();
+
+                    foreach (var address in shopAddresses)
+                    {
+                        address.IsCurrentAddress = false;
+                    }
+                }
+
+                // Employee üçün digər cari ünvanları false et
+                if (employeeId.HasValue)
+                {
+                    var employeeAddresses = Set<Address>()
+                        .Where(a => a.EmployeeID == employeeId && a.ID != currentAddress.Entity.ID && a.IsCurrentAddress)
+                        .ToList();
+
+                    foreach (var address in employeeAddresses)
+                    {
+                        address.IsCurrentAddress = false;
+                    }
+                }
+            }
+
+
+            ////ProductImage
+            var mainImage = ChangeTracker.Entries<ProductImageFile>()
+                            .FirstOrDefault(e => e.Entity.IsMain &&
+                          (e.State == EntityState.Modified || e.State == EntityState.Added));
+
+            if (mainImage != null)
+            {
+                // Yalnız həmin məhsula aid şəkilləri tapırıq
+                var productId = mainImage.Entity.ProductID; // Mövcud ProductID
+                var allImages = Set<ProductImageFile>()
+                    .Where(pi => pi.ProductID == productId && pi.ID != mainImage.Entity.ID && pi.IsMain)
+                    .ToList();
+
+                foreach (var image in allImages)
+                {
+                    image.IsMain = false;
+                }
+            }
+
+            // ProductImage silindiyi zaman sonuncu şəkilin "IsMain" təyin edilməsini təmin et
+            var deletedImage = ChangeTracker.Entries<ProductImageFile>()
+                                            .FirstOrDefault(e => e.State == EntityState.Deleted && e.Entity.IsMain);
+
+            if (deletedImage != null)
+            {
+                // Şəkil silindikdən sonra həmin məhsul üçün sonuncu şəkil "IsMain" olaraq təyin edilir
+                var productId = deletedImage.Entity.ProductID;
+                var remainingImages = Set<ProductImageFile>()
+                    .Where(pi => pi.ProductID == productId && pi.IsMain == false)
+                    .OrderByDescending(pi => pi.CreatedAt) // Sonuncu əlavə olunan şəkil
+                    .FirstOrDefault();
+
+                if (remainingImages != null)
+                {
+                    remainingImages.IsMain = true;
+                }
+            }
+
             return base.SaveChangesAsync(cancellationToken);
         }
     }

@@ -1,5 +1,4 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModel;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KovserHediyyeler.Domain.Models
 {
@@ -13,8 +12,5 @@ namespace KovserHediyyeler.Domain.Models
         //Relationships
         public ICollection<SocialMedia> SocialMedias { get; set; } = new List<SocialMedia>();
         public ICollection<Product> Products { get; set; } = new List<Product>();
-
-        [NotMapped]
-        public string DepartmentImagePath = "~/Assets/Images/Departments";
     }
 }

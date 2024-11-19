@@ -14,7 +14,5 @@ namespace KovserHediyyeler.Domain.Models
         [ForeignKey(nameof(Department))]
         public Guid DepartmentID { get; set; }
         public Department Department { get; set; }
-        [NotMapped]
-        public string SocialMediaImagePath = "~/Assets/Images/SocialMedias";
     }
 }

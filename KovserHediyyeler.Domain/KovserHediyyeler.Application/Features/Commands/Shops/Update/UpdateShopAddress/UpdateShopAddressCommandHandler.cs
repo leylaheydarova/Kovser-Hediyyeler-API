@@ -25,6 +25,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Shops.Update.UpdateSho
             var dto = request.Dto;
             address.City = dto.City is not null ? (City)dto.City : address.City;
             address.Region = dto.Region is not null ? dto.Region : address.Region;
+            address.District = dto.District is not null ? dto.District : "";
             address.Street = dto.Street is not null ? dto.Street : address.Street;
             address.Home = dto.Home is not null ? dto.Home : address.Home;
             address.PostalCode = dto.PostalCode is not null ? dto.PostalCode : address.PostalCode;

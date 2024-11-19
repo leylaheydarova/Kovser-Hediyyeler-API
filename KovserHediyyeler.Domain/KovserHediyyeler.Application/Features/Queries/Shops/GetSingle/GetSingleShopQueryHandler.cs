@@ -40,6 +40,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Shops.GetSingle
                     Id = address.ID.ToString(),
                     City = address.City.ToString(),
                     Region = address.Region,
+                    District = address.District,
                     Street = address.Street,
                     Home = address.Home,
                     PostalCode = address.PostalCode,

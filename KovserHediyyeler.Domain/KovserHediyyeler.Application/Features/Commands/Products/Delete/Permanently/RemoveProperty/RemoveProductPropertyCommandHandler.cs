@@ -1,28 +1,21 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Products;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveProperty
 {
     public class RemoveProductPropertyCommandHandler : IRequestHandler<RemoveProductPropertyCommandRequest, RemoveProductPropertyCommandResponse>
     {
-        readonly IProductPropertyReadRepository _readRepository;
-        readonly IProductPropertyWriteRepository _writeRepository;
+        readonly IProductService _service;
 
-        public RemoveProductPropertyCommandHandler(IProductPropertyReadRepository readRepository, IProductPropertyWriteRepository writeRepository)
+        public RemoveProductPropertyCommandHandler(IProductService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<RemoveProductPropertyCommandResponse> Handle(RemoveProductPropertyCommandRequest request, CancellationToken cancellationToken)
         {
-            ProductProperty property = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, true);
-            if (property == null) throw new ProductPropertyNotFoundException();
-            _writeRepository.RemovePermanently(property);
-            await _writeRepository.SaveAsync();
 
+            await _service.RemovePermanentlyProductPropertyAsync(request.Id);
             return new RemoveProductPropertyCommandResponse
             {
                 Message = "Məhsul xassəsi uğurla silinmişdir!"

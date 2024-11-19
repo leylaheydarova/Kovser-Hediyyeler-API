@@ -35,6 +35,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Shops.Create.CreateSho
                     ID = Guid.NewGuid(),
                     City = addressDto.City,
                     Region = addressDto.Region,
+                    District = addressDto.District == null ? " " : addressDto.District,
                     Street = addressDto.Street,
                     Home = addressDto.Home,
                     PostalCode = addressDto.PostalCode,

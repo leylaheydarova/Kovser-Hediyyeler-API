@@ -17,6 +17,9 @@ using KovserHedieyyeler.Application.Features.Queries.Products.GetAll.GetAllProdu
 using KovserHedieyyeler.Application.Features.Queries.Products.GetAll.GetAllProducts;
 using KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProduct;
 using KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProductProperty;
+using KovserHediyyeler.Application.Features.Commands.Products.Create.AddShopToProduct;
+using KovserHediyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveProductShop;
+using KovserHediyyeler.Application.Features.Queries.Products.GetAll.GetAllCategoryProducts;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,6 +38,13 @@ namespace Kovser.Hediyyeler.App.Controllers
 
         [HttpGet("GetAllProducts")]
         public async Task<IActionResult> GetAllProductsAsync([FromQuery] GetAllProductsQueryRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Datas);
+        }
+
+        [HttpGet("GetAllFilteredProducts")]
+        public async Task<IActionResult> GetAllFilteredProductsAsync([FromQuery] GetAllFilteredProductsQueryRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Datas);
@@ -73,6 +83,14 @@ namespace Kovser.Hediyyeler.App.Controllers
         //[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Create Product Property", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpPost("CreateProductProperty")]
         public async Task<IActionResult> CreateProductPropertyAsync([FromForm] CreateProductPropertyCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        //[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Add Shop To Product", Menu = AuthorizeDefinitionConstants.Products)]
+        [HttpPost("AddShopToProduct")]
+        public async Task<IActionResult> AddShopToProductAsync([FromForm] AddShopToProductCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -159,6 +177,14 @@ namespace Kovser.Hediyyeler.App.Controllers
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
+
+        [HttpDelete("RemoveProductShop")]
+        public async Task<IActionResult> RemoveProductShopAsync(RemoveProductShopCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
 
         // [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Product", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpPatch("UpdateProductData/{id}")]

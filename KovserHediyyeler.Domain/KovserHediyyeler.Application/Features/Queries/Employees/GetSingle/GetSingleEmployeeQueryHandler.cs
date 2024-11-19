@@ -39,6 +39,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Employees.GetSingle
                     Id = address.ID.ToString(),
                     City = address.City.ToString(),
                     Region = address.Region,
+                    District = address.District,
                     Street = address.Street,
                     Home = address.Home,
                     PostalCode = address.PostalCode,

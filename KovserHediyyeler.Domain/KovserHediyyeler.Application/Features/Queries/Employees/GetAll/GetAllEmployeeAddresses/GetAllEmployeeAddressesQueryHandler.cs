@@ -27,6 +27,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAll
                     Id = x.ID.ToString(),
                     City = x.City.ToString(),
                     Region = x.Region,
+                    District = x.District,
                     Street = x.Street,
                     Home = x.Home,
                     PostalCode = x.PostalCode,

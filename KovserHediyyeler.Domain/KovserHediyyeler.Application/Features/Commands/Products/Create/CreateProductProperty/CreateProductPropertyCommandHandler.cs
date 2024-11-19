@@ -1,29 +1,20 @@
-﻿using KovserHediyyeler.Application.Repositories.Products;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProductProperty
 {
     public class CreateProductPropertyCommandHandler : IRequestHandler<CreateProductPropertyCommandRequest, CreateProductPropertyCommandResponse>
     {
-        readonly IProductPropertyWriteRepository _repository;
+        readonly IProductService _service;
 
-        public CreateProductPropertyCommandHandler(IProductPropertyWriteRepository repository)
+        public CreateProductPropertyCommandHandler(IProductService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<CreateProductPropertyCommandResponse> Handle(CreateProductPropertyCommandRequest request, CancellationToken cancellationToken)
         {
-            ProductProperty property = new ProductProperty
-            {
-                ID = Guid.NewGuid(),
-                Name = request.Dto.Name,
-                Value = request.Dto.Value,
-                ProductID = Guid.Parse(request.ProductId)
-            };
-            await _repository.AddAsync(property);
-            await _repository.SaveAsync();
+            await _service.CreateProductPropertyAsync(request.ProductId, request.Dto);
 
             return new CreateProductPropertyCommandResponse
             {

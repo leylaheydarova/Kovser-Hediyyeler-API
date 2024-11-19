@@ -1,27 +1,20 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Products;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveImage
 {
     public class RemoveProductImageCommandHandler : IRequestHandler<RemoveProductImageCommandRequest, RemoveProductImageCommandResponse>
     {
-        readonly IProductImageFileReadRepository _readRepository;
-        readonly IProductImageFileWriteRepository _writeRepository;
+        readonly IProductService _service;
 
-        public RemoveProductImageCommandHandler(IProductImageFileReadRepository readRepository, IProductImageFileWriteRepository writeRepository)
+        public RemoveProductImageCommandHandler(IProductService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<RemoveProductImageCommandResponse> Handle(RemoveProductImageCommandRequest request, CancellationToken cancellationToken)
         {
-            ProductImageFile image = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, true);
-            if (image == null) throw new ProductImageNotFoundException();
-            _writeRepository.RemovePermanently(image);
-            await _writeRepository.SaveAsync();
+            await _service.RemovePermanentlyProductImageFileAsync(request.Id);
 
             return new RemoveProductImageCommandResponse
             {

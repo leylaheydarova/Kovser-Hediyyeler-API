@@ -14,9 +14,6 @@ namespace KovserHediyyeler.Domain.Models
         public double ProductAverageRating { get; set; } = 5;
 
         //Relationships
-        //[ForeignKey(nameof(Promotion))]
-        //public Guid? PromotionID { get; set; }
-        //public Promotion? Promotion { get; set; }
         [ForeignKey(nameof(Department))]
         public Guid DepartmentID { get; set; }
         public Department Department { get; set; }
@@ -36,8 +33,5 @@ namespace KovserHediyyeler.Domain.Models
         //public ICollection<WishListItem> WishListItems { get; set; } = new List<WishListItem>();
 
         public ICollection<Shop> Shops { get; set; } = new List<Shop>();
-
-        [NotMapped]
-        public string ProductImagePath = "~/Assets/Images/Products";
     }
 }

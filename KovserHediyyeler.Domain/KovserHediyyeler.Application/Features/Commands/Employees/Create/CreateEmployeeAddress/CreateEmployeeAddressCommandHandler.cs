@@ -19,6 +19,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Create.Creat
             {
                 City = request.Dto.City,
                 Region = request.Dto.Region,
+                District = request.Dto.District == null ? "" : request.Dto.District,
                 Street = request.Dto.Street,
                 Home = request.Dto.Home,
                 PostalCode = request.Dto.PostalCode,

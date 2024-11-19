@@ -1,9 +1,4 @@
 ﻿using KovserHediyyeler.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KovserHedieyyeler.Application.DTOs.Addresses
 {
@@ -11,6 +6,7 @@ namespace KovserHedieyyeler.Application.DTOs.Addresses
     {
         public City City { get; set; }
         public string Region { get; set; } // F.eg: "Yasamal", "Nizami", etc.
+        public string? District { get; set; } // F.eg: "Balaxani qes"
         public string Street { get; set; }
         public string Home { get; set; }
         public string PostalCode { get; set; } // F.eg: AZ1038

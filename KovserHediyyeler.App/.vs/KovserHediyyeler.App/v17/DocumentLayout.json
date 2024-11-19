@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B1A7C97-5422-4A69-82F0-C560026C76F5}|Infrastructure\\KovserHediyyeler.Infrastructure\\KovserHediyyeler.Infrastructure.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.infrastructure\\services\\storageservices\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1A7C97-5422-4A69-82F0-C560026C76F5}|Infrastructure\\KovserHediyyeler.Infrastructure\\KovserHediyyeler.Infrastructure.csproj|solutionrelative:infrastructure\\kovserhediyyeler.infrastructure\\services\\storageservices\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.persistence\\contexts\\kovserhediyyelerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:infrastructure\\kovserhediyyeler.persistence\\contexts\\kovserhediyyelerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\abstractions\\storageservices\\localstorage\\ilocalstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\abstractions\\storageservices\\localstorage\\ilocalstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhediyyeler.domain\\models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06F0E042-3597-470D-AD0D-7F9C008230F3}|Core\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|solutionrelative:core\\kovserhediyyeler.domain\\models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1A7C97-5422-4A69-82F0-C560026C76F5}|Infrastructure\\KovserHediyyeler.Infrastructure\\KovserHediyyeler.Infrastructure.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.infrastructure\\services\\storageservices\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B1A7C97-5422-4A69-82F0-C560026C76F5}|Infrastructure\\KovserHediyyeler.Infrastructure\\KovserHediyyeler.Infrastructure.csproj|solutionrelative:infrastructure\\kovserhediyyeler.infrastructure\\services\\storageservices\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0B1A7C97-5422-4A69-82F0-C560026C76F5}|Infrastructure\\KovserHediyyeler.Infrastructure\\KovserHediyyeler.Infrastructure.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.infrastructure\\services\\storageservices\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B1A7C97-5422-4A69-82F0-C560026C76F5}|Infrastructure\\KovserHediyyeler.Infrastructure\\KovserHediyyeler.Infrastructure.csproj|solutionrelative:infrastructure\\kovserhediyyeler.infrastructure\\services\\storageservices\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\infrastructure\\kovserhediyyeler.persistence\\contexts\\kovserhediyyelerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D7F09FF-1BA5-4F08-8AB2-15732AB6717D}|Infrastructure\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:infrastructure\\kovserhediyyeler.persistence\\contexts\\kovserhediyyelerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.app\\core\\kovserhedieyyeler.application\\abstractions\\storageservices\\localstorage\\ilocalstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}|Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj|solutionrelative:core\\kovserhedieyyeler.application\\abstractions\\storageservices\\localstorage\\ilocalstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +30,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KovserHediyyelerDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
+              "ViewState": "AQIAAIMBAAAAAAAAAAAIwIQBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T21:43:20.992Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Brand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\Brand.cs",
+              "RelativeDocumentMoniker": "Core\\KovserHediyyeler.Domain\\Models\\Brand.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHediyyeler.Domain\\Models\\Brand.cs",
+              "RelativeToolTip": "Core\\KovserHediyyeler.Domain\\Models\\Brand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:47:24.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ILocalStorageService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\LocalStorage\\ILocalStorageService.cs",
               "RelativeDocumentMoniker": "Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\LocalStorage\\ILocalStorageService.cs",
@@ -38,12 +69,11 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Abstractions\\StorageServices\\LocalStorage\\ILocalStorageService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T20:01:32.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T20:01:32.645Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Storage.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\Storage.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\Storage.cs",
@@ -56,28 +86,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "StorageService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\StorageService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\StorageService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\StorageService.cs",
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\StorageService.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T19:58:25.805Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "KovserHediyyelerDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAA6wCYAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T21:43:20.992Z"
             }
           ]
         }

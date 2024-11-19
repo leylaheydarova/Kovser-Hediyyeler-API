@@ -1,33 +1,20 @@
-﻿using KovserHediyyeler.Application.Repositories.Products;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProductImage
 {
     public class CreateProductImageCommandHandler : IRequestHandler<CreateProductImageCommandRequest, CreateProductImageCommandResponse>
     {
-        readonly IProductImageFileWriteRepository _repository;
-        readonly IHttpContextAccessor _accessor;
+        readonly IProductService _service;
 
-        public CreateProductImageCommandHandler(IProductImageFileWriteRepository repository, IHttpContextAccessor accessor)
+        public CreateProductImageCommandHandler(IProductService service)
         {
-            _repository = repository;
-            _accessor = accessor;
+            _service = service;
         }
 
         public async Task<CreateProductImageCommandResponse> Handle(CreateProductImageCommandRequest request, CancellationToken cancellationToken)
         {
-            ProductImageFile image = new ProductImageFile
-            {
-                ID = Guid.NewGuid(),
-                FileName = request.Dto.file.FileName,
-                Path = $"{_accessor.HttpContext.Request.Scheme}://{_accessor.HttpContext.Request.Host}/{request.Dto.file.FileName}",
-                ProductID = Guid.Parse(request.ProductId),
-                IsMain = request.Dto.IsMain
-            };
-            await _repository.AddAsync(image);
-            await _repository.SaveAsync();
+            await _service.CreateProductImageAsync(request.ProductId, request.Dto);
 
             return new CreateProductImageCommandResponse
             {

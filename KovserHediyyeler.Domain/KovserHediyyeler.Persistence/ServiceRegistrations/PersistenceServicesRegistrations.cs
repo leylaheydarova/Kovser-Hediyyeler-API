@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Application.Repositories.Addresses;
+﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Brands;
 using KovserHediyyeler.Application.Repositories.Categories;
 using KovserHediyyeler.Application.Repositories.Departments;
@@ -21,6 +22,7 @@ using KovserHediyyeler.Persistence.Repositories.Products;
 using KovserHediyyeler.Persistence.Repositories.Promotions;
 using KovserHediyyeler.Persistence.Repositories.Shops;
 using KovserHediyyeler.Persistence.Repositories.SocialMedias;
+using KovserHediyyeler.Persistence.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,6 +40,7 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
                 opt.UseSqlServer(configuration.GetConnectionString("Default"));
             });
 
+            //Repositories
             services.AddScoped<IAddressReadRepository, AddressReadRepository>();
             services.AddScoped<IAddressWriteRepository, AddressWriteRepository>();
 
@@ -68,6 +71,8 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<IProductPropertyReadRepository, ProductPropertyReadRepository>();
             services.AddScoped<IProductPropertyWriteRepository, ProductPropertyWriteRepository>();
 
+            services.AddScoped<IProductShopWriteRepository, ProductShopWriteRepository>();
+
             services.AddScoped<IPositionReadRepository, PositionReadRepository>();
             services.AddScoped<IPositionWriteRepository, PositionWriteRepository>();
 
@@ -79,6 +84,9 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
 
             services.AddScoped<ISocialMediaReadRepository, SocialMediaReadRepository>();
             services.AddScoped<ISocialMediaWriteRepository, SocialMediaWriteRepository>();
+
+            //Services
+            services.AddScoped<IProductService, ProductService>();
             return services;
         }
     }

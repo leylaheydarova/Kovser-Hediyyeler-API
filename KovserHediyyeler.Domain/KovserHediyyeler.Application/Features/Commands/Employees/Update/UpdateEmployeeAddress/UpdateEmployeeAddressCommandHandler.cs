@@ -24,6 +24,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Update.Updat
             var dto = request.Dto;
             address.City = dto.City != null ? (City)dto.City : address.City;
             address.Region = dto.Region != null ? dto.Region : address.Region;
+            address.District = dto.District != null ? dto.District : "";
             address.Street = dto.Street != null ? dto.Street : address.Street;
             address.Home = dto.Home != null ? dto.Home : address.Home;
             address.PostalCode = dto.PostalCode != null ? dto.PostalCode : address.PostalCode;

@@ -1,8 +1,11 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Department;
+using KovserHediyyeler.Application.Constants;
+using KovserHediyyeler.Application.Extentions;
 using KovserHediyyeler.Application.Repositories.Departments;
 using KovserHediyyeler.Application.Repositories.SocialMedias;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create.CreateDepartment
@@ -12,12 +15,14 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create.Cre
         readonly IDepartmentWriteRepository _repository;
         readonly IHttpContextAccessor _accessor;
         readonly ISocialMediaWriteRepository _smRepository;
+        readonly IWebHostEnvironment _env;
 
-        public CreateDepartmentCommandHandler(IDepartmentWriteRepository repository, IHttpContextAccessor accessor, ISocialMediaWriteRepository smRepository)
+        public CreateDepartmentCommandHandler(IDepartmentWriteRepository repository, IHttpContextAccessor accessor, ISocialMediaWriteRepository smRepository, IWebHostEnvironment env)
         {
             _repository = repository;
             _accessor = accessor;
             _smRepository = smRepository;
+            _env = env;
         }
 
         public async Task<CreateDepartmentCommandResponse> Handle(CreateDepartmentCommandRequest request, CancellationToken cancellationToken)
@@ -37,7 +42,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create.Cre
                 Name = dto.Name,
                 Description = dto.Description,
                 Phone = dto.Phone,
-                LogoImage = dto.file.FileName,
+                LogoImage = dto.file.UploadFile(_env.WebRootPath, FilePaths.DepartmentImagePath),
                 LogoImageURL = _accessor.HttpContext.Request.Scheme + "://" + _accessor.HttpContext.Request.Host + $"/{dto.file.FileName}"
             };
 
