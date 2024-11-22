@@ -28,7 +28,8 @@ namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetSingle
                 Id = brand.ID.ToString(),
                 Name = brand.Name,
                 Image = brand.Image is not null ? brand.Image : ConstantPaths.DefaultImage,
-                ImageURL = brand.Image is not null ? brand.Image : ConstantPaths.DefaultImageURL
+                ImageURL = brand.ImageURL
+
             };
 
             return new GetSingleBrandQueryResponse

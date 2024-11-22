@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\bin\Debug\net8.0\KovserHediyyeler.Application.deps.json
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\bin\Debug\net8.0\KovserHediyyeler.Application.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\bin\Debug\net8.0\KovserHediyyeler.Application.pdb
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\bin\Debug\net8.0\KovserHediyyeler.Domain.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\bin\Debug\net8.0\KovserHediyyeler.Domain.pdb
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.AssemblyInfo.cs
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.sourcelink.json
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHe.AE12384F.Up2Date
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\refint\KovserHediyyeler.Application.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.pdb
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\ref\KovserHediyyeler.Application.dll

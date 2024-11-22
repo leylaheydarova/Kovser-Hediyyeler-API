@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "Lys02FCukLm6FtAePFzFJoP73C9wU1a3znpZYBROxXw=",
+  "Source": "KovserHediyyeler.App",
+  "BasePath": "_content/KovserHediyyeler.App",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "KovserHediyyeler.App\\wwwroot",
+      "Source": "KovserHediyyeler.App",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
+      "BasePath": "_content/KovserHediyyeler.App",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

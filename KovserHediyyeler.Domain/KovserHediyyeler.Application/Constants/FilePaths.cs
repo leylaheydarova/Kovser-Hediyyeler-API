@@ -2,12 +2,12 @@
 {
     public static class FilePaths
     {
-        public static string BrandImagePath = "Assets/Images/Brands";
-        public static string DepartmentImagePath = "Assets/Images/Departments";
-        public static string SocialMediatImagePath = "Assets/Images/SocialMedias";
-        public static string ProuctImageFilePath = "Assets/Images/Products";
-        public static string PromotionImagePath = "Assets/Images/Promotions";
+        public static string BrandImagePath = "assets/images/brands";
+        public static string DepartmentImagePath = "assets/images/departments";
+        public static string SocialMediatImagePath = "assets/images/socialMedias";
+        public static string ProuctImageFilePath = "assets/images/products";
+        public static string PromotionImagePath = "assets/images/promotions";
 
-        public static string InvoiceFilePath = "Assets/Files/InvoiceFiles";
+        public static string InvoiceFilePath = "assets/files/invoiceFiles";
     }
 }

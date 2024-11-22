@@ -15,7 +15,6 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseStaticFiles();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -28,6 +27,7 @@ if (app.Environment.IsDevelopment())
         options.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None);
     });
 }
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 

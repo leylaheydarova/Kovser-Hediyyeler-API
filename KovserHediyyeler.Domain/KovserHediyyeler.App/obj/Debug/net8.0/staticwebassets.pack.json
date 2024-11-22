@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\Assets\\Images\\Brands\\1649d233-38b4-4f9e-a04e-3809c2287d92uzukdesti.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Brands\\1649d233-38b4-4f9e-a04e-3809c2287d92uzukdesti.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\Assets\\Images\\Brands\\3bd4e231-62a4-497f-b41f-560022c81492urekboyunbagi.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Brands\\3bd4e231-62a4-497f-b41f-560022c81492urekboyunbagi.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\Assets\\Images\\Brands\\7065917a-4938-4a82-a77a-4d3ecb6eaee8uzukdesti.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Brands\\7065917a-4938-4a82-a77a-4d3ecb6eaee8uzukdesti.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\Assets\\Images\\Brands\\9e15d46d-adb7-476f-b14b-1d331c714923urekboyunbagi.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Brands\\9e15d46d-adb7-476f-b14b-1d331c714923urekboyunbagi.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\Assets\\Images\\Brands\\c97a9a6b-7a86-41cb-8654-ee5d3e360c68urekboyunbagi.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Brands\\c97a9a6b-7a86-41cb-8654-ee5d3e360c68urekboyunbagi.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.KovserHediyyeler.App.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.KovserHediyyeler.App.props",
+      "PackagePath": "build\\KovserHediyyeler.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.KovserHediyyeler.App.props",
+      "PackagePath": "buildMultiTargeting\\KovserHediyyeler.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.KovserHediyyeler.App.props",
+      "PackagePath": "buildTransitive\\KovserHediyyeler.App.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -11,7 +11,7 @@ namespace KovserHediyyeler.Application.Extentions
 
             using (FileStream stream = new FileStream(fullpath, FileMode.Create))
             {
-                file.CopyToAsync(stream);
+                file.CopyTo(stream);
             }
             return filename;
         }

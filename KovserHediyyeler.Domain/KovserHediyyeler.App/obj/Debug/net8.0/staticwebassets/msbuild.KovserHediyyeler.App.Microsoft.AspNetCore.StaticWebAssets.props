@@ -1,0 +1,84 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Images\Brands\1649d233-38b4-4f9e-a04e-3809c2287d92uzukdesti.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>Assets/Images/Brands/1649d233-38b4-4f9e-a04e-3809c2287d92uzukdesti.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Images\Brands\1649d233-38b4-4f9e-a04e-3809c2287d92uzukdesti.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Images\Brands\3bd4e231-62a4-497f-b41f-560022c81492urekboyunbagi.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>Assets/Images/Brands/3bd4e231-62a4-497f-b41f-560022c81492urekboyunbagi.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Images\Brands\3bd4e231-62a4-497f-b41f-560022c81492urekboyunbagi.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Images\Brands\7065917a-4938-4a82-a77a-4d3ecb6eaee8uzukdesti.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>Assets/Images/Brands/7065917a-4938-4a82-a77a-4d3ecb6eaee8uzukdesti.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Images\Brands\7065917a-4938-4a82-a77a-4d3ecb6eaee8uzukdesti.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Images\Brands\9e15d46d-adb7-476f-b14b-1d331c714923urekboyunbagi.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>Assets/Images/Brands/9e15d46d-adb7-476f-b14b-1d331c714923urekboyunbagi.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Images\Brands\9e15d46d-adb7-476f-b14b-1d331c714923urekboyunbagi.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Images\Brands\c97a9a6b-7a86-41cb-8654-ee5d3e360c68urekboyunbagi.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>Assets/Images/Brands/c97a9a6b-7a86-41cb-8654-ee5d3e360c68urekboyunbagi.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\Images\Brands\c97a9a6b-7a86-41cb-8654-ee5d3e360c68urekboyunbagi.png))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>
