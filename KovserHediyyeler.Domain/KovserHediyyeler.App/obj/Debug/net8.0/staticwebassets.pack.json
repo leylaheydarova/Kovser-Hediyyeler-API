@@ -1,24 +1,20 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\Assets\\Images\\Brands\\1649d233-38b4-4f9e-a04e-3809c2287d92uzukdesti.png",
-      "PackagePath": "staticwebassets\\Assets\\Images\\Brands\\1649d233-38b4-4f9e-a04e-3809c2287d92uzukdesti.png"
+      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png",
+      "PackagePath": "staticwebassets\\assets\\images\\brand\\58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\Assets\\Images\\Brands\\3bd4e231-62a4-497f-b41f-560022c81492urekboyunbagi.png",
-      "PackagePath": "staticwebassets\\Assets\\Images\\Brands\\3bd4e231-62a4-497f-b41f-560022c81492urekboyunbagi.png"
+      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png",
+      "PackagePath": "staticwebassets\\assets\\images\\brand\\b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\Assets\\Images\\Brands\\7065917a-4938-4a82-a77a-4d3ecb6eaee8uzukdesti.png",
-      "PackagePath": "staticwebassets\\Assets\\Images\\Brands\\7065917a-4938-4a82-a77a-4d3ecb6eaee8uzukdesti.png"
+      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png",
+      "PackagePath": "staticwebassets\\assets\\images\\brand\\b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\Assets\\Images\\Brands\\9e15d46d-adb7-476f-b14b-1d331c714923urekboyunbagi.png",
-      "PackagePath": "staticwebassets\\Assets\\Images\\Brands\\9e15d46d-adb7-476f-b14b-1d331c714923urekboyunbagi.png"
-    },
-    {
-      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\Assets\\Images\\Brands\\c97a9a6b-7a86-41cb-8654-ee5d3e360c68urekboyunbagi.png",
-      "PackagePath": "staticwebassets\\Assets\\Images\\Brands\\c97a9a6b-7a86-41cb-8654-ee5d3e360c68urekboyunbagi.png"
+      "Id": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png",
+      "PackagePath": "staticwebassets\\assets\\images\\brand\\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.KovserHediyyeler.App.Microsoft.AspNetCore.StaticWebAssets.props",

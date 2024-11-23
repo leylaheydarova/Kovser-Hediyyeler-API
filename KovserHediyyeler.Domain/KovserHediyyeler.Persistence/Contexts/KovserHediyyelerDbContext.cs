@@ -1,10 +1,11 @@
 ﻿using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Domain.Models.BaseModel;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace KovserHediyyeler.Persistence.Contexts
 {
-    public class KovserHediyyelerDbContext : DbContext
+    public class KovserHediyyelerDbContext : IdentityDbContext
     {
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Brand> Brands { get; set; }

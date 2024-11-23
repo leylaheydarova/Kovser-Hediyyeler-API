@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Lys02FCukLm6FtAePFzFJoP73C9wU1a3znpZYBROxXw=",
+  "Hash": "rLnMlE9V8ya5JlO3bS5gs0NwJeoZYy13Twlo4reymBs=",
   "Source": "KovserHediyyeler.App",
   "BasePath": "_content/KovserHediyyeler.App",
   "Mode": "Default",
@@ -15,5 +15,82 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png",
+      "SourceId": "KovserHediyyeler.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
+      "BasePath": "_content/KovserHediyyeler.App",
+      "RelativePath": "assets/images/brand/58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\brand\\58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png",
+      "SourceId": "KovserHediyyeler.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
+      "BasePath": "_content/KovserHediyyeler.App",
+      "RelativePath": "assets/images/brand/b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\brand\\b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png",
+      "SourceId": "KovserHediyyeler.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
+      "BasePath": "_content/KovserHediyyeler.App",
+      "RelativePath": "assets/images/brand/b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\brand\\b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png",
+      "SourceId": "KovserHediyyeler.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
+      "BasePath": "_content/KovserHediyyeler.App",
+      "RelativePath": "assets/images/brand/ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\brand\\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png"
+    }
+  ]
 }

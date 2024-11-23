@@ -22,7 +22,7 @@ namespace KovserHediyyeler.Domain.Models
         [ForeignKey(nameof(Employee))]
         public Guid? EmployeeID { get; set; }
         public Employee? Employee { get; set; }
-        // public ICollection<WebUser> WebUsers { get; set; } = new List<WebUser>();
+        public ICollection<WebUser> WebUsers { get; set; } = new List<WebUser>();
 
 
         public string FullAddress

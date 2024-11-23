@@ -10,6 +10,7 @@ using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Application.Repositories.Promotions;
 using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Application.Repositories.SocialMedias;
+using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Persistence.Contexts;
 using KovserHediyyeler.Persistence.Repositories.Addresses;
 using KovserHediyyeler.Persistence.Repositories.Brands;
@@ -23,6 +24,7 @@ using KovserHediyyeler.Persistence.Repositories.Promotions;
 using KovserHediyyeler.Persistence.Repositories.Shops;
 using KovserHediyyeler.Persistence.Repositories.SocialMedias;
 using KovserHediyyeler.Persistence.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -39,6 +41,34 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             {
                 opt.UseSqlServer(configuration.GetConnectionString("Default"));
             });
+
+            services.AddIdentity<WebUser, IdentityRole>(options =>
+            {
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = true;
+                options.Password.RequiredLength = 8;
+                options.Password.RequiredUniqueChars = 1;
+
+                // Default Lockout settings.
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                options.Lockout.MaxFailedAccessAttempts = 5;
+                options.Lockout.AllowedForNewUsers = true;
+
+                // Default SignIn settings.
+                options.SignIn.RequireConfirmedEmail = false;
+                options.SignIn.RequireConfirmedPhoneNumber = false;
+
+                // Default User settings.
+                options.User.AllowedUserNameCharacters =
+                        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                options.User.RequireUniqueEmail = false;
+            })
+                .AddEntityFrameworkStores<KovserHediyyelerDbContext>()
+                .AddDefaultTokenProviders();
+
+
 
             //Repositories
             services.AddScoped<IAddressReadRepository, AddressReadRepository>();
