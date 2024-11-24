@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rLnMlE9V8ya5JlO3bS5gs0NwJeoZYy13Twlo4reymBs=",
+  "Hash": "UjWATsR7Phyjy+VPvuFYa0qW8pprJE3jLby6aPWMMkQ=",
   "Source": "KovserHediyyeler.App",
   "BasePath": "_content/KovserHediyyeler.App",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brands\\58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png",
       "SourceId": "KovserHediyyeler.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
       "BasePath": "_content/KovserHediyyeler.App",
-      "RelativePath": "assets/images/brand/58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png",
+      "RelativePath": "assets/images/brands/58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\brand\\58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\brands\\58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brands\\b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png",
       "SourceId": "KovserHediyyeler.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
       "BasePath": "_content/KovserHediyyeler.App",
-      "RelativePath": "assets/images/brand/b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png",
+      "RelativePath": "assets/images/brands/b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\brand\\b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\brands\\b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brands\\b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png",
       "SourceId": "KovserHediyyeler.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
       "BasePath": "_content/KovserHediyyeler.App",
-      "RelativePath": "assets/images/brand/b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png",
+      "RelativePath": "assets/images/brands/b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,15 +71,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\brand\\b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\brands\\b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brand\\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png",
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brands\\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png",
       "SourceId": "KovserHediyyeler.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
       "BasePath": "_content/KovserHediyyeler.App",
-      "RelativePath": "assets/images/brand/ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png",
+      "RelativePath": "assets/images/brands/ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,7 +90,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\brand\\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\brands\\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png"
     }
   ]
 }

@@ -1,29 +1,21 @@
-﻿
-
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.SocialMedias;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently.RemoveSocialMedia
 {
     public class RemoveSocialMediaCommandHandler : IRequestHandler<RemoveSocialMediaCommandRequest, RemoveSocialMediaCommandResponse>
     {
-        readonly ISocialMediaReadRepository _readRepository;
-        readonly ISocialMediaWriteRepository _writeRepository;
+        readonly IDepartmentService _service;
 
-        public RemoveSocialMediaCommandHandler(ISocialMediaReadRepository readRepository, ISocialMediaWriteRepository writeRepository)
+        public RemoveSocialMediaCommandHandler(IDepartmentService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<RemoveSocialMediaCommandResponse> Handle(RemoveSocialMediaCommandRequest request, CancellationToken cancellationToken)
         {
-            SocialMedia socialMedia = await _readRepository.GetWhereAsync(x => x.ID.ToString() == request.Id, true);
-            if (socialMedia == null) throw new SocialMediaNotFoundException();
-            _writeRepository.RemovePermanently(socialMedia);
-            await _writeRepository.SaveAsync();
+
+            await _service.RemovePermanentlyDepartmentSocialMediaAsync(request.Id);
 
             return new RemoveSocialMediaCommandResponse
             {

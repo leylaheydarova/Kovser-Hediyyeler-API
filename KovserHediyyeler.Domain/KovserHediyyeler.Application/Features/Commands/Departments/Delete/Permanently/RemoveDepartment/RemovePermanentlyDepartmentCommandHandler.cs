@@ -1,36 +1,22 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Departments;
-using KovserHediyyeler.Application.Repositories.SocialMedias;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently.RemoveDepartment
 {
     public class RemovePermanentlyDepartmentCommandHandler : IRequestHandler<RemovePermanentlyDepartmentCommandRequest, RemovePermanentlyDepartmentCommandResponse>
     {
-        readonly IDepartmentReadRepository _readRepository;
-        readonly IDepartmentWriteRepository _writeRepository;
-        readonly ISocialMediaWriteRepository _socialMediaRepository;
+        readonly IDepartmentService _service;
 
-        public RemovePermanentlyDepartmentCommandHandler(IDepartmentReadRepository readRepository, IDepartmentWriteRepository writeRepository)
+        public RemovePermanentlyDepartmentCommandHandler(IDepartmentService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<RemovePermanentlyDepartmentCommandResponse> Handle(RemovePermanentlyDepartmentCommandRequest request, CancellationToken cancellationToken)
         {
-            Department department = await _readRepository.GetWhereAsync(x => x.ID == Guid.Parse(request.Id), true);
-            if (department == null) throw new DepartmentNotFoundException();
-            foreach (var socialMedia in department.SocialMedias)
-            {
-                if (socialMedia.DepartmentID == department.ID)
-                {
-                    _socialMediaRepository.RemovePermanently(socialMedia);
-                }
-            }
-            _writeRepository.RemovePermanently(department);
-            await _writeRepository.SaveAsync();
+
+            await _service.RemovePermanentlyDepartmentAsync(request.Id);
+
             return new RemovePermanentlyDepartmentCommandResponse
             {
                 Message = "Şöbə uğurla silindi!"

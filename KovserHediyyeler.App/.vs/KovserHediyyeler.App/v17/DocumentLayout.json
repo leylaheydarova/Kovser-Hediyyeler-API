@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
-              "ViewState": "AQIAAIMBAAAAAAAAAAAIwIQBAAAAAAAA",
+              "ViewState": "AQIAAGwBAAAAAAAAAAAIwIQBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T21:43:20.992Z",
               "IsPinned": true,
@@ -56,8 +56,7 @@
               "RelativeToolTip": "Core\\KovserHediyyeler.Domain\\Models\\Brand.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T19:47:24.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T19:47:24.958Z"
             },
             {
               "$type": "Document",
@@ -81,8 +80,7 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\Storage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T19:58:44.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T19:58:44.347Z"
             },
             {
               "$type": "Document",
@@ -94,8 +92,7 @@
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Infrastructure\\Services\\StorageServices\\StorageService.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T19:58:25.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T19:58:25.805Z"
             }
           ]
         }

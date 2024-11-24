@@ -5,6 +5,5 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Update.Upd
 {
     public class UpdateTotalDepartmentCommandRequest : UpdateCommandRequest<DepartmentCommandDto>, IRequest<UpdateTotalDepartmentCommandResponse>
     {
-        public string? Nickname { get; set; }
     }
 }

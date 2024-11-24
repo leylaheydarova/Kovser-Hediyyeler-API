@@ -7,6 +7,7 @@ using KovserHedieyyeler.Application.Features.Commands.Brands.Update.Update;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Update.UpdateAll;
 using KovserHedieyyeler.Application.Features.Queries.Brands.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Brands.GetSingle;
+using KovserHediyyeler.Application.Features.Commands.Brands.Delete.Clear;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -105,6 +106,13 @@ namespace KovserHediyyeler.App.Controllers
         // [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Brand", Menu = AuthorizeDefinitionConstants.Brands)]
         [HttpPatch("UpdateBrand")]
         public async Task<IActionResult> UpdateAsync([FromForm] UpdateBrandCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpDelete("ClearAllBrands")]
+        public async Task<IActionResult> ClearBrandsAsync(ClearBrandsCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

@@ -104,13 +104,12 @@ namespace Kovser.Hediyyeler.App.Controllers
 
         //  [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Total Department", Menu = AuthorizeDefinitionConstants.Departments)]
         [HttpPut]
-        public async Task<IActionResult> UpdateTotalAsync([FromForm] DepartmentCommandDto dto, string id, string nickName)
+        public async Task<IActionResult> UpdateTotalAsync([FromForm] DepartmentCommandDto dto, string id)
         {
             var request = new UpdateTotalDepartmentCommandRequest
             {
                 Dto = dto,
-                Id = id,
-                Nickname = nickName
+                Id = id
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

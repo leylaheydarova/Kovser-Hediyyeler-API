@@ -1,30 +1,21 @@
-﻿using KovserHediyyeler.Application.Repositories.SocialMedias;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Departments.Create.CreateSocialMedia
 {
     public class CreateSocialMediaCommandHandler : IRequestHandler<CreateSocialMediaCommandRequest, CreateSocialMediaCommandResponse>
     {
-        readonly ISocialMediaWriteRepository _repository;
+        readonly IDepartmentService _service;
 
-        public CreateSocialMediaCommandHandler(ISocialMediaWriteRepository repository)
+        public CreateSocialMediaCommandHandler(IDepartmentService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<CreateSocialMediaCommandResponse> Handle(CreateSocialMediaCommandRequest request, CancellationToken cancellationToken)
         {
-            var socialMedia = new SocialMedia
-            {
-                ID = Guid.NewGuid(),
-                Name = request.Dto.Name,
-                NickName = request.Dto.NickName,
-                URL = request.Dto.URL,
-                DepartmentID = Guid.Parse(request.DepartmentId)
-            };
-            await _repository.AddAsync(socialMedia);
-            await _repository.SaveAsync();
+            await _service.CreateDepartmentSocialMediaAsync(request.Dto, request.DepartmentId);
+
             return new CreateSocialMediaCommandResponse
             {
                 StatusCode = 201,

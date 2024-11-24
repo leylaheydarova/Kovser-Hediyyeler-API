@@ -27,7 +27,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetS
                 "Properties",
                 "Images",
                 //"Comments",
-                "Shops");
+                "Shops.Addresses");
             if (product == null)
             {
                 throw new ProductNotFoundException();
@@ -57,14 +57,14 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetS
                     Name = property.Name,
                     Value = property.Value
                 }).ToList(),
-                ShopNames = product.Shops.Select(shop => new ShopGetAllDto
+                ShopNames = product.Shops != null ? product.Shops.Select(shop => new ShopGetAllDto
                 {
                     Id = shop.ID.ToString(),
                     Name = shop.Name,
                     City = shop.Addresses.FirstOrDefault(x => x.IsCurrentAddress).GetCity,
                     Description = shop.Description,
                     Phone = shop.Phone
-                }).ToList(),
+                }).ToList() : null,
                 //Comments = product.Comments.Select(comment => new ProductCommentGetDto
                 //{
                 //    Id = comment.ID.ToString(),

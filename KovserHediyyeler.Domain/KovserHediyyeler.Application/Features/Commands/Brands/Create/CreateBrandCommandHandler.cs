@@ -1,4 +1,5 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
+using KovserHediyyeler.Application.Constants;
 using KovserHediyyeler.Application.Extentions;
 using KovserHediyyeler.Application.Repositories.Brands;
 using KovserHediyyeler.Domain.Models;
@@ -25,14 +26,16 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Create
             if (request.Dto == null) throw new BadRequestException();
             if (request.Dto.file is null)
                 throw new BadRequestException();
+            var scheme = _accessor.HttpContext.Request.Scheme;
+            var host = _accessor.HttpContext.Request.Host;
             Brand brand = new Brand
             {
                 ID = Guid.NewGuid(),
                 Name = request.Dto.Name,
-                Image = request.Dto.file.UploadFile(_env.WebRootPath, "assets/images/brand"),
+                Image = request.Dto.file.UploadFile(_env.WebRootPath, FilePaths.BrandImagePath),
                 ImageURL = ""
             };
-            brand.ImageURL = $"{_accessor.HttpContext.Request.Scheme}://{_accessor.HttpContext.Request.Host}/{"assets/images/brand"}/{brand.Image}";
+            brand.ImageURL = $"{scheme}://{host}/{FilePaths.BrandImagePath}/{brand.Image}";
 
             if (brand == null) throw new BadRequestException();
             await _repository.AddAsync(brand);

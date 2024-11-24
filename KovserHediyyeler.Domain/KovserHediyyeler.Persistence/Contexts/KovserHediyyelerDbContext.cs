@@ -50,14 +50,6 @@ namespace KovserHediyyeler.Persistence.Contexts
                 .HasIndex(p => p.Status)
                 .IsUnique();
 
-            modelBuilder.Entity<ColorCode>()
-                .HasIndex(c => c.HexCode)
-                .IsUnique();
-
-            modelBuilder.Entity<ColorCode>()
-                .HasIndex(c => c.Name)
-                .IsUnique();
-
             modelBuilder.Entity<Product>()
                 .HasMany(p => p.Shops)
                 .WithMany(sh => sh.Products)

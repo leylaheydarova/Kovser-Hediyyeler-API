@@ -1,44 +1,25 @@
-﻿using KovserHedieyyeler.Application.DTOs.SocialMedias;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.SocialMedias;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Departments.GetAll.GetAllSocialMedias
 {
     public class GetAllSocialMediasQueryHandler : IRequestHandler<GetAllSocialMediasQueryRequest, GetAllSocialMediasQueryResponse>
     {
-        readonly ISocialMediaReadRepository _repository;
+        readonly IDepartmentService _service;
 
-        public GetAllSocialMediasQueryHandler(ISocialMediaReadRepository repository)
+        public GetAllSocialMediasQueryHandler(IDepartmentService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<GetAllSocialMediasQueryResponse> Handle(GetAllSocialMediasQueryRequest request, CancellationToken cancellationToken)
         {
-            if (!Guid.TryParse(request.DepartmentId, out var departmentId))
-            {
-                throw new DepartmentNotFoundException();
-            }
-            var query = _repository.GetAllWhere(x => !x.isDeleted && x.DepartmentID == departmentId, false);
-            query = query.Include(sm => sm.Department);
-            int totalCount = query.Count();
-            if (!query.Any()) throw new DepartmentNotFoundException();
-            List<SocialMediaGetDto> dtos = new List<SocialMediaGetDto>();
-            dtos = await query.Select(x => new SocialMediaGetDto
-            {
-                Id = x.ID.ToString(),
-                Name = x.Name,
-                NickName = x.NickName,
-                URL = x.URL,
-                DepartmenName = x.Department.Name
-            }).ToListAsync();
 
+            var dtos = await _service.GetAllDepartmentSocialMedias(request.DepartmentId);
             return new GetAllSocialMediasQueryResponse
             {
                 Datas = dtos,
-                TotalCount = totalCount
+                TotalCount = dtos.Count
             };
         }
     }
