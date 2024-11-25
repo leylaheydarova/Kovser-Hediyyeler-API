@@ -1,30 +1,21 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Brands;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Temporarily
 {
     public class DeleteTemporarilyBrandCommandHandler : IRequestHandler<DeleteTemporarilyBrandCommandRequest, DeleteTemporarilyBrandCommandResponse>
     {
-        readonly IBrandReadRepository _readRepository;
-        readonly IBrandWriteRepository _writeRepository;
+        readonly IBrandService _service;
 
-        public DeleteTemporarilyBrandCommandHandler(IBrandReadRepository readRepository, IBrandWriteRepository writeRepository)
+        public DeleteTemporarilyBrandCommandHandler(IBrandService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<DeleteTemporarilyBrandCommandResponse> Handle(DeleteTemporarilyBrandCommandRequest request, CancellationToken cancellationToken)
         {
-            Brand brand = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), true);
-            if (brand == null)
-            {
-                throw new BrandNotFoundException();
-            }
-            _writeRepository.DeleteTemporarily(brand);
-            await _writeRepository.SaveAsync();
+            await _service.DeleteTemporarilyAsync(request.Id);
+
             return new DeleteTemporarilyBrandCommandResponse
             {
                 Message = "Brend müvəqqəti silindi!"

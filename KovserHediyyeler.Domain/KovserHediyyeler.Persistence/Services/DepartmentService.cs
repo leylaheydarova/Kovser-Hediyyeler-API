@@ -4,9 +4,11 @@ using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.Constants;
 using KovserHediyyeler.Application.Extentions;
+using KovserHediyyeler.Application.Repositories;
 using KovserHediyyeler.Application.Repositories.Departments;
 using KovserHediyyeler.Application.Repositories.SocialMedias;
 using KovserHediyyeler.Domain.Models;
+using KovserHediyyeler.Domain.Models.BaseModel;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +34,18 @@ namespace KovserHediyyeler.Persistence.Services
             _accessor = accessor;
         }
 
+        private async Task<T> GetEntityAsync<T>(IReadRepository<T> repository, string id, bool trackChanges = true) where T : BaseEntity
+        {
+            T entity = await repository.GetWhereAsync(x => x.ID.ToString() == id, trackChanges);
+            if (entity == null)
+            {
+                if (typeof(T) == typeof(Department))
+                    throw new DepartmentNotFoundException();
+                if (typeof(T) == typeof(SocialMedia))
+                    throw new SocialMediaNotFoundException();
+            }
+            return entity;
+        }
         public async Task CreateDepartmentAsync(DepartmentCommandDto dto)
         {
             var scheme = _accessor.HttpContext.Request.Scheme;
@@ -89,8 +103,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task DeleteTemporarilyDepartment(string id)
         {
-            Department department = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(id), true);
-            if (department == null) throw new DepartmentNotFoundException();
+            var department = await GetEntityAsync(_readRepository, id);
             foreach (var socialMedia in department.SocialMedias)
             {
                 if (socialMedia.DepartmentID == department.ID)
@@ -142,11 +155,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task<DepartmentGetSingleDto> GetSingleDepartment(string id)
         {
-            Department department = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(id), false, "SocialMedias");
-            if (department == null)
-            {
-                throw new DepartmentNotFoundException();
-            }
+            Department department = await GetEntityAsync(_readRepository, id);
             DepartmentGetSingleDto dto = new DepartmentGetSingleDto
             {
                 Id = department.ID.ToString(),
@@ -208,8 +217,7 @@ namespace KovserHediyyeler.Persistence.Services
         {
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;
-            Department department = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true, "SocialMedias");
-            if (department == null) throw new DepartmentNotFoundException();
+            Department department = await GetEntityAsync(_readRepository, id);
             department.Name = dto.Name != null ? dto.Name : department.Name;
             department.Description = dto.Description != null ? dto.Description : department.Description;
             department.LogoImage = dto.file != null ?
@@ -224,8 +232,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task UpdateDepartmentSocialMediaAsync(SocialMediaUpdateDto dto, string id)
         {
-            SocialMedia socialMedia = await _smReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
-            if (socialMedia == null) throw new SocialMediaNotFoundException();
+            var socialMedia = await GetEntityAsync(_smReadRepository, id);
             socialMedia.NickName = dto.NickName != null ? dto.NickName : socialMedia.NickName;
             socialMedia.Name = dto.Name != null ? dto.Name : socialMedia.Name;
             socialMedia.URL = dto.URL != null ? dto.URL : socialMedia.URL;
@@ -238,8 +245,7 @@ namespace KovserHediyyeler.Persistence.Services
         {
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;
-            Department department = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
-            if (department == null) throw new DepartmentNotFoundException();
+            var department = GetEntityAsync(_readRepository, id);
             department.Name = dto.Name;
             department.Description = dto.Description;
             department.LogoImage = dto.File.UploadFile(_env.WebRootPath, FilePaths.DepartmentImagePath);

@@ -116,8 +116,9 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<ISocialMediaWriteRepository, SocialMediaWriteRepository>();
 
             //Services
-            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IDepartmentService, DepartmentService>();
+            services.AddScoped<IProductService, ProductService>();
             return services;
         }
     }

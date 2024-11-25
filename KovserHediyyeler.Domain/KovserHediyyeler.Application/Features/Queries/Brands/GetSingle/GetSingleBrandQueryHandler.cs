@@ -1,36 +1,20 @@
-﻿using KovserHedieyyeler.Application.DTOs.Brands;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Constants;
-using KovserHediyyeler.Application.Repositories.Brands;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Brands.GetSingle
 {
     public class GetSingleBrandQueryHandler : IRequestHandler<GetSingleBrandQueryRequest, GetSingleBrandQueryResponse>
     {
-        readonly IBrandReadRepository _repository;
+        readonly IBrandService _service;
 
-        public GetSingleBrandQueryHandler(IBrandReadRepository repository)
+        public GetSingleBrandQueryHandler(IBrandService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<GetSingleBrandQueryResponse> Handle(GetSingleBrandQueryRequest request, CancellationToken cancellationToken)
         {
-            Brand brand = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, false);
-            if (brand == null)
-            {
-                throw new BrandNotFoundException();
-            }
-            var dto = new BrandGetDto
-            {
-                Id = brand.ID.ToString(),
-                Name = brand.Name,
-                Image = brand.Image is not null ? brand.Image : ConstantPaths.DefaultImage,
-                ImageURL = brand.ImageURL
-
-            };
+            var dto = await _service.GetSingleAsync(request.Id);
 
             return new GetSingleBrandQueryResponse
             {
