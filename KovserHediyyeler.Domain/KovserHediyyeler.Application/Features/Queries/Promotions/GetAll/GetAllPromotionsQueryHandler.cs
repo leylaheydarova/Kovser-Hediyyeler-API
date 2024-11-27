@@ -1,39 +1,25 @@
-﻿using KovserHedieyyeler.Application.DTOs.Promotion;
-using KovserHediyyeler.Application.Repositories.Promotions;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Promotions.GetAll
 {
     public class GetAllPromotionsQueryHandler : IRequestHandler<GetAllPromotionsQueryRequest, GetAllPromotionsQueryResponse>
     {
-        readonly IPromotionReadRepository _repository;
+        readonly IPromotionService _service;
 
-        public GetAllPromotionsQueryHandler(IPromotionReadRepository repository)
+        public GetAllPromotionsQueryHandler(IPromotionService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<GetAllPromotionsQueryResponse> Handle(GetAllPromotionsQueryRequest request, CancellationToken cancellationToken)
         {
-            var query = _repository.GetAllWhere(x => !x.isDeleted, false);
-            int totalCount = query.Count();
-            List<PromotionGetAllDto> dtos = await query.Skip(request.Page * request.Size)
-                .Take(request.Size)
-                .Select(x => new PromotionGetAllDto
-                {
-                    Id = x.ID.ToString(),
-                    Title = x.Title,
-                    Description = x.Description,
-                    Price = (double)x.Price,
-                    DiscountedPrice = x.DiscountedPrice,
-                    StartDate = x.StartDate,
-                    ExpireDate = x.ExpireDate
-                }).ToListAsync();
+            var dtos = await _service.GetAllAsync(request.Page, request.Size);
+
             return new GetAllPromotionsQueryResponse
             {
                 Datas = dtos,
-                TotalCount = totalCount
+                TotalCount = dtos.Count
             };
         }
     }

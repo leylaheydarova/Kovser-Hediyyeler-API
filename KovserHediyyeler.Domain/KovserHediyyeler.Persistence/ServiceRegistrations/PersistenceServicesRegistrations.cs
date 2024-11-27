@@ -119,6 +119,7 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IDepartmentService, DepartmentService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IPromotionService, PromotionService>();
             return services;
         }
     }

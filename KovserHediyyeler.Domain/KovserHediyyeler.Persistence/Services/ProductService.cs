@@ -50,7 +50,6 @@ namespace KovserHediyyeler.Persistence.Services
             _departmentRepository = departmentRepository;
             _brandRepository = brandRepository;
         }
-        FileConstants constant = new FileConstants();
         private IQueryable<ProductGetAllDto> GetFilteredProductsQuery(Expression<Func<Product, bool>> filter)
         {
             return _productReadRepository.GetAllWhere(filter, false, "Department", "Shops")

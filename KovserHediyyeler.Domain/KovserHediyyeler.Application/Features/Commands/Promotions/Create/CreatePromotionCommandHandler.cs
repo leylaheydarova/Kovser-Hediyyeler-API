@@ -1,43 +1,20 @@
-﻿using KovserHediyyeler.Application.Constants;
-using KovserHediyyeler.Application.Extentions;
-using KovserHediyyeler.Application.Repositories.Promotions;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 
 namespace KovserHediyyeler.Application.Features.Commands.Promotions.Create
 {
     public class CreatePromotionCommandHandler : IRequestHandler<CreatePromotionCommandRequest, CreatePromotionCommandResponse>
     {
-        readonly IPromotionWriteRepository _writeRepository;
-        readonly FileConstants _fileConstants;
+        readonly IPromotionService _service;
 
-        public CreatePromotionCommandHandler(IPromotionWriteRepository writeRepository,
-                                             IHttpContextAccessor httpContextAccessor,
-                                             IWebHostEnvironment webHostEnvironment)
+        public CreatePromotionCommandHandler(IPromotionService service)
         {
-            _writeRepository = writeRepository;
-            _fileConstants = new FileConstants(httpContextAccessor, webHostEnvironment);
+            _service = service;
         }
 
         public async Task<CreatePromotionCommandResponse> Handle(CreatePromotionCommandRequest request, CancellationToken cancellationToken)
         {
-            var dto = request.Dto;
-            Promotion promotion = new Promotion
-            {
-                ID = Guid.NewGuid(),
-                Title = dto.Title,
-                Description = dto.Description,
-                Price = dto.Price,
-                DiscountedPrice = (dto.Price - ((dto.Price * (int)dto.DiscountPersentage) / 100)),
-                ImageName = dto.Image.UploadFile(_fileConstants.root, FilePaths.PromotionImagePath),
-                ImageURL = $"{_fileConstants.scheme}://{_fileConstants.host}/{dto.Image.FileName}",
-                ExpireDate = dto.ExpireDate,
-                StartDate = dto.StartDate
-            };
-            await _writeRepository.AddAsync(promotion);
-            await _writeRepository.SaveAsync();
+            await _service.CreateAsync(request.Dto);
 
             return new CreatePromotionCommandResponse
             {

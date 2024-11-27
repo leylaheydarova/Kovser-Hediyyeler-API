@@ -1,66 +1,22 @@
-﻿using KovserHedieyyeler.Application.DTOs.Promotion;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Promotions;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Promotions.GetSingle
 {
     public class GetSinglePromotionQueryHandler : IRequestHandler<GetSinglePromotionQueryRequest, GetSinglePromotionQueryResponse>
     {
-        readonly IPromotionReadRepository _repository;
+        readonly IPromotionService _service;
 
-        public GetSinglePromotionQueryHandler(IPromotionReadRepository repository)
+        public GetSinglePromotionQueryHandler(IPromotionService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<GetSinglePromotionQueryResponse> Handle(GetSinglePromotionQueryRequest request, CancellationToken cancellationToken)
         {
-            Promotion promotion = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false);
-            if (promotion == null)
-            {
-                throw new PromotionNotFoundException();
-            }
 
-            var dto = new PromotionGetSingleDto
-            {
-                Id = promotion.ID.ToString(),
-                Title = promotion.Title,
-                Description = promotion.Description,
-                DiscountedPrice = (double)promotion.DiscountedPrice,
-                DiscountPersentage = (double)(1 - ((promotion.DiscountedPrice * 100) / promotion.Price)) * 100,
-                ExpireDate = promotion.ExpireDate,
-                StartDate = (DateTime)promotion.StartDate,
-                Price = (double)promotion.Price,
-                //Products = promotion.Products.Select(p => new ProductGetAllDto
-                //{
-                //    Id = p.ID.ToString(),
-                //    Name = p.Name,
-                //    Price = p.Price,
-                //    Description = p.Description,
-                //    DiscountedPrice = p.DiscountedPrice,
-                //    Image = p.Images
-                //    .Where(image => image.IsMain) // IsMain filtrasiya
-                //        .Select(image => new ProductImageGetDto
-                //        {
-                //            Id = image.ID.ToString(),
-                //            ImageName = image.FileName,
-                //            ImageURL = image.Path,
-                //            isMain = image.IsMain
-                //        })
-                //        .FirstOrDefault() // İlk IsMain şəkli götür
-                //        ?? new ProductImageGetDto // Default şəkil qaytar
-                //        {
-                //            Id = Guid.Empty.ToString(),
-                //            ImageName = ,
-                //            ImageURL = BaseURLs.DefaultImageURL,
-                //            isMain = true
-                //        },
-                //    DepartmentName = p.Department.Name,
-                //    ProductAverageRating = p.ProductAverageRating
-                //}).ToList()
-            };
+            var dto = await _service.GetSingleAsync(request.Id);
+
             return new GetSinglePromotionQueryResponse
             {
                 Dto = dto

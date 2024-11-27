@@ -1,25 +1,21 @@
-﻿using KovserHediyyeler.Application.Repositories.Promotions;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.Promotions.Delete
 {
     public class RemovePromotionCommandHandler : IRequestHandler<RemovePromotionCommandRequest, RemovePromotionCommandResponse>
     {
-        readonly IPromotionReadRepository _readRepository;
-        readonly IPromotionWriteRepository _writeRepository;
+        readonly IPromotionService _service;
 
-        public RemovePromotionCommandHandler(IPromotionReadRepository readRepository, IPromotionWriteRepository writeRepository)
+        public RemovePromotionCommandHandler(IPromotionService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<RemovePromotionCommandResponse> Handle(RemovePromotionCommandRequest request, CancellationToken cancellationToken)
         {
-            Promotion promotion = await _readRepository.GetWhereAsync(p => p.ID.ToString() == request.Id, true);
-            _writeRepository.RemovePermanently(promotion);
-            await _writeRepository.SaveAsync();
+            await _service.RemovePermanentAsync(request.Id);
+
             return new RemovePromotionCommandResponse
             {
                 Message = "Kampaniya uğurla silindi"
