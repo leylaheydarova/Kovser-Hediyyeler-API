@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\serviceregistrations\\registrationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\serviceregistrations\\registrationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\serviceregistrations\\registrationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\serviceregistrations\\registrationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\queries\\promotions\\getexpiredate\\getpromotionexpiredatequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -152,8 +152,7 @@
               "ViewState": "AQIAAGQAAAAAAAAAAAAgwHkAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T21:27:56.56Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -166,8 +165,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T22:15:14.039Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -180,8 +178,7 @@
               "ViewState": "AQIAAB8AAAAAAAAAAAAQwEsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T22:17:05.384Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -191,14 +188,14 @@
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\ProductService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\ProductService.cs",
               "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\ProductService.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAswDMAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIkBAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T22:40:30.445Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RegistrationServices.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\ServiceRegistrations\\RegistrationServices.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\ServiceRegistrations\\RegistrationServices.cs",
@@ -206,18 +203,17 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\ServiceRegistrations\\RegistrationServices.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAAA8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:40:12.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:40:12.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "BrandService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\BrandService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\BrandService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\BrandService.cs",
               "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\BrandService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T22:40:01.968Z",
               "EditorCaption": ""
@@ -232,8 +228,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Queries\\Promotions\\GetExpireDate\\GetPromotionExpireDateQueryHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:37:33.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:37:33.12Z"
             },
             {
               "$type": "Document",
@@ -245,8 +240,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Queries\\Promotions\\GetSingle\\GetSinglePromotionQueryHandler.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAqwBEAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:35:06.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:35:06.275Z"
             },
             {
               "$type": "Document",
@@ -258,8 +252,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Queries\\Promotions\\GetAll\\GetAllPromotionsQueryResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:34:05.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:34:05.395Z"
             },
             {
               "$type": "Document",
@@ -271,8 +264,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Queries\\Promotions\\GetAll\\GetAllPromotionsQueryRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:34:02.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:34:02.791Z"
             },
             {
               "$type": "Document",
@@ -284,8 +276,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Queries\\Promotions\\GetAll\\GetAllPromotionsQueryHandler.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAuwBQAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:32:02.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:32:02.07Z"
             },
             {
               "$type": "Document",
@@ -297,8 +288,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Promotions\\Update\\UpdatePromotionCommandHandler.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAqwBAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:27:18.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:27:18.418Z"
             },
             {
               "$type": "Document",
@@ -310,8 +300,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Promotions\\Delete\\RemovePromotionCommandHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBAAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:23:28.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:23:28.476Z"
             },
             {
               "$type": "Document",
@@ -323,8 +312,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Promotions\\Create\\CreatePromotionCommandHandler.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAAABAAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:19:52.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:19:52.558Z"
             },
             {
               "$type": "Document",
@@ -336,8 +324,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Constants\\FilePaths.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:17:59.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:17:59.037Z"
             },
             {
               "$type": "Document",
@@ -349,8 +336,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Promotions\\Create\\CreatePromotionCommandRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:15:32.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T22:15:32.487Z"
             },
             {
               "$type": "Document",
@@ -374,8 +360,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Constants\\ConstantPaths.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T22:07:51.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T22:07:51.743Z"
             },
             {
               "$type": "Document",
@@ -387,8 +372,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Queries\\Brands\\GetSingle\\GetSingleBrandQueryHandler.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAqwBAAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T22:05:26.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T22:05:26.35Z"
             },
             {
               "$type": "Document",

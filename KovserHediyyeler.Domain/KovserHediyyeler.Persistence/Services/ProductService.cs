@@ -12,6 +12,8 @@ using KovserHediyyeler.Application.Repositories.Departments;
 using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Domain.Models;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -32,9 +34,11 @@ namespace KovserHediyyeler.Persistence.Services
         readonly ICategoryReadRepository _categoryRepository;
         readonly IDepartmentReadRepository _departmentRepository;
         readonly IBrandReadRepository _brandRepository;
+        readonly IWebHostEnvironment _env;
+        readonly IHttpContextAccessor _accessor;
 
 
-        public ProductService(IProductWriteRepository productWriteRepository, IProductImageFileWriteRepository productImageFileWriteRepository, IProductPropertyWriteRepository productPropertyWriteRepository, IColorWriteRepository colorWriteRepository, IShopReadRepository shopReadRepository, ICategoryReadRepository categoryRepository, IDepartmentReadRepository departmentRepository, IBrandReadRepository brandRepository, IProductReadRepository productReadRepository, IProductImageFileReadRepository productImageFileReadRepository, IProductPropertyReadRepository productPropertyReadRepository, IShopWriteRepository shopWriteRepository, IProductShopWriteRepository productShopWriteRepository)
+        public ProductService(IProductWriteRepository productWriteRepository, IProductImageFileWriteRepository productImageFileWriteRepository, IProductPropertyWriteRepository productPropertyWriteRepository, IColorWriteRepository colorWriteRepository, IShopReadRepository shopReadRepository, ICategoryReadRepository categoryRepository, IDepartmentReadRepository departmentRepository, IBrandReadRepository brandRepository, IProductReadRepository productReadRepository, IProductImageFileReadRepository productImageFileReadRepository, IProductPropertyReadRepository productPropertyReadRepository, IShopWriteRepository shopWriteRepository, IProductShopWriteRepository productShopWriteRepository, IWebHostEnvironment env, IHttpContextAccessor accessor)
         {
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
@@ -49,6 +53,8 @@ namespace KovserHediyyeler.Persistence.Services
             _categoryRepository = categoryRepository;
             _departmentRepository = departmentRepository;
             _brandRepository = brandRepository;
+            _env = env;
+            _accessor = accessor;
         }
         private IQueryable<ProductGetAllDto> GetFilteredProductsQuery(Expression<Func<Product, bool>> filter)
         {
@@ -123,6 +129,9 @@ namespace KovserHediyyeler.Persistence.Services
             if (brand == null && dto.BrandID is not null)
                 throw new InvalidInputException("brend");
 
+            var scheme = _accessor.HttpContext.Request.Scheme;
+            var host = _accessor.HttpContext.Request.Host;
+
             Product product = new Product
             {
                 ID = Guid.NewGuid(),
@@ -145,11 +154,12 @@ namespace KovserHediyyeler.Persistence.Services
                 ProductImageFile image = new ProductImageFile
                 {
                     ID = Guid.NewGuid(),
-                    FileName = imagedto.file.UploadFile(constant.root, FilePaths.ProuctImageFilePath),
-                    Path = $"{constant.scheme}://{constant.host}/{imagedto.file.FileName}",
+                    FileName = imagedto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath),
+                    Path = "",
                     ProductID = product.ID,
                     IsMain = imagedto.IsMain
                 };
+                image.Path = $"{scheme}://{host}/{FilePaths.ProuctImageFilePath}/{image.FileName}";
                 try
                 {
                     await _productImageFileWriteRepository.AddAsync(image);
@@ -222,14 +232,17 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task CreateProductImageAsync(string productId, ProductImageCommandDto dto)
         {
+            var scheme = _accessor.HttpContext.Request.Scheme;
+            var host = _accessor.HttpContext.Request.Host;
             ProductImageFile image = new ProductImageFile
             {
                 ID = Guid.NewGuid(),
-                FileName = dto.file.UploadFile(constant.root, FilePaths.ProuctImageFilePath),
-                Path = $"{constant.scheme}://{constant.host}/{dto.file.FileName}",
+                FileName = dto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath),
+                Path = "",
                 ProductID = Guid.Parse(productId),
                 IsMain = dto.IsMain
             };
+            image.Path = $"{scheme}://{host}/{FilePaths.ProuctImageFilePath}/{image.FileName}";
             await _productImageFileWriteRepository.AddAsync(image);
             await _productImageFileWriteRepository.SaveAsync();
         }
@@ -380,11 +393,13 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task UpdateProductImageFileAsync(string id, ProductImageCommandDto dto)
         {
+            var scheme = _accessor.HttpContext.Request.Scheme;
+            var host = _accessor.HttpContext.Request.Host;
             ProductImageFile image = await _productImageFileReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
             if (image == null) throw new ProductImageNotFoundException();
-            image.FileName = dto.file != null ? dto.file.UploadFile(constant.root, FilePaths.ProuctImageFilePath) : image.FileName != null ? image.FileName : ConstantPaths.DefaultImage;
+            image.FileName = dto.file != null ? dto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath) : image.FileName != null ? image.FileName : ConstantPaths.DefaultImage;
             image.Path = dto.file != null
-                ? $"{constant.scheme}://{constant.host}/{dto.file.FileName}"
+                ? $"{scheme}://{host}/{FilePaths.ProuctImageFilePath}/{image.FileName}"
                 : image.Path != null ? image.Path : ConstantPaths.DefaultImageURL;
             image.IsMain = dto.IsMain != null ? (bool)dto.IsMain : image.IsMain;
 
