@@ -245,7 +245,7 @@ namespace KovserHediyyeler.Persistence.Services
         {
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;
-            var department = GetEntityAsync(_readRepository, id);
+            var department = await GetEntityAsync(_readRepository, id);
             department.Name = dto.Name;
             department.Description = dto.Description;
             department.LogoImage = dto.File.UploadFile(_env.WebRootPath, FilePaths.DepartmentImagePath);

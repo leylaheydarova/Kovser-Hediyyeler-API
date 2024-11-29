@@ -16,6 +16,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\brands\58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\brands\622c2916-8c68-4419-90c7-ee021740a0daDefault.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>assets/images/brands/622c2916-8c68-4419-90c7-ee021740a0daDefault.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\brands\622c2916-8c68-4419-90c7-ee021740a0daDefault.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\brands\b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png))">
       <SourceType>Package</SourceType>
       <SourceId>KovserHediyyeler.App</SourceId>
@@ -63,6 +79,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\brands\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\departments\6e1e60d1-d15b-4239-bab2-6a1b0ff4553fEsrParfume.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>assets/images/departments/6e1e60d1-d15b-4239-bab2-6a1b0ff4553fEsrParfume.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\departments\6e1e60d1-d15b-4239-bab2-6a1b0ff4553fEsrParfume.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\departments\f8984af0-6b0d-495f-b95e-118a05d71247k-gold.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>assets/images/departments/f8984af0-6b0d-495f-b95e-118a05d71247k-gold.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\departments\f8984af0-6b0d-495f-b95e-118a05d71247k-gold.png))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

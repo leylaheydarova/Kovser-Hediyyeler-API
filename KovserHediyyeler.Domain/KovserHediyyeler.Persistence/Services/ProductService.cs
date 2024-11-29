@@ -395,7 +395,7 @@ namespace KovserHediyyeler.Persistence.Services
         {
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;
-            ProductImageFile image = await _productImageFileReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
+            ProductImageFile image = await _productImageFileReadRepository.GetWhereAsync(x => x.ID.ToString() == id, true);
             if (image == null) throw new ProductImageNotFoundException();
             image.FileName = dto.file != null ? dto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath) : image.FileName != null ? image.FileName : ConstantPaths.DefaultImage;
             image.Path = dto.file != null

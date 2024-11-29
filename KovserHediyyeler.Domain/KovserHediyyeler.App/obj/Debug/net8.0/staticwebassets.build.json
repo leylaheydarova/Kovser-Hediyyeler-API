@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UjWATsR7Phyjy+VPvuFYa0qW8pprJE3jLby6aPWMMkQ=",
+  "Hash": "fUfe5LbdFIiz1tkdyhEtxhnkr5jlj8LrXttaArHa7xc=",
   "Source": "KovserHediyyeler.App",
   "BasePath": "_content/KovserHediyyeler.App",
   "Mode": "Default",
@@ -34,6 +34,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\brands\\58fdfa05-9f8d-45dc-9e52-4d41c7493555uzukdesti.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brands\\622c2916-8c68-4419-90c7-ee021740a0daDefault.png",
+      "SourceId": "KovserHediyyeler.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
+      "BasePath": "_content/KovserHediyyeler.App",
+      "RelativePath": "assets/images/brands/622c2916-8c68-4419-90c7-ee021740a0daDefault.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\brands\\622c2916-8c68-4419-90c7-ee021740a0daDefault.png"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brands\\b03bfcf5-3a30-426b-aac7-e2b1c2df6d9euzukdesti.png",
@@ -91,6 +110,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\brands\\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\departments\\6e1e60d1-d15b-4239-bab2-6a1b0ff4553fEsrParfume.png",
+      "SourceId": "KovserHediyyeler.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
+      "BasePath": "_content/KovserHediyyeler.App",
+      "RelativePath": "assets/images/departments/6e1e60d1-d15b-4239-bab2-6a1b0ff4553fEsrParfume.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\departments\\6e1e60d1-d15b-4239-bab2-6a1b0ff4553fEsrParfume.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\departments\\f8984af0-6b0d-495f-b95e-118a05d71247k-gold.png",
+      "SourceId": "KovserHediyyeler.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
+      "BasePath": "_content/KovserHediyyeler.App",
+      "RelativePath": "assets/images/departments/f8984af0-6b0d-495f-b95e-118a05d71247k-gold.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\departments\\f8984af0-6b0d-495f-b95e-118a05d71247k-gold.png"
     }
   ]
 }
