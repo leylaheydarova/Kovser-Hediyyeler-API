@@ -112,5 +112,101 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\departments\f8984af0-6b0d-495f-b95e-118a05d71247k-gold.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\products\435dc065-010c-4aa1-897b-613a10dd0724Clipped_image_20240807_115227.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>assets/images/products/435dc065-010c-4aa1-897b-613a10dd0724Clipped_image_20240807_115227.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\products\435dc065-010c-4aa1-897b-613a10dd0724Clipped_image_20240807_115227.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\products\52c36532-b6d4-4737-803f-01a4e5483e87Clipped_image_20240823_232951.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>assets/images/products/52c36532-b6d4-4737-803f-01a4e5483e87Clipped_image_20240823_232951.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\products\52c36532-b6d4-4737-803f-01a4e5483e87Clipped_image_20240823_232951.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\products\5c39099a-710e-4f91-b5b2-bf489fe67b5bClipped_image_20240823_232946.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>assets/images/products/5c39099a-710e-4f91-b5b2-bf489fe67b5bClipped_image_20240823_232946.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\products\5c39099a-710e-4f91-b5b2-bf489fe67b5bClipped_image_20240823_232946.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\products\c0236c97-9bc6-4cee-a98e-5cbcf08cde72yazili-qab-ile-etir-parfum-etirler-duxular-duxu.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>assets/images/products/c0236c97-9bc6-4cee-a98e-5cbcf08cde72yazili-qab-ile-etir-parfum-etirler-duxular-duxu.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\products\c0236c97-9bc6-4cee-a98e-5cbcf08cde72yazili-qab-ile-etir-parfum-etirler-duxular-duxu.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\products\dfc63aab-fd8f-403e-9442-fc67e4bfc5f8Clipped_image_20240807_115251.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>assets/images/products/dfc63aab-fd8f-403e-9442-fc67e4bfc5f8Clipped_image_20240807_115251.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\products\dfc63aab-fd8f-403e-9442-fc67e4bfc5f8Clipped_image_20240807_115251.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\promotions\e748918e-f9ce-454e-8e42-ca46b8d37586Picture2.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>KovserHediyyeler.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KovserHediyyeler.App</BasePath>
+      <RelativePath>assets/images/promotions/e748918e-f9ce-454e-8e42-ca46b8d37586Picture2.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\promotions\e748918e-f9ce-454e-8e42-ca46b8d37586Picture2.png))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>
