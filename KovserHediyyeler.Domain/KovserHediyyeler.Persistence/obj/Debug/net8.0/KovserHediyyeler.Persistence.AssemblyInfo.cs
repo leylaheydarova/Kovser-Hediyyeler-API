@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KovserHediyyeler.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03e5790aca53017d2931e71c49a8891d6edb9b6f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c7c8c488ef5e6c8f7faaab42849b94f27adba43")]
 [assembly: System.Reflection.AssemblyProductAttribute("KovserHediyyeler.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KovserHediyyeler.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

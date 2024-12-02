@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using Serilog;
-using Serilog.Core;
-using Serilog.Sinks.MSSqlServer;
 using System.Security.Claims;
 using System.Text;
 
@@ -40,18 +37,18 @@ namespace Kovser.Hediyyeler.App.RegistrationServices
             return services;
         }
 
-        public static void ConfigureLogging(this IConfiguration configuration)
-        {
-            Logger log = new LoggerConfiguration()
-                .WriteTo.Console()
-                .WriteTo.File("logs/log.txt")
-                .WriteTo.MSSqlServer(
-                    connectionString: "Server=.;Database=KovserHediyyelerDb;Integrated Security=true;TrustServerCertificate=true;",
-                    sinkOptions: new MSSqlServerSinkOptions { TableName = "Logs", AutoCreateSqlTable = true }//,
-                    //columnOptions: new Dictionary<string, ColumnBuilder>
-                    )
-                .CreateLogger();
-        }
+        //public static void ConfigureLogging(this IConfiguration configuration)
+        //{
+        //    Logger log = new LoggerConfiguration()
+        //        .WriteTo.Console()
+        //        .WriteTo.File("logs/log.txt")
+        //        .WriteTo.MSSqlServer(
+        //            connectionString: "Server=.;Database=KovserHediyyelerDb;Integrated Security=true;TrustServerCertificate=true;",
+        //            sinkOptions: new MSSqlServerSinkOptions { TableName = "Logs", AutoCreateSqlTable = true }//,
+        //            //columnOptions: new Dictionary<string, ColumnBuilder>
+        //            )
+        //        .CreateLogger();
+        //}
 
 
 

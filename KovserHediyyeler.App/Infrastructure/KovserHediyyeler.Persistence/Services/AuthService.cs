@@ -4,9 +4,9 @@ using KovserHedieyyeler.Application.Abstractions.Tokens;
 using KovserHedieyyeler.Application.DTOs.Tokens;
 using KovserHedieyyeler.Application.Exceptions.FailExceptions;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+using KovserHedieyyeler.Application.Helpers;
 using KovserHediyyeler.Domain.Models.Identity;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 //using KovserHedieyyeler.Application.Helpers;
 
@@ -108,46 +108,45 @@ namespace KovserHediyyeler.Persistence.Services
         public async Task PasswordResetAsnyc(string email)
         {
             throw new Exception();
-        //    WebUser user = await _userManager.FindByEmailAsync(email);
-        //    if (user != null)
-        //    {
-        //        string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+            //    WebUser user = await _userManager.FindByEmailAsync(email);
+            //    if (user != null)
+            //    {
+            //        string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
 
-        //        //byte[] tokenBytes = Encoding.UTF8.GetBytes(resetToken);
-        //        //resetToken = WebEncoders.Base64UrlEncode(tokenBytes);
-        //        resetToken = resetToken.UrlEncode();
+            //        //byte[] tokenBytes = Encoding.UTF8.GetBytes(resetToken);
+            //        //resetToken = WebEncoders.Base64UrlEncode(tokenBytes);
+            //        resetToken = resetToken.UrlEncode();
 
-        //        await _mailService.SendPasswordResetMailAsync(email, user.Id.ToString(), resetToken);
-        //    }
+            //        await _mailService.SendPasswordResetMailAsync(email, user.Id.ToString(), resetToken);
+            //    }
         }
 
-       public async Task<Token> RefreshTokenLoginAsync(string refreshToken)
-       {
+        public async Task<Token> RefreshTokenLoginAsync(string refreshToken)
+        {
             throw new Exception();
-        //    WebUser? user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
-        //    if (user != null && user?.RefreshTokenEndDate > DateTime.UtcNow)
-        //    {
-        //        Token token = _tokenHandler.CreateAccessToken(15, user);
-        //        await _userService.UpdateRefreshTokenAsync(token.RefreshToken, user, token.Expiration, 300);
-        //        return token;
-        //    }
-        //    else
-        //        throw new UserNotFoundException();
-       }
+            //    WebUser? user = await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
+            //    if (user != null && user?.RefreshTokenEndDate > DateTime.UtcNow)
+            //    {
+            //        Token token = _tokenHandler.CreateAccessToken(15, user);
+            //        await _userService.UpdateRefreshTokenAsync(token.RefreshToken, user, token.Expiration, 300);
+            //        return token;
+            //    }
+            //    else
+            //        throw new UserNotFoundException();
+        }
 
         public async Task<bool> VerifyResetTokenAsync(string resetToken, string userId)
         {
-            throw new Exception();
-        //    WebUser user = await _userManager.FindByIdAsync(userId);
-        //    if (user != null)
-        //    {
-        //        //byte[] tokenBytes = WebEncoders.Base64UrlDecode(resetToken);
-        //        //resetToken = Encoding.UTF8.GetString(tokenBytes);
-        //        resetToken = resetToken.UrlDecode();
+            WebUser user = await _userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                //byte[] tokenBytes = WebEncoders.Base64UrlDecode(resetToken);
+                //resetToken = Encoding.UTF8.GetString(tokenBytes);
+                resetToken = resetToken.UrlDecode();
 
-        //        return await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", resetToken);
-        //    }
-        //    return false;
+                return await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", resetToken);
+            }
+            return false;
         }
     }
 }

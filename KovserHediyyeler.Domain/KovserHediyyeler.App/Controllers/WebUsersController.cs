@@ -4,6 +4,7 @@ using KovserHediyyeler.Application.Features.Commands.WebUsers.Register.Clients;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Register.Moderators;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Remove.RemoveAccount;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Remove.RemoveAddress;
+using KovserHediyyeler.Application.Features.Commands.WebUsers.Update.UpdatePassword;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Update.UpdateUser;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Update.UpdateUserAddress;
 using KovserHediyyeler.Application.Features.Queries.WebUsers.GetAll.GetAllUserAddresses;
@@ -113,6 +114,13 @@ namespace KovserHediyyeler.App.Controllers
 
         [HttpPatch("updateUserAddress")]
         public async Task<IActionResult> UpdateUserAddressAsync(UpdateUserAddressCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpPost("updatePassword")]
+        public async Task<IActionResult> UpdatePasswordAsync(UpdatePasswordCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

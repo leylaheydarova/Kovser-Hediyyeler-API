@@ -1,5 +1,6 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Addresses;
 using KovserHediyyeler.Application.DTOs.WebUsers;
+using KovserHediyyeler.Domain.Models;
 
 namespace KovserHediyyeler.Application.Abstractions
 {
@@ -20,6 +21,8 @@ namespace KovserHediyyeler.Application.Abstractions
         Task UpdateUserAsync(string userIdOrEmail, UserDto dto);//done
         Task UpdateUserAddressAsync(string userIdOrEmail, string addressId, AddressUpdateDto dto);//done
         Task RemoveAccount(string userIdOrEmail);//done
-        Task AddOrUpdateRoleToUser(string userIdOrEmail, string[] roles);
+        Task AddOrUpdateRoleToUser(string userIdOrEmail, string[] roles);//done
+        Task UpdateRefreshTokenAsync(string refreshToken, WebUser user, DateTime accessTokenDate, int addOnAccessTokenDate);
+        Task UpdatePasswordAsync(string userIdOrEmail, string resetToken, string newPassword);
     }
 }

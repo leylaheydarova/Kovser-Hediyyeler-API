@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\KovserHedieyyeler.Application\KovserHedieyyeler.Application.csproj" />
+    <ProjectReference Include="..\..\Core\KovserHedieyyeler.Application\KovserHediyyeler.Application.csproj" />
   </ItemGroup>
 
 </Project>

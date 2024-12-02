@@ -1774,7 +1774,7 @@
           }
         }
       },
-      "KovserHedieyyeler.Application/1.0.0": {
+      "KovserHediyyeler.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -1786,10 +1786,10 @@
           "MediatR": "12.4.1"
         },
         "compile": {
-          "bin/placeholder/KovserHedieyyeler.Application.dll": {}
+          "bin/placeholder/KovserHediyyeler.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/KovserHedieyyeler.Application.dll": {}
+          "bin/placeholder/KovserHediyyeler.Application.dll": {}
         }
       },
       "KovserHediyyeler.Domain/1.0.0": {
@@ -4725,10 +4725,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "KovserHedieyyeler.Application/1.0.0": {
+    "KovserHediyyeler.Application/1.0.0": {
       "type": "project",
-      "path": "../../Core/KovserHedieyyeler.Application/KovserHedieyyeler.Application.csproj",
-      "msbuildProject": "../../Core/KovserHedieyyeler.Application/KovserHedieyyeler.Application.csproj"
+      "path": "../../Core/KovserHedieyyeler.Application/KovserHediyyeler.Application.csproj",
+      "msbuildProject": "../../Core/KovserHedieyyeler.Application/KovserHediyyeler.Application.csproj"
     },
     "KovserHediyyeler.Domain/1.0.0": {
       "type": "project",
@@ -4739,7 +4739,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Google.Apis.Auth >= 1.68.0",
-      "KovserHedieyyeler.Application >= 1.0.0",
+      "KovserHediyyeler.Application >= 1.0.0",
       "MediatR >= 12.4.1",
       "Microsoft.EntityFrameworkCore >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
@@ -4778,8 +4778,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\KovserHedieyyeler.Application.csproj"
+            "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\KovserHediyyeler.Application.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Core\\KovserHedieyyeler.Application\\KovserHediyyeler.Application.csproj"
             }
           }
         }

@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D1911EE0-5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KovserHediyyeler.Domain", "Core\KovserHediyyeler.Domain\KovserHediyyeler.Domain.csproj", "{06F0E042-3597-470D-AD0D-7F9C008230F3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KovserHedieyyeler.Application", "Core\KovserHedieyyeler.Application\KovserHedieyyeler.Application.csproj", "{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KovserHediyyeler.Application", "Core\KovserHedieyyeler.Application\KovserHediyyeler.Application.csproj", "{F15BC96C-46E4-419C-9B4A-3EA4EBAF76B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{71D2B6D9-6F63-4E71-BD57-B54F2F381F0F}"
 EndProject

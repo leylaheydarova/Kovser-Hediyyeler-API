@@ -1,7 +1,9 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Addresses;
+using KovserHedieyyeler.Application.Exceptions.FailExceptions;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.DTOs.WebUsers;
+using KovserHediyyeler.Application.Helpers;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models;
@@ -314,6 +316,29 @@ namespace KovserHediyyeler.Persistence.Services
                 if (!removeResult.Succeeded)
                     throw new Exception($"Rolları silərkən xəta baş verdi: {string.Join(", ", removeResult.Errors.Select(e => e.Description))}");
             }
+        }
+
+        public async Task UpdateRefreshTokenAsync(string refreshToken, WebUser user, DateTime accessTokenDate, int addOnAccessTokenDate)
+        {
+            if (user != null)
+            {
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenEndDate = accessTokenDate.AddSeconds(addOnAccessTokenDate);
+                await _userManager.UpdateAsync(user);
+            }
+            else throw new UserNotFoundException();
+        }
+
+        public async Task UpdatePasswordAsync(string userIdOrEmail, string resetToken, string newPassword)
+        {
+            WebUser webUser = await FindUserAsync(userIdOrEmail);
+            resetToken = resetToken.UrlDecode();
+            IdentityResult result = await _userManager.ResetPasswordAsync(webUser, resetToken, newPassword);
+            if (result.Succeeded)
+            {
+                await _userManager.UpdateSecurityStampAsync(webUser);
+            }
+            else throw new PasswordChangeFailedException();
         }
     }
 }

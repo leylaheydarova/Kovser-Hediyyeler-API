@@ -160,3 +160,7 @@ C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hedi
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\bin\Debug\net8.0\KovserHediyyeler.Infrastructure.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\bin\Debug\net8.0\KovserHediyyeler.Infrastructure.pdb

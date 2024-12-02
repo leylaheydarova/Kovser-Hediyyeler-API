@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Infrastructure.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace KovserHediyyeler.Infrastructure.ServiceRegistrations
 {
-    internal class InfrastructureServicesREgistration
+    public static class InfrastructureServicesRegistration
     {
+        public static IServiceCollection RegisterInfrastructureServices(this IServiceCollection services)
+        {
+            services.AddScoped<ITokenHandler, TokenHandler>();
+            return services;
+        }
     }
 }

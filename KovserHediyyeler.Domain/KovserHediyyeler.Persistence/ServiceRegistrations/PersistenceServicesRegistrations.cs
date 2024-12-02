@@ -1,4 +1,5 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Abstractions.Authentication;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Brands;
 using KovserHediyyeler.Application.Repositories.Categories;
@@ -116,12 +117,15 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<ISocialMediaWriteRepository, SocialMediaWriteRepository>();
 
             //Services
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IInternalAuthentication, AuthService>();
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IDepartmentService, DepartmentService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IPromotionService, PromotionService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddHttpClient();
             return services;
         }
     }

@@ -1,4 +1,6 @@
 ﻿using KovserHedieyyeler.Application.ServiceRegistrations;
+using KovserHediyyeler.App.ServiceRegistrations;
+using KovserHediyyeler.Infrastructure.ServiceRegistrations;
 using KovserHediyyeler.Persistence.ServiceRegistrations;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services
     .RegisterDataServices(builder.Configuration)
+    .RegisterInfrastructureServices()
+    .AppServiceRegistrationServices(builder.Configuration)
+    .RegisterLoginServices(builder.Configuration)
     .RegisterApplicationServices();
 builder.Services.AddSwaggerGen();
 
@@ -29,7 +34,11 @@ if (app.Environment.IsDevelopment())
 }
 app.UseStaticFiles();
 
+app.UseCors("KovserHediyyeler");
+
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
