@@ -63,8 +63,7 @@
               "ViewState": "AQIAAGMBAAAAAAAAAAAIwIQBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T21:43:20.992Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -77,8 +76,7 @@
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T05:18:48.292Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -88,7 +86,7 @@
               "RelativeDocumentMoniker": "Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.App\\Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
               "RelativeToolTip": "Infrastructure\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAA6wBwAAAAIAAAA",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAmwJcAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T05:21:38.172Z",
               "IsPinned": true,
@@ -117,8 +115,7 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\Features\\Commands\\WebUsers\\Login\\UserLoginCommandResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T05:30:58.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T05:30:58.831Z"
             },
             {
               "$type": "Document",
@@ -130,8 +127,7 @@
               "RelativeToolTip": "Core\\KovserHedieyyeler.Application\\DTOs\\Accounts\\UserResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T05:18:57.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T05:18:57.572Z"
             },
             {
               "$type": "Document",

@@ -11,6 +11,30 @@ namespace KovserHediyyeler.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropIndex(
+                name: "IX_Colors_HexCode",
+                table: "Colors");
+
+            migrationBuilder.DropIndex(
+                name: "IX_Colors_Name",
+                table: "Colors");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Name",
+                table: "Colors",
+                type: "nvarchar(max)",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(450)");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "HexCode",
+                table: "Colors",
+                type: "nvarchar(max)",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(450)");
+
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -258,6 +282,34 @@ namespace KovserHediyyeler.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Name",
+                table: "Colors",
+                type: "nvarchar(450)",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "HexCode",
+                table: "Colors",
+                type: "nvarchar(450)",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Colors_HexCode",
+                table: "Colors",
+                column: "HexCode",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Colors_Name",
+                table: "Colors",
+                column: "Name",
+                unique: true);
         }
     }
 }

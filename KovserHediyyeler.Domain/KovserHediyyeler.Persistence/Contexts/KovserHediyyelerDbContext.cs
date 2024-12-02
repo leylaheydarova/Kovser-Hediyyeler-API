@@ -58,6 +58,25 @@ namespace KovserHediyyeler.Persistence.Contexts
                 sh => sh.HasOne<Shop>().WithMany().HasForeignKey("ShopID"),
                 p => p.HasOne<Product>().WithMany().HasForeignKey("ProductID"));
 
+            modelBuilder.Entity<Address>()
+                 .HasMany(a => a.WebUsers)
+                 .WithMany(w => w.Addresses)
+                 .UsingEntity<Dictionary<string, object>>(
+             "AddressWebUser",
+             j => j
+                 .HasOne<WebUser>()
+                 .WithMany()
+                 .HasForeignKey("WebUsersId")
+                 .HasConstraintName("FK_AddressWebUser_AspNetUsers_WebUsersId")
+                 .OnDelete(DeleteBehavior.Cascade),
+             j => j
+                 .HasOne<Address>()
+                 .WithMany()
+                 .HasForeignKey("AddressesID")
+                 .HasConstraintName("FK_AddressWebUser_Addresses_AddressesID")
+                 .OnDelete(DeleteBehavior.Cascade));
+
+
             base.OnModelCreating(modelBuilder);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

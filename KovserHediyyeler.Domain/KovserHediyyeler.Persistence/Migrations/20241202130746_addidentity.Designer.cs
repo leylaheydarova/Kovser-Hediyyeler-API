@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KovserHediyyeler.Persistence.Migrations
 {
     [DbContext(typeof(KovserHediyyelerDbContext))]
-    [Migration("20241123130731_addidentity")]
+    [Migration("20241202130746_addidentity")]
     partial class addidentity
     {
         /// <inheritdoc />
@@ -197,11 +197,11 @@ namespace KovserHediyyeler.Persistence.Migrations
 
                     b.Property<string>("HexCode")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -210,12 +210,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("HexCode")
-                        .IsUnique();
-
-                    b.HasIndex("Name")
-                        .IsUnique();
 
                     b.ToTable("Colors");
                 });
@@ -876,13 +870,15 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .WithMany()
                         .HasForeignKey("AddressesID")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK_AddressWebUser_Addresses_AddressesID");
 
                     b.HasOne("KovserHediyyeler.Domain.Models.WebUser", null)
                         .WithMany()
                         .HasForeignKey("WebUsersId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK_AddressWebUser_AspNetUsers_WebUsersId");
                 });
 
             modelBuilder.Entity("ColorCodeProductProperty", b =>
