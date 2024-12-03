@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Commands.WebUsers.Remove.RemoveA
 
         public async Task<RemoveAccountCommandResponse> Handle(RemoveAccountCommandRequest request, CancellationToken cancellationToken)
         {
-            await _service.RemoveAccount(request.UserIdOrName);
+            await _service.RemoveAccountAsync(request.UserIdOrName);
             return new RemoveAccountCommandResponse()
             {
                 Message = "istifadəçi hesabı uğurla silinmişdir!"

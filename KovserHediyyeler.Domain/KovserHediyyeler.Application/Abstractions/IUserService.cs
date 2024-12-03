@@ -20,9 +20,11 @@ namespace KovserHediyyeler.Application.Abstractions
         Task RemoveUserAddressAsync(string userIdOrEmail, string addressId);//done
         Task UpdateUserAsync(string userIdOrEmail, UserDto dto);//done
         Task UpdateUserAddressAsync(string userIdOrEmail, string addressId, AddressUpdateDto dto);//done
-        Task RemoveAccount(string userIdOrEmail);//done
-        Task AddOrUpdateRoleToUser(string userIdOrEmail, string[] roles);//done
+        Task RemoveAccountAsync(string userIdOrEmail);//done
+        Task AddRolesToUserAsync(string userIdOrEmail, string[] roles);//done
+        Task UpdateUserRoleAsync(string userIdOrEmail, string existingRole, string newRole);//done
         Task UpdateRefreshTokenAsync(string refreshToken, WebUser user, DateTime accessTokenDate, int addOnAccessTokenDate);
-        Task UpdatePasswordAsync(string userIdOrEmail, string resetToken, string newPassword);
+        Task<string> ForgetPasswordAsync(string email, string WebUserUri);//error
+        Task ResetPasswordAsync(string email, string newPassword);//error
     }
 }

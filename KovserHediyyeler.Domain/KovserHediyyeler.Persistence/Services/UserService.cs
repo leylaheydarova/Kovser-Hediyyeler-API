@@ -3,12 +3,14 @@ using KovserHedieyyeler.Application.Exceptions.FailExceptions;
 using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.DTOs.WebUsers;
-using KovserHediyyeler.Application.Helpers;
+using KovserHediyyeler.Application.Exceptions.FailExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace KovserHediyyeler.Persistence.Services
 {
@@ -16,11 +18,13 @@ namespace KovserHediyyeler.Persistence.Services
     {
         readonly UserManager<WebUser> _userManager;
         readonly IAddressWriteRepository _addressRepository;
+        readonly IEmailService _emailService;
 
-        public UserService(UserManager<WebUser> userManager, IAddressWriteRepository addressRepository)
+        public UserService(UserManager<WebUser> userManager, IAddressWriteRepository addressRepository, IEmailService emailService)
         {
             _userManager = userManager;
             _addressRepository = addressRepository;
+            _emailService = emailService;
         }
 
         async Task<WebUser> FindUserAsync(string userIdOrEmail)
@@ -236,7 +240,7 @@ namespace KovserHediyyeler.Persistence.Services
         }
 
 
-        public async Task RemoveAccount(string userIdOrEmail)
+        public async Task RemoveAccountAsync(string userIdOrEmail)
         {
             var webUser = await _userManager.Users
                .Include(u => u.Addresses)
@@ -289,35 +293,6 @@ namespace KovserHediyyeler.Persistence.Services
             return dtos;
         }
 
-        public async Task AddOrUpdateRoleToUser(string userIdOrEmail, string[] roles)
-        {
-            // İstifadəçini tapırıq
-            var webUser = await FindUserAsync(userIdOrEmail);
-
-            // İstifadəçinin mövcud rollarını alırıq
-            var currentRoles = await _userManager.GetRolesAsync(webUser);
-
-            // Mövcud olmayan rolları tapırıq və əlavə edirik
-            var rolesToAdd = roles.Except(currentRoles).ToArray();
-
-            if (rolesToAdd.Any())
-            {
-                var addResult = await _userManager.AddToRolesAsync(webUser, rolesToAdd);
-                if (!addResult.Succeeded)
-                    throw new Exception($"Rolları əlavə edərkən xəta baş verdi: {string.Join(", ", addResult.Errors.Select(e => e.Description))}");
-            }
-
-            // Yalnız əlavə edilməli olan yeni rollar əlavə olunur, amma mövcud rolları dəyişdirməyi unutma.
-            // Bütün mövcud rolu silirik və sonra yenidən əlavə edirik, amma yalnız ehtiyac olanları əlavə etmək lazımdır.
-            var rolesToRemove = currentRoles.Except(roles).ToArray();
-            if (rolesToRemove.Any())
-            {
-                var removeResult = await _userManager.RemoveFromRolesAsync(webUser, rolesToRemove);
-                if (!removeResult.Succeeded)
-                    throw new Exception($"Rolları silərkən xəta baş verdi: {string.Join(", ", removeResult.Errors.Select(e => e.Description))}");
-            }
-        }
-
         public async Task UpdateRefreshTokenAsync(string refreshToken, WebUser user, DateTime accessTokenDate, int addOnAccessTokenDate)
         {
             if (user != null)
@@ -329,16 +304,54 @@ namespace KovserHediyyeler.Persistence.Services
             else throw new UserNotFoundException();
         }
 
-        public async Task UpdatePasswordAsync(string userIdOrEmail, string resetToken, string newPassword)
+        public async Task<string> ForgetPasswordAsync(string email, string WebUserUri)
         {
-            WebUser webUser = await FindUserAsync(userIdOrEmail);
-            resetToken = resetToken.UrlDecode();
-            IdentityResult result = await _userManager.ResetPasswordAsync(webUser, resetToken, newPassword);
-            if (result.Succeeded)
+            var webUser = await FindUserAsync(email!);
+            var token = await _userManager.GeneratePasswordResetTokenAsync(webUser);
+            var param = new Dictionary<string, string>
             {
-                await _userManager.UpdateSecurityStampAsync(webUser);
+                {"token", token },
+                {"email", email!}
+            };
+            var callback = QueryHelpers.AddQueryString(WebUserUri!, param);
+            var subject = $"{webUser.Email}, Şifrə sıfırlama tokeni";
+            var body = "Şifrəni yeniləmək üçün linkə keçid edin.";
+            await _emailService.SendEmailAsync(webUser.Email!, subject, body);
+            return token;
+        }
+
+        public async Task ResetPasswordAsync(string email, string newPassword)
+        {
+            var webUser = await FindUserAsync(email);
+            var resetToken = await ForgetPasswordAsync(email, "https://localhost:7125/api/WebUsers/resetPassword");
+            var result = await _userManager.ResetPasswordAsync(webUser, resetToken, newPassword);
+            if (!result.Succeeded) throw new PasswordChangeFailedException();
+        }
+
+        public async Task AddRolesToUserAsync(string userIdOrEmail, string[] roles)
+        {
+            var webUser = await FindUserAsync(userIdOrEmail);
+            var result = await _userManager.AddToRolesAsync(webUser, roles);
+            if (!result.Succeeded) throw new AddRoleFailException();
+        }
+
+        public async Task UpdateUserRoleAsync(string userIdOrEmail, string existingRole, string newRole)
+        {
+            var webUser = await FindUserAsync(userIdOrEmail);
+            var userRoles = await GetAllUserRolesAsync(userIdOrEmail);
+            foreach (var userRole in userRoles)
+            {
+                if (userRole == existingRole)
+                {
+                    if (userRole == newRole) throw new FailException("İstifadəçi bu rola öncədən sahibdir!");
+                    var removeResult = await _userManager.RemoveFromRoleAsync(webUser, userRole);
+                    if (!removeResult.Succeeded) throw new RemoveRoleFailException();
+                    var addResult = await _userManager.AddToRoleAsync(webUser, newRole);
+                    if (!addResult.Succeeded) throw new AddRoleFailException();
+                }
             }
-            else throw new PasswordChangeFailedException();
         }
     }
 }
+
+

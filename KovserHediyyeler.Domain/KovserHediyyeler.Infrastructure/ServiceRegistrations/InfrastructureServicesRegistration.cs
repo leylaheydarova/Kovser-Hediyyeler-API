@@ -9,6 +9,7 @@ namespace KovserHediyyeler.Infrastructure.ServiceRegistrations
         public static IServiceCollection RegisterInfrastructureServices(this IServiceCollection services)
         {
             services.AddScoped<ITokenHandler, TokenHandler>();
+            services.AddScoped<IEmailService, GmailEmailService>();
             return services;
         }
     }

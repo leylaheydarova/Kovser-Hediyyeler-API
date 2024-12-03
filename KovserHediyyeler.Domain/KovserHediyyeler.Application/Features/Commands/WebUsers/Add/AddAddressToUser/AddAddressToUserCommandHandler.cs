@@ -1,7 +1,7 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
-namespace KovserHediyyeler.Application.Features.Commands.WebUsers.AddAddressToUser
+namespace KovserHediyyeler.Application.Features.Commands.WebUsers.Add.AddAddressToUser
 {
     public class AddAddressToUserCommandHandler : IRequestHandler<AddAddressToUserCommandRequest, AddAddressToUserCommandResponse>
     {

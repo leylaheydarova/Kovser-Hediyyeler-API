@@ -1,12 +1,14 @@
-﻿using KovserHediyyeler.Application.Features.Commands.WebUsers.AddAddressToUser;
-using KovserHediyyeler.Application.Features.Commands.WebUsers.AddOrUpdateRole;
+﻿using KovserHediyyeler.Application.Features.Commands.WebUsers.Add.AddAddressToUser;
+using KovserHediyyeler.Application.Features.Commands.WebUsers.Add.AddRoleToUser;
+using KovserHediyyeler.Application.Features.Commands.WebUsers.ForgotPassword;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Register.Clients;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Register.Moderators;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Remove.RemoveAccount;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Remove.RemoveAddress;
-using KovserHediyyeler.Application.Features.Commands.WebUsers.Update.UpdatePassword;
+using KovserHediyyeler.Application.Features.Commands.WebUsers.ResetPassword;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Update.UpdateUser;
 using KovserHediyyeler.Application.Features.Commands.WebUsers.Update.UpdateUserAddress;
+using KovserHediyyeler.Application.Features.Commands.WebUsers.Update.UpdateUserRole;
 using KovserHediyyeler.Application.Features.Queries.WebUsers.GetAll.GetAllUserAddresses;
 using KovserHediyyeler.Application.Features.Queries.WebUsers.GetAll.GetAllUserRoles;
 using KovserHediyyeler.Application.Features.Queries.WebUsers.GetAll.GetAllUsers;
@@ -73,8 +75,15 @@ namespace KovserHediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPost("addOrUpdateRoleToUser")]
-        public async Task<IActionResult> AddOrUpdateRoleToUserAsync(AddOrUpdateUserRoleCommandRequest request)
+        [HttpPost("addRolesToUser")]
+        public async Task<IActionResult> AddOrUpdateRoleToUserAsync(AddRolesToUserCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpPut("updateUserRole")]
+        public async Task<IActionResult> UpdateUserRoleAsync(UpdateUserRoleCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -119,11 +128,19 @@ namespace KovserHediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        [HttpPost("updatePassword")]
-        public async Task<IActionResult> UpdatePasswordAsync(UpdatePasswordCommandRequest request)
+        [HttpPost("forgotPassword")]
+        public async Task<IActionResult> ForgotPasswordAsync(ForgotPasswordCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
+
+        [HttpPost("resetPassword")]
+        public async Task<IActionResult> ResetPasswordAsync(ResetPasswordCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
     }
 }
