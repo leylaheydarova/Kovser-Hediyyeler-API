@@ -16,8 +16,8 @@ namespace KovserHediyyeler.Infrastructure.Services
 
         public async Task SendEmailAsync(string to, string subject, string body)
         {
-            var email = _config["Email:Address"];
-            var securityKey = _config["Email:SMTPKey"]; // SMTP Security Key
+            var email = _config["Smtp:Address"];
+            var securityKey = _config["Smtp:SMTPKey"]; // SMTP Security Key
 
             // To parametrinin düzgünlüyünü yoxlayaq
             if (string.IsNullOrWhiteSpace(to))
@@ -26,10 +26,17 @@ namespace KovserHediyyeler.Infrastructure.Services
             }
 
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("Kovser Hediyyeler", email));
-            message.To.Add(new MailboxAddress("", to)); // To address daxil edilir
-            message.Subject = subject;
-
+            try
+            {
+                message.From.Add(new MailboxAddress("Kovser Hediyyeler", email));
+                message.To.Add(new MailboxAddress("", to)); // To address daxil edilir
+                message.Subject = subject;
+            }
+            catch (Exception ex)
+            {
+                throw;
+                Console.WriteLine(ex.Message);
+            }
             var bodyBuilder = new BodyBuilder
             {
                 HtmlBody = body // HTML məzmunu

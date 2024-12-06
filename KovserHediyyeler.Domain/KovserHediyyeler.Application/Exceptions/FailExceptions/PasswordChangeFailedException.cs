@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KovserHedieyyeler.Application.Exceptions.FailExceptions
+﻿namespace KovserHedieyyeler.Application.Exceptions.FailExceptions
 {
-    public class PasswordChangeFailedException:BaseException
+    public class PasswordChangeFailedException : BaseException
     {
         public PasswordChangeFailedException() : base("Şifrə yenilənməsində xəta baş verdi!")
         {
         }
 
-        public PasswordChangeFailedException(string message) : base(message) 
+        public PasswordChangeFailedException(string message) : base(message)
+        {
+        }
+
+        public PasswordChangeFailedException(string message, Exception? innerException) : base(message, innerException)
         {
         }
     }

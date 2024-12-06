@@ -8,5 +8,6 @@ namespace KovserHediyyeler.Application.Abstractions
     {
         Task<Token> CreateAccessTokenAsync(int second, WebUser webUser, UserManager<WebUser> userManager);
         string CreateRefreshToken();
+        bool ValidateToken(string token);
     }
 }

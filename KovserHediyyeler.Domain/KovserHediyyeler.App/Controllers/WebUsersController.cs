@@ -132,7 +132,7 @@ namespace KovserHediyyeler.App.Controllers
         public async Task<IActionResult> ForgotPasswordAsync(ForgotPasswordCommandRequest request)
         {
             var response = await _mediator.Send(request);
-            return StatusCode(response.StatusCode, response.Message);
+            return StatusCode(response.StatusCode, response.Token);
         }
 
         [HttpPost("resetPassword")]

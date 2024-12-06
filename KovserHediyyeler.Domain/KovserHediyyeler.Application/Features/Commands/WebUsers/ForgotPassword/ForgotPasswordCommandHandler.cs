@@ -19,7 +19,8 @@ namespace KovserHediyyeler.Application.Features.Commands.WebUsers.ForgotPassword
             if (result is null) throw new FailException();
             return new ForgotPasswordCommandResponse
             {
-                Message = ""
+                Message = "",
+                Token = result
             };
         }
     }

@@ -24,7 +24,7 @@ namespace KovserHediyyeler.Application.Abstractions
         Task AddRolesToUserAsync(string userIdOrEmail, string[] roles);//done
         Task UpdateUserRoleAsync(string userIdOrEmail, string existingRole, string newRole);//done
         Task UpdateRefreshTokenAsync(string refreshToken, WebUser user, DateTime accessTokenDate, int addOnAccessTokenDate);
-        Task<string> ForgetPasswordAsync(string email, string WebUserUri);//error
-        Task ResetPasswordAsync(string email, string newPassword);//error
+        Task<string> ForgetPasswordAsync(string email, string WebUserUri);//done
+        Task ResetPasswordAsync(string resetToken, string email, string newPassword, string confirmPassword);//error
     }
 }

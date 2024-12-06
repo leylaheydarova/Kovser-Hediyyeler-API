@@ -65,5 +65,26 @@ namespace KovserHediyyeler.Infrastructure.Services
             random.GetBytes(number);
             return Convert.ToBase64String(number);
         }
+
+        public bool ValidateToken(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            try
+            {
+                // Bu hissədə tokeni doğrula
+                var jwtToken = tokenHandler.ReadToken(token) as JwtSecurityToken;
+                var expirationDate = jwtToken?.ValidTo;
+
+                if (expirationDate == null || expirationDate < DateTime.UtcNow)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

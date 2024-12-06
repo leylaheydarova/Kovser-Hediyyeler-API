@@ -19,12 +19,14 @@ namespace KovserHediyyeler.Persistence.Services
         readonly UserManager<WebUser> _userManager;
         readonly IAddressWriteRepository _addressRepository;
         readonly IEmailService _emailService;
+        readonly ITokenHandler _tokenHandler;
 
-        public UserService(UserManager<WebUser> userManager, IAddressWriteRepository addressRepository, IEmailService emailService)
+        public UserService(UserManager<WebUser> userManager, IAddressWriteRepository addressRepository, IEmailService emailService, ITokenHandler tokenHandler)
         {
             _userManager = userManager;
             _addressRepository = addressRepository;
             _emailService = emailService;
+            _tokenHandler = tokenHandler;
         }
 
         async Task<WebUser> FindUserAsync(string userIdOrEmail)
@@ -314,18 +316,36 @@ namespace KovserHediyyeler.Persistence.Services
                 {"email", email!}
             };
             var callback = QueryHelpers.AddQueryString(WebUserUri!, param);
+            Console.WriteLine("Generated Callback URL: " + callback);
             var subject = $"{webUser.Email}, Şifrə sıfırlama tokeni";
-            var body = "Şifrəni yeniləmək üçün linkə keçid edin.";
+            var body = $"<p>Zəhmət olmasa, şifrəni yeniləmək üçün aşağıdakı linkə daxil olun:</p><a href='#'>{callback}</a>";
             await _emailService.SendEmailAsync(webUser.Email!, subject, body);
             return token;
         }
 
-        public async Task ResetPasswordAsync(string email, string newPassword)
+        public async Task ResetPasswordAsync(string resetToken, string email, string newPassword, string confirmPassword)
         {
+            //var isValidToken = _tokenHandler.ValidateToken(resetToken);
+            //if (!isValidToken)
+            //{
+            //    throw new InvalidTokenException();
+            //}
             var webUser = await FindUserAsync(email);
-            var resetToken = await ForgetPasswordAsync(email, "https://localhost:7125/api/WebUsers/resetPassword");
-            var result = await _userManager.ResetPasswordAsync(webUser, resetToken, newPassword);
-            if (!result.Succeeded) throw new PasswordChangeFailedException();
+            if (newPassword != confirmPassword) throw new PasswordChangeFailedException("Şifrələr eyniləşmədi! Zəhmət olmasa, hər iki xanaya eyni şifrəni daxil edin");
+            try
+            {
+                var result = await _userManager.ResetPasswordAsync(webUser, resetToken, newPassword);
+                if (!result.Succeeded)
+                {
+                    throw new PasswordChangeFailedException();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xətanı burada istədiyin şəkildə idarə edə bilərsən
+                throw new PasswordChangeFailedException("Şifrəni sıfırlayarkən xəta baş verdi.", ex);
+            }
+
         }
 
         public async Task AddRolesToUserAsync(string userIdOrEmail, string[] roles)
@@ -355,3 +375,4 @@ namespace KovserHediyyeler.Persistence.Services
 }
 
 
+//todo: need to develop UpdatePassword
