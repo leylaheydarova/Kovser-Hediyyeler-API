@@ -12,6 +12,7 @@ namespace KovserHediyyeler.Domain.Models
         public DateTime? RefreshTokenEndDate { get; set; }
 
         //Relations
+        public Basket Basket { get; set; }
         public ICollection<Address> Addresses { get; set; } = new List<Address>();
 
         public string FullName

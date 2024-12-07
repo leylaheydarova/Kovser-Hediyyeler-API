@@ -19,11 +19,11 @@ namespace KovserHediyyeler.Persistence.Services
         readonly IBasketWriteRepository _basketWriteRepository;
         readonly IBasketItemReadRepository _itemReadRepository;
         readonly IBasketItemWriteRepository _itemWriteRepository;
-        readonly IWishListItemWriteRepository _wishListItemWriteRepository;
-        readonly IProductReadRepository _productReadRepository;
         readonly IProductWriteRepository _productWriteRepository;
+        readonly IProductReadRepository _productReadRepository;
         readonly IHttpContextAccessor _accessor;
         readonly UserManager<WebUser> _userManager;
+        readonly IWishListItemWriteRepository _wishListItemWriteRepository;
 
         public BasketService(IBasketReadRepository basketReadRepository, IBasketWriteRepository basketWriteRepository, IBasketItemReadRepository itemReadRepository, IBasketItemWriteRepository itemWriteRepository, IWishListItemWriteRepository wishListItemWriteRepository, UserManager<WebUser> userManager, IProductReadRepository productReadRepository, IHttpContextAccessor accessor, IProductWriteRepository productWriteRepository)
         {
@@ -38,7 +38,7 @@ namespace KovserHediyyeler.Persistence.Services
             _productWriteRepository = productWriteRepository;
         }
 
-        private string GetUserIdAsync()
+        private string GetUserId()
         {
             var userId = _accessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (userId == null) throw new UserNotFoundException();
@@ -47,7 +47,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task AddItemToBasketAsync(Guid productId, int count)
         {
-            var userId = GetUserIdAsync();
+            var userId = GetUserId();
             var basket = await _basketReadRepository.GetWhereAsync(b => b.CustomerID == userId && !b.isDeleted, true);
             if (basket.BasketItems == null)
             {

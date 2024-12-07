@@ -15,6 +15,7 @@ builder.Services
     .RegisterInfrastructureServices()
     .AppServiceRegistrationServices(builder.Configuration)
     .RegisterLoginServices(builder.Configuration)
+    .RegisterSwaggerServices()
     .RegisterApplicationServices();
 builder.Services.AddSwaggerGen();
 

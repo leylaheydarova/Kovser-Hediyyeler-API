@@ -103,7 +103,7 @@ namespace KovserHediyyeler.Persistence.Services
                 PhoneNumber = dto.Phone,
                 Email = dto.Email,
                 UserName = dto.Email,
-                //Basket = new(),
+                Basket = new(),
                 //WishList = new()
             };
             Address address = new Address

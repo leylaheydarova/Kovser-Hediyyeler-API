@@ -109,6 +109,81 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.ToTable("Addresses");
                 });
 
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Basket", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CustomerID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double?>("DiscountedPrice")
+                        .HasColumnType("float");
+
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CustomerID")
+                        .IsUnique();
+
+                    b.ToTable("Baskets");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.BasketItem", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BasketID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductCount")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("ProductID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("BasketID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("BasketItems");
+                });
+
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Brand", b =>
                 {
                     b.Property<Guid>("ID")
@@ -908,6 +983,36 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Shop");
                 });
 
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Basket", b =>
+                {
+                    b.HasOne("KovserHediyyeler.Domain.Models.WebUser", "Customer")
+                        .WithOne("Basket")
+                        .HasForeignKey("KovserHediyyeler.Domain.Models.Basket", "CustomerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.BasketItem", b =>
+                {
+                    b.HasOne("KovserHediyyeler.Domain.Models.Basket", "Basket")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("BasketID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("KovserHediyyeler.Domain.Models.Product", "Product")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Category", b =>
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Category", "ParentCategory")
@@ -1067,6 +1172,11 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Basket", b =>
+                {
+                    b.Navigation("BasketItems");
+                });
+
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Brand", b =>
                 {
                     b.Navigation("Products");
@@ -1096,6 +1206,8 @@ namespace KovserHediyyeler.Persistence.Migrations
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Product", b =>
                 {
+                    b.Navigation("BasketItems");
+
                     b.Navigation("Images");
 
                     b.Navigation("Properties");
@@ -1106,6 +1218,12 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Addresses");
 
                     b.Navigation("Employees");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.WebUser", b =>
+                {
+                    b.Navigation("Basket")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
