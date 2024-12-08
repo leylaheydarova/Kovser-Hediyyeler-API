@@ -3,6 +3,7 @@
     public interface IBasketService
     {
         Task AddItemToBasketAsync(Guid productId, int count, string userId);
-        //CelarBasket
+        Task RemoveItemFromBasketAsync(Guid productId, string customerId);
+
     }
 }

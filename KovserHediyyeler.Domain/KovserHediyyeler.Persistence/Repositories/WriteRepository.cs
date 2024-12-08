@@ -3,6 +3,7 @@ using KovserHediyyeler.Domain.Models.BaseModel;
 using KovserHediyyeler.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace KovserHediyyeler.Persistence.Repositories
 {
@@ -21,6 +22,11 @@ namespace KovserHediyyeler.Persistence.Repositories
         {
             EntityEntry entry = await _context.AddAsync(entity);
             return entry.State == EntityState.Added;
+        }
+
+        public async Task<IDbContextTransaction> BeginTransactionAsync()
+        {
+            return await _context.Database.BeginTransactionAsync();
         }
 
         public bool DeleteTemporarily(T entity)

@@ -1,4 +1,5 @@
 ﻿using KovserHediyyeler.Domain.Models.BaseModel;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace KovserHediyyeler.Application.Repositories
 {
@@ -9,6 +10,7 @@ namespace KovserHediyyeler.Application.Repositories
         bool RemovePermanently(T entity);
         bool RecoverData(T entity);
         bool Update(T entity);
+        Task<IDbContextTransaction> BeginTransactionAsync();
         Task<int> SaveAsync();
         int Save();
     }

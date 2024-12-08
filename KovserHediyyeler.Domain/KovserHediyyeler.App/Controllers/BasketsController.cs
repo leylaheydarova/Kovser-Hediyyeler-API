@@ -1,4 +1,5 @@
 ﻿using KovserHediyyeler.Application.Features.Commands.Baskets.Add;
+using KovserHediyyeler.Application.Features.Commands.Baskets.Remove.RemoveItem;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,6 +24,18 @@ namespace KovserHediyyeler.App.Controllers
                 ProductId = productId,
                 Count = count,
                 UserId = userId
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpDelete("remove-item-from-basket")]
+        public async Task<IActionResult> RemoveItemFromBasketAsync(Guid productId, string userId)
+        {
+            var request = new RemoveItemFromBasketCommandRequest
+            {
+                ProductId = productId,
+                CustomerId = userId
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
