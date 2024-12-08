@@ -1,4 +1,5 @@
 ﻿using KovserHedieyyeler.Application.ServiceRegistrations;
+using KovserHediyyeler.App.Helpers;
 using KovserHediyyeler.App.ServiceRegistrations;
 using KovserHediyyeler.Infrastructure.ServiceRegistrations;
 using KovserHediyyeler.Persistence.ServiceRegistrations;
@@ -38,6 +39,8 @@ app.UseStaticFiles();
 app.UseCors("KovserHediyyeler");
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<AuthenticationLoggingMiddleware>();
 
 app.UseAuthentication();
 

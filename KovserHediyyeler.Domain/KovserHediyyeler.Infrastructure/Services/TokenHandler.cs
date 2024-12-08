@@ -30,10 +30,10 @@ namespace KovserHediyyeler.Infrastructure.Services
             token.Expiration = DateTime.UtcNow.AddHours(4).AddMinutes(minute);
             var userRoles = await userManager.GetRolesAsync(webUser);
             var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, webUser.UserName),
-            new Claim(ClaimTypes.NameIdentifier, webUser.Id),
-        };
+            {
+                new Claim(ClaimTypes.Name, webUser.UserName),
+                new Claim(ClaimTypes.NameIdentifier, webUser.Id),
+            };
             foreach (var role in userRoles)
             {
                 claims.Add(new Claim(ClaimTypes.Role, role));
@@ -45,7 +45,7 @@ namespace KovserHediyyeler.Infrastructure.Services
             expires: token.Expiration,
             notBefore: DateTime.UtcNow.AddHours(4),
             signingCredentials: signingCredentials,
-            claims: claims  // Burada rolları da əlavə etdik
+            claims: claims
         );
 
             //Token oluşturucu sınıfından bir örnek alalım.

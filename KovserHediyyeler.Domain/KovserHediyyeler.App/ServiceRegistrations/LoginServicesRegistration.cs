@@ -21,6 +21,19 @@ namespace KovserHediyyeler.App.ServiceRegistrations
                     ValidAudience = configuration["Token:Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Token:SecurityKey"])),
                 };
+                options.Events = new JwtBearerEvents
+                {
+                    OnAuthenticationFailed = context =>
+                    {
+                        Console.WriteLine($"Authentication failed: {context.Exception.Message}");
+                        return Task.CompletedTask;
+                    },
+                    OnTokenValidated = context =>
+                    {
+                        Console.WriteLine("Token is valid.");
+                        return Task.CompletedTask;
+                    }
+                };
             });
 
             //    services.AddSwaggerGen(c =>

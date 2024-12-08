@@ -6,5 +6,6 @@ namespace KovserHediyyeler.Application.Features.Commands.Baskets.Add
     {
         public Guid ProductId { get; set; }
         public int Count { get; set; }
+        public string UserId { get; set; }
     }
 }

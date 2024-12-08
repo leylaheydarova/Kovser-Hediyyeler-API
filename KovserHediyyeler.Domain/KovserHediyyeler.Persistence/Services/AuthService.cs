@@ -65,7 +65,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task<Token> LoginAsync(string email, string password, int accessTokenLifeTime)
         {
-            WebUser user = await _userManager.FindByNameAsync(email);
+            var user = await _userManager.FindByNameAsync(email);
             if (user == null)
                 user = await _userManager.FindByEmailAsync(email);
 
@@ -84,7 +84,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task PasswordResetAsnyc(string email)
         {
-            WebUser user = await _userManager.FindByEmailAsync(email);
+            var user = await _userManager.FindByEmailAsync(email);
             if (user != null)
             {
                 string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);

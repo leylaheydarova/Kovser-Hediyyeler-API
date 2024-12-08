@@ -2,6 +2,7 @@
 {
     public interface IBasketService
     {
-        Task AddItemToBasketAsync(Guid productId, int count);
+        Task AddItemToBasketAsync(Guid productId, int count, string userId);
+        //CelarBasket
     }
 }

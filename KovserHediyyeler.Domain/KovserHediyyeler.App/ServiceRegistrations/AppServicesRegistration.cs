@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Security.Claims;
-using System.Text;
-
-namespace KovserHediyyeler.App.ServiceRegistrations
+﻿namespace KovserHediyyeler.App.ServiceRegistrations
 {
     public static class AppServicesRegistration
     {
@@ -15,25 +10,25 @@ namespace KovserHediyyeler.App.ServiceRegistrations
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer("Admin", options =>
-                {
-                    options.TokenValidationParameters = new()
-                    {
-                        ValidateAudience = true,
-                        ValidateIssuer = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddJwtBearer("Admin", options =>
+            //    {
+            //        options.TokenValidationParameters = new()
+            //        {
+            //            ValidateAudience = true,
+            //            ValidateIssuer = true,
+            //            ValidateLifetime = true,
+            //            ValidateIssuerSigningKey = true,
 
-                        ValidAudience = configuration["Token:Audience"],
-                        ValidIssuer = configuration["Token:Issuer"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Token:SecurityKey"])),
-                        LifetimeValidator = (notBefore, expires, securityToken, validationParameters) =>
-                            expires != null ? expires > DateTime.UtcNow : false,
+            //            ValidAudience = configuration["Token:Audience"],
+            //            ValidIssuer = configuration["Token:Issuer"],
+            //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Token:SecurityKey"])),
+            //            LifetimeValidator = (notBefore, expires, securityToken, validationParameters) =>
+            //                expires != null ? expires > DateTime.UtcNow : false,
 
-                        NameClaimType = ClaimTypes.Name
-                    };
-                });
+            //            NameClaimType = ClaimTypes.Name
+            //        };
+            //    });
             return services;
         }
     }

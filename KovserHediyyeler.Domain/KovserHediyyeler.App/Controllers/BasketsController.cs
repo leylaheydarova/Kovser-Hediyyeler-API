@@ -16,8 +16,14 @@ namespace KovserHediyyeler.App.Controllers
         }
 
         [HttpPost("add-item-to-basket")]
-        public async Task<IActionResult> AddItemToBasketAsync(AddItemToBasketCommandRequest request)
+        public async Task<IActionResult> AddItemToBasketAsync(Guid productId, int count, string userId)
         {
+            var request = new AddItemToBasketCommandRequest
+            {
+                ProductId = productId,
+                Count = count,
+                UserId = userId
+            };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
