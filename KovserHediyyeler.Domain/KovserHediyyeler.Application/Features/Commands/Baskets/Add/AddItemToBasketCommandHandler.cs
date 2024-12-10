@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Baskets.Add
 
         public async Task<AddItemToBasketCommandResponse> Handle(AddItemToBasketCommandRequest request, CancellationToken cancellationToken)
         {
-            await _service.AddItemToBasketAsync(request.ProductId, request.Count, request.UserId);
+            await _service.AddItemToBasketAsync(request.Dto.ProductId, request.Dto.Count, request.Dto.UserId);
             return new AddItemToBasketCommandResponse
             {
                 StatusCode = 201,

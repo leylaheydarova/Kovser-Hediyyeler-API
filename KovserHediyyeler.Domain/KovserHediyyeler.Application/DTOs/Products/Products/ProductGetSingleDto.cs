@@ -21,7 +21,7 @@ namespace KovserHedieyyeler.Application.DTOs.Products.Products
         public string CategoryName { get; set; }
         public string BrandName { get; set; }
         public ICollection<ShopGetAllDto>? ShopNames { get; set; }
-        public ICollection<ProductPropertyGetAllDto> Properties { get; set; } = new List<ProductPropertyGetAllDto>();
+        public ICollection<ProductPropertyGetDto> Properties { get; set; } = new List<ProductPropertyGetDto>();
         public ICollection<ProductImageGetDto> Images { get; set; } = new List<ProductImageGetDto>();
         public ICollection<ProductCommentGetDto> Comments { get; set; } = new List<ProductCommentGetDto>();
     }

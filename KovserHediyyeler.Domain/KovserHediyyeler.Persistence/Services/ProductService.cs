@@ -292,11 +292,11 @@ namespace KovserHediyyeler.Persistence.Services
             return await PaginateAsync(query, page, size);
         }
 
-        public async Task<List<ProductPropertyGetAllDto>> GetAllProductPropertiesAsync(int page, int size, string productId)
+        public async Task<List<ProductPropertyGetDto>> GetAllProductPropertiesAsync(int page, int size, string productId)
         {
             var query = _productPropertyReadRepository
                 .GetAllWhere(x => !x.isDeleted && x.ProductID.ToString() == productId, false)
-                .Select(x => new ProductPropertyGetAllDto
+                .Select(x => new ProductPropertyGetDto
                 {
                     Id = x.ID.ToString(),
                     Name = x.Name,
@@ -376,13 +376,13 @@ namespace KovserHediyyeler.Persistence.Services
         {
             Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
             if (product == null) throw new ProductNotFoundException();
-            var discountprice = dto.Price - dto.Price * (int)dto.DiscountPercentage / 100;
+            var discountprice = dto.Price - dto.Price * (int)dto.DiscountPercentage! / 100;
             product.Name = dto.Name != null ? dto.Name : product.Name;
             product.Description = dto.Description != null ? dto.Description : product.Description;
-            product.Stock = dto.Stock != null ? dto.Stock : product.Stock;
-            product.Price = dto.Price != null ? dto.Price : product.Price;
-            product.DiscountedPrice = dto.DiscountPercentage == null ? product.DiscountedPrice : discountprice;
-            product.isSingleColour = dto.isSingleColour != null ? dto.isSingleColour : product.isSingleColour;
+            product.Stock = dto.Stock != null ? (int)dto.Stock : product.Stock;
+            product.Price = dto.Price != null ? (double)dto.Price : product.Price;
+            product.DiscountedPrice = (double)discountprice > 0 ? (double)discountprice : product.DiscountedPrice;
+            product.isSingleColour = dto.isSingleColour != null ? (bool)dto.isSingleColour : product.isSingleColour;
             product.BrandID = dto.BrandID != null ? dto.BrandID : product.BrandID;
             product.DepartmentID = dto.DepartmentID != null ? (Guid)dto.DepartmentID : product.DepartmentID;
             product.CategoryID = dto.CategoryID != null ? (Guid)dto.CategoryID : product.CategoryID;

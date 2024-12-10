@@ -1,11 +1,10 @@
-﻿using MediatR;
+﻿using KovserHediyyeler.Application.DTOs.Baskets;
+using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.Baskets.Add
 {
-    public class AddItemToBasketCommandRequest : IRequest<AddItemToBasketCommandResponse>
+    public class AddItemToBasketCommandRequest : BasketCommandRequest<BasketCommandDto>, IRequest<AddItemToBasketCommandResponse>
     {
-        public Guid ProductId { get; set; }
-        public int Count { get; set; }
-        public string UserId { get; set; }
+
     }
 }

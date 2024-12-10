@@ -150,7 +150,6 @@ C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hedi
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.AssemblyInfo.cs
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.sourcelink.json
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\staticwebassets.build.json

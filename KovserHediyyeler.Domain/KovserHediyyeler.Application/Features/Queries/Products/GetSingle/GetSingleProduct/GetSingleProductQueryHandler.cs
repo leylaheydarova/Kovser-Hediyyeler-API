@@ -51,7 +51,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetS
                     ImageURL = image.Path,
                     isMain = image.IsMain
                 }).ToList(),
-                Properties = product.Properties.Select(property => new ProductPropertyGetAllDto
+                Properties = product.Properties.Select(property => new ProductPropertyGetDto
                 {
                     Id = property.ID.ToString(),
                     Name = property.Name,

@@ -18,7 +18,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetS
         {
             var property = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, false);
             if (property == null) throw new ProductPropertyNotFoundException();
-            var dto = new ProductPropertyGetSingleDto
+            var dto = new ProductPropertyGetDto
             {
                 Id = property.ID.ToString(),
                 Name = property.Name,

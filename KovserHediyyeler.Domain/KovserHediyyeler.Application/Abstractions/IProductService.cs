@@ -28,7 +28,7 @@ namespace KovserHediyyeler.Application.Abstractions
         //Get
         public Task<List<ProductGetAllDto>> GetAllProductsAsync(int page, int size);
         public Task<List<ProductImageGetDto>> GetAllProductImagesAsync(int page, int size, string productId);
-        public Task<List<ProductPropertyGetAllDto>> GetAllProductPropertiesAsync(int page, int size, string productId);
+        public Task<List<ProductPropertyGetDto>> GetAllProductPropertiesAsync(int page, int size, string productId);
         public Task<List<ProductGetAllDto>> GetAllFilteredProductsAsync(int page, int size, string BrandIdOrCategoryIdOrDepartmentIdOrShopId);
 
 
