@@ -12,6 +12,7 @@ using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Application.Repositories.Promotions;
 using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Application.Repositories.SocialMedias;
+using KovserHediyyeler.Application.Repositories.WishLists;
 using KovserHediyyeler.Domain.Models;
 using KovserHediyyeler.Persistence.Contexts;
 using KovserHediyyeler.Persistence.Repositories.Addresses;
@@ -26,6 +27,7 @@ using KovserHediyyeler.Persistence.Repositories.Products;
 using KovserHediyyeler.Persistence.Repositories.Promotions;
 using KovserHediyyeler.Persistence.Repositories.Shops;
 using KovserHediyyeler.Persistence.Repositories.SocialMedias;
+using KovserHediyyeler.Persistence.Repositories.WishLists;
 using KovserHediyyeler.Persistence.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -120,6 +122,11 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<ISocialMediaReadRepository, SocialMediaReadRepository>();
             services.AddScoped<ISocialMediaWriteRepository, SocialMediaWriteRepository>();
 
+            services.AddScoped<IWishListItemReadRepository, WishListItemReadRepository>();
+            services.AddScoped<IWishListItemWriteRepository, WishListItemWriteRepository>();
+            services.AddScoped<IWishListReadRepository, WishListReadRepository>();
+            services.AddScoped<IWishListWriteRepository, WishListWriteRepository>();
+
             //Services
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IInternalAuthentication, AuthService>();
@@ -130,6 +137,7 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<IPromotionService, PromotionService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IWishListService, WishListService>();
             services.AddHttpClient();
             return services;
         }

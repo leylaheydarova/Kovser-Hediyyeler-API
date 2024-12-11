@@ -1,7 +1,7 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Addresses;
 using KovserHedieyyeler.Application.DTOs.Shops;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.DTOs.Employees;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -21,10 +21,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Shops.GetSingle
         {
             Shop shop = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, "Employees.Position", "Addresses"); //add Products to include 
 
-            if (shop == null)
-            {
-                throw new ShopNotFoundException();
-            }
+            if (shop == null) throw new NotFoundException("mağaza");
 
             var address = shop.Addresses.FirstOrDefault(a => a.IsCurrentAddress && !a.isDeleted);
 

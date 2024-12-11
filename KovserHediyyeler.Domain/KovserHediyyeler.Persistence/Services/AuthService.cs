@@ -1,7 +1,7 @@
 ﻿using KovserHedieyyeler.Application.Exceptions.FailExceptions;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.DTOs.Tokens;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Helpers;
 using KovserHediyyeler.Domain.Models;
 using Microsoft.AspNetCore.Identity;
@@ -70,7 +70,7 @@ namespace KovserHediyyeler.Persistence.Services
                 user = await _userManager.FindByEmailAsync(email);
 
             if (user == null)
-                throw new UserNotFoundException();
+                throw new NotFoundException("istifadəçi");
 
             SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, password, false);
             if (result.Succeeded) //Authentication başarılı!
@@ -107,7 +107,7 @@ namespace KovserHediyyeler.Persistence.Services
                 return token;
             }
             else
-                throw new UserNotFoundException();
+                throw new NotFoundException("istifadəçi");
         }
 
         public async Task<bool> VerifyResetTokenAsync(string resetToken, string userIdOrEmail)

@@ -1,10 +1,10 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
 using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
 using KovserHedieyyeler.Application.DTOs.Products.Products;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.Constants;
 using KovserHediyyeler.Application.Exceptions.BadRequestExceptions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Extentions;
 using KovserHediyyeler.Application.Repositories.Brands;
 using KovserHediyyeler.Application.Repositories.Categories;
@@ -105,10 +105,10 @@ namespace KovserHediyyeler.Persistence.Services
                 throw new InvalidInputException("mağaza");
 
             var product = await _productReadRepository.GetWhereAsync(p => p.ID == productGuid && !p.isDeleted, true);
-            if (product == null) throw new ProductNotFoundException();
+            if (product == null) throw new NotFoundException("məhsul");
 
             var shop = await _shopReadRepository.GetWhereAsync(s => s.ID == shopGuid && !s.isDeleted, true);
-            if (shop == null) throw new ShopNotFoundException();
+            if (shop == null) throw new NotFoundException("mağaza");
 
             shop.Products.Add(product);
             await _shopWriteRepository.SaveAsync();
@@ -263,7 +263,7 @@ namespace KovserHediyyeler.Persistence.Services
         public async Task DeleteTemporarilyProductAsync(string id)
         {
             Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true, "Properties");
-            if (product == null) throw new ProductNotFoundException();
+            if (product == null) throw new NotFoundException("mağaza");
             foreach (var property in product.Properties)
             {
                 _productPropertyWriteRepository.DeleteTemporarily(property);
@@ -315,7 +315,7 @@ namespace KovserHediyyeler.Persistence.Services
         public async Task RecoverProductDataAsync(string id)
         {
             Product product = await _productReadRepository.GetWhereAsync(x => x.isDeleted && x.ID.ToString() == id, true, "Properties");
-            if (product == null) throw new ProductNotFoundException();
+            if (product == null) throw new NotFoundException("məhsul");
 
             foreach (var property in product.Properties)
             {
@@ -334,7 +334,7 @@ namespace KovserHediyyeler.Persistence.Services
         {
             Product product = await _productReadRepository.GetWhereAsync(p => p.ID.ToString() == id, true, "Images", "Properties");
 
-            if (product == null) throw new ProductNotFoundException();
+            if (product == null) throw new NotFoundException("məhsul");
             foreach (var image in product.Images)
             {
                 _productImageFileWriteRepository.RemovePermanently(image);
@@ -354,7 +354,7 @@ namespace KovserHediyyeler.Persistence.Services
         public async Task RemovePermanentlyProductImageFileAsync(string id)
         {
             ProductImageFile image = await _productImageFileReadRepository.GetWhereAsync(x => x.ID.ToString() == id, true);
-            if (image == null) throw new ProductImageNotFoundException();
+            if (image == null) throw new NotFoundException("məhsul şəkli");
             _productImageFileWriteRepository.RemovePermanently(image);
             await _productImageFileWriteRepository.SaveAsync();
         }
@@ -362,7 +362,7 @@ namespace KovserHediyyeler.Persistence.Services
         public async Task RemovePermanentlyProductPropertyAsync(string id)
         {
             ProductProperty property = await _productPropertyReadRepository.GetWhereAsync(x => x.ID.ToString() == id, true);
-            if (property == null) throw new ProductPropertyNotFoundException();
+            if (property == null) throw new NotFoundException("məhsul xüsusiyyəti");
             _productPropertyWriteRepository.RemovePermanently(property);
             await _productPropertyWriteRepository.SaveAsync();
         }
@@ -375,7 +375,7 @@ namespace KovserHediyyeler.Persistence.Services
         public async Task UpdateProductAsync(string id, ProductPutDto dto)
         {
             Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
-            if (product == null) throw new ProductNotFoundException();
+            if (product == null) throw new NotFoundException("məhsul");
             var discountprice = dto.Price - dto.Price * (int)dto.DiscountPercentage! / 100;
             product.Name = dto.Name != null ? dto.Name : product.Name;
             product.Description = dto.Description != null ? dto.Description : product.Description;
@@ -396,7 +396,7 @@ namespace KovserHediyyeler.Persistence.Services
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;
             ProductImageFile image = await _productImageFileReadRepository.GetWhereAsync(x => x.ID.ToString() == id, true);
-            if (image == null) throw new ProductImageNotFoundException();
+            if (image == null) throw new NotFoundException("məhsul şəkli");
             image.FileName = dto.file != null ? dto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath) : image.FileName != null ? image.FileName : ConstantPaths.DefaultImage;
             image.Path = dto.file != null
                 ? $"{scheme}://{host}/{FilePaths.ProuctImageFilePath}/{image.FileName}"
@@ -410,7 +410,7 @@ namespace KovserHediyyeler.Persistence.Services
         public async Task UpdateProductPropertyAsync(string id, ProductPropertyCommandDto dto)
         {
             ProductProperty property = await _productPropertyReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
-            if (property == null) throw new ProductPropertyNotFoundException();
+            if (property == null) throw new NotFoundException("məhsul xüsusiyyəti");
             property.Name = dto.Name != null ? dto.Name : property.Name;
             property.Value = dto.Value != null ? dto.Value : property.Value;
 

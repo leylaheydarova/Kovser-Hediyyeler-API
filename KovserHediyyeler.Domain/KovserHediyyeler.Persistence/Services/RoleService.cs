@@ -1,6 +1,7 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Abstractions;
+﻿using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.DTOs.Roles;
+using KovserHediyyeler.Application.Exceptions.FailExceptions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,13 +28,13 @@ namespace KovserHediyyeler.Persistence.Services
             try
             {
                 var role = await _roleManager.FindByIdAsync(id);
-                if (role == null) throw new RoleNotFoundException();
+                if (role == null) throw new NotFoundException("uyğun rol");
                 IdentityResult result = await _roleManager.DeleteAsync(role);
                 return result.Succeeded;
             }
             catch (Exception)
             {
-                throw new Exception("Rol silinərkən xəta baş verdi!");
+                throw new FailException("Rol silinərkən xəta baş verdi!");
             }
         }
 

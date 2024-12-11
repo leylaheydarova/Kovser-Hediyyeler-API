@@ -1,8 +1,8 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Abstractions;
+﻿using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.DTOs.Baskets;
 using KovserHediyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHediyyeler.Application.Exceptions.FailExceptions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Baskets;
 using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Domain.Models;
@@ -36,14 +36,14 @@ namespace KovserHediyyeler.Persistence.Services
         async Task<WebUser> GetUserAsync(string userId)
         {
             var webUser = await _userManager.FindByIdAsync(userId);
-            if (webUser == null) throw new UserNotFoundException();
+            if (webUser == null) throw new NotFoundException("istifadəçi");
             return webUser;
         }
 
         async Task<Product> GetProductAsync(Guid productId)
         {
             Product product = await _productReadRepository.GetWhereAsync(p => p.ID == productId && !p.isDeleted, false);
-            if (product == null) throw new ProductNotFoundException();
+            if (product == null) throw new NotFoundException("məhsul");
             return product;
         }
 
@@ -112,8 +112,7 @@ namespace KovserHediyyeler.Persistence.Services
             {
                 var webUser = await GetUserAsync(customerId);
                 var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == webUser.Id, true, "BasketItems.Product");
-                var product = await _productReadRepository.GetWhereAsync(p => p.ID == productId && !p.isDeleted, false);
-                if (product == null) throw new ProductNotFoundException();
+                var product = await GetProductAsync(productId);
                 var item = basket.BasketItems.FirstOrDefault(i => i.ProductID == productId && !i.isDeleted);
                 if (item == null || basket == null)
                 {

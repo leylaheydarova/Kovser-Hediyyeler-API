@@ -23,6 +23,8 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
+        public DbSet<WishList> WishLists { get; set; }
+        public DbSet<WishListItem> WishListItems { get; set; }
 
         public KovserHediyyelerDbContext(DbContextOptions<KovserHediyyelerDbContext> options) : base(options)
         {

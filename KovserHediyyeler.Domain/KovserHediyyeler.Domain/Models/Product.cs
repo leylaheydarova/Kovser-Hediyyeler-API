@@ -30,7 +30,7 @@ namespace KovserHediyyeler.Domain.Models
         public ICollection<ProductImageFile> Images { get; set; } = new List<ProductImageFile>();
         //public ICollection<ProductComment> Comments { get; set; } = new List<ProductComment>();
         public ICollection<BasketItem> BasketItems { get; set; } = new List<BasketItem>();
-        //public ICollection<WishListItem> WishListItems { get; set; } = new List<WishListItem>();
+        public ICollection<WishListItem> WishListItems { get; set; } = new List<WishListItem>();
 
         public ICollection<Shop> Shops { get; set; } = new List<Shop>();
     }

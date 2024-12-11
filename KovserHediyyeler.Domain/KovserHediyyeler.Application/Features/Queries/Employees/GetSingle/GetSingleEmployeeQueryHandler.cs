@@ -1,6 +1,6 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Addresses;
 using KovserHedieyyeler.Application.DTOs.Employees;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Employees;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -21,7 +21,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Employees.GetSingle
             Employee employee = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, "Addresses", "Position", "Shop", "Department");
             if (employee == null)
             {
-                throw new EmployeeNotFoundException();
+                throw new NotFoundException("işçi");
             }
             var address = employee.Addresses.FirstOrDefault(ad => ad.IsCurrentAddress && !ad.isDeleted);
             EmployeeGetDto dto = new EmployeeGetDto

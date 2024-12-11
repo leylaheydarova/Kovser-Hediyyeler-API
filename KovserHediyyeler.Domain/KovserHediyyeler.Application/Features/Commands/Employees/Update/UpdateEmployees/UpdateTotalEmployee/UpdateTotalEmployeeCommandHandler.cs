@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Employees;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -19,7 +19,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Update.Updat
         public async Task<UpdateTotalEmployeeCommandResponse> Handle(UpdateTotalEmployeeCommandRequest request, CancellationToken cancellationToken)
         {
             Employee employee = await _readRepository.GetWhereAsync(emp => !emp.isDeleted && emp.ID.ToString() == request.Id, true);
-            if (employee == null) throw new EmployeeNotFoundException();
+            if (employee == null) throw new NotFoundException("işçi");
             employee.FirstName = request.Dto.FirstName;
             employee.LastName = request.Dto.LastName;
             employee.Phone = request.Dto.Phone;

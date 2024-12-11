@@ -1,5 +1,4 @@
-﻿
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Domain.Models;
@@ -23,7 +22,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Shops.Recover
         public async Task<RecoverShopCommandResponse> Handle(RecoverShopCommandRequest request, CancellationToken cancellationToken)
         {
             Shop shop = await _readRepository.GetWhereAsync(sh => sh.isDeleted && sh.ID.ToString() == request.Id, true);
-            if (shop == null) throw new ShopNotFoundException();
+            if (shop == null) throw new NotFoundException("mağaza");
             foreach (var address in shop.Addresses)
             {
                 _addressWriteRepository.RecoverData(address);

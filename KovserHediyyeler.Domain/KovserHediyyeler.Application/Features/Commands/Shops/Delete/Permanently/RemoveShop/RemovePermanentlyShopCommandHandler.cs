@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Domain.Models;
@@ -22,7 +22,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Shops.Delete.Permanent
         public async Task<RemovePermanentlyShopCommandResponse> Handle(RemovePermanentlyShopCommandRequest request, CancellationToken cancellationToken)
         {
             Shop shop = await _readRepository.GetWhereAsync(x => x.ID.ToString() == request.Id, true);
-            if (shop == null) throw new ShopNotFoundException();
+            if (shop == null) throw new NotFoundException("mağaza");
             foreach (var address in shop.Addresses)
             {
                 _addressWriteRepository.RemovePermanently(address);

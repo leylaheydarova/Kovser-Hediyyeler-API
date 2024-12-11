@@ -1,8 +1,8 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Brands;
 using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.Constants;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Extentions;
 using KovserHediyyeler.Application.Repositories.Brands;
 using KovserHediyyeler.Domain.Models;
@@ -30,7 +30,7 @@ namespace KovserHediyyeler.Persistence.Services
         private async Task<Brand> GetBrandAsync(string id, bool tracking)
         {
             Brand brand = await _readRepository.GetWhereAsync(b => b.ID.ToString() == id, tracking);
-            if (brand == null) throw new BrandNotFoundException();
+            if (brand == null) throw new NotFoundException("brend");
             return brand;
         }
         public async Task CreateAsync(BrandCommandDto dto)
@@ -102,8 +102,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task RemovePermanentAsync(string id)
         {
-            var brand = await _readRepository.GetWhereAsync(x => x.ID.ToString() == id, true);
-            if (brand == null) throw new BrandNotFoundException();
+            var brand = await GetBrandAsync(id, true);
 
             _writeRepository.RemovePermanently(brand);
             await _writeRepository.SaveAsync();
@@ -130,7 +129,6 @@ namespace KovserHediyyeler.Persistence.Services
             var brand = await GetBrandAsync(id, true);
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;
-            if (brand == null) throw new BrandNotFoundException();
             brand.Name = dto.Name;
             brand.Image = dto.file.UploadFile(_env.WebRootPath, FilePaths.BrandImagePath);
             brand.ImageURL = $"{scheme}://{host}/{FilePaths.BrandImagePath}/{brand.Image}";

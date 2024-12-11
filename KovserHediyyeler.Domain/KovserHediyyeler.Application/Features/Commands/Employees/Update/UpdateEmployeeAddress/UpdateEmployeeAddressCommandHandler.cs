@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models;
@@ -20,7 +20,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Update.Updat
         public async Task<UpdateEmployeeAddressCommandResponse> Handle(UpdateEmployeeAddressCommandRequest request, CancellationToken cancellationToken)
         {
             Address address = await _readRepository.GetWhereAsync(a => !a.isDeleted && a.ID.ToString() == request.Id && a.EmployeeID.ToString() == request.EmployeeId, true);
-            if (address == null) throw new AddressNotFoundException();
+            if (address == null) throw new NotFoundException("ünvan");
             var dto = request.Dto;
             address.City = dto.City != null ? (City)dto.City : address.City;
             address.Region = dto.Region != null ? dto.Region : address.Region;

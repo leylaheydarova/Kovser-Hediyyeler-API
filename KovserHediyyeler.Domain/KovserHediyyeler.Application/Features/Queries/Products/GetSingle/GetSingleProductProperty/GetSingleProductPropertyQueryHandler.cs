@@ -1,5 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Products;
 using MediatR;
 
@@ -17,7 +17,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetS
         public async Task<GetSingleProductPropertyQueryResponse> Handle(GetSingleProductPropertyQueryRequest request, CancellationToken cancellationToken)
         {
             var property = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, false);
-            if (property == null) throw new ProductPropertyNotFoundException();
+            if (property == null) throw new NotFoundException("məhsul xüsusiyyəti");
             var dto = new ProductPropertyGetDto
             {
                 Id = property.ID.ToString(),

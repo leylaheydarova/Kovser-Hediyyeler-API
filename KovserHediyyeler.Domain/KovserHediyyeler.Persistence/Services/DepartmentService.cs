@@ -1,8 +1,8 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Department;
 using KovserHedieyyeler.Application.DTOs.SocialMedias;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.Constants;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Extentions;
 using KovserHediyyeler.Application.Repositories;
 using KovserHediyyeler.Application.Repositories.Departments;
@@ -40,9 +40,9 @@ namespace KovserHediyyeler.Persistence.Services
             if (entity == null)
             {
                 if (typeof(T) == typeof(Department))
-                    throw new DepartmentNotFoundException();
+                    throw new NotFoundException("şöbə");
                 if (typeof(T) == typeof(SocialMedia))
-                    throw new SocialMediaNotFoundException();
+                    throw new NotFoundException("sosyal media hesabı");
             }
             return entity;
         }
@@ -136,11 +136,11 @@ namespace KovserHediyyeler.Persistence.Services
         {
             if (!Guid.TryParse(DepartmentId, out var departmentId))
             {
-                throw new DepartmentNotFoundException();
+                throw new NotFoundException("şöbə");
             }
             var query = _smReadRepository.GetAllWhere(x => !x.isDeleted && x.DepartmentID == departmentId, false);
             query = query.Include(sm => sm.Department);
-            if (!query.Any()) throw new DepartmentNotFoundException();
+            if (!query.Any()) throw new NotFoundException("şöbə");
             List<SocialMediaGetDto> dtos = new List<SocialMediaGetDto>();
             dtos = await query.Select(x => new SocialMediaGetDto
             {
@@ -192,8 +192,8 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task RemovePermanentlyDepartmentAsync(string id)
         {
-            Department department = await _readRepository.GetWhereAsync(x => x.ID == Guid.Parse(id), true);
-            if (department == null) throw new DepartmentNotFoundException();
+            Department department = await _readRepository.GetWhereAsync(x => x.ID == Guid.Parse(id), true, "SocialMedias");
+            if (department == null) throw new NotFoundException("şöbə");
             foreach (var socialMedia in department.SocialMedias)
             {
                 if (socialMedia.DepartmentID == department.ID)
@@ -207,8 +207,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task RemovePermanentlyDepartmentSocialMediaAsync(string id)
         {
-            SocialMedia socialMedia = await _smReadRepository.GetWhereAsync(x => x.ID.ToString() == id, true);
-            if (socialMedia == null) throw new SocialMediaNotFoundException();
+            SocialMedia socialMedia = await GetEntityAsync(_smReadRepository, id, true);
             _smWriteRepository.RemovePermanently(socialMedia);
             await _smWriteRepository.SaveAsync();
         }

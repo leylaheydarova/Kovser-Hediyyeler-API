@@ -1,5 +1,4 @@
-﻿
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Employees;
 using KovserHediyyeler.Domain.Models;
@@ -23,7 +22,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Recover
         public async Task<RecoverEmployeeCommandResponse> Handle(RecoverEmployeeCommandRequest request, CancellationToken cancellationToken)
         {
             Employee employee = await _readRepository.GetWhereAsync(emp => emp.isDeleted && emp.ID.ToString() == request.Id, true);
-            if (employee == null) throw new EmployeeNotFoundException();
+            if (employee == null) throw new NotFoundException("işçi");
             foreach (var address in employee.Addresses)
             {
                 _addressWriteRepository.RecoverData(address);

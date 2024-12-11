@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Shops;
 using MediatR;
 
@@ -18,7 +18,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Shops.Update.UpdateSho
         public async Task<UpdateShopCommandResponse> Handle(UpdateShopCommandRequest request, CancellationToken cancellationToken)
         {
             KovserHediyyeler.Domain.Models.Shop shop = await _readRepository.GetWhereAsync(sh => !sh.isDeleted && sh.ID.ToString() == request.Id, true);
-            if (shop == null) throw new ShopNotFoundException();
+            if (shop == null) throw new NotFoundException("mağaza"); ;
             var dto = request.Dto;
             shop.Name = dto.Name is not null ? dto.Name : shop.Name;
             shop.Description = dto.Description is not null ? dto.Description : shop.Description;

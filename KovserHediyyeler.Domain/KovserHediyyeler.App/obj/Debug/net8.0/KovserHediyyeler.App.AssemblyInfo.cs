@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KovserHediyyeler.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+099c43e6b0ef6ff662f434c13ab3a55e0c4954e6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26aaae6e69678ef0435bd3b64f24422d5e058975")]
 [assembly: System.Reflection.AssemblyProductAttribute("KovserHediyyeler.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KovserHediyyeler.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -20,7 +20,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Perm
         public async Task<RemovePermanentlyCategoryCommandResponse> Handle(RemovePermanentlyCategoryCommandRequest request, CancellationToken cancellationToken)
         {
             Category category = await _readRepository.GetWhereAsync(x => x.ID.ToString() == request.Id, true);
-            if (category == null) throw new CategoryNotFoundException();
+            if (category == null) throw new NotFoundException("kateqoriya");
 
             var query = _readRepository.GetAllWhere(child => !child.isDeleted && child.ParentId == Guid.Parse(request.Id), true).Include(c => c.ParentCategory);
             List<Category> categoryChilds = new List<Category>();

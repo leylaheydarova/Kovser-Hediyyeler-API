@@ -1,5 +1,5 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Categories;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -20,7 +20,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Categories.GetSingle
             Category category = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, false, "ParentCategory");
             if (category == null)
             {
-                throw new CategoryNotFoundException();
+                throw new NotFoundException("kateqoriya");
             }
             CategoryGetDto dto = new CategoryGetDto
             {

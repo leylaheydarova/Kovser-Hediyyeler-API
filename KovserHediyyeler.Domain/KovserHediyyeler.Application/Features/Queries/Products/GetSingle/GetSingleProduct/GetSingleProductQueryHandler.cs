@@ -2,7 +2,7 @@
 using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
 using KovserHedieyyeler.Application.DTOs.Products.Products;
 using KovserHedieyyeler.Application.DTOs.Shops;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -30,7 +30,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetS
                 "Shops.Addresses");
             if (product == null)
             {
-                throw new ProductNotFoundException();
+                throw new NotFoundException("məhsul");
             }
             ProductGetSingleDto dto = new ProductGetSingleDto
             {

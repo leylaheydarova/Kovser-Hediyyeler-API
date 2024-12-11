@@ -672,6 +672,69 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.ToTable("SocialMedias");
                 });
 
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishList", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CustomerID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CustomerID")
+                        .IsUnique();
+
+                    b.ToTable("WishLists");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishListItem", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("ProductID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("WishListID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ProductID");
+
+                    b.HasIndex("WishListID");
+
+                    b.ToTable("WishListItems");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -1095,6 +1158,36 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Department");
                 });
 
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishList", b =>
+                {
+                    b.HasOne("KovserHediyyeler.Domain.Models.WebUser", "Customer")
+                        .WithOne("WishList")
+                        .HasForeignKey("KovserHediyyeler.Domain.Models.WishList", "CustomerID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishListItem", b =>
+                {
+                    b.HasOne("KovserHediyyeler.Domain.Models.Product", "Product")
+                        .WithMany("WishListItems")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("KovserHediyyeler.Domain.Models.WishList", "List")
+                        .WithMany("ListItems")
+                        .HasForeignKey("WishListID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("List");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -1211,6 +1304,8 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("Properties");
+
+                    b.Navigation("WishListItems");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shop", b =>
@@ -1220,9 +1315,17 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Employees");
                 });
 
+            modelBuilder.Entity("KovserHediyyeler.Domain.Models.WishList", b =>
+                {
+                    b.Navigation("ListItems");
+                });
+
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.WebUser", b =>
                 {
                     b.Navigation("Basket")
+                        .IsRequired();
+
+                    b.Navigation("WishList")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

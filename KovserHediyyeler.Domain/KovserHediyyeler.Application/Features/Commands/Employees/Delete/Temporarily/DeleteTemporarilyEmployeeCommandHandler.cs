@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Employees;
 using KovserHediyyeler.Domain.Models;
@@ -22,7 +22,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Tempo
         public async Task<DeleteTemporarilyEmployeeCommandResponse> Handle(DeleteTemporarilyEmployeeCommandRequest request, CancellationToken cancellationToken)
         {
             Employee employee = await _readRepository.GetWhereAsync(emp => !emp.isDeleted && emp.ID.ToString() == request.Id, true);
-            if (employee == null) throw new EmployeeNotFoundException();
+            if (employee == null) throw new NotFoundException("işçi");
             foreach (var address in employee.Addresses)
             {
                 _addressWriteRepository.DeleteTemporarily(address);

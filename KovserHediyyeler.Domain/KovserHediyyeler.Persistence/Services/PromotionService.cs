@@ -1,8 +1,8 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Promotion;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.Constants;
 using KovserHediyyeler.Application.DTOs.Promotion;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Extentions;
 using KovserHediyyeler.Application.Repositories.Promotions;
 using KovserHediyyeler.Domain.Models;
@@ -30,7 +30,7 @@ namespace KovserHediyyeler.Persistence.Services
         private async Task<Promotion> GetPromotionAsync(string id, bool tracking)
         {
             var promotion = await _readRepository.GetWhereAsync(p => p.ID.ToString() == id, tracking);
-            if (promotion == null) throw new PromotionNotFoundException();
+            if (promotion == null) throw new NotFoundException("uyğun kampaniya məhsulu");
             return promotion;
         }
 

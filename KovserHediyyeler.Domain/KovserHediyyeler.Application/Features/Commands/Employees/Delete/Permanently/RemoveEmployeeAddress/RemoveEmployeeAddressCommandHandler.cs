@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -19,7 +19,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Perma
         public async Task<RemoveEmployeeAddressCommandResponse> Handle(RemoveEmployeeAddressCommandRequest request, CancellationToken cancellationToken)
         {
             Address address = await _readRepository.GetWhereAsync(x => x.ID.ToString() == request.Id, true);
-            if (address == null) throw new AddressNotFoundException();
+            if (address == null) throw new NotFoundException("ünvan");
             _writeRepository.RemovePermanently(address);
             await _writeRepository.SaveAsync();
 

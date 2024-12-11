@@ -1,10 +1,12 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Addresses;
 using KovserHedieyyeler.Application.Exceptions.FailExceptions;
-using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.DTOs.WebUsers;
 using KovserHediyyeler.Application.Exceptions.FailExceptions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
+using KovserHediyyeler.Application.Repositories.Baskets;
+using KovserHediyyeler.Application.Repositories.WishLists;
 using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models;
 using Microsoft.AspNetCore.Identity;
@@ -20,13 +22,17 @@ namespace KovserHediyyeler.Persistence.Services
         readonly IAddressWriteRepository _addressRepository;
         readonly IEmailService _emailService;
         readonly ITokenHandler _tokenHandler;
+        readonly IBasketWriteRepository _basketRepository;
+        readonly IWishListWriteRepository _wishListRepository;
 
-        public UserService(UserManager<WebUser> userManager, IAddressWriteRepository addressRepository, IEmailService emailService, ITokenHandler tokenHandler)
+        public UserService(UserManager<WebUser> userManager, IAddressWriteRepository addressRepository, IEmailService emailService, ITokenHandler tokenHandler, IBasketWriteRepository basketRepository, IWishListWriteRepository wishListRepository)
         {
             _userManager = userManager;
             _addressRepository = addressRepository;
             _emailService = emailService;
             _tokenHandler = tokenHandler;
+            _basketRepository = basketRepository;
+            _wishListRepository = wishListRepository;
         }
 
         async Task<WebUser> FindUserAsync(string userIdOrEmail)
@@ -37,7 +43,7 @@ namespace KovserHediyyeler.Persistence.Services
                 webUser = await _userManager.FindByEmailAsync(userIdOrEmail);
             }
 
-            if (webUser == null) throw new UserNotFoundException();
+            if (webUser == null) throw new NotFoundException("istifadəçi");
             return webUser;
         }
 
@@ -104,7 +110,7 @@ namespace KovserHediyyeler.Persistence.Services
                 Email = dto.Email,
                 UserName = dto.Email,
                 Basket = new(),
-                //WishList = new()
+                WishList = new()
             };
             Address address = new Address
             {
@@ -165,7 +171,7 @@ namespace KovserHediyyeler.Persistence.Services
                 .Include(u => u.Addresses)
                 .FirstOrDefaultAsync(u => u.Id == userIdOrEmail || u.Email == userIdOrEmail);
             var address = webUser.Addresses.FirstOrDefault(a => a.ID == Guid.Parse(addressId) && !a.isDeleted);
-            if (address == null) throw new AddressNotFoundException();
+            if (address == null) throw new NotFoundException("ünvan");
             _addressRepository.RemovePermanently(address);
             await _addressRepository.SaveAsync();
         }
@@ -190,7 +196,7 @@ namespace KovserHediyyeler.Persistence.Services
         public async Task<WebUserGetSingleDto> GetUserAsync(string userIdOrEmail)
         {
             WebUser webUser = await _userManager.Users.Include(u => u.Addresses).FirstOrDefaultAsync(u => u.Id == userIdOrEmail || u.Email == userIdOrEmail);
-            if (webUser == null) throw new UserNotFoundException();
+            if (webUser == null) throw new NotFoundException("istifadəçi");
             var currentAddress = webUser.Addresses.FirstOrDefault(a => a.IsCurrentAddress == true && !a.isDeleted);
             var dto = new WebUserGetSingleDto
             {
@@ -244,29 +250,48 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task RemoveAccountAsync(string userIdOrEmail)
         {
-            var webUser = await _userManager.Users
+            using var transaction = await _wishListRepository.BeginTransactionAsync();
+            try
+            {
+                var webUser = await _userManager.Users
                .Include(u => u.Addresses)
+               .Include(u => u.Basket)
+               .Include(u => u.WishList)
                .FirstOrDefaultAsync(u => u.Id == userIdOrEmail || u.Email == userIdOrEmail);
-            if (webUser == null) throw new UserNotFoundException();
-            if (webUser.Addresses != null)
-            {
-                foreach (var address in webUser.Addresses)
+                if (webUser == null) throw new NotFoundException("istifadəçi");
+                if (webUser.Addresses != null)
                 {
-                    _addressRepository.RemovePermanently(address);
+                    foreach (var address in webUser.Addresses)
+                    {
+                        _addressRepository.RemovePermanently(address);
+                    }
+                    await _addressRepository.SaveAsync();
                 }
-                await _addressRepository.SaveAsync();
-            }
-            var currentRoles = await _userManager.GetRolesAsync(webUser);
-            if (currentRoles.Any())
-            {
-                await _userManager.RemoveFromRolesAsync(webUser, currentRoles);
-            }
 
-            var result = await _userManager.DeleteAsync(webUser);
+                _basketRepository.RemovePermanently(webUser.Basket);
 
-            if (!result.Succeeded)
+                _wishListRepository.RemovePermanently(webUser.WishList);
+
+                var currentRoles = await _userManager.GetRolesAsync(webUser);
+                if (currentRoles.Any())
+                {
+                    await _userManager.RemoveFromRolesAsync(webUser, currentRoles);
+                }
+
+                var result = await _userManager.DeleteAsync(webUser);
+
+                if (!result.Succeeded)
+                {
+                    throw new Exception($"Hesab silinərkən xəta baş verdi: {string.Join(", ", result.Errors.Select(e => e.Description))}");
+                }
+                await _basketRepository.SaveAsync();
+                await _wishListRepository.SaveAsync();
+                await transaction.CommitAsync();
+            }
+            catch (Exception)
             {
-                throw new Exception($"Hesab silinərkən xəta baş verdi: {string.Join(", ", result.Errors.Select(e => e.Description))}");
+                await transaction.RollbackAsync();
+                throw;
             }
         }
 
@@ -275,7 +300,7 @@ namespace KovserHediyyeler.Persistence.Services
             var webUser = await _userManager.Users
                 .Include(u => u.Addresses)
                 .FirstOrDefaultAsync(u => u.Id == userIdOrEmail || u.Email == userIdOrEmail);
-            if (webUser == null) throw new UserNotFoundException();
+            if (webUser == null) throw new NotFoundException("istifadəçi");
             var dtos = new List<AddressGetDto>();
             if (webUser.Addresses != null)
             {
@@ -303,7 +328,7 @@ namespace KovserHediyyeler.Persistence.Services
                 user.RefreshTokenEndDate = accessTokenDate.AddSeconds(addOnAccessTokenDate);
                 await _userManager.UpdateAsync(user);
             }
-            else throw new UserNotFoundException();
+            else throw new NotFoundException("istifadəçi");
         }
 
         public async Task<string> ForgetPasswordAsync(string email, string WebUserUri)

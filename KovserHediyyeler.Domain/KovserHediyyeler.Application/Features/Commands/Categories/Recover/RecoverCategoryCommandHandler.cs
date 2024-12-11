@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Application.Repositories.Categories;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
+using KovserHediyyeler.Application.Repositories.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 
@@ -18,6 +19,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Recover
         public async Task<RecoverCategoryCommandResponse> Handle(RecoverCategoryCommandRequest request, CancellationToken cancellationToken)
         {
             Category category = await _readRepository.GetWhereAsync(c => c.isDeleted && c.ID.ToString() == request.Id, true);
+            if (category == null) throw new NotFoundException("kateqoriya");
             _writeRepository.RecoverData(category);
             await _writeRepository.SaveAsync();
             return new RecoverCategoryCommandResponse

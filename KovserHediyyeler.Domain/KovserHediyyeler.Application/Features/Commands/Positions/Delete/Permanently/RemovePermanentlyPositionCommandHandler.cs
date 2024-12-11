@@ -1,4 +1,4 @@
-﻿using KovserHedieyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Employees;
 using KovserHediyyeler.Application.Repositories.Positions;
 using KovserHediyyeler.Domain.Models;
@@ -25,17 +25,10 @@ namespace KovserHedieyyeler.Application.Features.Commands.Positions.Delete.Perma
         public async Task<RemovePermanentlyPositionCommandResponse> Handle(RemovePermanentlyPositionCommandRequest request, CancellationToken cancellationToken)
         {
             Position position = await _readRepository.GetWhereAsync(x => x.ID.ToString() == request.Id, true, "Employees");
-            if (position == null) throw new PositionNotFoundException();
+            if (position == null) throw new NotFoundException("vəzifə");
             var query = _employeeReadRepository.GetAllWhere(e => e.PositionID == position.ID, false);
             List<Employee> employees = new List<Employee>();
             employees = await query.ToListAsync();
-            //if(employees.Count > 0)
-            //{
-            //    foreach (var employee in employees)
-            //    {
-            //        //set new position
-            //    }
-            //}
             _writeRepository.RemovePermanently(position);
             await _writeRepository.SaveAsync();
             return new RemovePermanentlyPositionCommandResponse
