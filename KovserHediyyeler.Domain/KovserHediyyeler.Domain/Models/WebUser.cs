@@ -25,3 +25,7 @@ namespace KovserHediyyeler.Domain.Models
         }
     }
 }
+//todo: "Bank ilə ödəniş sistemini daha sonra artıracağam. Bu səbəblə, müvəqqəti olaraq ödəniş button üzərinə "Tezliklə ödəniş funksiyası gələcək" deyə yazılmalıdır."
+//todo: "Zaman qalarsa, qəbz sistemini artırmaq və file olaraq müştərinin əldə etməsini təmin etmək"
+//todo: Profile Photo
+//todo: comment zamani adlarin gizledilmesi ve sekilli deyerlendirme

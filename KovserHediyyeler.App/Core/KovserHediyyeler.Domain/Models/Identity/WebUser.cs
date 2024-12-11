@@ -28,4 +28,3 @@ namespace KovserHediyyeler.Domain.Models.Identity
     }
 }
 
-//todo: Profile Photo

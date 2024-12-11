@@ -5,10 +5,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KovserHediyyeler.Domain.Models
 {
-    public class ProductComment:BaseEntity
+    public class ProductComment : BaseEntity
     {
-        public string CommentText {  get; set; }
-        public Rating? RatingGivenByUser {  get; set; } 
+        public string CommentText { get; set; }
+        public Rating? RatingGivenByUser { get; set; }
 
         //Relationship
         public Guid ProductID { get; set; }
@@ -19,4 +19,4 @@ namespace KovserHediyyeler.Domain.Models
     }
 }
 
-//todo: adlarin gizledilmesi ve sekilli deyerlendirme
+

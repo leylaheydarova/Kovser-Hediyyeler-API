@@ -136,6 +136,7 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IPromotionService, PromotionService>();
             services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<ISearchService, SearchService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IWishListService, WishListService>();
             services.AddHttpClient();

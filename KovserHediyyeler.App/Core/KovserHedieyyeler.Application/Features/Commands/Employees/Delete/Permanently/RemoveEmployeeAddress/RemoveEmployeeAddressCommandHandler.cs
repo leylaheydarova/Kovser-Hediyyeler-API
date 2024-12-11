@@ -31,4 +31,3 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Perma
     }
 }
 
-//todo: isCurrentAddress = true olan address silindikde, digerleri de false qaldigi ucun employee icinde address null dusur. FIX IT!
