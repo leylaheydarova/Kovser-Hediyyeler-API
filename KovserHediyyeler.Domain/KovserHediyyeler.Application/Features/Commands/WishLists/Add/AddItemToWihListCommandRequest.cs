@@ -1,10 +1,10 @@
-﻿using MediatR;
+﻿using KovserHediyyeler.Application.DTOs.WishLists;
+using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.WishLists.Add
 {
     public class AddItemToWihListCommandRequest : IRequest<AddItemToWihListCommandResponse>
     {
-        public string CustomerId { get; set; }
-        public Guid ProductId { get; set; }
+        public WishListCommandDto Dto { get; set; }
     }
 }

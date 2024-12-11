@@ -15,7 +15,7 @@ namespace KovserHediyyeler.Application.Features.Commands.WishLists.Add
 
         public async Task<AddItemToWihListCommandResponse> Handle(AddItemToWihListCommandRequest request, CancellationToken cancellationToken)
         {
-            var isAdded = await _service.AddItemToWishListAsync(request.CustomerId, request.ProductId);
+            var isAdded = await _service.AddItemToWishListAsync(request.Dto.CustomerId, request.Dto.ProductId);
             var dto = new WishListPostResultDto()
             {
                 IsAdded = isAdded

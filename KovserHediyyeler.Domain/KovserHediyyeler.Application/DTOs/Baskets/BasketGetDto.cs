@@ -6,6 +6,6 @@
         public int Count { get; set; }
         public double TotalPrice { get; set; }
         public string CustomerName { get; set; }
-        public ICollection<BasketItemGetDto> Items { get; set; }
+        public ICollection<BasketItemGetDto> Items { get; set; } = new List<BasketItemGetDto>();
     }
 }
