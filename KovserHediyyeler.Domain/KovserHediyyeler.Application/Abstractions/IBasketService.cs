@@ -12,6 +12,6 @@ namespace KovserHediyyeler.Application.Abstractions
         public Task<BasketGetDto> GetBasketAsync(string customerId);
         public Task<double> GetTotalPriceAsync(string customerId);
         public Task<int> GetTotalItemCountAsync(string customerId);
-
+        public Task SetIsSelectedTrueAsunc(List<Guid> productIDs, string customerId);
     }
 }

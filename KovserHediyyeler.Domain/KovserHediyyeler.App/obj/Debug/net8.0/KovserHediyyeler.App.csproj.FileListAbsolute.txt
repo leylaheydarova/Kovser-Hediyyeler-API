@@ -166,3 +166,4 @@ C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hedi
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.pdb
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.genruntimeconfig.cache
 C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\ref\KovserHediyyeler.App.dll
+C:\Users\User\Desktop\Learning Programming\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.MvcApplicationPartsAssemblyInfo.cs

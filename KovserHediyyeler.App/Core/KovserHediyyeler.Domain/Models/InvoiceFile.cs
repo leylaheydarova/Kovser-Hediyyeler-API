@@ -1,13 +1,14 @@
 ﻿namespace KovserHediyyeler.Domain.Models
 {
-    public class InvoiceFile:File
+    public class InvoiceFile : File
     {
         public string InvoiceTrackingNumber { get; set; }
-        
+
         public DateTime IssueDate { get; set; } //Qebzin verildiyi tarix
-        
+
 
         //Relationships
+        public Guid OrderID { get; set; }
         public Order Order { get; set; }
         public string CustomerID
         {

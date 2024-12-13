@@ -16,11 +16,16 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Domain.Models.File> Files { get; set; }
+        public DbSet<InvoiceFile> InvoiceFies { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<OrderPayment> OrderPayments { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImageFile> ProductImagesFiles { get; set; }
         public DbSet<ProductProperty> ProductProperties { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
+        public DbSet<Shipping> Shippings { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<WishList> WishLists { get; set; }

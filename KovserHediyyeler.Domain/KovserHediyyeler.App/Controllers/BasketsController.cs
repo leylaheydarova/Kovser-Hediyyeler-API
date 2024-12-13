@@ -2,7 +2,8 @@
 using KovserHediyyeler.Application.Features.Commands.Baskets.Add;
 using KovserHediyyeler.Application.Features.Commands.Baskets.Remove.ClearBasket;
 using KovserHediyyeler.Application.Features.Commands.Baskets.Remove.RemoveItem;
-using KovserHediyyeler.Application.Features.Commands.Baskets.Update;
+using KovserHediyyeler.Application.Features.Commands.Baskets.Update.UpdateIsSelected;
+using KovserHediyyeler.Application.Features.Commands.Baskets.Update.UpdateItemCount;
 using KovserHediyyeler.Application.Features.Queries.Baskets.GetBasket;
 using KovserHediyyeler.Application.Features.Queries.Baskets.GetTotalCount;
 using KovserHediyyeler.Application.Features.Queries.Baskets.GetTotalPrice;
@@ -111,5 +112,12 @@ namespace KovserHediyyeler.App.Controllers
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.TotalCount);
         }
+        [HttpPatch("set-isSelected-true")]
+        public async Task<IActionResult> SetIsSelectedTrueAsync(SetIsSelectedTrueCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
     }
+
 }

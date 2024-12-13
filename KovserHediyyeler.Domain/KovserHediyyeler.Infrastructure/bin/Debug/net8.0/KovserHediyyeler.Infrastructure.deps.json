@@ -108,6 +108,11 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Features/2.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        }
+      },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore/8.0.11": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "8.0.11",
@@ -358,6 +363,7 @@
       },
       "KovserHediyyeler.Domain/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.1.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
           "Microsoft.EntityFrameworkCore": "8.0.11",
           "Microsoft.Extensions.Identity.Stores": "8.0.11"
@@ -436,6 +442,13 @@
       "sha512": "sha512-w7zU4Bh6AEHsu5spE4OIoZ/z68mMvZITUl0wUAU7tS4vwc+szzht2wKitH1KwODrjHfHk0MAkyw3l6SIR62zBg==",
       "path": "microsoft.aspnetcore.cryptography.keyderivation/8.0.11",
       "hashPath": "microsoft.aspnetcore.cryptography.keyderivation.8.0.11.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UmkUePxRjsQW0j5euFFscBwjvTu25b8+qIK/2fI3GvcqQ+mkwgbWNAT8b/Gkoei1m2bTWC07lSdutuRDPPLcJA==",
+      "path": "microsoft.aspnetcore.http.features/2.1.0",
+      "hashPath": "microsoft.aspnetcore.http.features.2.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore/8.0.11": {
       "type": "package",

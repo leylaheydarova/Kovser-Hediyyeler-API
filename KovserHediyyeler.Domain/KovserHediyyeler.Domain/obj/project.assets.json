@@ -44,6 +44,22 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Features/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore/8.0.11": {
         "type": "package",
         "dependencies": {
@@ -923,6 +939,19 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
         "microsoft.aspnetcore.cryptography.keyderivation.8.0.11.nupkg.sha512",
         "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/2.1.0": {
+      "sha512": "UmkUePxRjsQW0j5euFFscBwjvTu25b8+qIK/2fI3GvcqQ+mkwgbWNAT8b/Gkoei1m2bTWC07lSdutuRDPPLcJA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.2.1.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore/8.0.11": {
@@ -2204,6 +2233,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Microsoft.AspNetCore.Http.Features >= 2.1.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.11",
       "Microsoft.EntityFrameworkCore >= 8.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.11",
@@ -2258,6 +2288,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.11, )"

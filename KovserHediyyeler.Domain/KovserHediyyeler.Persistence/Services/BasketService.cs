@@ -47,13 +47,25 @@ namespace KovserHediyyeler.Persistence.Services
             return product;
         }
 
+        async Task<Basket> FindBasketAsync(string customerId, bool istracking)
+        {
+            var webuser = await GetUserAsync(customerId);
+            var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == webuser.Id, istracking);
+            return basket;
+        }
+
+        async Task<Basket> FindBasketWithIncludeAsync(string customerId, bool istracking, string includes)
+        {
+            var webuser = await GetUserAsync(customerId);
+            var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == webuser.Id, istracking, includes);
+            return basket;
+        }
         public async Task AddItemToBasketAsync(Guid productId, int count, string userId)
         {
             using var transaction = await _basketWriteRepository.BeginTransactionAsync();
             try
             {
-                var webUser = await GetUserAsync(userId);
-                var basket = await _basketReadRepository.GetWhereAsync(b => b.CustomerID == webUser.Id && !b.isDeleted, true);
+                var basket = await FindBasketAsync(userId, true);
                 if (basket.BasketItems == null)
                 {
                     basket.BasketItems = new List<BasketItem>();
@@ -110,8 +122,7 @@ namespace KovserHediyyeler.Persistence.Services
             using var transaction = await _basketWriteRepository.BeginTransactionAsync();
             try
             {
-                var webUser = await GetUserAsync(customerId);
-                var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == webUser.Id, true, "BasketItems.Product");
+                var basket = await FindBasketWithIncludeAsync(customerId, true, "BasketItems.Product");
                 var product = await GetProductAsync(productId);
                 var item = basket.BasketItems.FirstOrDefault(i => i.ProductID == productId && !i.isDeleted);
                 if (item == null || basket == null)
@@ -146,8 +157,7 @@ namespace KovserHediyyeler.Persistence.Services
                 //{
                 if (product.Stock < newCount) throw new InvalidCountException(newCount);
                 //}
-                var webUser = await GetUserAsync(customerId);
-                var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == webUser.Id, true, "BasketItems");
+                var basket = await FindBasketWithIncludeAsync(customerId, true, "BasketItems");
                 if (basket.BasketItems == null)
                 {
                     basket.BasketItems = new List<BasketItem>();
@@ -176,8 +186,7 @@ namespace KovserHediyyeler.Persistence.Services
             using var transaction = await _basketWriteRepository.BeginTransactionAsync();
             try
             {
-                var webUser = await GetUserAsync(customerId);
-                Basket basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == webUser.Id, true, "BasketItems");
+                Basket basket = await FindBasketWithIncludeAsync(customerId, true, "BasketItems");
                 if (basket.BasketItems.Count == 0) return false;
                 foreach (var item in basket.BasketItems)
                 {
@@ -211,7 +220,7 @@ namespace KovserHediyyeler.Persistence.Services
                 DiscountedPrice = x.Product.DiscountedPrice,
                 ProductPrice = x.Product.Price
             }).ToListAsync();
-            var basket = await _basketReadRepository.GetWhereAsync(x => !x.isDeleted && x.CustomerID == customerId, false, "Customer");
+            var basket = await FindBasketWithIncludeAsync(customerId, false, "Customer");
             var dto = new BasketGetDto
             {
                 Id = basket.ID.ToString(),
@@ -225,16 +234,30 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task<double> GetTotalPriceAsync(string customerId)
         {
-            var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == customerId, false);
+            var basket = await FindBasketAsync(customerId, false);
             double TotalPrice = basket.TotalPrice;
             return TotalPrice;
         }
 
         public async Task<int> GetTotalItemCountAsync(string customerId)
         {
-            var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == customerId, false);
+            var basket = await FindBasketAsync(customerId, false);
             int Count = basket.Count;
             return Count;
+        }
+
+        public async Task SetIsSelectedTrueAsunc(List<Guid> productIds, string customerId)
+        {
+            var basket = await FindBasketAsync(customerId, false);
+
+            foreach (var productId in productIds)
+            {
+                var item = await _itemReadRepository.GetWhereAsync(i => i.ProductID == productId && i.BasketID == basket.ID && !i.isDeleted, true);
+                if (item is null) throw new InvalidInputException("məhsul");
+                item.isSelected = true;
+                _itemWriteRepository.Update(item);
+            }
+            await _itemWriteRepository.SaveAsync();
         }
     }
 }

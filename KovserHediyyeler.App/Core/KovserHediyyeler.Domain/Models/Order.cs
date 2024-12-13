@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KovserHediyyeler.Domain.Models
 {
-    public class Order:BaseEntity
+    public class Order : BaseEntity
     {
         public DateTime OrderDate { get; set; }
         public DateTime RequiredDate { get; set; }
@@ -20,16 +20,14 @@ namespace KovserHediyyeler.Domain.Models
         public OrderPayment OrderPayment { get; set; }
         public Guid InvoiceFileId { get; set; }
         public InvoiceFile InvoiceFile { get; set; }
-        public OrderStatus OrderStatus {  get; set; }
+        public OrderStatus OrderStatus { get; set; }
         [ForeignKey(nameof(Customer))]
         public string CustomerID { get; set; }
         public WebUser Customer { get; set; }
         public Guid ShippingID { get; set; }
         public Shipping Shipping { get; set; }
-        public Guid ShopID { get; set; }
+        public Guid? ShopID { get; set; }
         public Shop? Shop { get; set; }
-        //public Guid BasketID { get; set; }
-        //public Basket Basket { get; set; }
         public ICollection<OrderDetail> Details { get; set; } = new List<OrderDetail>();
 
     }

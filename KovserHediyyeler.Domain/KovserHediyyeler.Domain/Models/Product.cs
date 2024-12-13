@@ -25,7 +25,7 @@ namespace KovserHediyyeler.Domain.Models
         [ForeignKey(nameof(Brand))]
         public Guid? BrandID { get; set; }
         public Brand? Brand { get; set; }
-        //public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+        public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
         public ICollection<ProductProperty> Properties { get; set; } = new List<ProductProperty>();
         public ICollection<ProductImageFile> Images { get; set; } = new List<ProductImageFile>();
         //public ICollection<ProductComment> Comments { get; set; } = new List<ProductComment>();

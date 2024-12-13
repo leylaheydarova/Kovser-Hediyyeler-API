@@ -1,7 +1,7 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
-namespace KovserHediyyeler.Application.Features.Commands.Baskets.Update
+namespace KovserHediyyeler.Application.Features.Commands.Baskets.Update.UpdateItemCount
 {
     public class UpdateItemCountCommandHandler : IRequestHandler<UpdateItemCountCommandRequest, UpdateItemCountCommandResponse>
     {
