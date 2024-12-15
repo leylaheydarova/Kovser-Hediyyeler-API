@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace KovserHediyyeler.Persistence.Services
 {
-    public class OrderService : IOrderService
+    public class OrderService : IOrderService//png.form-post edir, shablon melumat uzerinde datalar elave olunur.
     {
         readonly IOrderReadRepository _orderReadRepository;
         readonly IOrderWriteRepository _orderWriteRepository;

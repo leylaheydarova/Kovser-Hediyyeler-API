@@ -10,6 +10,7 @@ namespace KovserHediyyeler.Domain.Models
         public bool isDeleted { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenEndDate { get; set; }
+        //public DateTime BirthDate {get; set;} - 1. hamisini gune cevir, 2. ayri - ayri al datalari.
 
         //Relations
         public Basket Basket { get; set; }
