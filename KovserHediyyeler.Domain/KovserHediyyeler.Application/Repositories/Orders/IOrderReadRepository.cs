@@ -1,8 +1,8 @@
-﻿using KovserHediyyeler.Domain.Models;
+﻿//using KovserHediyyeler.Domain.Models;
 
-namespace KovserHediyyeler.Application.Repositories.Orders
-{
-    public interface IOrderReadRepository : IReadRepository<Order>
-    {
-    }
-}
+//namespace KovserHediyyeler.Application.Repositories.Orders
+//{
+//    public interface IOrderReadRepository : IReadRepository<Order>
+//    {
+//    }
+//}

@@ -16,16 +16,16 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Domain.Models.File> Files { get; set; }
-        public DbSet<InvoiceFile> InvoiceFies { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderDetail> OrderDetails { get; set; }
-        public DbSet<OrderPayment> OrderPayments { get; set; }
+        //public DbSet<InvoiceFile> InvoiceFies { get; set; }
+        //public DbSet<Order> Orders { get; set; }
+        //public DbSet<OrderDetail> OrderDetails { get; set; }
+        //public DbSet<OrderPayment> OrderPayments { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImageFile> ProductImagesFiles { get; set; }
         public DbSet<ProductProperty> ProductProperties { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
-        public DbSet<Shipping> Shippings { get; set; }
+        //public DbSet<Shipping> Shippings { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<WishList> WishLists { get; set; }
@@ -84,6 +84,24 @@ namespace KovserHediyyeler.Persistence.Contexts
                  .HasForeignKey("AddressesID")
                  .HasConstraintName("FK_AddressWebUser_Addresses_AddressesID")
                  .OnDelete(DeleteBehavior.Cascade));
+
+            //modelBuilder.Entity<Order>()
+            //    .HasOne(o => o.OrderPayment)
+            //    .WithOne(op => op.Order)
+            //    .HasForeignKey<OrderPayment>(op => op.OrderID)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+            //modelBuilder.Entity<Order>()
+            //    .HasOne(o => o.Shipping)
+            //    .WithOne(sh => sh.Order)
+            //    .HasForeignKey<Shipping>(sh => sh.OrderID)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+            //modelBuilder.Entity<Order>()
+            //    .HasMany(o => o.Details)
+            //    .WithOne(od => od.Order)
+            //    .HasForeignKey(od => od.OrderID)
+            //    .OnDelete(DeleteBehavior.Cascade);
 
 
             base.OnModelCreating(modelBuilder);

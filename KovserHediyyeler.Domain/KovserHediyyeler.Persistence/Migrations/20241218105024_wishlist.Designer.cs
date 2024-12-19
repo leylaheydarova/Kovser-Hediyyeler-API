@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KovserHediyyeler.Persistence.Migrations
 {
     [DbContext(typeof(KovserHediyyelerDbContext))]
-    [Migration("20241211100908_wishlist")]
+    [Migration("20241218105024_wishlist")]
     partial class wishlist
     {
         /// <inheritdoc />
@@ -176,6 +176,9 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("isSelected")
                         .HasColumnType("bit");
 
                     b.HasKey("ID");

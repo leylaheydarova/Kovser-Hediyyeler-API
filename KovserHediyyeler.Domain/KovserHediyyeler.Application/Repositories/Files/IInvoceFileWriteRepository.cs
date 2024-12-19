@@ -1,8 +1,8 @@
-﻿using KovserHediyyeler.Domain.Models;
+﻿//using KovserHediyyeler.Domain.Models;
 
-namespace KovserHediyyeler.Application.Repositories.Files
-{
-    public interface IInvoceFileWriteRepository : IWriteRepository<InvoiceFile>
-    {
-    }
-}
+//namespace KovserHediyyeler.Application.Repositories.Files
+//{
+//    public interface IInvoceFileWriteRepository : IWriteRepository<InvoiceFile>
+//    {
+//    }
+//}

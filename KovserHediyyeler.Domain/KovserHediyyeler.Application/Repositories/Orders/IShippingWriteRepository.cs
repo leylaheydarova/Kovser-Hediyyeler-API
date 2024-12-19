@@ -1,8 +1,8 @@
-﻿using KovserHediyyeler.Domain.Models;
+﻿//using KovserHediyyeler.Domain.Models;
 
-namespace KovserHediyyeler.Application.Repositories.Orders
-{
-    public interface IShippingWriteRepository : IWriteRepository<Shipping>
-    {
-    }
-}
+//namespace KovserHediyyeler.Application.Repositories.Orders
+//{
+//    public interface IShippingWriteRepository : IWriteRepository<Shipping>
+//    {
+//    }
+//}

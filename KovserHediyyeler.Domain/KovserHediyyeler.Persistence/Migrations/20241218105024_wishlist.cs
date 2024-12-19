@@ -11,6 +11,13 @@ namespace KovserHediyyeler.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<bool>(
+                name: "isSelected",
+                table: "BasketItems",
+                type: "bit",
+                nullable: false,
+                defaultValue: false);
+
             migrationBuilder.CreateTable(
                 name: "WishLists",
                 columns: table => new
@@ -87,6 +94,10 @@ namespace KovserHediyyeler.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "WishLists");
+
+            migrationBuilder.DropColumn(
+                name: "isSelected",
+                table: "BasketItems");
         }
     }
 }

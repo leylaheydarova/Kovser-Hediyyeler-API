@@ -422,141 +422,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
-                {
-                    b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CustomerID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("DiscountedPrice")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("OrderStatus")
-                        .HasColumnType("int");
-
-                    b.Property<string>("OrderTrackingNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("RequiredDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("SavingAmount")
-                        .HasColumnType("float");
-
-                    b.Property<double>("TotalPrice")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("isDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("CustomerID");
-
-                    b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.OrderDetail", b =>
-                {
-                    b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<Guid>("ProductID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("isDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("OrderID");
-
-                    b.HasIndex("ProductID");
-
-                    b.ToTable("OrderDetails");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.OrderPayment", b =>
-                {
-                    b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Currency")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("PaymentDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("PaymentMethod")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PaymentStatus")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("isDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("OrderID")
-                        .IsUnique();
-
-                    b.ToTable("OrderPayments");
-                });
-
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Position", b =>
                 {
                     b.Property<Guid>("ID")
@@ -733,44 +598,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Promotions");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shipping", b =>
-                {
-                    b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("ShippedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("ShippingStatus")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ShippingType")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("isDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("OrderID")
-                        .IsUnique();
-
-                    b.ToTable("Shippings");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shop", b =>
@@ -1133,27 +960,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.ToTable("ProductShop");
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.InvoiceFile", b =>
-                {
-                    b.HasBaseType("KovserHediyyeler.Domain.Models.File");
-
-                    b.Property<string>("InvoiceTrackingNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("IssueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasIndex("OrderID")
-                        .IsUnique()
-                        .HasFilter("[OrderID] IS NOT NULL");
-
-                    b.HasDiscriminator().HasValue("InvoiceFile");
-                });
-
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ProductImageFile", b =>
                 {
                     b.HasBaseType("KovserHediyyeler.Domain.Models.File");
@@ -1308,47 +1114,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Shop");
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.WebUser", "Customer")
-                        .WithMany("Orders")
-                        .HasForeignKey("CustomerID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.OrderDetail", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Order", "Order")
-                        .WithMany("Details")
-                        .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("KovserHediyyeler.Domain.Models.Product", "Product")
-                        .WithMany("OrderDetails")
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.OrderPayment", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Order", "Order")
-                        .WithOne("OrderPayment")
-                        .HasForeignKey("KovserHediyyeler.Domain.Models.OrderPayment", "OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-                });
-
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Product", b =>
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Brand", "Brand")
@@ -1383,17 +1148,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shipping", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Order", "Order")
-                        .WithOne("Shipping")
-                        .HasForeignKey("KovserHediyyeler.Domain.Models.Shipping", "OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.SocialMedia", b =>
@@ -1503,17 +1257,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.InvoiceFile", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Order", "Order")
-                        .WithOne("InvoiceFile")
-                        .HasForeignKey("KovserHediyyeler.Domain.Models.InvoiceFile", "OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-                });
-
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.ProductImageFile", b =>
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Product", "Product")
@@ -1552,18 +1295,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Addresses");
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
-                {
-                    b.Navigation("Details");
-
-                    b.Navigation("InvoiceFile");
-
-                    b.Navigation("OrderPayment");
-
-                    b.Navigation("Shipping")
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Position", b =>
                 {
                     b.Navigation("Employees");
@@ -1574,8 +1305,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("BasketItems");
 
                     b.Navigation("Images");
-
-                    b.Navigation("OrderDetails");
 
                     b.Navigation("Properties");
 
@@ -1598,8 +1327,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                 {
                     b.Navigation("Basket")
                         .IsRequired();
-
-                    b.Navigation("Orders");
 
                     b.Navigation("WishList")
                         .IsRequired();
