@@ -4,6 +4,7 @@ using KovserHediyyeler.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KovserHediyyeler.Persistence.Migrations
 {
     [DbContext(typeof(KovserHediyyelerDbContext))]
-    partial class KovserHediyyelerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241219184930_orderanddetail")]
+    partial class orderanddetail
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -512,51 +515,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.ToTable("OrderDetails");
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.OrderPayment", b =>
-                {
-                    b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Currency")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("PaymentDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("PaymentMethod")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PaymentStatus")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("isDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("OrderID")
-                        .IsUnique();
-
-                    b.ToTable("OrderPayments");
-                });
-
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Position", b =>
                 {
                     b.Property<Guid>("ID")
@@ -733,44 +691,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Promotions");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shipping", b =>
-                {
-                    b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("ShippedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("ShippingStatus")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ShippingType")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("isDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("OrderID")
-                        .IsUnique();
-
-                    b.ToTable("Shippings");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shop", b =>
@@ -1317,17 +1237,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.OrderPayment", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Order", "Order")
-                        .WithOne("OrderPayment")
-                        .HasForeignKey("KovserHediyyeler.Domain.Models.OrderPayment", "OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-                });
-
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Product", b =>
                 {
                     b.HasOne("KovserHediyyeler.Domain.Models.Brand", "Brand")
@@ -1362,17 +1271,6 @@ namespace KovserHediyyeler.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("KovserHediyyeler.Domain.Models.Shipping", b =>
-                {
-                    b.HasOne("KovserHediyyeler.Domain.Models.Order", "Order")
-                        .WithOne("Shipping")
-                        .HasForeignKey("KovserHediyyeler.Domain.Models.Shipping", "OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.SocialMedia", b =>
@@ -1523,11 +1421,6 @@ namespace KovserHediyyeler.Persistence.Migrations
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Order", b =>
                 {
                     b.Navigation("Details");
-
-                    b.Navigation("OrderPayment");
-
-                    b.Navigation("Shipping")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("KovserHediyyeler.Domain.Models.Position", b =>
