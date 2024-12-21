@@ -5,3 +5,4 @@ Bu layihə zamanı öyrəndiklərim:
 4. DbContext-də one-to-one, one-to-many, many-to-many declarations.
 5. Adlandırma (NameOperation)
 6. Storage ayrımı.
+7. Transaction for multi-SaveAsyncs()
