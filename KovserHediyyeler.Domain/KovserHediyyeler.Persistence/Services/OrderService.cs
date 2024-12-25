@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace KovserHediyyeler.Persistence.Services
 {
-    public class OrderService : IOrderService//png.form-post edir, shablon melumat uzerinde datalar elave olunur.
+    public class OrderService : IOrderService
     {
         readonly IOrderReadRepository _orderReadRepository;
         readonly IOrderWriteRepository _orderWriteRepository;
@@ -29,7 +29,7 @@ namespace KovserHediyyeler.Persistence.Services
         readonly IProductReadRepository _productReadRepository;
         readonly IProductWriteRepository _productWriteRepository;
 
-        public OrderService(IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, IOrderDetailReadRepository orderDetailReadRepository, IOrderDetailWriteRepository orderDetailWriteRepository, IOrderPaymentReadRepository orderPaymentReadRepository, IOrderPaymentWriteRepository orderPaymentWriteRepository, IShippingReadRepository shippingReadRepository, IShippingWriteRepository shippingWriteRepository, IBasketItemReadRepository basketItemReadRepository, IBasketReadRepository basketReadRepository, UserManager<WebUser> userManager, IProductReadRepository productReadRepository, IProductWriteRepository productWriteRepository, IBasketWriteRepository basketWriteRepository, IBasketItemWriteRepository basketItemWriteRepository)
+        public OrderService(IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, IOrderDetailReadRepository orderDetailReadRepository, IOrderDetailWriteRepository orderDetailWriteRepository, IOrderPaymentReadRepository orderPaymentReadRepository, IOrderPaymentWriteRepository orderPaymentWriteRepository, IShippingReadRepository shippingReadRepository, IShippingWriteRepository shippingWriteRepository, IBasketItemReadRepository basketItemReadRepository, IBasketItemWriteRepository basketItemWriteRepository, IBasketReadRepository basketReadRepository, IBasketWriteRepository basketWriteRepository, UserManager<WebUser> userManager, IProductReadRepository productReadRepository, IProductWriteRepository productWriteRepository)
         {
             _orderReadRepository = orderReadRepository;
             _orderWriteRepository = orderWriteRepository;
@@ -40,14 +40,13 @@ namespace KovserHediyyeler.Persistence.Services
             _shippingReadRepository = shippingReadRepository;
             _shippingWriteRepository = shippingWriteRepository;
             _basketItemReadRepository = basketItemReadRepository;
+            _basketItemWriteRepository = basketItemWriteRepository;
             _basketReadRepository = basketReadRepository;
+            _basketWriteRepository = basketWriteRepository;
             _userManager = userManager;
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
-            _basketWriteRepository = basketWriteRepository;
-            _basketItemWriteRepository = basketItemWriteRepository;
         }
-
         async Task<WebUser> GetUserAsync(string userId)
         {
             var webUser = await _userManager.FindByIdAsync(userId);
@@ -61,11 +60,9 @@ namespace KovserHediyyeler.Persistence.Services
             return trackingString;
         } //todo: datetime formati daha oxunaqlidir, onu sadece yanyana reqemler sekline cevir
 
-
-
         public async Task<bool> CreateOrderAsync(string customerId, OrderDto orderDto)
         {
-            using var transaction = await _orderWriteRepository.BeginTransactionAsync();
+            //using var transaction = await _orderWriteRepository.BeginTransactionAsync();
             bool result;
             try
             {
@@ -156,6 +153,7 @@ namespace KovserHediyyeler.Persistence.Services
                     };
                     await _shippingWriteRepository.AddAsync(order.Shipping);
                 }
+                await _orderWriteRepository.AddAsync(order);
 
                 foreach (var item in items)
                 {
@@ -165,7 +163,6 @@ namespace KovserHediyyeler.Persistence.Services
                     _basketWriteRepository.Update(basket);
                 }
 
-                await _orderWriteRepository.AddAsync(order);
                 await _orderDetailWriteRepository.SaveAsync();
                 await _orderWriteRepository.SaveAsync();
                 await _productWriteRepository.SaveAsync();
@@ -173,15 +170,14 @@ namespace KovserHediyyeler.Persistence.Services
                 await _basketItemWriteRepository.SaveAsync();
 
                 result = true;
-                await transaction.CommitAsync();
+                //await transaction.CommitAsync();
                 return result;
             }
-            catch (Exception)
+            catch
             {
-                await transaction.RollbackAsync();
+                //await transaction.RollbackAsync();
                 throw;
             }
-
         }
     }
 }

@@ -7,12 +7,20 @@
       "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\services\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\abstractions\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\abstractions\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\serviceregistrations\\persistenceservicesregistrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\serviceregistrations\\persistenceservicesregistrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41D5804C-EFA1-46D2-BE2F-F5E46D24112A}|KovserHediyyeler.App\\KovserHediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.app\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41D5804C-EFA1-46D2-BE2F-F5E46D24112A}|KovserHediyyeler.App\\KovserHediyyeler.App.csproj|solutionrelative:kovserhediyyeler.app\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\services\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\abstractions\\ibasketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\repositories\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\repositories\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\abstractions\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\abstractions\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\exceptions\\badrequestexceptions\\invalidcountexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EB2D4099-8045-4CA4-86A3-906424EBB623}|KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.domain\\models\\orderpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB2D4099-8045-4CA4-86A3-906424EBB623}|KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj|solutionrelative:kovserhediyyeler.domain\\models\\orderpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41D5804C-EFA1-46D2-BE2F-F5E46D24112A}|KovserHediyyeler.App\\KovserHediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.app\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41D5804C-EFA1-46D2-BE2F-F5E46D24112A}|KovserHediyyeler.App\\KovserHediyyeler.App.csproj|solutionrelative:kovserhediyyeler.app\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\repositories\\orders\\orderwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -794,7 +794,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "KovserHediyyelerDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Contexts\\KovserHediyyelerDbContext.cs",
@@ -803,7 +803,8 @@
               "ViewState": "AQIAAL4AAAAAAAAAAAAAwNIAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T20:51:01.922Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -813,7 +814,7 @@
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\ServiceRegistrations\\PersistenceServicesRegistrations.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\ServiceRegistrations\\PersistenceServicesRegistrations.cs",
               "RelativeToolTip": "KovserHediyyeler.Persistence\\ServiceRegistrations\\PersistenceServicesRegistrations.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAH4AAABUAAAA",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAgwJEAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T20:51:12.682Z",
               "IsPinned": true,
@@ -821,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Abstractions\\IOrderService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Abstractions\\IOrderService.cs",
@@ -830,7 +831,8 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T20:11:59.636Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -840,29 +842,15 @@
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\OrderService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\OrderService.cs",
               "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\OrderService.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAowLcAAAAAAAAA",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAIwLEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T21:13:12.683Z",
+              "WhenOpened": "2024-12-25T19:46:09.155Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BasketService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\BasketService.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\BasketService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\BasketService.cs",
-              "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\BasketService.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAmwIoAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T05:59:15.532Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "OrderPaymentReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Repositories\\Orders\\OrderPaymentReadRepository.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Repositories\\Orders\\OrderPaymentReadRepository.cs",
@@ -874,7 +862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "WriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Repositories\\WriteRepository.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Repositories\\WriteRepository.cs",
@@ -886,7 +874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\Program.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.App\\Program.cs",
@@ -898,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ShippingReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Repositories\\Orders\\ShippingReadRepository.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Repositories\\Orders\\ShippingReadRepository.cs",
@@ -910,7 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\Models\\Order.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Domain\\Models\\Order.cs",
@@ -918,12 +906,11 @@
               "RelativeToolTip": "KovserHediyyeler.Domain\\Models\\Order.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAowBcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:22:51.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T19:22:51.527Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IBasketService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Abstractions\\IBasketService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Abstractions\\IBasketService.cs",
@@ -931,12 +918,36 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Abstractions\\IBasketService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T05:58:39.338Z",
+              "WhenOpened": "2024-12-08T05:58:39.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.App\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "KovserHediyyeler.App\\Controllers\\OrdersController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T22:40:36.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "BasketService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\BasketService.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\BasketService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\BasketService.cs",
+              "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\BasketService.cs",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAmwIoAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T05:59:15.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "IWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Repositories\\IWriteRepository.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Repositories\\IWriteRepository.cs",
@@ -948,7 +959,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "InvalidCountException.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Exceptions\\BadRequestExceptions\\InvalidCountException.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Exceptions\\BadRequestExceptions\\InvalidCountException.cs",
@@ -960,7 +971,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ShippingWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Repositories\\Orders\\ShippingWriteRepository.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Repositories\\Orders\\ShippingWriteRepository.cs",
@@ -972,7 +983,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "OrderPaymentWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Repositories\\Orders\\OrderPaymentWriteRepository.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Repositories\\Orders\\OrderPaymentWriteRepository.cs",
@@ -984,7 +995,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "IShippingWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Repositories\\Orders\\IShippingWriteRepository.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Repositories\\Orders\\IShippingWriteRepository.cs",
@@ -996,7 +1007,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "IShippingReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Repositories\\Orders\\IShippingReadRepository.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Repositories\\Orders\\IShippingReadRepository.cs",
@@ -1008,7 +1019,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "IOrderPaymentWriteRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Repositories\\Orders\\IOrderPaymentWriteRepository.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Repositories\\Orders\\IOrderPaymentWriteRepository.cs",
@@ -1020,7 +1031,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "IOrderPaymentReadRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Repositories\\Orders\\IOrderPaymentReadRepository.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Repositories\\Orders\\IOrderPaymentReadRepository.cs",
@@ -1032,7 +1043,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "InvoiceFile.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\Models\\InvoiceFile.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Domain\\Models\\InvoiceFile.cs",
@@ -1044,7 +1055,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Shipping.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\Models\\Shipping.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Domain\\Models\\Shipping.cs",
@@ -1056,7 +1067,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "OrderPayment.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\Models\\OrderPayment.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Domain\\Models\\OrderPayment.cs",
@@ -1065,18 +1076,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T19:30:56.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.App\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "KovserHediyyeler.App\\Controllers\\OrdersController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAIwBYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T22:40:36.241Z"
             },
             {
               "$type": "Document",
