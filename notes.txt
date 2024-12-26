@@ -1,4 +1,5 @@
 Bu layihə zamanı öyrəndiklərim:
+
 1. Onion arxitekturası.
 2. Table Per Hierarchy (TPH).
 3. CQRS Pattern.
@@ -6,3 +7,4 @@ Bu layihə zamanı öyrəndiklərim:
 5. Adlandırma (NameOperation)
 6. Storage ayrımı.
 7. Transaction for multi-SaveAsyncs()
+8. Pagination
