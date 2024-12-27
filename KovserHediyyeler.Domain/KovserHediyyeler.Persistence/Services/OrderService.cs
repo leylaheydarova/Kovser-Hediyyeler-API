@@ -28,8 +28,9 @@ namespace KovserHediyyeler.Persistence.Services
         readonly UserManager<WebUser> _userManager;
         readonly IProductReadRepository _productReadRepository;
         readonly IProductWriteRepository _productWriteRepository;
+        readonly IBasketService _basketService;
 
-        public OrderService(IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, IOrderDetailReadRepository orderDetailReadRepository, IOrderDetailWriteRepository orderDetailWriteRepository, IOrderPaymentReadRepository orderPaymentReadRepository, IOrderPaymentWriteRepository orderPaymentWriteRepository, IShippingReadRepository shippingReadRepository, IShippingWriteRepository shippingWriteRepository, IBasketItemReadRepository basketItemReadRepository, IBasketItemWriteRepository basketItemWriteRepository, IBasketReadRepository basketReadRepository, IBasketWriteRepository basketWriteRepository, UserManager<WebUser> userManager, IProductReadRepository productReadRepository, IProductWriteRepository productWriteRepository)
+        public OrderService(IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, IOrderDetailReadRepository orderDetailReadRepository, IOrderDetailWriteRepository orderDetailWriteRepository, IOrderPaymentReadRepository orderPaymentReadRepository, IOrderPaymentWriteRepository orderPaymentWriteRepository, IShippingReadRepository shippingReadRepository, IShippingWriteRepository shippingWriteRepository, IBasketItemReadRepository basketItemReadRepository, IBasketItemWriteRepository basketItemWriteRepository, IBasketReadRepository basketReadRepository, IBasketWriteRepository basketWriteRepository, UserManager<WebUser> userManager, IProductReadRepository productReadRepository, IProductWriteRepository productWriteRepository, IBasketService basketService)
         {
             _orderReadRepository = orderReadRepository;
             _orderWriteRepository = orderWriteRepository;
@@ -46,6 +47,7 @@ namespace KovserHediyyeler.Persistence.Services
             _userManager = userManager;
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
+            _basketService = basketService;
         }
         async Task<WebUser> GetUserAsync(string userId)
         {
@@ -62,7 +64,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task<bool> CreateOrderAsync(string customerId, OrderDto orderDto)
         {
-            //using var transaction = await _orderWriteRepository.BeginTransactionAsync();
+            using var transaction = await _orderWriteRepository.BeginTransactionAsync();
             bool result;
             try
             {
@@ -157,25 +159,26 @@ namespace KovserHediyyeler.Persistence.Services
 
                 foreach (var item in items)
                 {
-                    basket.Count -= item.ProductCount;
-                    basket.TotalPrice -= (item.Product.DiscountedPrice * item.ProductCount);
-                    _basketItemWriteRepository.RemovePermanently(item);
-                    _basketWriteRepository.Update(basket);
+                    //basket.Count -= item.ProductCount;
+                    //basket.TotalPrice -= (item.Product.DiscountedPrice * item.ProductCount);
+                    //_basketItemWriteRepository.RemovePermanently(item);
+                    //_basketWriteRepository.Update(basket);
+                    await _basketService.RemoveItemFromBasketAsync(item.ProductID, basket.CustomerID);
                 }
 
                 await _orderDetailWriteRepository.SaveAsync();
                 await _orderWriteRepository.SaveAsync();
                 await _productWriteRepository.SaveAsync();
-                await _basketWriteRepository.SaveAsync();
-                await _basketItemWriteRepository.SaveAsync();
+                //await _basketWriteRepository.SaveAsync();
+                //await _basketItemWriteRepository.SaveAsync();
 
                 result = true;
-                //await transaction.CommitAsync();
+                await transaction.CommitAsync();
                 return result;
             }
             catch
             {
-                //await transaction.RollbackAsync();
+                await transaction.RollbackAsync();
                 throw;
             }
         }

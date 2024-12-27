@@ -42,10 +42,8 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
     {
         public static IServiceCollection RegisterDataServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<KovserHediyyelerDbContext>(opt =>
-            {
-                opt.UseSqlServer(configuration.GetConnectionString("Default"));
-            });
+            services.AddDbContext<KovserHediyyelerDbContext>(options =>
+            options.UseSqlServer(configuration.GetConnectionString("Default")), ServiceLifetime.Scoped);
 
             services.AddIdentity<WebUser, IdentityRole>(options =>
             {

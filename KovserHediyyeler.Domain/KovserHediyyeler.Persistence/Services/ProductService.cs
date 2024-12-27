@@ -376,7 +376,19 @@ namespace KovserHediyyeler.Persistence.Services
         {
             Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
             if (product == null) throw new NotFoundException("məhsul");
-            var discountprice = dto.Price - dto.Price * (int)dto.DiscountPercentage! / 100;
+            double? discountprice = 0;
+            if (dto.Price != null)
+            {
+                if (dto.DiscountPercentage != null)
+                {
+                    discountprice = dto.Price - dto.Price * (int)dto.DiscountPercentage! / 100;
+                }
+                else
+                {
+                    discountprice = dto.Price;
+                }
+            }
+
             product.Name = dto.Name != null ? dto.Name : product.Name;
             product.Description = dto.Description != null ? dto.Description : product.Description;
             product.Stock = dto.Stock != null ? (int)dto.Stock : product.Stock;
