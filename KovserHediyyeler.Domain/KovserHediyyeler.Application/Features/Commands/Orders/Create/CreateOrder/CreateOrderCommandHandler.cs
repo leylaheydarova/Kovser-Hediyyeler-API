@@ -1,5 +1,4 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
-using KovserHediyyeler.Application.Exceptions.FailExceptions;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.Orders.Create.CreateOrder
@@ -15,8 +14,16 @@ namespace KovserHediyyeler.Application.Features.Commands.Orders.Create.CreateOrd
 
         public async Task<CreateOrderCommandResponse> Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken)
         {
-            var result = await _service.CreateOrderAsync(request.CustomerId, request.Dto);
-            if (!result) throw new FailException("Sifari yaradılarkən, gözlənilməz xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.");
+            var isPaid = await _service.CreateOrderAsync(request.CustomerId, request.Dto);
+
+            if (!isPaid)
+            {
+                return new CreateOrderCommandResponse
+                {
+                    StatusCode = 200,
+                    Message = "Sifarişiniz ödəmə gözləməkdədir."
+                };
+            }
             return new CreateOrderCommandResponse
             {
                 StatusCode = 201,
