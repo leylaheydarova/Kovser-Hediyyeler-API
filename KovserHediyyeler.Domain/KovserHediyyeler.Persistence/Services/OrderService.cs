@@ -154,19 +154,19 @@ namespace KovserHediyyeler.Persistence.Services
                     };
                     await _shippingWriteRepository.AddAsync(order.Shipping);
                     await _shippingWriteRepository.SaveAsync();
-
-                    foreach (var item in items)
-                    {
-                        basket.Count -= item.ProductCount;
-                        basket.TotalPrice -= (item.Product.DiscountedPrice * item.ProductCount);
-                        _basketItemWriteRepository.RemovePermanently(item);
-                        _basketWriteRepository.Update(basket);
-                    }
                     isPaid = true;
                 }
                 else
                 {
                     isPaid = false;
+                }
+
+                foreach (var item in items)
+                {
+                    basket.Count -= item.ProductCount;
+                    basket.TotalPrice -= (item.Product.DiscountedPrice * item.ProductCount);
+                    _basketItemWriteRepository.RemovePermanently(item);
+                    _basketWriteRepository.Update(basket);
                 }
                 await _orderWriteRepository.AddAsync(order);
                 await _orderDetailWriteRepository.SaveAsync();
@@ -186,9 +186,49 @@ namespace KovserHediyyeler.Persistence.Services
             }
         }
 
-        public Task<bool> ApproveOrderPayment(string customerId, PaymentStatus status, Guid OrderId)
+        public async Task<bool> ApproveOrderPaymentAsync(string customerId, PaymentStatus status, Guid OrderId, ShippingType type)
         {
-            throw new NotImplementedException();
+            using var transaction = await _orderWriteRepository.BeginTransactionAsync();
+            try
+            {
+                bool result = false;
+                var order = await _orderReadRepository.GetWhereAsync(o => o.ID == OrderId && !o.isDeleted, true, "OrderPayment");
+                if (order == null) throw new NotFoundException("sifariş");
+                var customer = await GetUserAsync(customerId);
+                if (order.CustomerID == customer.Id)
+                {
+                    if (status == PaymentStatus.Paid)
+                    {
+                        order.OrderPayment.PaymentStatus = PaymentStatus.Paid;
+                        order.OrderPayment.PaymentDate = DateTime.UtcNow.AddHours(4);
+                        order.Shipping = new Shipping
+                        {
+                            ID = Guid.NewGuid(),
+                            OrderID = order.ID,
+                            ShippingStatus = ShippingStatus.Gözləmədə,
+                            ShippingType = type,
+                        };
+                        await _shippingWriteRepository.AddAsync(order.Shipping);
+                        await _shippingWriteRepository.SaveAsync();
+                        result = true;
+                    }
+                    else
+                    {
+                        result = false;
+                    }
+                }
+                _orderPaymentWriteRepository.Update(order.OrderPayment);
+                _orderWriteRepository.Update(order);
+                await _orderPaymentWriteRepository.SaveAsync();
+                await _orderWriteRepository.SaveAsync();
+                await transaction.CommitAsync();
+                return result;
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
     }
 }
