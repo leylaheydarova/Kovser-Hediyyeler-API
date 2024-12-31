@@ -4,6 +4,7 @@ using KovserHediyyeler.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KovserHediyyeler.Persistence.Migrations
 {
     [DbContext(typeof(KovserHediyyelerDbContext))]
-    partial class KovserHediyyelerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241231084949_productcolorandsize")]
+    partial class productcolorandsize
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

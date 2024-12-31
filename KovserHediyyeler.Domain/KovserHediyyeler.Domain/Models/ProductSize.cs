@@ -3,12 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KovserHediyyeler.Domain.Models
 {
-    public class ProductProperty : BaseEntity
+    public class ProductSize : BaseEntity
     {
-        public string Name { get; set; }
-        public string Value { get; set; }
-
-        //Relationships
+        public string SizeName { get; set; }
         [ForeignKey(nameof(Product))]
         public Guid ProductID { get; set; }
         public Product Product { get; set; }

@@ -27,7 +27,6 @@ namespace KovserHediyyeler.Persistence.Services
         readonly IProductImageFileWriteRepository _productImageFileWriteRepository;
         readonly IProductPropertyReadRepository _productPropertyReadRepository;
         readonly IProductPropertyWriteRepository _productPropertyWriteRepository;
-        readonly IColorWriteRepository _colorWriteRepository;
         readonly IShopReadRepository _shopReadRepository;
         readonly IShopWriteRepository _shopWriteRepository;
         readonly IProductShopWriteRepository _productShopWriteRepository;
@@ -38,7 +37,7 @@ namespace KovserHediyyeler.Persistence.Services
         readonly IHttpContextAccessor _accessor;
 
 
-        public ProductService(IProductWriteRepository productWriteRepository, IProductImageFileWriteRepository productImageFileWriteRepository, IProductPropertyWriteRepository productPropertyWriteRepository, IColorWriteRepository colorWriteRepository, IShopReadRepository shopReadRepository, ICategoryReadRepository categoryRepository, IDepartmentReadRepository departmentRepository, IBrandReadRepository brandRepository, IProductReadRepository productReadRepository, IProductImageFileReadRepository productImageFileReadRepository, IProductPropertyReadRepository productPropertyReadRepository, IShopWriteRepository shopWriteRepository, IProductShopWriteRepository productShopWriteRepository, IWebHostEnvironment env, IHttpContextAccessor accessor)
+        public ProductService(IProductWriteRepository productWriteRepository, IProductImageFileWriteRepository productImageFileWriteRepository, IProductPropertyWriteRepository productPropertyWriteRepository, IShopReadRepository shopReadRepository, ICategoryReadRepository categoryRepository, IDepartmentReadRepository departmentRepository, IBrandReadRepository brandRepository, IProductReadRepository productReadRepository, IProductImageFileReadRepository productImageFileReadRepository, IProductPropertyReadRepository productPropertyReadRepository, IShopWriteRepository shopWriteRepository, IProductShopWriteRepository productShopWriteRepository, IWebHostEnvironment env, IHttpContextAccessor accessor)
         {
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
@@ -47,7 +46,6 @@ namespace KovserHediyyeler.Persistence.Services
             _productPropertyReadRepository = productPropertyReadRepository;
             _productPropertyWriteRepository = productPropertyWriteRepository;
             _productShopWriteRepository = productShopWriteRepository;
-            _colorWriteRepository = colorWriteRepository;
             _shopReadRepository = shopReadRepository;
             _shopWriteRepository = shopWriteRepository;
             _categoryRepository = categoryRepository;
@@ -173,22 +171,17 @@ namespace KovserHediyyeler.Persistence.Services
 
             foreach (var colordto in dto.Colors)
             {
-                ColorCode color = new ColorCode
-                {
-                    ID = Guid.NewGuid(),
-                    Name = colordto.Name,
-                    HexCode = colordto.HexCode
-                };
+
 
                 var propertycolor = new ProductProperty
                 {
                     ID = Guid.NewGuid(),
                     Name = "rəng",
-                    Value = color.Name,
+                    //Value = color.Name,
                     ProductID = product.ID
                 };
                 await _productPropertyWriteRepository.AddAsync(propertycolor);
-                await _colorWriteRepository.AddAsync(color);
+
             }
 
             foreach (var propertydto in dto.ProductProperties)

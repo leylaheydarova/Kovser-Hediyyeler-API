@@ -12,7 +12,6 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<BasketItem> BasketItems { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<ColorCode> Colors { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Domain.Models.File> Files { get; set; }
@@ -24,6 +23,8 @@ namespace KovserHediyyeler.Persistence.Contexts
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImageFile> ProductImagesFiles { get; set; }
         public DbSet<ProductProperty> ProductProperties { get; set; }
+        public DbSet<ProductColor> ProductColors { get; set; }
+        public DbSet<ProductSize> ProductSizes { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<Shipping> Shippings { get; set; }
         public DbSet<Shop> Shops { get; set; }

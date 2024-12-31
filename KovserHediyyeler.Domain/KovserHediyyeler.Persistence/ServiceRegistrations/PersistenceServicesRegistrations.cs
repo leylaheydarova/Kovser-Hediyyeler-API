@@ -33,8 +33,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using IColorReadRepository = KovserHediyyeler.Application.Repositories.Products.IColorReadRepository;
-using IColorWriteRepository = KovserHediyyeler.Application.Repositories.Products.IColorWriteRepository;
 
 namespace KovserHediyyeler.Persistence.ServiceRegistrations
 {
@@ -87,9 +85,6 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
 
             services.AddScoped<ICategoryReadRepository, CategoryReadRepository>();
             services.AddScoped<ICategoryWriteRepository, CategoryWriteRepository>();
-
-            services.AddScoped<IColorReadRepository, ColorReadRepository>();
-            services.AddScoped<IColorWriteRepository, ColorWriteRepository>();
 
             services.AddScoped<IDepartmentReadRepository, DepartmentReadRepository>();
             services.AddScoped<IDepartmentWriteRepository, DepartmentWriteRepository>();
