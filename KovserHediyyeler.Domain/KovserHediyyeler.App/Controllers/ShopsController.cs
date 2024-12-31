@@ -98,7 +98,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         [HttpDelete("RemovePermanentlyShopAddress/{id}")]
         public async Task<IActionResult> RemoveShopAddressAsync([FromRoute] string id)
         {
-            var request = new RemovePermanentlyShopAddressCommandRequest
+            var request = new RemoveShopAddressCommandRequest
             {
                 Id = id,
             };

@@ -109,6 +109,10 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<IProductPropertyReadRepository, ProductPropertyReadRepository>();
             services.AddScoped<IProductPropertyWriteRepository, ProductPropertyWriteRepository>();
             services.AddScoped<IProductShopWriteRepository, ProductShopWriteRepository>();
+            services.AddScoped<IProductColorReadRepository, ProductColorReadRepository>();
+            services.AddScoped<IProductColorWriteRepository, ProductColorWriteRepository>();
+            services.AddScoped<IProductSizeReadRepository, ProductSizeReadRepository>();
+            services.AddScoped<IProductSizeWriteRepository, ProductSizeWriteRepository>();
 
             services.AddScoped<IPositionReadRepository, PositionReadRepository>();
             services.AddScoped<IPositionWriteRepository, PositionWriteRepository>();

@@ -1,7 +1,6 @@
 ﻿using KovserHedieyyeler.Application.Features.Commands.Employees.Create.CreateEmployee;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Create.CreateEmployeeAddress;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployee;
-using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployeeAddress;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmployeeAddress;
@@ -9,6 +8,8 @@ using KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmp
 using KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAllEmployeeAddresses;
 using KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAllEmployees;
 using KovserHedieyyeler.Application.Features.Queries.Employees.GetSingle;
+using KovserHediyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployeeAddress;
+using KovserHediyyeler.Application.Features.Commands.Employees.Update.UpdateEmployees.UpdateTotalEmployee;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -98,7 +99,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         [HttpDelete("RemovePermanentlyEmployeeAddress/{id}")]
         public async Task<IActionResult> RemoveEmployeeAddressAsync([FromRoute] string id)
         {
-            var request = new RemoveEmployeeAddressCommandRequest
+            var request = new RemoveAddressCommandRequest
             {
                 Id = id,
             };
@@ -122,7 +123,7 @@ namespace Kovser.Hediyyeler.App.Controllers
 
         // [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Total Employee", Menu = AuthorizeDefinitionConstants.Empoyees)]
         [HttpPut("UpdateTotalEmployee")]
-        public async Task<IActionResult> UpdateTotalEmployeeAsync([FromForm] UpdateTotalEmployeeCommandRequest request)
+        public async Task<IActionResult> UpdateTotalEmployeeAsync([FromForm] UpdateTEmployeeCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

@@ -2,7 +2,6 @@
 using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Create.CreateDepartment;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Create.CreateSocialMedia;
-using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently.RemoveDepartment;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Permanently.RemoveSocialMedia;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Departments.Recover;
@@ -12,6 +11,7 @@ using KovserHedieyyeler.Application.Features.Commands.Departments.Update.UpdateS
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetAll.GetAllDepartments;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetAll.GetAllSocialMedias;
 using KovserHedieyyeler.Application.Features.Queries.Departments.GetSingle;
+using KovserHediyyeler.Application.Features.Commands.Departments.Delete.Permanently.RemoveDepartment;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -88,7 +88,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         [HttpDelete("RemoveDepartment")]
         public async Task<IActionResult> RemoveDepartmentAsync(string id)
         {
-            var request = new RemovePermanentlyDepartmentCommandRequest { Id = id };
+            var request = new RemoveDepartmentCommandRequest { Id = id };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }

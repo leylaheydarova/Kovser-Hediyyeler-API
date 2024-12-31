@@ -1,6 +1,7 @@
-﻿using KovserHedieyyeler.Application.DTOs.Colors;
-using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
+﻿using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
 using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
+using KovserHediyyeler.Application.DTOs.Products.ProductColor;
+using KovserHediyyeler.Application.DTOs.Products.ProductSize;
 using KovserHediyyeler.Domain.Enums;
 
 namespace KovserHedieyyeler.Application.DTOs.Products.Products
@@ -21,6 +22,7 @@ namespace KovserHedieyyeler.Application.DTOs.Products.Products
         public ICollection<Guid> ShopIDs { get; set; } = new List<Guid>();
         public ICollection<ProductPropertyCommandDto> ProductProperties { get; set; } = new List<ProductPropertyCommandDto>();
         public ICollection<ProductImageCommandDto> ProductImages { get; set; } = new List<ProductImageCommandDto>();
-        public ICollection<ColorDto> Colors { get; set; } = new List<ColorDto>();
+        public ICollection<ProductColorPostDto> ProductColors { get; set; } = new List<ProductColorPostDto>();
+        public ICollection<ProductSizePostDto> ProductSizes { get; set; } = new List<ProductSizePostDto>();
     }
 }

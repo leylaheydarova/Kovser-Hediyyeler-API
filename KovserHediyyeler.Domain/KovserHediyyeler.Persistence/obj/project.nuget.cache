@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iKIBVTIQsiPLFc1pn1kwqmpfc+dtNKOZXB6llRAN8xjyDk+TUVN5DGzlJXSYWBoqHxsWxXm8W/CsMppc6kU7Jg==",
+  "dgSpecHash": "Or4pbppxCTt9RCVkhP6H4ACJD04f+DuNf6lrbp1lnEV+NGFEtWkeo21yVhKBSp8RcWeNeyNrqwsXWtOcJdPhuw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

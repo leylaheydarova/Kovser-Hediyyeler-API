@@ -27,6 +27,10 @@ namespace KovserHediyyeler.Persistence.Services
         readonly IProductImageFileWriteRepository _productImageFileWriteRepository;
         readonly IProductPropertyReadRepository _productPropertyReadRepository;
         readonly IProductPropertyWriteRepository _productPropertyWriteRepository;
+        readonly IProductColorReadRepository _productColorReadRepository;
+        readonly IProductColorWriteRepository _productColorWriteRepository;
+        readonly IProductSizeReadRepository _productSizeReadRepository;
+        readonly IProductSizeWriteRepository _productSizeWriteRepository;
         readonly IShopReadRepository _shopReadRepository;
         readonly IShopWriteRepository _shopWriteRepository;
         readonly IProductShopWriteRepository _productShopWriteRepository;
@@ -36,8 +40,7 @@ namespace KovserHediyyeler.Persistence.Services
         readonly IWebHostEnvironment _env;
         readonly IHttpContextAccessor _accessor;
 
-
-        public ProductService(IProductWriteRepository productWriteRepository, IProductImageFileWriteRepository productImageFileWriteRepository, IProductPropertyWriteRepository productPropertyWriteRepository, IShopReadRepository shopReadRepository, ICategoryReadRepository categoryRepository, IDepartmentReadRepository departmentRepository, IBrandReadRepository brandRepository, IProductReadRepository productReadRepository, IProductImageFileReadRepository productImageFileReadRepository, IProductPropertyReadRepository productPropertyReadRepository, IShopWriteRepository shopWriteRepository, IProductShopWriteRepository productShopWriteRepository, IWebHostEnvironment env, IHttpContextAccessor accessor)
+        public ProductService(IProductReadRepository productReadRepository, IProductWriteRepository productWriteRepository, IProductImageFileReadRepository productImageFileReadRepository, IProductImageFileWriteRepository productImageFileWriteRepository, IProductPropertyReadRepository productPropertyReadRepository, IProductPropertyWriteRepository productPropertyWriteRepository, IProductColorReadRepository productColorReadRepository, IProductColorWriteRepository productColorWriteRepository, IProductSizeReadRepository productSizeReadRepository, IProductSizeWriteRepository productSizeWriteRepository, IShopReadRepository shopReadRepository, IShopWriteRepository shopWriteRepository, IProductShopWriteRepository productShopWriteRepository, ICategoryReadRepository categoryRepository, IDepartmentReadRepository departmentRepository, IBrandReadRepository brandRepository, IWebHostEnvironment env, IHttpContextAccessor accessor)
         {
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
@@ -45,15 +48,20 @@ namespace KovserHediyyeler.Persistence.Services
             _productImageFileWriteRepository = productImageFileWriteRepository;
             _productPropertyReadRepository = productPropertyReadRepository;
             _productPropertyWriteRepository = productPropertyWriteRepository;
-            _productShopWriteRepository = productShopWriteRepository;
+            _productColorReadRepository = productColorReadRepository;
+            _productColorWriteRepository = productColorWriteRepository;
+            _productSizeReadRepository = productSizeReadRepository;
+            _productSizeWriteRepository = productSizeWriteRepository;
             _shopReadRepository = shopReadRepository;
             _shopWriteRepository = shopWriteRepository;
+            _productShopWriteRepository = productShopWriteRepository;
             _categoryRepository = categoryRepository;
             _departmentRepository = departmentRepository;
             _brandRepository = brandRepository;
             _env = env;
             _accessor = accessor;
         }
+
         private IQueryable<ProductGetAllDto> GetFilteredProductsQuery(Expression<Func<Product, bool>> filter)
         {
             return _productReadRepository.GetAllWhere(filter, false, "Department", "Shops")
@@ -115,112 +123,131 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task CreateProductAsync(ProductPostDto dto)
         {
-            var category = await _categoryRepository.GetWhereAsync(c => c.ID == dto.CategoryID, false, "ParentCategory");
-            if (category == null) throw new InvalidInputException("kateqoriya");
-
-            var department = await _departmentRepository.GetWhereAsync(d => d.ID == dto.DepartmentID, false);
-            if (department == null) throw new InvalidInputException("şöbə");
-            var brand = dto.BrandID is not null
-                ? await _brandRepository.GetWhereAsync(b => b.ID == dto.BrandID, false)
-                : null;
-
-            if (brand == null && dto.BrandID is not null)
-                throw new InvalidInputException("brend");
-
-            var scheme = _accessor.HttpContext.Request.Scheme;
-            var host = _accessor.HttpContext.Request.Host;
-
-            Product product = new Product
+            using var transaction = await _productWriteRepository.BeginTransactionAsync();
+            try
             {
-                ID = Guid.NewGuid(),
-                Name = dto.Name,
-                Description = dto.Description,
-                BrandID = brand.ID,
-                CategoryID = category.ID,
-                DepartmentID = department.ID,
-                Price = dto.Price,
-                DiscountedPrice = (dto.Price - ((dto.Price * (int)dto.DiscountPercentage) / 100)),
-                isSingleColour = dto.isSingleColour,
-                Stock = dto.Stock
-            };
+                var category = await _categoryRepository.GetWhereAsync(c => c.ID == dto.CategoryID, false, "ParentCategory");
+                if (category == null) throw new InvalidInputException("kateqoriya");
 
+                var department = await _departmentRepository.GetWhereAsync(d => d.ID == dto.DepartmentID, false);
+                if (department == null) throw new InvalidInputException("şöbə");
+                var brand = dto.BrandID is not null
+                    ? await _brandRepository.GetWhereAsync(b => b.ID == dto.BrandID, false)
+                    : null;
 
-            foreach (var imagedto in dto.ProductImages)
-            {
-                var res = imagedto.file.FileName;
+                if (brand == null && dto.BrandID is not null)
+                    throw new InvalidInputException("brend");
 
-                ProductImageFile image = new ProductImageFile
+                var scheme = _accessor.HttpContext.Request.Scheme;
+                var host = _accessor.HttpContext.Request.Host;
+
+                Product product = new Product
                 {
                     ID = Guid.NewGuid(),
-                    FileName = imagedto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath),
-                    Path = "",
-                    ProductID = product.ID,
-                    IsMain = imagedto.IsMain
+                    Name = dto.Name,
+                    Description = dto.Description,
+                    BrandID = brand.ID,
+                    CategoryID = category.ID,
+                    DepartmentID = department.ID,
+                    Price = dto.Price,
+                    DiscountedPrice = (dto.Price - ((dto.Price * (int)dto.DiscountPercentage) / 100)),
+                    isSingleColour = dto.isSingleColour,
+                    Stock = dto.Stock
                 };
-                image.Path = $"{scheme}://{host}/{FilePaths.ProuctImageFilePath}/{image.FileName}";
+
+
+                foreach (var imagedto in dto.ProductImages)
+                {
+                    var res = imagedto.file.FileName;
+
+                    ProductImageFile image = new ProductImageFile
+                    {
+                        ID = Guid.NewGuid(),
+                        FileName = imagedto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath),
+                        Path = "",
+                        ProductID = product.ID,
+                        IsMain = imagedto.IsMain
+                    };
+                    image.Path = $"{scheme}://{host}/{FilePaths.ProuctImageFilePath}/{image.FileName}";
+                    try
+                    {
+                        await _productImageFileWriteRepository.AddAsync(image);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        throw;
+                    }
+                }
+
+                foreach (var colordto in dto.ProductColors)
+                {
+                    var color = new ProductColor
+                    {
+                        ColorName = colordto.ColorName
+                    };
+                    await _productColorWriteRepository.AddAsync(color);
+
+                }
+
+                foreach (var sizedto in dto.ProductSizes)
+                {
+                    var size = new ProductSize
+                    {
+                        SizeName = sizedto.SizeName
+                    };
+                    await _productSizeWriteRepository.AddAsync(size);
+
+                }
+
+                foreach (var propertydto in dto.ProductProperties)
+                {
+                    ProductProperty property = new ProductProperty
+                    {
+                        ID = Guid.NewGuid(),
+                        Name = propertydto.Name,
+                        Value = propertydto.Value,
+                        ProductID = product.ID
+                    };
+
+                    await _productPropertyWriteRepository.AddAsync(property);
+                }
+
+                foreach (var shopId in dto.ShopIDs)
+                {
+                    var shop = await _shopReadRepository.GetWhereAsync(sh => sh.ID == shopId && !sh.isDeleted, true);
+                    if (shop != null)
+                    {
+                        product.Shops.Add(shop);
+                    }
+                    else throw new InvalidInputException("mağaza");
+                }
+
+                category.Products.Add(product);
+                department.Products.Add(product);
+                if (brand is not null) brand.Products.Add(product);
                 try
                 {
-                    await _productImageFileWriteRepository.AddAsync(image);
+                    await _productWriteRepository.AddAsync(product);
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex);
                     throw;
                 }
+
+                await _productWriteRepository.SaveAsync();
+                await _productColorWriteRepository.SaveAsync();
+                await _productImageFileWriteRepository.SaveAsync();
+                await _productPropertyWriteRepository.SaveAsync();
+                await _productSizeWriteRepository.SaveAsync();
+                await transaction.CommitAsync();
             }
-
-            foreach (var colordto in dto.Colors)
+            catch
             {
-
-
-                var propertycolor = new ProductProperty
-                {
-                    ID = Guid.NewGuid(),
-                    Name = "rəng",
-                    //Value = color.Name,
-                    ProductID = product.ID
-                };
-                await _productPropertyWriteRepository.AddAsync(propertycolor);
-
-            }
-
-            foreach (var propertydto in dto.ProductProperties)
-            {
-                ProductProperty property = new ProductProperty
-                {
-                    ID = Guid.NewGuid(),
-                    Name = propertydto.Name,
-                    Value = propertydto.Value,
-                    ProductID = product.ID
-                };
-
-                await _productPropertyWriteRepository.AddAsync(property);
-            }
-
-            foreach (var shopId in dto.ShopIDs)
-            {
-                var shop = await _shopReadRepository.GetWhereAsync(sh => sh.ID == shopId && !sh.isDeleted, true);
-                if (shop != null)
-                {
-                    product.Shops.Add(shop);
-                }
-                else throw new InvalidInputException("mağaza");
-            }
-
-            category.Products.Add(product);
-            department.Products.Add(product);
-            if (brand is not null) brand.Products.Add(product);
-            try
-            {
-                await _productWriteRepository.AddAsync(product);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
+                await transaction.RollbackAsync();
                 throw;
             }
-
-            await _productWriteRepository.SaveAsync();
         }
 
         public async Task CreateProductImageAsync(string productId, ProductImageCommandDto dto)

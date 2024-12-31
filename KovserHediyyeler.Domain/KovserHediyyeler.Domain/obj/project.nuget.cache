@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3AoiAnrzcVZeYzpR1l/85np925s4Q0WKEv+03RZYK3+ecH0hrusgeoN+Z3Dhc77biE984Xv1wU3XkY/77/FlpQ==",
+  "dgSpecHash": "We4wCpuU+c6PQriqqloYCan70IES5rcwQTuv4sGq9Qk0y1nu03OL9kj7/j1UCSJbmA91+yu+C1o7EEB0hjckhg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\Learning Programming\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.11\\microsoft.aspnetcore.cryptography.internal.8.0.11.nupkg.sha512",
