@@ -17,8 +17,12 @@ using KovserHedieyyeler.Application.Features.Queries.Products.GetAll.GetAllProdu
 using KovserHedieyyeler.Application.Features.Queries.Products.GetAll.GetAllProducts;
 using KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProduct;
 using KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProductProperty;
+using KovserHediyyeler.Application.Features.Commands.Products.Create.AddColorToProduct;
 using KovserHediyyeler.Application.Features.Commands.Products.Create.AddShopToProduct;
+using KovserHediyyeler.Application.Features.Commands.Products.Create.AddSizeToProduct;
 using KovserHediyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveProductShop;
+using KovserHediyyeler.Application.Features.Commands.Products.Update.UpdateProductColor;
+using KovserHediyyeler.Application.Features.Commands.Products.Update.UpdateProductSize;
 using KovserHediyyeler.Application.Features.Queries.Products.GetAll.GetAllCategoryProducts;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -91,6 +95,23 @@ namespace Kovser.Hediyyeler.App.Controllers
         //[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Add Shop To Product", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpPost("AddShopToProduct")]
         public async Task<IActionResult> AddShopToProductAsync([FromForm] AddShopToProductCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        //[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Add Color To Product", Menu = AuthorizeDefinitionConstants.Products)]
+        [HttpPost("AddColorToProduct")]
+        public async Task<IActionResult> AddColorToProductAsync([FromForm] AddColorCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+
+        //[AuthorizeDefinition(ActionType = ActionType.Writing, Definition = "Add Size To Product", Menu = AuthorizeDefinitionConstants.Products)]
+        [HttpPost("AddSizeToProduct")]
+        public async Task<IActionResult> AddSizeToProductAsync([FromForm] AddSizeCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -221,6 +242,22 @@ namespace Kovser.Hediyyeler.App.Controllers
                 Id = id,
                 Dto = dto
             };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        // [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Product Color", Menu = AuthorizeDefinitionConstants.Products)]
+        [HttpPatch("UpdateProductColor")]
+        public async Task<IActionResult> UpdateProductColorAsync(UpdateColorCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        // [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Product Size", Menu = AuthorizeDefinitionConstants.Products)]
+        [HttpPatch("UpdateProductSize")]
+        public async Task<IActionResult> UpdateProductSizeAsync(UpdateSizeCommandRequest request)
+        {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }

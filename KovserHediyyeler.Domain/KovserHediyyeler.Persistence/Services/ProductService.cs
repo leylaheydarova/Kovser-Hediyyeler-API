@@ -62,6 +62,12 @@ namespace KovserHediyyeler.Persistence.Services
             _accessor = accessor;
         }
 
+        async Task<Product> GetProductAsync(string id, bool tracking)
+        {
+            var product = await _productReadRepository.GetWhereAsync(p => p.ID.ToString() == id && !p.isDeleted, tracking);
+            if (product == null) throw new NotFoundException("məhsul");
+            return product;
+        }
         private IQueryable<ProductGetAllDto> GetFilteredProductsQuery(Expression<Func<Product, bool>> filter)
         {
             return _productReadRepository.GetAllWhere(filter, false, "Department", "Shops")
@@ -254,12 +260,13 @@ namespace KovserHediyyeler.Persistence.Services
         {
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;
+            var product = await GetProductAsync(productId, false);
             ProductImageFile image = new ProductImageFile
             {
                 ID = Guid.NewGuid(),
                 FileName = dto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath),
                 Path = "",
-                ProductID = Guid.Parse(productId),
+                ProductID = product.ID,
                 IsMain = dto.IsMain
             };
             image.Path = $"{scheme}://{host}/{FilePaths.ProuctImageFilePath}/{image.FileName}";
@@ -269,12 +276,13 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task CreateProductPropertyAsync(string productId, ProductPropertyCommandDto dto)
         {
-            ProductProperty property = new ProductProperty
+            var product = await GetProductAsync(productId, false);
+            var property = new ProductProperty
             {
                 ID = Guid.NewGuid(),
                 Name = dto.Name,
                 Value = dto.Value,
-                ProductID = Guid.Parse(productId)
+                ProductID = product.ID
             };
             await _productPropertyWriteRepository.AddAsync(property);
             await _productPropertyWriteRepository.SaveAsync();
@@ -462,6 +470,48 @@ namespace KovserHediyyeler.Persistence.Services
             );
 
             return await PaginateAsync(query, page, size);
+        }
+
+        public async Task AddColorToProductAsync(string productId, string colorName)
+        {
+            var product = await GetProductAsync(productId, false);
+            var color = new ProductColor
+            {
+                ColorName = colorName,
+                ProductID = product.ID
+            };
+            await _productColorWriteRepository.AddAsync(color);
+            await _productColorWriteRepository.SaveAsync();
+        }
+
+        public async Task AddSizeToProductAsync(string productId, string sizeName)
+        {
+            var product = await GetProductAsync(productId, false);
+            var size = new ProductSize
+            {
+                SizeName = sizeName,
+                ProductID = product.ID
+            };
+            await _productSizeWriteRepository.AddAsync(size);
+            await _productSizeWriteRepository.SaveAsync();
+        }
+
+        public async Task UpdateProductColorAsync(string id, string colorName)
+        {
+            var color = await _productColorReadRepository.GetWhereAsync(c => c.ID.ToString() == id && !c.isDeleted, true);
+            if (color == null) throw new NotFoundException("rəng");
+            color.ColorName = colorName;
+            _productColorWriteRepository.Update(color);
+            await _productColorWriteRepository.SaveAsync();
+        }
+
+        public async Task UpdateProductSizeAsync(string id, string sizeName)
+        {
+            var size = await _productSizeReadRepository.GetWhereAsync(c => c.ID.ToString() == id && !c.isDeleted, true);
+            if (size == null) throw new NotFoundException("ölçü");
+            size.SizeName = sizeName;
+            _productSizeWriteRepository.Update(size);
+            await _productSizeWriteRepository.SaveAsync();
         }
     }
 }

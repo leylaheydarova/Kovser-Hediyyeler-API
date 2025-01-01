@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XPl4zCfo1uzz6pJQj0UsPPY+KA0gFw+vZzzzW92ckWA=",
+  "Hash": "ijzwCbAR7dCRlqUw5vp0SWRjLOyyR8LHpJPXBcgNpps=",
   "Source": "KovserHediyyeler.App",
   "BasePath": "_content/KovserHediyyeler.App",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\brands\\b50f3e4a-2b7d-4681-bc9a-94584ff36b44uzukdesti.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brands\\e910c589-aeee-48f0-917d-d453865231f5Screenshot (42).png",
+      "SourceId": "KovserHediyyeler.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\",
+      "BasePath": "_content/KovserHediyyeler.App",
+      "RelativePath": "assets/images/brands/e910c589-aeee-48f0-917d-d453865231f5Screenshot (42).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\brands\\e910c589-aeee-48f0-917d-d453865231f5Screenshot (42).png"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\wwwroot\\assets\\images\\brands\\ed79c271-9af1-46b4-9785-c8fea8ffa684uzukdesti.png",

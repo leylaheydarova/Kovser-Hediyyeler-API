@@ -1,0 +1,10 @@
+﻿using MediatR;
+
+namespace KovserHediyyeler.Application.Features.Commands.Products.Update.UpdateProductColor
+{
+    public class UpdateColorCommandRequest:IRequest<UpdateColorCommandResponse>
+    {
+        public string ID { get; set; }
+        public string ColorName { get; set; }
+    }
+}
