@@ -17,7 +17,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Products.Recover
             await _service.RecoverProductDataAsync(request.Id);
             return new RecoverProductCommandResponse
             {
-                Message = "Məhsul məlumatları uğurla bərpa edilmişdir!"
+                Message = "Silinmiş məlumat uğurla bərpa oldu!"
             };
         }
     }

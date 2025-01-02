@@ -2,6 +2,8 @@
 using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
 using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
 using KovserHedieyyeler.Application.DTOs.Shops;
+using KovserHediyyeler.Application.DTOs.Products.ProductColor;
+using KovserHediyyeler.Application.DTOs.Products.ProductSize;
 
 namespace KovserHedieyyeler.Application.DTOs.Products.Products
 {
@@ -24,5 +26,7 @@ namespace KovserHedieyyeler.Application.DTOs.Products.Products
         public ICollection<ProductPropertyGetDto> Properties { get; set; } = new List<ProductPropertyGetDto>();
         public ICollection<ProductImageGetDto> Images { get; set; } = new List<ProductImageGetDto>();
         public ICollection<ProductCommentGetDto> Comments { get; set; } = new List<ProductCommentGetDto>();
+        public ICollection<ProductColorGetDto> Colors { get; set; } = new List<ProductColorGetDto>();
+        public ICollection<ProductSizeGetDto> Sizes { get; set; } = new List<ProductSizeGetDto>();
     }
 }

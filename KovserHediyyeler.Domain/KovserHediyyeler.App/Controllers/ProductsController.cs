@@ -20,10 +20,16 @@ using KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetSingl
 using KovserHediyyeler.Application.Features.Commands.Products.Create.AddColorToProduct;
 using KovserHediyyeler.Application.Features.Commands.Products.Create.AddShopToProduct;
 using KovserHediyyeler.Application.Features.Commands.Products.Create.AddSizeToProduct;
+using KovserHediyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveColor;
 using KovserHediyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveProductShop;
+using KovserHediyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveSize;
 using KovserHediyyeler.Application.Features.Commands.Products.Update.UpdateProductColor;
 using KovserHediyyeler.Application.Features.Commands.Products.Update.UpdateProductSize;
 using KovserHediyyeler.Application.Features.Queries.Products.GetAll.GetAllCategoryProducts;
+using KovserHediyyeler.Application.Features.Queries.Products.GetAll.GetAllColors;
+using KovserHediyyeler.Application.Features.Queries.Products.GetAll.GetAllSizes;
+using KovserHediyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProductColor;
+using KovserHediyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProductSize;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -63,6 +69,20 @@ namespace Kovser.Hediyyeler.App.Controllers
 
         [HttpGet("GetAllProductProperties")]
         public async Task<IActionResult> GetAllProductPropertiesAsync([FromQuery] GetAllProductPropertiesQueryRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Datas);
+        }
+
+        [HttpGet("GetAllProductColors")]
+        public async Task<IActionResult> GetAllProductColorsAsync([FromQuery] GetAllColorsQueryRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Datas);
+        }
+
+        [HttpGet("GetAllProductSizes")]
+        public async Task<IActionResult> GetAllProductSizesAsync([FromQuery] GetAllSizesCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Datas);
@@ -139,6 +159,28 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Dto);
         }
 
+        [HttpGet("GetSingleProductColor/{id}")]
+        public async Task<IActionResult> GetProductColorAsync(string id)
+        {
+            var request = new GetSingleColorQueryRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Dto);
+        }
+
+        [HttpGet("GetSingleProductSize/{id}")]
+        public async Task<IActionResult> GetProductSizeAsync(string id)
+        {
+            var request = new GetSingleSizeQueryRequest
+            {
+                Id = id
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Dto);
+        }
+
         // [AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Delete Temporarily Product", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpDelete("DeleteTemporarilyProduct/{id}")]
         public async Task<IActionResult> DeleteProductAsync(string id)
@@ -206,6 +248,19 @@ namespace Kovser.Hediyyeler.App.Controllers
             return StatusCode(response.StatusCode, response.Message);
         }
 
+        [HttpDelete("RemoveProductColor")]
+        public async Task<IActionResult> RemoveProductColorAsync(RemoveColorCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpDelete("RemoveProductSize")]
+        public async Task<IActionResult> RemoveProductSizeAsync(RemoveSizeCommandRequest request)
+        {
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
 
         // [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Product", Menu = AuthorizeDefinitionConstants.Products)]
         [HttpPatch("UpdateProductData/{id}")]

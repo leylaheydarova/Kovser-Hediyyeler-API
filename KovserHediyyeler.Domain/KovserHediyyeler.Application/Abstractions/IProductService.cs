@@ -1,6 +1,8 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
 using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
 using KovserHedieyyeler.Application.DTOs.Products.Products;
+using KovserHediyyeler.Application.DTOs.Products.ProductColor;
+using KovserHediyyeler.Application.DTOs.Products.ProductSize;
 
 namespace KovserHediyyeler.Application.Abstractions
 {
@@ -19,6 +21,8 @@ namespace KovserHediyyeler.Application.Abstractions
         public Task RemovePermanentlyProductImageFileAsync(string id);
         public Task RemovePermanentlyProductPropertyAsync(string id);
         public Task RemovePermanentlyProductShopAsync(string prodcutId, string shopId);
+        public Task RemovePermanentlyProductColorAsync(string id);
+        public Task RemovePermanentlyProductSizeAsync(string id);
         public Task DeleteTemporarilyProductAsync(string id);
         public Task RecoverProductDataAsync(string id);
 
@@ -33,10 +37,14 @@ namespace KovserHediyyeler.Application.Abstractions
         public Task<List<ProductGetAllDto>> GetAllProductsAsync(int page, int size);
         public Task<List<ProductImageGetDto>> GetAllProductImagesAsync(int page, int size, string productId);
         public Task<List<ProductPropertyGetDto>> GetAllProductPropertiesAsync(int page, int size, string productId);
+        public Task<List<ProductColorGetDto>> GetAllProductColorsAsync(int page, int size, string productId);
+        public Task<List<ProductSizeGetDto>> GetAllProductSizesAsync(int page, int size, string productId);
         public Task<List<ProductGetAllDto>> GetAllFilteredProductsAsync(int page, int size, string BrandIdOrCategoryIdOrDepartmentIdOrShopId);
 
-
-
+        public Task<ProductGetSingleDto> GetSingleProductAsync(string id);
+        public Task<ProductPropertyGetDto> GetSingleProductPropertyAsync(string id);
+        public Task<ProductColorGetDto> GetSingleProductColorAsync(string id);
+        public Task<ProductSizeGetDto> GetSingleProductSizeAsync(string id);
 
     }
 }
