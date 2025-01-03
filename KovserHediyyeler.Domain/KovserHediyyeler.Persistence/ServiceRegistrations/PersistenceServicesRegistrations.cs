@@ -1,5 +1,6 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.Abstractions.Authentication;
+using KovserHediyyeler.Application.Abstractions.Products;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Baskets;
 using KovserHediyyeler.Application.Repositories.Brands;
@@ -29,6 +30,7 @@ using KovserHediyyeler.Persistence.Repositories.Shops;
 using KovserHediyyeler.Persistence.Repositories.SocialMedias;
 using KovserHediyyeler.Persistence.Repositories.WishLists;
 using KovserHediyyeler.Persistence.Services;
+using KovserHediyyeler.Persistence.Services.Products;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -141,7 +143,11 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IDepartmentService, DepartmentService>();
             services.AddScoped<IOrderService, OrderService>();
-            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductPostService, ProductPostService>();
+            services.AddScoped<IProductDeleteService, ProductDeleteService>();
+            services.AddScoped<IProductPatchService, ProductPatchService>();
+            services.AddScoped<IProductGetAllService, ProductGetAllService>();
+            services.AddScoped<IProductGetSingleService, ProductGetSingleService>();
             services.AddScoped<IPromotionService, PromotionService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<ISearchService, SearchService>();

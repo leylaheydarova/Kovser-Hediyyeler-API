@@ -1,13 +1,13 @@
-﻿using KovserHediyyeler.Application.Abstractions;
+﻿using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Queries.Products.GetAll.GetAllSizes
 {
     public class GetAllSizesCommandHandler : IRequestHandler<GetAllSizesCommandRequest, GetAllSizesCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductGetAllService _service;
 
-        public GetAllSizesCommandHandler(IProductService service)
+        public GetAllSizesCommandHandler(IProductGetAllService service)
         {
             _service = service;
         }

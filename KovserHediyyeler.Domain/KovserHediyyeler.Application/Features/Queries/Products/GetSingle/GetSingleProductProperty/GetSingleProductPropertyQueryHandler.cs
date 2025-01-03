@@ -1,22 +1,20 @@
-﻿using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
-using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Products;
+﻿using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProductProperty
 {
     public class GetSingleProductPropertyQueryHandler : IRequestHandler<GetSingleProductPropertyQueryRequest, GetSingleProductPropertyQueryResponse>
     {
-        readonly IProductPropertyReadRepository _repository;
+        readonly IProductGetSingleService _service;
 
-        public GetSingleProductPropertyQueryHandler(IProductPropertyReadRepository repository)
+        public GetSingleProductPropertyQueryHandler(IProductGetSingleService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<GetSingleProductPropertyQueryResponse> Handle(GetSingleProductPropertyQueryRequest request, CancellationToken cancellationToken)
         {
-            
+            var dto = await _service.GetSingleProductPropertyAsync(request.Id);
 
             return new GetSingleProductPropertyQueryResponse
             {

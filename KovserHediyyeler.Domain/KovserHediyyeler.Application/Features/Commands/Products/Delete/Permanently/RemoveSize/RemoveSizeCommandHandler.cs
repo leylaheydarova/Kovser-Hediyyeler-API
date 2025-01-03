@@ -1,13 +1,14 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveSize
 {
     public class RemoveSizeCommandHandler : IRequestHandler<RemoveSizeCommandRequest, RemoveSizeCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductDeleteService _service;
 
-        public RemoveSizeCommandHandler(IProductService service)
+        public RemoveSizeCommandHandler(IProductDeleteService service)
         {
             _service = service;
         }

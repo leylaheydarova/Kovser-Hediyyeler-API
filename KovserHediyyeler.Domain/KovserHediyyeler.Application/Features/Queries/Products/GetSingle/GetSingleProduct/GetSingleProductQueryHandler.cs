@@ -1,20 +1,13 @@
-﻿using KovserHedieyyeler.Application.DTOs.Products.ProductImage;
-using KovserHedieyyeler.Application.DTOs.Products.ProductProperty;
-using KovserHedieyyeler.Application.DTOs.Products.Products;
-using KovserHedieyyeler.Application.DTOs.Shops;
-using KovserHediyyeler.Application.Abstractions;
-using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Products;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProduct
 {
     public class GetSingleProductQueryHandler : IRequestHandler<GetSingleProductQueryRequest, GetSingleProductQueryResponse>
     {
-        readonly IProductService _service;
+        readonly IProductGetSingleService _service;
 
-        public GetSingleProductQueryHandler(IProductService service)
+        public GetSingleProductQueryHandler(IProductGetSingleService service)
         {
             _service = service;
         }

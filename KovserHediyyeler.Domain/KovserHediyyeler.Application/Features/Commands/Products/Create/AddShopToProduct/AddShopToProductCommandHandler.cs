@@ -1,13 +1,14 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.Products.Create.AddShopToProduct
 {
     public class AddShopToProductCommandHandler : IRequestHandler<AddShopToProductCommandRequest, AddShopToProductCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductPostService _service;
 
-        public AddShopToProductCommandHandler(IProductService service)
+        public AddShopToProductCommandHandler(IProductPostService service)
         {
             _service = service;
         }

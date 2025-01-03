@@ -1,13 +1,13 @@
-﻿using KovserHediyyeler.Application.Abstractions;
+﻿using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Update.UpdateProducts
 {
     public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommandRequest, UpdateProductCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductPatchService _service;
 
-        public UpdateProductCommandHandler(IProductService service)
+        public UpdateProductCommandHandler(IProductPatchService service)
         {
             _service = service;
         }

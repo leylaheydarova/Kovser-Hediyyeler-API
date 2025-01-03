@@ -1,13 +1,13 @@
-﻿using KovserHediyyeler.Application.Abstractions;
+﻿using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.Products.Update.UpdateProductColor
 {
     public class UpdateColorCommandHandler : IRequestHandler<UpdateColorCommandRequest, UpdateColorCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductPatchService _service;
 
-        public UpdateColorCommandHandler(IProductService service)
+        public UpdateColorCommandHandler(IProductPatchService service)
         {
             _service = service;
         }

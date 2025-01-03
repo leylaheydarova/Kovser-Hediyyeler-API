@@ -1,13 +1,13 @@
-﻿using KovserHediyyeler.Application.Abstractions;
+﻿using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Queries.Products.GetAll.GetAllColors
 {
     public class GetAllColorsQueryHandler : IRequestHandler<GetAllColorsQueryRequest, GetAllColorsQueryResponse>
     {
-        readonly IProductService _service;
+        readonly IProductGetAllService _service;
 
-        public GetAllColorsQueryHandler(IProductService service)
+        public GetAllColorsQueryHandler(IProductGetAllService service)
         {
             _service = service;
         }

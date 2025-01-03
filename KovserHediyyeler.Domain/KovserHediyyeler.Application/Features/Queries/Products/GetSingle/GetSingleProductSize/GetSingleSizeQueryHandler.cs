@@ -1,13 +1,13 @@
-﻿using KovserHediyyeler.Application.Abstractions;
+﻿using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Queries.Products.GetSingle.GetSingleProductSize
 {
     public class GetSingleSizeQueryHandler : IRequestHandler<GetSingleSizeQueryRequest, GetSingleSizeQueryResponse>
     {
-        readonly IProductService _service;
+        readonly IProductGetSingleService _service;
 
-        public GetSingleSizeQueryHandler(IProductService service)
+        public GetSingleSizeQueryHandler(IProductGetSingleService service)
         {
             _service = service;
         }

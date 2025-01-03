@@ -1,13 +1,14 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveImage
 {
     public class RemoveProductImageCommandHandler : IRequestHandler<RemoveProductImageCommandRequest, RemoveProductImageCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductDeleteService _service;
 
-        public RemoveProductImageCommandHandler(IProductService service)
+        public RemoveProductImageCommandHandler(IProductDeleteService service)
         {
             _service = service;
         }

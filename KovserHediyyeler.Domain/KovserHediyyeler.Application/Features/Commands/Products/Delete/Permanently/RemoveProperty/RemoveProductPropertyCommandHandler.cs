@@ -1,13 +1,14 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveProperty
 {
     public class RemoveProductPropertyCommandHandler : IRequestHandler<RemoveProductPropertyCommandRequest, RemoveProductPropertyCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductDeleteService _service;
 
-        public RemoveProductPropertyCommandHandler(IProductService service)
+        public RemoveProductPropertyCommandHandler(IProductDeleteService service)
         {
             _service = service;
         }

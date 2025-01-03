@@ -1,13 +1,14 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Recover
 {
     public class RecoverProductCommandHandler : IRequestHandler<RecoverProductCommandRequest, RecoverProductCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductDeleteService _service;
 
-        public RecoverProductCommandHandler(IProductService service)
+        public RecoverProductCommandHandler(IProductDeleteService service)
         {
             _service = service;
         }

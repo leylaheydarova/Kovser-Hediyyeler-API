@@ -1,13 +1,14 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveColor
 {
     public class RemoveColorCommandHandler : IRequestHandler<RemoveColorCommandRequest, RemoveColorCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductDeleteService _service;
 
-        public RemoveColorCommandHandler(IProductService service)
+        public RemoveColorCommandHandler(IProductDeleteService service)
         {
             _service = service;
         }

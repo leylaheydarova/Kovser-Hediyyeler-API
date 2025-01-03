@@ -1,13 +1,13 @@
-﻿using KovserHediyyeler.Application.Abstractions;
+﻿using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Products.GetAll.GetAllProducts
 {
     public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQueryRequest, GetAllProductsQueryResponse>
     {
-        readonly IProductService _service;
+        readonly IProductGetAllService _service;
 
-        public GetAllProductsQueryHandler(IProductService service)
+        public GetAllProductsQueryHandler(IProductGetAllService service)
         {
             _service = service;
         }

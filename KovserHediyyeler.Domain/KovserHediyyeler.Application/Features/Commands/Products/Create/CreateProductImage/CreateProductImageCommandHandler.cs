@@ -1,13 +1,14 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProductImage
 {
     public class CreateProductImageCommandHandler : IRequestHandler<CreateProductImageCommandRequest, CreateProductImageCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductPostService _service;
 
-        public CreateProductImageCommandHandler(IProductService service)
+        public CreateProductImageCommandHandler(IProductPostService service)
         {
             _service = service;
         }

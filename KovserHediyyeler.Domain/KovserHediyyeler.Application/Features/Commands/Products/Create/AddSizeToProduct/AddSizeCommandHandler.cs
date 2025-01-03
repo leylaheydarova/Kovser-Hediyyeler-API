@@ -1,13 +1,14 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.Products.Create.AddSizeToProduct
 {
     public class AddSizeCommandHandler : IRequestHandler<AddSizeCommandRequest, AddSizeCommandResponse>
     {
-        readonly IProductService _service;
+        readonly IProductPostService _service;
 
-        public AddSizeCommandHandler(IProductService service)
+        public AddSizeCommandHandler(IProductPostService service)
         {
             _service = service;
         }
