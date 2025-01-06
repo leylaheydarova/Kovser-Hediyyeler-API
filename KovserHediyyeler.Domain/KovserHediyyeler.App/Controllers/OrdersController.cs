@@ -1,5 +1,6 @@
 ﻿using KovserHediyyeler.Application.DTOs.Orders;
 using KovserHediyyeler.Application.Features.Commands.Orders.ApproveOrder.OrderPayment;
+using KovserHediyyeler.Application.Features.Commands.Orders.CancelOrder;
 using KovserHediyyeler.Application.Features.Commands.Orders.Create.CreateOrder;
 using KovserHediyyeler.Domain.Enums;
 using MediatR;
@@ -39,6 +40,17 @@ namespace KovserHediyyeler.App.Controllers
                 OrderId = orderId,
                 Status = status,
                 Type = type
+            };
+            var response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        [HttpDelete("cancel-order/{id}")]
+        public async Task<IActionResult> CancelOrderAsync(string id)
+        {
+            var request = new CancelOrderCommandRequest
+            {
+                Id = id
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

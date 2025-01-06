@@ -230,5 +230,37 @@ namespace KovserHediyyeler.Persistence.Services
                 throw;
             }
         }
+
+        public async Task<bool> CancelOrderAsync(Guid OrderId)
+        {
+            using var transanction = await _orderWriteRepository.BeginTransactionAsync();
+            var result = false;
+            try
+            {
+                var order = await _orderReadRepository.GetWhereAsync(o => o.ID == OrderId && !o.isDeleted, true, "OrderPayment", "Details", "Shipping");
+                if (order == null) throw new NotFoundException("sifariş");
+                foreach (var detail in order.Details)
+                {
+                    _orderDetailWriteRepository.RemovePermanently(detail);
+                }
+                _shippingWriteRepository.RemovePermanently(order.Shipping);
+                _orderPaymentWriteRepository.RemovePermanently(order.OrderPayment);
+                _orderWriteRepository.RemovePermanently(order);
+
+                await _orderDetailWriteRepository.SaveAsync();
+                await _shippingWriteRepository.SaveAsync();
+                await _orderPaymentWriteRepository.SaveAsync();
+                await _orderWriteRepository.SaveAsync();
+                result = true;
+                await transanction.CommitAsync();
+                return result;
+            }
+            catch
+            {
+                await transanction.RollbackAsync();
+                result = false;
+                throw;
+            }
+        }
     }
 }

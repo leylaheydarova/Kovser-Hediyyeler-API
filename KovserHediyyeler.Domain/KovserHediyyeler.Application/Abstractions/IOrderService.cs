@@ -7,5 +7,6 @@ namespace KovserHediyyeler.Application.Abstractions
     {
         Task<bool> CreateOrderAsync(string customerId, OrderDto orderDto); //todo: payment cancel oldugu hali da dusun
         Task<bool> ApproveOrderPaymentAsync(string customerId, PaymentStatus status, Guid OrderId, ShippingType type);
+        Task<bool> CancelOrderAsync(Guid OrderId);
     }
 }
