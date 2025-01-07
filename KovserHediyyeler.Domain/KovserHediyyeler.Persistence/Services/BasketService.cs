@@ -8,6 +8,7 @@ using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.InteropServices;
 
 namespace KovserHediyyeler.Persistence.Services
 {
@@ -60,7 +61,8 @@ namespace KovserHediyyeler.Persistence.Services
             var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == webuser.Id, istracking, includes);
             return basket;
         }
-        public async Task AddItemToBasketAsync(Guid productId, int count, string userId)
+       
+        public async Task AddItemToBasketAsync(Guid productId, int count, string userId, Guid colorId, Guid sizeId)
         {
             using var transaction = await _basketWriteRepository.BeginTransactionAsync();
             try
@@ -71,9 +73,18 @@ namespace KovserHediyyeler.Persistence.Services
                     basket.BasketItems = new List<BasketItem>();
                 }
                 var product = await GetProductAsync(productId);
+
+                var color = product.Colors.FirstOrDefault(c => c.ID == colorId && !c.isDeleted);
+                if (color == null) throw new NotFoundException("bu rəng");
+                if (color.ColorStock <= 0) throw new FailException("Bu rəngdə məhsul tükənib. Zəhmət olmasa mövcud digər rənglərdən seçin.");
+                var size = product.Sizes.FirstOrDefault(s => s.ID == sizeId && !s.isDeleted);
+                if (size == null) throw new NotFoundException("bu ölçü");
+                if (size.SizeStock <= 0) throw new FailException("Bu ölçüdə məhsul tükənib. Zəhmət olmasa mövcud digər ölçülərdən seçin.");
+
+
                 //if (product.Department.Name != "Kövsər Hədiyyələr") //cunki handmade mehsullari stock-u free-dir ve istenilen sayda secile biler
                 //{
-                if (product.Stock < count) throw new InvalidCountException(count);
+                if (product.Stock < count) throw new InvalidCountException(count); 
                 //}
                 var item = await _itemReadRepository.Table.Include(i => i.Basket).Include(i => i.Product).FirstOrDefaultAsync(i => i.ProductID == product.ID && i.BasketID == basket.ID && !i.isDeleted);
                 if (item == null)
@@ -85,9 +96,19 @@ namespace KovserHediyyeler.Persistence.Services
                         BasketID = basket.ID,
                         ProductID = product.ID,
                         Product = product,
-                        ProductCount = count,
-
+                        SelectedColor = color,
+                        SelectedSize = size
                     };
+                    if(item.SelectedSize.SizeStock >= item.SelectedColor.ColorStock)
+                    {
+                        if (count > item.SelectedColor.ColorStock) throw new InvalidCountException(item.SelectedColor.ColorStock);
+                        else item.ProductCount = count;
+                    }
+                    else
+                    {
+                        if (count > item.SelectedSize.SizeStock) throw new InvalidCountException(item.SelectedSize.SizeStock);
+                        else item.ProductCount = count;
+                    }
                     basket.BasketItems.Add(item);
                     await _itemWriteRepository.AddAsync(item);
                 }
@@ -153,9 +174,10 @@ namespace KovserHediyyeler.Persistence.Services
             try
             {
                 var product = await GetProductAsync(productId);
+                
                 //if (product.Department.Name != "Kövsər Hədiyyələr")
                 //{
-                if (product.Stock < newCount) throw new InvalidCountException(newCount);
+                //if (product.Stock < newCount) throw new InvalidCountException(newCount);
                 //}
                 var basket = await FindBasketWithIncludeAsync(customerId, true, "BasketItems");
                 if (basket.BasketItems == null)
@@ -164,9 +186,20 @@ namespace KovserHediyyeler.Persistence.Services
                 }
 
                 var item = await _itemReadRepository.GetWhereAsync(x => x.ProductID == product.ID && !x.isDeleted, true, "Product");
-                basket.Count = (basket.Count - item.ProductCount) + newCount;
-                basket.TotalPrice = (basket.TotalPrice - (item.ProductCount * item.Product.DiscountedPrice)) + (newCount * item.Product.DiscountedPrice);
-                item.ProductCount = newCount;
+                var previousCount = item.ProductCount; //əvvəlki say
+                if (item.SelectedSize.SizeStock >= item.SelectedColor.ColorStock)
+                {
+                    if (newCount > item.SelectedColor.ColorStock) throw new InvalidCountException(item.SelectedColor.ColorStock);
+                    else item.ProductCount = newCount;
+                }
+                else
+                {
+                    if (newCount > item.SelectedSize.SizeStock) throw new InvalidCountException(item.SelectedSize.SizeStock);
+                    else item.ProductCount = newCount;
+                }
+
+                basket.Count = (basket.Count - previousCount) + item.ProductCount;
+                basket.TotalPrice = (basket.TotalPrice - (previousCount * item.Product.DiscountedPrice)) + (item.ProductCount * item.Product.DiscountedPrice);
                 basket = item.Basket;
                 _itemWriteRepository.Update(item);
                 _basketWriteRepository.Update(basket);
@@ -210,7 +243,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task<BasketGetDto> GetBasketAsync(string customerId)
         {
-            var query = _itemReadRepository.GetAllWhere(x => !x.isDeleted && x.Basket.CustomerID == customerId, false, "Product");
+            var query = _itemReadRepository.GetAllWhere(x => !x.isDeleted && x.Basket.CustomerID == customerId, false, "Product.Colors", "Product.Sizes");
             List<BasketItemGetDto> items = await query.Select(x => new BasketItemGetDto()
             {
                 Id = x.ID.ToString(),
@@ -218,7 +251,9 @@ namespace KovserHediyyeler.Persistence.Services
                 ProductCount = x.ProductCount,
                 BasketID = x.BasketID.ToString(),
                 DiscountedPrice = x.Product.DiscountedPrice,
-                ProductPrice = x.Product.Price
+                ProductPrice = x.Product.Price,
+                SelectedColor = x.SelectedColor.ColorName,
+                SelectedSize = x.SelectedSize.SizeName
             }).ToListAsync();
             var basket = await FindBasketWithIncludeAsync(customerId, false, "Customer");
             var dto = new BasketGetDto

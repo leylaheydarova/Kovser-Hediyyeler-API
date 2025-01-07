@@ -62,7 +62,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
 
             product.Name = dto.Name != null ? dto.Name : product.Name;
             product.Description = dto.Description != null ? dto.Description : product.Description;
-            product.Stock = dto.Stock != null ? (int)dto.Stock : product.Stock;
+            product.Stock = product.Stock;
             product.Price = dto.Price != null ? (double)dto.Price : product.Price;
             product.DiscountedPrice = (double)discountprice > 0 ? (double)discountprice : product.DiscountedPrice;
             product.isSingleColour = dto.isSingleColour != null ? (bool)dto.isSingleColour : product.isSingleColour;
@@ -102,22 +102,52 @@ namespace KovserHediyyeler.Persistence.Services.Products
 
         }
 
-        public async Task UpdateProductColorAsync(string id, string colorName)
+        public async Task UpdateProductColorAsync(string id, string? colorName, int colorStock)
         {
-            var color = await _productColorReadRepository.GetWhereAsync(c => c.ID.ToString() == id && !c.isDeleted, true);
-            if (color == null) throw new NotFoundException("məhsul rəngi");
-            color.ColorName = colorName;
-            _productColorWriteRepository.Update(color);
-            await _productColorWriteRepository.SaveAsync();
+            using var transaction = await _productWriteRepository.BeginTransactionAsync();
+            try
+            {
+                var color = await _productColorReadRepository.GetWhereAsync(c => c.ID.ToString() == id && !c.isDeleted, true, "Product");
+                if (color == null) throw new NotFoundException("məhsul rəngi");
+                var tempStock = color.ColorStock; //ilkin stok dəyəri
+                color.ColorName = colorName != null ? colorName : color.ColorName;
+                color.ColorStock = colorStock != 0 ? colorStock :color.ColorStock;
+                color.Product.Stock += color.ColorStock - tempStock;//çünki color-da olan ilkin stok dəyəri çıxmalı, yeni stock dəyəri toplanmalıdır.
+                _productColorWriteRepository.Update(color);
+                _productWriteRepository.Update(color.Product);
+                await _productColorWriteRepository.SaveAsync();
+                await _productWriteRepository.SaveAsync();
+                await transaction.CommitAsync();
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
 
-        public async Task UpdateProductSizeAsync(string id, string sizeName)
+        public async Task UpdateProductSizeAsync(string id, string? sizeName, int sizeStock)
         {
-            var size = await _productSizeReadRepository.GetWhereAsync(c => c.ID.ToString() == id && !c.isDeleted, true);
-            if (size == null) throw new NotFoundException("məhsul ölçüsü");
-            size.SizeName = sizeName;
-            _productSizeWriteRepository.Update(size);
-            await _productSizeWriteRepository.SaveAsync();
+            using var transaction = await _productWriteRepository.BeginTransactionAsync();
+            try
+            {
+                var size = await _productSizeReadRepository.GetWhereAsync(c => c.ID.ToString() == id && !c.isDeleted, true, "Product");
+                if (size == null) throw new NotFoundException("məhsul ölçüsü");
+                var tempStock = size.SizeStock; //ilkin stok dəyəri
+                size.SizeName = sizeName != null ? sizeName : size.SizeName;
+                size.SizeStock = sizeStock != 0 ? sizeStock : size.SizeStock;
+                size.Product.Stock += size.SizeStock - tempStock; //çünki size-da olan ilkin stok dəyəri çıxmalı, yeni stock dəyəri toplanmalıdır.
+                _productSizeWriteRepository.Update(size);
+                _productWriteRepository.Update(size.Product);
+                await _productSizeWriteRepository.SaveAsync();
+                await _productWriteRepository.SaveAsync();
+                await transaction.CommitAsync();
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
 
     }

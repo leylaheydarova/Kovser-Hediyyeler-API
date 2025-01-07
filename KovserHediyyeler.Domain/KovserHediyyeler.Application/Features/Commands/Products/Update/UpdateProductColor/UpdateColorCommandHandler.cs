@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Products.Update.UpdateP
 
         public async Task<UpdateColorCommandResponse> Handle(UpdateColorCommandRequest request, CancellationToken cancellationToken)
         {
-            await _service.UpdateProductColorAsync(request.ID, request.ColorName);
+            await _service.UpdateProductColorAsync(request.ID, request.ColorName, request.ColorStock);
             return new UpdateColorCommandResponse
             {
                 Message = "Rəng uğurla yeniləndi!"

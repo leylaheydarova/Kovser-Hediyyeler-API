@@ -78,12 +78,14 @@ namespace KovserHediyyeler.Persistence.Services.Products
                 Colors = product.Colors.Select(color => new ProductColorGetDto
                 {
                     Id = color.ID.ToString(),
-                    ColorName = color.ColorName
+                    ColorName = color.ColorName,
+                    ColorStock = color.ColorStock
                 }).ToList(),
                 Sizes = product.Sizes.Select(size => new ProductSizeGetDto
                 {
                     Id = size.ID.ToString(),
-                    SizeName = size.SizeName
+                    SizeName = size.SizeName,
+                    SizeStock = size.SizeStock
                 }).ToList(),
                 //Comments = product.Comments.Select(comment => new ProductCommentGetDto
                 //{
@@ -116,7 +118,8 @@ namespace KovserHediyyeler.Persistence.Services.Products
             var dto = new ProductColorGetDto
             {
                 Id = color.ID.ToString(),
-                ColorName = color.ColorName
+                ColorName = color.ColorName,
+                ColorStock = color.ColorStock
             };
             return dto;
         }
@@ -128,7 +131,8 @@ namespace KovserHediyyeler.Persistence.Services.Products
             var dto = new ProductSizeGetDto
             {
                 Id = size.ID.ToString(),
-                SizeName = size.SizeName
+                SizeName = size.SizeName,
+                SizeStock = size.SizeStock
             };
             return dto;
         }

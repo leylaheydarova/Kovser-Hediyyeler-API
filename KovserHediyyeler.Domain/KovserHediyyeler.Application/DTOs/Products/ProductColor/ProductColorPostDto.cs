@@ -3,5 +3,6 @@
     public class ProductColorPostDto
     {
         public string ColorName { get; set; }
+        public int ColorStock { get; set; }
     }
 }

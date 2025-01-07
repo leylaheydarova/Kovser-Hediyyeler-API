@@ -9,7 +9,7 @@ namespace KovserHediyyeler.Application.Abstractions.Products
         public Task UpdateProductAsync(string id, ProductPutDto dto);
         public Task UpdateProductImageFileAsync(string id, ProductImageCommandDto dto);
         public Task UpdateProductPropertyAsync(string id, ProductPropertyCommandDto dto);
-        public Task UpdateProductColorAsync(string id, string colorName);
-        public Task UpdateProductSizeAsync(string id, string sizeName);
+        public Task UpdateProductColorAsync(string id, string? colorName, int colorStock);
+        public Task UpdateProductSizeAsync(string id, string? sizeName, int sizeStock);
     }
 }

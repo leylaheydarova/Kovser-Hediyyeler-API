@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Products.Update.UpdateP
 
         public async Task<UpdateSizeCommandResponse> Handle(UpdateSizeCommandRequest request, CancellationToken cancellationToken)
         {
-            await _service.UpdateProductSizeAsync(request.ID, request.SizeName);
+            await _service.UpdateProductSizeAsync(request.ID, request.SizeName, request.SizeStock);
             return new UpdateSizeCommandResponse
             {
                 Message = "Ölçü uğurla yeniləndi!"

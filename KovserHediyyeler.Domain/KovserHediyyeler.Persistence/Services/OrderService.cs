@@ -1,5 +1,6 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.DTOs.Orders;
+using KovserHediyyeler.Application.DTOs.Orders.OrderDetails;
 using KovserHediyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHediyyeler.Application.Exceptions.FailExceptions;
 using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
@@ -9,6 +10,7 @@ using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace KovserHediyyeler.Persistence.Services
 {
@@ -81,6 +83,8 @@ namespace KovserHediyyeler.Persistence.Services
                         DiscountedPrice = (item.Product.DiscountedPrice * item.ProductCount),
                         Price = (item.Product.Price * item.ProductCount),
                         ProductID = item.ProductID,
+                        SelectedColor = item.SelectedColor,
+                        SelectedSize = item.SelectedSize
                     };
                     detailDtos.Add(detailDto);
                 }
@@ -122,7 +126,9 @@ namespace KovserHediyyeler.Persistence.Services
                         ID = Guid.NewGuid(),
                         OrderID = order.ID,
                         Price = dto.DiscountedPrice,
-                        ProductID = dto.ProductID
+                        ProductID = dto.ProductID,
+                        SelectedColor = dto.SelectedColor,
+                        SelectedSize = dto.SelectedSize
                     };
                     if (dto.Quantity > product.Stock) throw new InvalidCountException(product.Stock);
                     detail.Quantity = dto.Quantity;
@@ -131,7 +137,7 @@ namespace KovserHediyyeler.Persistence.Services
                     await _orderDetailWriteRepository.AddAsync(detail);
                     _productWriteRepository.Update(product);
                 }
-
+                
                 order.OrderPayment = new OrderPayment
                 {
                     ID = Guid.NewGuid(),
@@ -261,6 +267,134 @@ namespace KovserHediyyeler.Persistence.Services
                 result = false;
                 throw;
             }
+        }
+
+        public async Task ChangeShippingStatusAsync(Guid OrderId, ShippingStatus status)
+        {
+            var order = await _orderReadRepository.GetWhereAsync(o => o.ID == OrderId && !o.isDeleted, true, "Shipping");
+            if (order == null) throw new NotFoundException("sifariş");
+            order.Shipping.ShippingStatus = status;
+            _shippingWriteRepository.Update(order.Shipping);
+            await _shippingWriteRepository.SaveAsync();
+        }
+
+        public async Task ChangeOrderStatusAsync(Guid OrderId, OrderStatus status)
+        {
+            var order = await _orderReadRepository.GetWhereAsync(o => o.ID == OrderId && !o.isDeleted, true);
+            if (order == null) throw new NotFoundException("sifariş");
+            order.OrderStatus = status;
+            _orderWriteRepository.Update(order);
+            await _orderWriteRepository.SaveAsync();
+        }
+
+        public async Task<List<OrderGetAllForACustomerDto>> GetAllCustomerOrdersAsync(int page, int size, string customerId)
+        {
+            var customer = await GetUserAsync(customerId);
+            var query = _orderReadRepository.GetAllWhere(o => o.CustomerID == customer.Id && !o.isDeleted, false, "Details.Product");
+            var dtos = new List<OrderGetAllForACustomerDto>();
+            dtos = await query.Skip(page * size)
+                .Take(size)
+                .Select(order => new OrderGetAllForACustomerDto
+                {
+                    Id = order.ID.ToString(),
+                    OrderTrackingNumber = order.OrderTrackingNumber,
+                    DiscountedPrice = order.DiscountedPrice,
+                    OrderStatus = order.OrderStatus,
+                    ImageNames = order.Details.Select(d => d.Product.Images.FirstOrDefault(i => i.IsMain).FileName).ToList(),
+                    ImageURLs = order.Details.Select(d => d.Product.Images.FirstOrDefault(i => i.IsMain).Path).ToList()
+                }).ToListAsync();
+            return dtos;
+        }
+
+        public async Task<List<OrderGetAllDto>> GetAllOrdersAsync(int page, int size)
+        {
+            var query = _orderReadRepository.GetAllWhere(o => !o.isDeleted, false, "Customer");
+            var dtos = new List<OrderGetAllDto>();
+            dtos = await query.Skip(page * size)
+                .Take(size)
+                .Select(order => new OrderGetAllDto
+                {
+                    Id = order.ID.ToString(),
+                    OrderTrackingNumber = order.OrderTrackingNumber,
+                    DiscountedPrice = order.DiscountedPrice,
+                    OrderStatus = order.OrderStatus,
+                    CustomerId = order.CustomerID,
+                    CustomerName = order.Customer.FullName,
+                    CustomerPhone = order.Customer.PhoneNumber
+                }).ToListAsync();
+            return dtos;
+        }
+
+        public async Task<List<OrderDetailGetAllDto>> GetAllOrderDetailsAsync(Guid orderId)
+        {
+            var order = await _orderReadRepository.GetWhereAsync(o => o.ID == orderId && !o.isDeleted, false, "Details.Product");
+            if (order == null) throw new NotFoundException("sifariş");
+            var details = order.Details;
+            if (details == null) throw new NotFoundException("sifarişin detalı");
+            var dtos = new List<OrderDetailGetAllDto>();
+            dtos = details.Select(detail => new OrderDetailGetAllDto
+            {
+                Id = detail.ID.ToString(),
+                Quantity = detail.Quantity,
+                Price = detail.Price,
+                ProductId = detail.ProductID.ToString(),
+                ProductName = detail.Product.Name
+            }).ToList();
+            return dtos;
+        }
+
+        public async Task<OrderGetSingleDto> GetSingleOrderAsync(Guid orderId)
+        {
+            var order = await _orderReadRepository.GetWhereAsync(o => o.ID == orderId && !o.isDeleted, false,
+                "Details.Product.Colors",
+                "Details.Product.Sizes",
+                "Details.Product.Images",
+                "Details.SelectedColor",
+                "Details.SelectedSize",
+                "OrderPayment",
+                "Shipping",
+                "Customer.Addresses");
+            if (order == null) throw new NotFoundException("sifariş");
+            var details = order.Details;
+            var products = order.Details.Select(d => d.Product);
+            var colors = order.Details.Select(d => d.Product.Colors);
+            var sizes = order.Details.Select(d => d.Product.Sizes);
+            var images = order.Details.Select(d => d.Product.Images.FirstOrDefault(i => i.IsMain));
+            var dto = new OrderGetSingleDto
+            {
+                Id = order.ID.ToString(),
+                OrderTrackingNumber = order.OrderTrackingNumber,
+                OrderDate = order.OrderDate,
+                TotalPrice = order.TotalPrice,
+                DiscountedPrice = order.DiscountedPrice,
+                SavingAmount = order.SavingAmount,
+                RequiredDate = order.RequiredDate,
+                CustomerID = order.CustomerID,
+                CustomerName = order.Customer.FullName,
+                CustomerEmail = order.Customer.Email,
+                CustomerPhone = order.Customer.PhoneNumber,
+                OrderPaymentStatus = order.OrderPayment.PaymentStatus.ToString(),
+                OrderPaymentDate = order.OrderPayment.PaymentDate != null ? order.OrderPayment.PaymentDate.ToString() : "Ödənilməyib",
+                OrderStatus = order.OrderStatus.ToString(),
+                OrderPaymentType = order.OrderPayment.PaymentMethod.ToString(),
+                ShippingAddress = order.Customer.Addresses.FirstOrDefault(a => a.IsCurrentAddress && !a.isDeleted).FullAddress,
+                ShippingStatus = order.Shipping.ShippingStatus.ToString(),
+                ShippingType = order.Shipping.ShippingType.ToString(),
+                Details = details.Select(detail => new OrderDetailGetSingleDto
+                {
+                    Id = detail.ID.ToString(),
+                    Price = detail.Price,
+                    Quantity = detail.Quantity,
+                    ProductId = detail.ProductID.ToString(),
+                    ProductName = detail.Product.Name,
+                    ProductDescription = detail.Product.Description,
+                    ProductImageName = detail.Product.Images.FirstOrDefault(i => i.IsMain).FileName,
+                    ProductImageURl = detail.Product.Images.FirstOrDefault(i => i.IsMain).Path,
+                    ProductColor = detail.SelectedColor.ColorName,
+                    ProductSize = detail.SelectedSize.SizeName,
+                }).ToList()
+            };
+            return dto;
         }
     }
 }

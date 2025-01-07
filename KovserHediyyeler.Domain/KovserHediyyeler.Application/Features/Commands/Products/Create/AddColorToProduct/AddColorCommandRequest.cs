@@ -6,5 +6,6 @@ namespace KovserHediyyeler.Application.Features.Commands.Products.Create.AddColo
     {
         public string ProductId { get; set; }
         public string ColorName { get; set; }
+        public int ColorStock { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Products.Create.AddColo
 
         public async Task<AddColorCommandResponse> Handle(AddColorCommandRequest request, CancellationToken cancellationToken)
         {
-            await _service.AddColorToProductAsync(request.ProductId, request.ColorName);
+            await _service.AddColorToProductAsync(request.ProductId, request.ColorName, request.ColorStock);
             return new AddColorCommandResponse
             {
                 Message = "Məhsul rəngi uğurla artırılmışdır!"

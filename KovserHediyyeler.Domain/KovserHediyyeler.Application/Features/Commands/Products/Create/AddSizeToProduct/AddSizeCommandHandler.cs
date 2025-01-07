@@ -15,7 +15,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Products.Create.AddSize
 
         public async Task<AddSizeCommandResponse> Handle(AddSizeCommandRequest request, CancellationToken cancellationToken)
         {
-            await _service.AddSizeToProductAsync(request.ProductId, request.SizeName);
+            await _service.AddSizeToProductAsync(request.ProductId, request.SizeName, request.SizeStock);
             return new AddSizeCommandResponse
             {
                 Message = "Məhsul ölçüsü uğurla artırıldı!"

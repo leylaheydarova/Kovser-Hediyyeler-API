@@ -6,6 +6,8 @@ namespace KovserHediyyeler.Domain.Models
     {
         public double Price { get; set; }//quantity * product.price
         public int Quantity { get; set; }
+        public ProductColor SelectedColor { get; set; }
+        public ProductSize SelectedSize { get; set; }
         //Relationships
         public Guid OrderID { get; set; }
         public Order Order { get; set; }

@@ -4,5 +4,6 @@
     {
         public string Id {  get; set; }
         public string SizeName { get; set; }
+        public int SizeStock { get; set; }
     }
 }

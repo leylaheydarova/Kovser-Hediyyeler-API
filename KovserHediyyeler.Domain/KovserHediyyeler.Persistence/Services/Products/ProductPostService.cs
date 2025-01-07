@@ -107,7 +107,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
                     Price = dto.Price,
                     DiscountedPrice = (dto.Price - ((dto.Price * (int)dto.DiscountPercentage) / 100)),
                     isSingleColour = dto.isSingleColour,
-                    Stock = dto.Stock
+                    Stock = 0
                 };
 
 
@@ -177,6 +177,8 @@ namespace KovserHediyyeler.Persistence.Services.Products
                     }
                     else throw new InvalidInputException("mağaza");
                 }
+               
+                product.Stock += product.Colors.Sum(c => c.ColorStock) + product.Sizes.Sum(s => s.SizeStock);
 
                 category.Products.Add(product);
                 department.Products.Add(product);
@@ -237,25 +239,27 @@ namespace KovserHediyyeler.Persistence.Services.Products
             await _productPropertyWriteRepository.SaveAsync();
         }
 
-        public async Task AddColorToProductAsync(string productId, string colorName)
+        public async Task AddColorToProductAsync(string productId, string colorName, int colorStock)
         {
             var product = await GetProductAsync(productId, false);
             var color = new ProductColor
             {
                 ColorName = colorName,
-                ProductID = product.ID
+                ProductID = product.ID,
+                ColorStock = colorStock
             };
             await _productColorWriteRepository.AddAsync(color);
             await _productColorWriteRepository.SaveAsync();
         }
 
-        public async Task AddSizeToProductAsync(string productId, string sizeName)
+        public async Task AddSizeToProductAsync(string productId, string sizeName, int sizeStock)
         {
             var product = await GetProductAsync(productId, false);
             var size = new ProductSize
             {
                 SizeName = sizeName,
-                ProductID = product.ID
+                ProductID = product.ID,
+                SizeStock = sizeStock
             };
             await _productSizeWriteRepository.AddAsync(size);
             await _productSizeWriteRepository.SaveAsync();

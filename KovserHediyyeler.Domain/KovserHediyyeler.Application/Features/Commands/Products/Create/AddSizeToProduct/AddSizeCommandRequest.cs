@@ -6,5 +6,6 @@ namespace KovserHediyyeler.Application.Features.Commands.Products.Create.AddSize
     {
         public string ProductId { get; set; }
         public string SizeName { get; set; }
+        public int SizeStock { get; set; }
     }
 }

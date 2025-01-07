@@ -7,6 +7,8 @@ namespace KovserHediyyeler.Domain.Models
     {
         public int ProductCount { get; set; }
         public bool isSelected { get; set; }
+        public ProductColor SelectedColor { get; set; }
+        public ProductSize SelectedSize { get; set; }
         [ForeignKey(nameof(Product))]
         public Guid ProductID { get; set; }
         public Product Product { get; set; }
