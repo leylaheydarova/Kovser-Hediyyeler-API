@@ -11,10 +11,6 @@ namespace KovserHediyyeler.Application.Validations.Products
                 .NotNull()
                 .NotEmpty()
                 .GreaterThanOrEqualTo(0);
-            RuleFor(p => p.Stock)
-                .NotNull()
-                .NotEmpty()
-                .GreaterThanOrEqualTo(0);
             RuleFor(p => p.Name)
                 .NotNull()
                 .NotEmpty();

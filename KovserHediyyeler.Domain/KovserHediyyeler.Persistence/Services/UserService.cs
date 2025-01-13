@@ -57,10 +57,11 @@ namespace KovserHediyyeler.Persistence.Services
                 ID = Guid.NewGuid(),
                 City = dto.City,
                 Region = dto.Region,
+                District = dto.District,
                 Street = dto.Street,
                 Home = dto.Home,
                 PostalCode = dto.PostalCode,
-                IsCurrentAddress = dto.IsCurrentAddress
+                IsCurrentAddress = dto.IsCurrentAddress,
             };
             await _addressRepository.AddAsync(address);
             webUser.Addresses.Add(address);

@@ -8,3 +8,11 @@ Bu layihə zamanı öyrəndiklərim:
 6. Storage ayrımı.
 7. Transaction for multi-SaveAsyncs()
 8. Pagination
+
+
+Guider
+1. Stok-un iş prinsipi məhsulun rəng və ölçülərini nəzərə alaraq gedir. Belə ki, sadəcə Product üçün bir Stock kəmiyyəti saxlamaq bu proyekt üçün absurd yanaşmadır və müştərini yanılda bilir. Məsələn, stoka 190 çanta gətirilib. Bunun 50-si qırmızı, 60-ı yaşıl və 
+80 ədədi qara rəngdədir. Eyni zamanda bu məhsullar ölçülərinə görə də fərqli stok dəyərlərinə sahibdirlər. Belə ki, 190 çantanın 100 ədədi orta, 60 ədədi kiçik və 30 ədədi böyük çantalardır. 
+Müştıri 160 çanta sifariş verir. Yalnız Product Stokuna nəzər yetirsək, 190 > 160, müştərinin istəyi ödənir. Lakin onun istədiyi rəng və ölçü sayları stokdakılarla uzlaşmadıqda problem yaranır. Məsələn, onun istəyi 35 qırmızı, 70 yaşıl və 55 qara çanta istəyir. 
+Bu halda qırmızı və qara çantalardan fərqli olaraq stokda olan yaşıl çanta sayı - 60 müştərinin istəyinə görə yetərsizdir. 15 çanta əskikdir. Belə halların qarşısını almaq üçün səbətə məhsul əlavə edərkən və sifariş yaradarkən Product.Stock-unu deyil, sırf rəng və 
+ölçülərin stoku müqayisə edilməlidir. Sifariş verilərkən də həm rəng, gəm ölçü, həm də product stokundan sifarişdəki count çıxılmalıdır.
