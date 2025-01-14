@@ -1,7 +1,7 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Brands.Recover
+namespace KovserHediyyeler.Application.Features.Commands.Brands.Update.Recover
 {
     public class RecoverBrandCommandHandler : IRequestHandler<RecoverCategoryRequest, RecoverBrandCommandResponse>
     {

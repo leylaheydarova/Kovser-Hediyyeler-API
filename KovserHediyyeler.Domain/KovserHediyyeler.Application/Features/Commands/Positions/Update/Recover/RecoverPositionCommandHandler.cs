@@ -3,7 +3,7 @@ using KovserHediyyeler.Application.Repositories.Positions;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Positions.Recover
+namespace KovserHediyyeler.Application.Features.Commands.Positions.Update.Recover
 {
     public class RecoverPositionCommandHandler : IRequestHandler<RecoverPositionCommandRequest, RecoverPositionCommandResponse>
     {

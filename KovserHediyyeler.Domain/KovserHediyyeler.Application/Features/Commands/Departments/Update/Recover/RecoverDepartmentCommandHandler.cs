@@ -1,7 +1,7 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Departments.Recover
+namespace KovserHediyyeler.Application.Features.Commands.Departments.Update.Recover
 {
     public class RecoverDepartmentCommandHandler : IRequestHandler<RecoverDepartmentCommandRequest, RecoverDepartmentCommandResponse>
     {

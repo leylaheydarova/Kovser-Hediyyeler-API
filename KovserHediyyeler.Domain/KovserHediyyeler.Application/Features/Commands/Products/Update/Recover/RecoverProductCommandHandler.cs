@@ -2,7 +2,7 @@
 using KovserHediyyeler.Application.Abstractions.Products;
 using MediatR;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Products.Recover
+namespace KovserHediyyeler.Application.Features.Commands.Products.Update.Recover
 {
     public class RecoverProductCommandHandler : IRequestHandler<RecoverProductCommandRequest, RecoverProductCommandResponse>
     {

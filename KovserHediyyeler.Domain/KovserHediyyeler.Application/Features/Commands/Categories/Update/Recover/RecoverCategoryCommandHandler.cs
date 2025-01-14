@@ -3,7 +3,7 @@ using KovserHediyyeler.Application.Repositories.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Categories.Recover
+namespace KovserHediyyeler.Application.Features.Commands.Categories.Update.Recover
 {
     public class RecoverCategoryCommandHandler : IRequestHandler<RecoverCategoryCommandRequest, RecoverCategoryCommandResponse>
     {

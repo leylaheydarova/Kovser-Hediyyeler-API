@@ -4,7 +4,7 @@ using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Shops.Recover
+namespace KovserHediyyeler.Application.Features.Commands.Shops.Update.Recover
 {
     public class RecoverShopCommandHandler : IRequestHandler<RecoverShopCommandRequest, RecoverShopCommandResponse>
     {

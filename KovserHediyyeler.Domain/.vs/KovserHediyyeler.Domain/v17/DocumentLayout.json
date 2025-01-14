@@ -258,7 +258,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 473,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -300,19 +300,6 @@
               "IsPinned": true
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
-              "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\UserService.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAwwD8AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:04:27.001Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
@@ -323,6 +310,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
+              "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\UserService.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAcwD8AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T14:04:27.001Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -346,8 +346,7 @@
               "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Baskets\\Add\\AddItemToBasketCommandHandler.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAWwAsAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T10:12:54.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-26T10:12:54.727Z"
             },
             {
               "$type": "Document",

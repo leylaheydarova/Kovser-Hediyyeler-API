@@ -4,7 +4,7 @@ using KovserHediyyeler.Application.Repositories.Employees;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
 
-namespace KovserHedieyyeler.Application.Features.Commands.Employees.Recover
+namespace KovserHediyyeler.Application.Features.Commands.Employees.Update.Recover
 {
     public class RecoverEmployeeCommandHandler : IRequestHandler<RecoverEmployeeCommandRequest, RecoverEmployeeCommandResponse>
     {

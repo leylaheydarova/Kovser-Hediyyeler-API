@@ -2,11 +2,11 @@
 using KovserHedieyyeler.Application.Features.Commands.Positions.Create;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Delete.Temporarily;
-using KovserHedieyyeler.Application.Features.Commands.Positions.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Update.Update;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Update.UpdateTotalPosition;
 using KovserHedieyyeler.Application.Features.Queries.Positions.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Positions.GetSingle;
+using KovserHediyyeler.Application.Features.Commands.Positions.Update.Recover;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
