@@ -1,27 +1,19 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Categories;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 namespace KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Temporarily
 {
     public class DeleteTemporarilyCategoryCommandHandler : IRequestHandler<DeleteTemporarilyCategoryCommandRequest, DeleteTemporarilyCategoryCommandResponse>
     {
-        readonly ICategoryReadRepository _readRepository;
-        readonly ICategoryWriteRepository _writeRepository;
+        readonly ICategoryService _service;
 
-        public DeleteTemporarilyCategoryCommandHandler(ICategoryReadRepository readRepository, ICategoryWriteRepository writeRepository)
+        public DeleteTemporarilyCategoryCommandHandler(ICategoryService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<DeleteTemporarilyCategoryCommandResponse> Handle(DeleteTemporarilyCategoryCommandRequest request, CancellationToken cancellationToken)
         {
-            Category category = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), true);
-            if (category == null) throw new NotFoundException("kateqoriya");
-
-            _writeRepository.DeleteTemporarily(category);
-            await _writeRepository.SaveAsync();
+            await _service.DeleteTemporarilyCategoryAsync(request.Id);
 
             return new DeleteTemporarilyCategoryCommandResponse
             {

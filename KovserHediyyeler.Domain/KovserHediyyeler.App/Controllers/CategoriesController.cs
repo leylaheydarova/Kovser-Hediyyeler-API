@@ -1,13 +1,14 @@
 ﻿using KovserHedieyyeler.Application.DTOs.Categories;
 using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Create;
-using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Update.TotalUpdate;
 using KovserHedieyyeler.Application.Features.Commands.Categories.Update.UpdatePartly;
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAllAbstractParents;
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAllCategories;
 using KovserHedieyyeler.Application.Features.Queries.Categories.GetSingle;
+using KovserHediyyeler.Application.Features.Commands.Categories.Delete.Permanently.OnlyBase;
+using KovserHediyyeler.Application.Features.Commands.Categories.Delete.Permanently.WithItsChild;
 using KovserHediyyeler.Application.Features.Commands.Categories.Update.Recover;
 using KovserHediyyeler.Application.Features.Queries.Categories.GetAll.GetAllChilds;
 using MediatR;
@@ -69,7 +70,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             if (id == null) throw new BadRequestException();
             GetSingleCategoryQueryRequest request = new GetSingleCategoryQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             GetSingleCategoryQueryResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);
@@ -82,7 +83,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             if (id == null) throw new BadRequestException();
             DeleteTemporarilyCategoryCommandRequest request = new DeleteTemporarilyCategoryCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             DeleteTemporarilyCategoryCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -95,9 +96,22 @@ namespace Kovser.Hediyyeler.App.Controllers
             if (id == null) throw new BadRequestException();
             RemovePermanentlyCategoryCommandRequest request = new RemovePermanentlyCategoryCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             RemovePermanentlyCategoryCommandResponse response = await _mediator.Send(request);
+            return StatusCode(response.StatusCode, response.Message);
+        }
+
+        //[AuthorizeDefinition(ActionType = ActionType.Deleting, Definition = "Remove Permanently Category With Its Childs", Menu = AuthorizeDefinitionConstants.Categories)]
+        [HttpDelete("RemovePermanentlyWithItsChilds/{id}")]
+        public async Task<IActionResult> RemoveWithChildsAsync(string id)
+        {
+            if (id == null) throw new BadRequestException();
+            var request = new RemoveCategoryWithChildCommandRequest
+            {
+                Id = Guid.Parse(id)
+            };
+            var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 

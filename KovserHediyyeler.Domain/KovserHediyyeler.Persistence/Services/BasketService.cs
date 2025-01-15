@@ -8,7 +8,6 @@ using KovserHediyyeler.Application.Repositories.Products;
 using KovserHediyyeler.Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.InteropServices;
 
 namespace KovserHediyyeler.Persistence.Services
 {
@@ -61,7 +60,7 @@ namespace KovserHediyyeler.Persistence.Services
             var basket = await _basketReadRepository.GetWhereAsync(x => x.CustomerID == webuser.Id, istracking, includes);
             return basket;
         }
-       
+
         public async Task AddItemToBasketAsync(Guid productId, int count, string userId, Guid colorId, Guid sizeId)
         {
             using var transaction = await _basketWriteRepository.BeginTransactionAsync();
@@ -84,7 +83,7 @@ namespace KovserHediyyeler.Persistence.Services
 
                 //if (product.Department.Name != "Kövsər Hədiyyələr") //cunki handmade mehsullari stock-u free-dir ve istenilen sayda secile biler
                 //{
-                if (product.Stock < count) throw new InvalidCountException(count); 
+                if (product.Stock < count) throw new InvalidCountException(count);
                 //}
                 var item = await _itemReadRepository.Table.Include(i => i.Basket).Include(i => i.Product).FirstOrDefaultAsync(i => i.ProductID == product.ID && i.BasketID == basket.ID && !i.isDeleted);
                 if (item == null)
@@ -99,7 +98,7 @@ namespace KovserHediyyeler.Persistence.Services
                         SelectedColor = color,
                         SelectedSize = size
                     };
-                    if(item.SelectedSize.SizeStock >= item.SelectedColor.ColorStock)
+                    if (item.SelectedSize.SizeStock >= item.SelectedColor.ColorStock)
                     {
                         if (count > item.SelectedColor.ColorStock) throw new InvalidCountException(item.SelectedColor.ColorStock);
                         else item.ProductCount = count;
@@ -174,7 +173,7 @@ namespace KovserHediyyeler.Persistence.Services
             try
             {
                 var product = await GetProductAsync(productId);
-                
+
                 //if (product.Department.Name != "Kövsər Hədiyyələr")
                 //{
                 //if (product.Stock < newCount) throw new InvalidCountException(newCount);

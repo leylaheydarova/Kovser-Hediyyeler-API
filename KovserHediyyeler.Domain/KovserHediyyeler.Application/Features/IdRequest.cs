@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KovserHedieyyeler.Application.Features
+﻿namespace KovserHedieyyeler.Application.Features
 {
     public abstract class IdRequest
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

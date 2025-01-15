@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Categories;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -7,25 +8,17 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Update.Tota
 {
     public class UpdateTotalCategoryCommandHandler : IRequestHandler<UpdateTotalCategoryCommandRequest, UpdateTotalCategoryCommandResponse>
     {
-        readonly ICategoryReadRepository _readRepository;
-        readonly ICategoryWriteRepository _writeRepository;
+        readonly ICategoryService _service;
 
-        public UpdateTotalCategoryCommandHandler(ICategoryReadRepository readRepository, ICategoryWriteRepository writeRepository)
+        public UpdateTotalCategoryCommandHandler(ICategoryService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<UpdateTotalCategoryCommandResponse> Handle(UpdateTotalCategoryCommandRequest request, CancellationToken cancellationToken)
         {
-            Category category = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), true);
-            if (category == null) throw new NotFoundException("kateqoriya");
-            category.Name = request.Dto.Name;
-            category.ParentId = request.Dto.ParentId;
-
-            _writeRepository.Update(category);
-            await _writeRepository.SaveAsync();
-
+           
+            _service.UpdateTotalCategoryAsync(request.Dto, request.Id)
             return new UpdateTotalCategoryCommandResponse
             {
                 Message = "Kateqoriya məlumatları uğurla yeniləndi"

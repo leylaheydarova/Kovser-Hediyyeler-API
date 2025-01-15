@@ -1,27 +1,20 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Categories;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.Categories.Update.Recover
 {
     public class RecoverCategoryCommandHandler : IRequestHandler<RecoverCategoryCommandRequest, RecoverCategoryCommandResponse>
     {
-        readonly ICategoryReadRepository _readRepository;
-        readonly ICategoryWriteRepository _writeRepository;
+        readonly ICategoryService _service;
 
-        public RecoverCategoryCommandHandler(ICategoryReadRepository readRepository, ICategoryWriteRepository writeRepository)
+        public RecoverCategoryCommandHandler(ICategoryService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<RecoverCategoryCommandResponse> Handle(RecoverCategoryCommandRequest request, CancellationToken cancellationToken)
         {
-            Category category = await _readRepository.GetWhereAsync(c => c.isDeleted && c.ID.ToString() == request.Id, true);
-            if (category == null) throw new NotFoundException("kateqoriya");
-            _writeRepository.RecoverData(category);
-            await _writeRepository.SaveAsync();
+            await _service.RecoverCategoryDataAsync(request.Id);
             return new RecoverCategoryCommandResponse
             {
                 Message = "Kateqoriya məlumatları uğurla bərpa edilmişdir!"

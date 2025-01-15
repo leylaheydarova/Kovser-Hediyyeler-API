@@ -2,7 +2,7 @@
 {
     public class UpdateCommandRequest<T> where T : class
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public T Dto { get; set; }
     }
 }

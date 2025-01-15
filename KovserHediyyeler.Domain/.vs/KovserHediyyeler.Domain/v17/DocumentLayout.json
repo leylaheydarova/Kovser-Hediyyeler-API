@@ -3,6 +3,82 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\abstractions\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\abstractions\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\commands\\categories\\update\\update\\updatecategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\commands\\categories\\update\\update\\updatecategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\commands\\categories\\update\\recover\\recovercategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\commands\\categories\\update\\recover\\recovercategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41D5804C-EFA1-46D2-BE2F-F5E46D24112A}|KovserHediyyeler.App\\KovserHediyyeler.App.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.app\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41D5804C-EFA1-46D2-BE2F-F5E46D24112A}|KovserHediyyeler.App\\KovserHediyyeler.App.csproj|solutionrelative:kovserhediyyeler.app\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\commands\\categories\\delete\\permanently\\withitschild\\removecategorywithchildcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\commands\\categories\\delete\\permanently\\withitschild\\removecategorywithchildcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\commands\\categories\\delete\\permanently\\onlybase\\removepermanentlycategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\commands\\categories\\delete\\permanently\\onlybase\\removepermanentlycategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\commands\\categories\\delete\\permanently\\withitschild\\removecategorywithchildcommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\commands\\categories\\delete\\permanently\\withitschild\\removecategorywithchildcommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\commands\\categories\\delete\\permanently\\withitschild\\removecategorywithchildcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\commands\\categories\\delete\\permanently\\withitschild\\removecategorywithchildcommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\commands\\categories\\delete\\temporarily\\deletetemporarilycategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\commands\\categories\\delete\\temporarily\\deletetemporarilycategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\idrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\idrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\commands\\deletecommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\commands\\deletecommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\commands\\categories\\create\\createcategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\commands\\categories\\create\\createcategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\services\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\serviceregistrations\\persistenceservicesregistrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\serviceregistrations\\persistenceservicesregistrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\features\\commands\\categories\\create\\createcategorycommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\features\\commands\\categories\\create\\createcategorycommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\abstractions\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\abstractions\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\extentions\\fileupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|solutionrelative:kovserhediyyeler.application\\extentions\\fileupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\services\\products\\productpatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\products\\productpatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.persistence\\services\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0183A86B-756B-4004-B2A2-63CED777F2AE}|KovserHediyyeler.Persistence\\KovserHediyyeler.Persistence.csproj|solutionrelative:kovserhediyyeler.persistence\\services\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{332DAC9F-F6C6-4BEF-BF34-C02FDF28B3BC}|KovserHediyyeler.Application\\KovserHediyyeler.Application.csproj|c:\\users\\user\\desktop\\learning programming\\student\\jed academy\\final project\\kovser hediyyeler back\\kovserhediyyeler.domain\\kovserhediyyeler.application\\abstractions\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -258,11 +330,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 473,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 25,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.App\\Controllers\\OrdersController.cs",
@@ -275,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 24,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Abstractions\\IOrderService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Abstractions\\IOrderService.cs",
@@ -288,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 29,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\OrderService.cs",
@@ -298,6 +370,216 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-06T16:57:20.339Z",
               "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Abstractions\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Abstractions\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Abstractions\\ICategoryService.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Abstractions\\ICategoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:24:40.255Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\CategoryService.cs*",
+              "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\CategoryService.cs*",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAmwGcAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:26:17.673Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateCategoryCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Update\\Update\\UpdateCategoryCommandHandler.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Update\\Update\\UpdateCategoryCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Update\\Update\\UpdateCategoryCommandHandler.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Update\\Update\\UpdateCategoryCommandHandler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:53:06.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecoverCategoryCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Update\\Recover\\RecoverCategoryCommandHandler.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Update\\Recover\\RecoverCategoryCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Update\\Recover\\RecoverCategoryCommandHandler.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Update\\Recover\\RecoverCategoryCommandHandler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAIAwwBAAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:52:31.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.App\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.App\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "KovserHediyyeler.App\\Controllers\\CategoriesController.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAcwGgAAAB6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:49:40.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RemoveCategoryWithChildCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandHandler.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandHandler.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandHandler.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBMAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:47:48.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RemoveCategoryWithChildCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandRequest.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandRequest.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAB+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:47:15.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RemoveCategoryWithChildCommandResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandResponse.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandResponse.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandResponse.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\WithItsChild\\RemoveCategoryWithChildCommandResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:46:57.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RemovePermanentlyCategoryCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\OnlyBase\\RemovePermanentlyCategoryCommandHandler.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\OnlyBase\\RemovePermanentlyCategoryCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\OnlyBase\\RemovePermanentlyCategoryCommandHandler.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Permanently\\OnlyBase\\RemovePermanentlyCategoryCommandHandler.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAApwBMAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:40:27.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IdRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\IdRequest.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\IdRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\IdRequest.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\IdRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:40:07.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DeleteCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\DeleteCommandRequest.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\DeleteCommandRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\DeleteCommandRequest.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\DeleteCommandRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:40:04.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DeleteTemporarilyCategoryCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Temporarily\\DeleteTemporarilyCategoryCommandHandler.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Temporarily\\DeleteTemporarilyCategoryCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Temporarily\\DeleteTemporarilyCategoryCommandHandler.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Delete\\Temporarily\\DeleteTemporarilyCategoryCommandHandler.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAA8AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:37:51.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PersistenceServicesRegistrations.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\ServiceRegistrations\\PersistenceServicesRegistrations.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\ServiceRegistrations\\PersistenceServicesRegistrations.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\ServiceRegistrations\\PersistenceServicesRegistrations.cs",
+              "RelativeToolTip": "KovserHediyyeler.Persistence\\ServiceRegistrations\\PersistenceServicesRegistrations.cs",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAgwI8AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:26:51.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateCategoryCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Create\\CreateCategoryCommandHandler.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Create\\CreateCategoryCommandHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Create\\CreateCategoryCommandHandler.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Create\\CreateCategoryCommandHandler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAMwBAAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:25:12.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateCategoryCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Create\\CreateCategoryCommandRequest.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Create\\CreateCategoryCommandRequest.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Categories\\Create\\CreateCategoryCommandRequest.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Features\\Commands\\Categories\\Create\\CreateCategoryCommandRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:25:09.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Abstractions\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Abstractions\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Abstractions\\IUnitOfWork.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Abstractions\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:24:42.964Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -313,20 +595,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 13,
+              "Title": "BasketService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\BasketService.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\BasketService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\BasketService.cs",
+              "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\BasketService.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwDYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T23:19:02.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DepartmentService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\DepartmentService.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\DepartmentService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\DepartmentService.cs",
+              "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\DepartmentService.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAowN4AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:18:36.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FileUpload.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Extentions\\FileUpload.cs",
+              "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Extentions\\FileUpload.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Extentions\\FileUpload.cs",
+              "RelativeToolTip": "KovserHediyyeler.Application\\Extentions\\FileUpload.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:17:53.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\UserService.cs",
               "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\UserService.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAcwD8AAAA4AAAA",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAqwJ4AAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-30T14:04:27.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 21,
               "Title": "BasketCommandDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Baskets\\BasketCommandDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Baskets\\BasketCommandDto.cs",
@@ -338,7 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 20,
               "Title": "AddItemToBasketCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Baskets\\Add\\AddItemToBasketCommandHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Baskets\\Add\\AddItemToBasketCommandHandler.cs",
@@ -350,7 +671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 22,
               "Title": "ProductPostDtoValidation.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Validations\\Products\\ProductPostDtoValidation.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Validations\\Products\\ProductPostDtoValidation.cs",
@@ -362,7 +683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 27,
               "Title": "GetSingleOrderQueryRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetSingle\\Order\\GetSingleOrderQueryRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetSingle\\Order\\GetSingleOrderQueryRequest.cs",
@@ -374,7 +695,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 28,
               "Title": "GetSingleOrderQueryResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetSingle\\Order\\GetSingleOrderQueryResponse.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetSingle\\Order\\GetSingleOrderQueryResponse.cs",
@@ -386,7 +707,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 30,
               "Title": "ProductGetSingleService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\Products\\ProductGetSingleService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\Products\\ProductGetSingleService.cs",
@@ -398,7 +719,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 32,
               "Title": "UpdateSizeCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Products\\Update\\UpdateProductSize\\UpdateSizeCommandHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Products\\Update\\UpdateProductSize\\UpdateSizeCommandHandler.cs",
@@ -410,19 +731,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BasketService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\BasketService.cs",
-              "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\BasketService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\BasketService.cs",
-              "RelativeToolTip": "KovserHediyyeler.Persistence\\Services\\BasketService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T23:19:02.552Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 23,
               "Title": "ProductPatchService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\Products\\ProductPatchService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\Products\\ProductPatchService.cs",
@@ -434,7 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 26,
               "Title": "GetSingleOrderQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetSingle\\Order\\GetSingleOrderQueryHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetSingle\\Order\\GetSingleOrderQueryHandler.cs",
@@ -446,7 +755,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 33,
               "Title": "UpdateSizeCommandRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Products\\Update\\UpdateProductSize\\UpdateSizeCommandRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Products\\Update\\UpdateProductSize\\UpdateSizeCommandRequest.cs",
@@ -458,7 +767,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 34,
               "Title": "UpdateColorCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Products\\Update\\UpdateProductColor\\UpdateColorCommandHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Products\\Update\\UpdateProductColor\\UpdateColorCommandHandler.cs",
@@ -470,7 +779,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 35,
               "Title": "IProductPatchService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Abstractions\\Products\\IProductPatchService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Abstractions\\Products\\IProductPatchService.cs",
@@ -482,7 +791,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 31,
               "Title": "ProductColorGetDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Products\\ProductColor\\ProductColorGetDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Products\\ProductColor\\ProductColorGetDto.cs",
@@ -494,7 +803,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 36,
               "Title": "UpdateColorCommandRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Products\\Update\\UpdateProductColor\\UpdateColorCommandRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Products\\Update\\UpdateProductColor\\UpdateColorCommandRequest.cs",
@@ -506,7 +815,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 37,
               "Title": "ProductPutDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Products\\Products\\ProductPutDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Products\\Products\\ProductPutDto.cs",
@@ -518,7 +827,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 38,
               "Title": "AddSizeCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Products\\Create\\AddSizeToProduct\\AddSizeCommandHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Products\\Create\\AddSizeToProduct\\AddSizeCommandHandler.cs",
@@ -530,7 +839,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 39,
               "Title": "AddSizeCommandRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Products\\Create\\AddSizeToProduct\\AddSizeCommandRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Products\\Create\\AddSizeToProduct\\AddSizeCommandRequest.cs",
@@ -542,7 +851,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 40,
               "Title": "AddColorCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Products\\Create\\AddColorToProduct\\AddColorCommandHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Products\\Create\\AddColorToProduct\\AddColorCommandHandler.cs",
@@ -554,7 +863,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 41,
               "Title": "AddColorCommandRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Products\\Create\\AddColorToProduct\\AddColorCommandRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Products\\Create\\AddColorToProduct\\AddColorCommandRequest.cs",
@@ -566,7 +875,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 42,
               "Title": "IProductPostService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Abstractions\\Products\\IProductPostService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Abstractions\\Products\\IProductPostService.cs",
@@ -578,7 +887,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 44,
               "Title": "ProductPostDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Products\\Products\\ProductPostDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Products\\Products\\ProductPostDto.cs",
@@ -590,7 +899,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 43,
               "Title": "ProductPostService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Persistence\\Services\\Products\\ProductPostService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Persistence\\Services\\Products\\ProductPostService.cs",
@@ -602,7 +911,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 45,
               "Title": "ProductSizePostDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Products\\ProductSize\\ProductSizePostDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Products\\ProductSize\\ProductSizePostDto.cs",
@@ -614,7 +923,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 46,
               "Title": "ProductSizeGetDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Products\\ProductSize\\ProductSizeGetDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Products\\ProductSize\\ProductSizeGetDto.cs",
@@ -626,7 +935,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 47,
               "Title": "ProductColorPostDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Products\\ProductColor\\ProductColorPostDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Products\\ProductColor\\ProductColorPostDto.cs",
@@ -638,7 +947,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 50,
               "Title": "OrderDetailCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Orders\\OrderDetails\\OrderDetailCreateDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Orders\\OrderDetails\\OrderDetailCreateDto.cs",
@@ -650,7 +959,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 51,
               "Title": "BasketItemGetDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Baskets\\BasketItemGetDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Baskets\\BasketItemGetDto.cs",
@@ -662,7 +971,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 52,
               "Title": "BasketGetDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Baskets\\BasketGetDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Baskets\\BasketGetDto.cs",
@@ -674,7 +983,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 53,
               "Title": "OrderDetail.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\Models\\OrderDetail.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Domain\\Models\\OrderDetail.cs",
@@ -686,7 +995,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 54,
               "Title": "IBasketService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Abstractions\\IBasketService.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Abstractions\\IBasketService.cs",
@@ -698,7 +1007,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 49,
               "Title": "ProductColor.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\Models\\ProductColor.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Domain\\Models\\ProductColor.cs",
@@ -710,7 +1019,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 48,
               "Title": "ProductSize.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\Models\\ProductSize.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Domain\\Models\\ProductSize.cs",
@@ -722,7 +1031,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 55,
               "Title": "BasketItem.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\Models\\BasketItem.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Domain\\Models\\BasketItem.cs",
@@ -734,7 +1043,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 57,
               "Title": "OrderDetailGetSingleDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Orders\\OrderDetails\\OrderDetailGetSingleDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Orders\\OrderDetails\\OrderDetailGetSingleDto.cs",
@@ -746,7 +1055,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 59,
               "Title": "GetAllOrderDetailsQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\OrderDetails\\GetAllOrderDetailsQueryHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\OrderDetails\\GetAllOrderDetailsQueryHandler.cs",
@@ -758,7 +1067,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 60,
               "Title": "GetAllOrderDetailsQueryRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\OrderDetails\\GetAllOrderDetailsQueryRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\OrderDetails\\GetAllOrderDetailsQueryRequest.cs",
@@ -770,7 +1079,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 58,
               "Title": "OrderDetailGetAllDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Orders\\OrderDetails\\OrderDetailGetAllDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Orders\\OrderDetails\\OrderDetailGetAllDto.cs",
@@ -782,7 +1091,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 56,
               "Title": "OrderGetSingleDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Orders\\OrderGetSingleDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Orders\\OrderGetSingleDto.cs",
@@ -794,7 +1103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 61,
               "Title": "GetAllOrderDetailsQueryResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\OrderDetails\\GetAllOrderDetailsQueryResponse.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\OrderDetails\\GetAllOrderDetailsQueryResponse.cs",
@@ -806,7 +1115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 62,
               "Title": "GetAllCustomerOrdersQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\CustomerOrders\\GetAllCustomerOrdersQueryHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\CustomerOrders\\GetAllCustomerOrdersQueryHandler.cs",
@@ -818,7 +1127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 63,
               "Title": "GetAllCustomerOrdersQueryRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\CustomerOrders\\GetAllCustomerOrdersQueryRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\CustomerOrders\\GetAllCustomerOrdersQueryRequest.cs",
@@ -830,7 +1139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 64,
               "Title": "GetAllCustomerOrdersQueryResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\CustomerOrders\\GetAllCustomerOrdersQueryResponse.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\CustomerOrders\\GetAllCustomerOrdersQueryResponse.cs",
@@ -842,7 +1151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 68,
               "Title": "OrderGetAllDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Orders\\OrderGetAllDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Orders\\OrderGetAllDto.cs",
@@ -854,7 +1163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 65,
               "Title": "GetAllOrdersQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\Orders\\GetAllOrdersQueryHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\Orders\\GetAllOrdersQueryHandler.cs",
@@ -866,7 +1175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 67,
               "Title": "GetAllOrdersQueryRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\Orders\\GetAllOrdersQueryRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\Orders\\GetAllOrdersQueryRequest.cs",
@@ -878,7 +1187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 66,
               "Title": "GetAllOrdersQueryResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\Orders\\GetAllOrdersQueryResponse.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Queries\\Orders\\GetAll\\Orders\\GetAllOrdersQueryResponse.cs",
@@ -890,7 +1199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 70,
               "Title": "OrderGetAllForACustomerDto.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\DTOs\\Orders\\OrderGetAllForACustomerDto.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\DTOs\\Orders\\OrderGetAllForACustomerDto.cs",
@@ -902,7 +1211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 69,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Domain\\Models\\Order.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Domain\\Models\\Order.cs",
@@ -914,7 +1223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 71,
               "Title": "ChangeOrderStatusCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Order\\ChangeOrderStatusCommandHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Order\\ChangeOrderStatusCommandHandler.cs",
@@ -926,7 +1235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 72,
               "Title": "ChangeOrderStatusCommandRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Order\\ChangeOrderStatusCommandRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Order\\ChangeOrderStatusCommandRequest.cs",
@@ -938,7 +1247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 73,
               "Title": "ChangeOrderStatusCommandResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Order\\ChangeOrderStatusCommandResponse.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Order\\ChangeOrderStatusCommandResponse.cs",
@@ -950,7 +1259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 74,
               "Title": "ChangeShippingStatusCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Shipping\\ChangeShippingStatusCommandHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Shipping\\ChangeShippingStatusCommandHandler.cs",
@@ -962,7 +1271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 75,
               "Title": "ChangeShippingStatusCommandRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Shipping\\ChangeShippingStatusCommandRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Shipping\\ChangeShippingStatusCommandRequest.cs",
@@ -974,7 +1283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 76,
               "Title": "ChangeShippingStatusCommandResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Shipping\\ChangeShippingStatusCommandResponse.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Orders\\ChangeStatus\\Shipping\\ChangeShippingStatusCommandResponse.cs",
@@ -986,7 +1295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 77,
               "Title": "CancelOrderCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Orders\\CancelOrder\\CancelOrderCommandHandler.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Orders\\CancelOrder\\CancelOrderCommandHandler.cs",
@@ -998,7 +1307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 78,
               "Title": "CancelOrderCommandRequest.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Orders\\CancelOrder\\CancelOrderCommandRequest.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Orders\\CancelOrder\\CancelOrderCommandRequest.cs",
@@ -1010,7 +1319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 79,
               "Title": "CancelOrderCommandResponse.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Jed Academy\\Final Project\\Kovser Hediyyeler Back\\KovserHediyyeler.Domain\\KovserHediyyeler.Application\\Features\\Commands\\Orders\\CancelOrder\\CancelOrderCommandResponse.cs",
               "RelativeDocumentMoniker": "KovserHediyyeler.Application\\Features\\Commands\\Orders\\CancelOrder\\CancelOrderCommandResponse.cs",

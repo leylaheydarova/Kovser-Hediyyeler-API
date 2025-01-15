@@ -1,32 +1,20 @@
-﻿using KovserHedieyyeler.Application.Exceptions.BadRequestExceptions;
-using KovserHediyyeler.Application.Repositories.Categories;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Categories.Create
 {
     public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommandRequest, CreateCategoryCommandResponse>
     {
-        readonly ICategoryReadRepository _readRepository;
-        readonly ICategoryWriteRepository _writeRepository;
+        readonly ICategoryService _service;
 
-        public CreateCategoryCommandHandler(ICategoryReadRepository readRepository, ICategoryWriteRepository writeRepository)
+        public CreateCategoryCommandHandler(ICategoryService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<CreateCategoryCommandResponse> Handle(CreateCategoryCommandRequest request, CancellationToken cancellationToken)
         {
-            Category category = new Category
-            {
-                Name = request.Dto.Name,
-                ParentId = request.Dto.ParentId,
-                ParentCategory = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == request.Dto.ParentId, true)
-            };
-            if (category == null) throw new BadRequestException();
-            _writeRepository.AddAsync(category);
-            await _writeRepository.SaveAsync();
+            await _service.CreateCategoryAsync(request.Dto);
 
             return new CreateCategoryCommandResponse
             {

@@ -141,6 +141,7 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<IInternalAuthentication, AuthService>();
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IBrandService, BrandService>();
+            services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IDepartmentService, DepartmentService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IProductPostService, ProductPostService>();
