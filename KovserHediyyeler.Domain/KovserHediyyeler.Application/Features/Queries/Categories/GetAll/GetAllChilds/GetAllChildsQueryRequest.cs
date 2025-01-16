@@ -5,6 +5,6 @@ namespace KovserHediyyeler.Application.Features.Queries.Categories.GetAll.GetAll
 {
     public class GetAllChildsQueryRequest : GetAllQueryRequest, IRequest<GetAllChildsQueryResponse>
     {
-        public string ParentId { get; set; }
+        public Guid ParentId { get; set; }
     }
 }

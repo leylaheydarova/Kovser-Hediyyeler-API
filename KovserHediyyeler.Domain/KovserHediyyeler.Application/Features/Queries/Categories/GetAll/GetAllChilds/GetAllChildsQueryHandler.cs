@@ -1,37 +1,24 @@
-﻿using KovserHedieyyeler.Application.DTOs.Categories;
-using KovserHediyyeler.Application.Repositories.Categories;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace KovserHediyyeler.Application.Features.Queries.Categories.GetAll.GetAllChilds
 {
     public class GetAllChildsQueryHandler : IRequestHandler<GetAllChildsQueryRequest, GetAllChildsQueryResponse>
     {
-        readonly ICategoryReadRepository _repository;
+        readonly ICategoryService _service;
 
-        public GetAllChildsQueryHandler(ICategoryReadRepository repository)
+        public GetAllChildsQueryHandler(ICategoryService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<GetAllChildsQueryResponse> Handle(GetAllChildsQueryRequest request, CancellationToken cancellationToken)
         {
-            var query = _repository.GetAllWhere(c => c.ParentId.ToString() == request.ParentId && !c.isDeleted, false, "ParentCategory");
-            List<CategoryGetDto> dtos = new List<CategoryGetDto>();
-            dtos = await query
-                .Skip(request.Page * request.Size)
-                .Take(request.Size)
-                .Select(c => new CategoryGetDto
-                {
-                    Id = c.ID.ToString(),
-                    Name = c.Name,
-                    ParentID = c.ParentId.ToString(),
-                    ParentCategoryName = c.ParentCategory.Name
-                }).ToListAsync();
+            var dtos = await _service.GetAllCategoryChildsAsync(request.Page, request.Size, request.ParentId);
             return new GetAllChildsQueryResponse
             {
                 Datas = dtos,
-                TotalCount = query.Count()
+                TotalCount = dtos.Count()
             };
         }
     }

@@ -1,5 +1,4 @@
-﻿using Azure.Core;
-using KovserHedieyyeler.Application.DTOs.Categories;
+﻿using KovserHedieyyeler.Application.DTOs.Categories;
 using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Categories;
@@ -44,6 +43,69 @@ namespace KovserHediyyeler.Persistence.Services
 
             _writeRepository.DeleteTemporarily(category);
             await _writeRepository.SaveAsync();
+        }
+
+        public async Task<List<CategoryGetDto>> GetAllCategoriesAsync()
+        {
+            var query = _readRepository.GetAllWhere(x => !x.isDeleted, false, "ParentCategory");
+            List<CategoryGetDto> dtos = new List<CategoryGetDto>();
+            dtos = await query.Select(x => new CategoryGetDto
+            {
+                Id = x.ID.ToString(),
+                Name = x.Name,
+                ParentID = x.ParentId.ToString(),
+                ParentCategoryName = x.ParentId != null ? x.ParentCategory.Name : "Ana kateqoriya"
+            }).ToListAsync();
+            return dtos;
+        }
+
+        public async Task<List<CategoryGetDto>> GetAllCategoryChildsAsync(int page, int size, Guid ParentId)
+        {
+            var query = _readRepository.GetAllWhere(c => c.ParentId == ParentId && !c.isDeleted, false, "ParentCategory");
+            List<CategoryGetDto> dtos = new List<CategoryGetDto>();
+            dtos = await query
+                .Skip(page * size)
+                .Take(size)
+                .Select(c => new CategoryGetDto
+                {
+                    Id = c.ID.ToString(),
+                    Name = c.Name,
+                    ParentID = c.ParentId.ToString(),
+                    ParentCategoryName = c.ParentCategory.Name
+                }).ToListAsync();
+            return dtos;
+        }
+
+        public async Task<List<CategoryGetDto>> GetAllTopCategoriesAsync(int page, int size)
+        {
+            var query = _readRepository.GetAllWhere(x => !x.isDeleted && x.ParentId == null, false);
+            List<CategoryGetDto> dtos = new List<CategoryGetDto>();
+            dtos = await query.Skip(page * size)
+                .Take(size)
+                .Select(x => new CategoryGetDto
+                {
+                    Id = x.ID.ToString(),
+                    Name = x.Name,
+                    ParentCategoryName = x.ParentId != null ? x.ParentCategory.Name : "Ana kateqoriya"
+                }).ToListAsync();
+            return dtos;
+        }
+
+        public async Task<CategoryGetDto> GetSingleCategoryAsync(Guid id)
+        {
+            Category category = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == id, false, "ParentCategory");
+            if (category == null)
+            {
+                throw new NotFoundException("kateqoriya");
+            }
+            CategoryGetDto dto = new CategoryGetDto
+            {
+                Id = category.ID.ToString(),
+                Name = category.Name,
+                ParentID = category.ParentId.ToString(),
+                ParentCategoryName = category.ParentId != null ? category.ParentCategory.Name : "Ana kateqoriya"
+            };
+            return dto;
         }
 
         public async Task RecoverCategoryDataAsync(Guid id)

@@ -1,36 +1,24 @@
-﻿using KovserHedieyyeler.Application.DTOs.Categories;
-using KovserHediyyeler.Application.Repositories.Categories;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Categories.GetAll.GetAllAbstractParents
 {
     public class GetAllTopParentsQueryHandler : IRequestHandler<GetAllTopParentsQueryRequest, GetAllTopParentsQueryResponse>
     {
-        readonly ICategoryReadRepository _repository;
+        readonly ICategoryService _service;
 
-        public GetAllTopParentsQueryHandler(ICategoryReadRepository repository)
+        public GetAllTopParentsQueryHandler(ICategoryService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<GetAllTopParentsQueryResponse> Handle(GetAllTopParentsQueryRequest request, CancellationToken cancellationToken)
         {
-            var query = _repository.GetAllWhere(x => !x.isDeleted && x.ParentId == null, false);
-            int totalCount = query.Count();
-            List<CategoryGetDto> dtos = new List<CategoryGetDto>();
-            dtos = await query.Skip(request.Page * request.Size)
-                .Take(request.Size)
-                .Select(x => new CategoryGetDto
-                {
-                    Id = x.ID.ToString(),
-                    Name = x.Name,
-                    ParentCategoryName = x.ParentId != null ? x.ParentCategory.Name : "Ana kateqoriya"
-                }).ToListAsync();
+            var dtos = await _service.GetAllTopCategoriesAsync(request.Page, request.Size);
             return new GetAllTopParentsQueryResponse
             {
                 Datas = dtos,
-                TotalCount = totalCount
+                TotalCount = dtos.Count()
             };
         }
     }
