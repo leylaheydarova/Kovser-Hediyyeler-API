@@ -5,6 +5,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Update.Updat
 {
     public class UpdateEmployeeAddressCommandRequest:UpdateCommandRequest<AddressUpdateDto>, IRequest<UpdateEmployeeAddressCommandResponse>
     {
-        public string EmployeeId {  get; set; }
+        public Guid EmployeeId {  get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models;
@@ -8,30 +9,16 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Update.Updat
 {
     public class UpdateEmployeeAddressCommandHandler : IRequestHandler<UpdateEmployeeAddressCommandRequest, UpdateEmployeeAddressCommandResponse>
     {
-        IAddressReadRepository _readRepository;
-        IAddressWriteRepository _writeRepository;
+        readonly IEmployeeService _service;
 
-        public UpdateEmployeeAddressCommandHandler(IAddressReadRepository readRepository, IAddressWriteRepository writeRepository)
+        public UpdateEmployeeAddressCommandHandler(IEmployeeService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<UpdateEmployeeAddressCommandResponse> Handle(UpdateEmployeeAddressCommandRequest request, CancellationToken cancellationToken)
         {
-            Address address = await _readRepository.GetWhereAsync(a => !a.isDeleted && a.ID.ToString() == request.Id && a.EmployeeID.ToString() == request.EmployeeId, true);
-            if (address == null) throw new NotFoundException("ünvan");
-            var dto = request.Dto;
-            address.City = dto.City != null ? (City)dto.City : address.City;
-            address.Region = dto.Region != null ? dto.Region : address.Region;
-            address.District = dto.District != null ? dto.District : "";
-            address.Street = dto.Street != null ? dto.Street : address.Street;
-            address.Home = dto.Home != null ? dto.Home : address.Home;
-            address.PostalCode = dto.PostalCode != null ? dto.PostalCode : address.PostalCode;
-            address.IsCurrentAddress = dto.IsCurrentAddress != null ? (bool)dto.IsCurrentAddress : address.IsCurrentAddress;
-
-            _writeRepository.Update(address);
-            await _writeRepository.SaveAsync();
+            await _service.UpdateEmployeeAddressAsync(request.Id, request.EmployeeId, request.Dto);
 
             return new UpdateEmployeeAddressCommandResponse
             {

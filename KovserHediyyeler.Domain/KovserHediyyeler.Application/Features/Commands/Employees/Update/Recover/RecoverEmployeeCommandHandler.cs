@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Employees;
 using KovserHediyyeler.Domain.Models;
@@ -8,27 +9,17 @@ namespace KovserHediyyeler.Application.Features.Commands.Employees.Update.Recove
 {
     public class RecoverEmployeeCommandHandler : IRequestHandler<RecoverEmployeeCommandRequest, RecoverEmployeeCommandResponse>
     {
-        IEmployeeReadRepository _readRepository;
-        IEmployeeWriteRepository _writeRepository;
-        IAddressWriteRepository _addressWriteRepository;
+        readonly IEmployeeService _service;
 
-        public RecoverEmployeeCommandHandler(IEmployeeReadRepository readRepository, IEmployeeWriteRepository writeRepository, IAddressWriteRepository addressWriteRepository)
+        public RecoverEmployeeCommandHandler(IEmployeeService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
-            _addressWriteRepository = addressWriteRepository;
+            _service = service;
         }
 
         public async Task<RecoverEmployeeCommandResponse> Handle(RecoverEmployeeCommandRequest request, CancellationToken cancellationToken)
         {
-            Employee employee = await _readRepository.GetWhereAsync(emp => emp.isDeleted && emp.ID.ToString() == request.Id, true);
-            if (employee == null) throw new NotFoundException("işçi");
-            foreach (var address in employee.Addresses)
-            {
-                _addressWriteRepository.RecoverData(address);
-            }
-            _writeRepository.RecoverData(employee);
-            await _writeRepository.SaveAsync();
+
+            await _service.RecoverEmployeeDataAsync(request.Id);
 
             return new RecoverEmployeeCommandResponse()
             {

@@ -1,43 +1,25 @@
-﻿
-using KovserHedieyyeler.Application.DTOs.Addresses;
-using KovserHediyyeler.Application.Repositories.Addresses;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAllEmployeeAddresses
 {
     public class GetAllEmployeeAddressesQueryHandler : IRequestHandler<GetAllEmployeeAddressesQueryRequest, GetAllEmployeeAddressesQueryResponse>
     {
-        readonly IAddressReadRepository _repository;
+        readonly IEmployeeService _service;
 
-        public GetAllEmployeeAddressesQueryHandler(IAddressReadRepository repository)
+        public GetAllEmployeeAddressesQueryHandler(IEmployeeService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<GetAllEmployeeAddressesQueryResponse> Handle(GetAllEmployeeAddressesQueryRequest request, CancellationToken cancellationToken)
         {
-            var query = _repository.GetAllWhere(x => !x.isDeleted && x.EmployeeID.ToString() == request.EmployeId, false);
-            int totalCount = query.Count();
-            List<AddressGetDto> dtos = new List<AddressGetDto>();
-            dtos = await query.Skip(request.Page * request.Size)
-                .Take(request.Size)
-                .Select(x => new AddressGetDto
-                {
-                    Id = x.ID.ToString(),
-                    City = x.City.ToString(),
-                    Region = x.Region,
-                    District = x.District,
-                    Street = x.Street,
-                    Home = x.Home,
-                    PostalCode = x.PostalCode,
-                    IsCurrentAddress = x.IsCurrentAddress
-                }).ToListAsync();
+            var dtos = await _service.GetAllEmployeeAddressesAsync(request.Page, request.Size, request.EmployeeId);
 
             return new GetAllEmployeeAddressesQueryResponse
             {
                 Datas = dtos,
-                TotalCount = totalCount
+                TotalCount = dtos.Count(),
             };
         }
 

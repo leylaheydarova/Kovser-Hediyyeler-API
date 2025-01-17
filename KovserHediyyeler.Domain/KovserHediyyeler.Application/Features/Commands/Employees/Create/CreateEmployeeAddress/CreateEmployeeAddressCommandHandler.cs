@@ -1,34 +1,20 @@
-﻿using KovserHediyyeler.Application.Repositories.Addresses;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Employees.Create.CreateEmployeeAddress
 {
     public class CreateEmployeeAddressCommandHandler : IRequestHandler<CreateEmployeeAddressCommandRequest, CreateEmployeeAddressCommandResponse>
     {
-        readonly IAddressWriteRepository _repository;
+        readonly IEmployeeService _service;
 
-        public CreateEmployeeAddressCommandHandler(IAddressWriteRepository repository)
+        public CreateEmployeeAddressCommandHandler(IEmployeeService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<CreateEmployeeAddressCommandResponse> Handle(CreateEmployeeAddressCommandRequest request, CancellationToken cancellationToken)
         {
-            Address address = new Address
-            {
-                City = request.Dto.City,
-                Region = request.Dto.Region,
-                District = request.Dto.District == null ? "" : request.Dto.District,
-                Street = request.Dto.Street,
-                Home = request.Dto.Home,
-                PostalCode = request.Dto.PostalCode,
-                IsCurrentAddress = request.Dto.IsCurrentAddress,
-                EmployeeID = Guid.Parse(request.EmployeeId)
-            };
-
-            await _repository.AddAsync(address);
-            await _repository.SaveAsync();
+            await _service.CreateEmployeeAddressAsync(request.Dto, request.EmployeeId);
 
             return new CreateEmployeeAddressCommandResponse
             {

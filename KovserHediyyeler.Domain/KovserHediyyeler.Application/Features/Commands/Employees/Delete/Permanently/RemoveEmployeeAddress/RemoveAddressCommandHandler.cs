@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
@@ -7,21 +8,17 @@ namespace KovserHediyyeler.Application.Features.Commands.Employees.Delete.Perman
 {
     public class RemoveAddressCommandHandler : IRequestHandler<RemoveAddressCommandRequest, RemoveAddressCommandResponse>
     {
-        readonly IAddressReadRepository _readRepository;
-        readonly IAddressWriteRepository _writeRepository;
+        readonly IEmployeeService _service;
 
-        public RemoveAddressCommandHandler(IAddressReadRepository readRepository, IAddressWriteRepository writeRepository)
+        public RemoveAddressCommandHandler(IEmployeeService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<RemoveAddressCommandResponse> Handle(RemoveAddressCommandRequest request, CancellationToken cancellationToken)
         {
-            Address address = await _readRepository.GetWhereAsync(x => x.ID.ToString() == request.Id, true);
-            if (address == null) throw new NotFoundException("ünvan");
-            _writeRepository.RemovePermanently(address);
-            await _writeRepository.SaveAsync();
+            await _service.RemovePermanentlyEmployeeAddressAsync(request.Id);
+
             return new RemoveAddressCommandResponse
             {
                 Message = "İşçi ünvanı uğurla silinmişdir"

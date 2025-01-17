@@ -1,4 +1,5 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Abstractions;
+using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Employees;
 using KovserHediyyeler.Domain.Models;
@@ -8,27 +9,16 @@ namespace KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Tempo
 {
     public class DeleteTemporarilyEmployeeCommandHandler : IRequestHandler<DeleteTemporarilyEmployeeCommandRequest, DeleteTemporarilyEmployeeCommandResponse>
     {
-        IEmployeeReadRepository _readRepository;
-        IEmployeeWriteRepository _writeRepository;
-        IAddressWriteRepository _addressWriteRepository;
+        readonly IEmployeeService _service;
 
-        public DeleteTemporarilyEmployeeCommandHandler(IEmployeeReadRepository readRepository, IEmployeeWriteRepository writeRepository, IAddressWriteRepository addressWriteRepository)
+        public DeleteTemporarilyEmployeeCommandHandler(IEmployeeService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
-            _addressWriteRepository = addressWriteRepository;
+            _service = service;
         }
 
         public async Task<DeleteTemporarilyEmployeeCommandResponse> Handle(DeleteTemporarilyEmployeeCommandRequest request, CancellationToken cancellationToken)
         {
-            Employee employee = await _readRepository.GetWhereAsync(emp => !emp.isDeleted && emp.ID.ToString() == request.Id, true);
-            if (employee == null) throw new NotFoundException("işçi");
-            foreach (var address in employee.Addresses)
-            {
-                _addressWriteRepository.DeleteTemporarily(address);
-            }
-            _writeRepository.DeleteTemporarily(employee);
-            await _writeRepository.SaveAsync();
+            await _service.DeleteTemporarilyEmployeeAsync(request.Id);
 
             return new DeleteTemporarilyEmployeeCommandResponse
             {

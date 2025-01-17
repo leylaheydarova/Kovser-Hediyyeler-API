@@ -1,51 +1,21 @@
-﻿using KovserHedieyyeler.Application.DTOs.Addresses;
-using KovserHedieyyeler.Application.DTOs.Employees;
-using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Employees;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Employees.GetSingle
 {
     public class GetSingleEmployeeQueryHandler : IRequestHandler<GetSingleEmployeeQueryRequest, GetSingleEmployeeQueryResponse>
     {
-        readonly IEmployeeReadRepository _repository;
+        readonly IEmployeeService _service;
 
-        public GetSingleEmployeeQueryHandler(IEmployeeReadRepository repository)
+        public GetSingleEmployeeQueryHandler(IEmployeeService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<GetSingleEmployeeQueryResponse> Handle(GetSingleEmployeeQueryRequest request, CancellationToken cancellationToken)
         {
-            Employee employee = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false, "Addresses", "Position", "Shop", "Department");
-            if (employee == null)
-            {
-                throw new NotFoundException("işçi");
-            }
-            var address = employee.Addresses.FirstOrDefault(ad => ad.IsCurrentAddress && !ad.isDeleted);
-            EmployeeGetDto dto = new EmployeeGetDto
-            {
-                Id = employee.ID.ToString(),
-                FirstName = employee.FirstName,
-                LastName = employee.LastName,
-                Phone = employee.Phone,
-                isRemote = employee.isRemote,
-                DepartmentName = employee.Department.Name,
-                PositionName = employee.Position.Status,
-                ShopName = employee.Shop.Name,
-                Address = new AddressGetDto
-                {
-                    Id = address.ID.ToString(),
-                    City = address.City.ToString(),
-                    Region = address.Region,
-                    District = address.District,
-                    Street = address.Street,
-                    Home = address.Home,
-                    PostalCode = address.PostalCode,
-                    IsCurrentAddress = address.IsCurrentAddress
-                }
-            };
+            var dto = await _service.GetSingleEmployeeAsync(request.Id);
+
             return new GetSingleEmployeeQueryResponse
             {
                 Dto = dto

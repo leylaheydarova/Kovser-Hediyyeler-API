@@ -1,38 +1,23 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
+﻿using KovserHediyyeler.Application.Abstractions;
 using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Employees;
-using KovserHediyyeler.Domain.Models;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployee
 {
     public class RemovePermanentlyEmployeeCommandHandler : IRequestHandler<RemovePermanentlyEmployeeCommandRequest, RemovePermanentlyEmployeeCommandResponse>
     {
-        readonly IEmployeeReadRepository _readRepository;
-        readonly IEmployeeWriteRepository _writeRepository;
-        readonly IAddressWriteRepository _addressWriteRepository;
+        readonly IEmployeeService _service;
 
-        public RemovePermanentlyEmployeeCommandHandler(IEmployeeReadRepository readRepository, IEmployeeWriteRepository writeRepository, IAddressWriteRepository addressWriteRepository)
+        public RemovePermanentlyEmployeeCommandHandler(IEmployeeService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
-            _addressWriteRepository = addressWriteRepository;
+            _service = service;
         }
 
         public async Task<RemovePermanentlyEmployeeCommandResponse> Handle(RemovePermanentlyEmployeeCommandRequest request, CancellationToken cancellationToken)
         {
-            Employee employee = await _readRepository.GetWhereAsync(x => x.ID.ToString() == request.Id, true, "Addresses");
-            if (employee == null) throw new NotFoundException("işçi");
-            if (employee.Addresses.Count() > 0)
-            {
-                foreach (var address in employee.Addresses)
-                {
-                    _addressWriteRepository.RemovePermanently(address);
-                }
-            }
-            _writeRepository.RemovePermanently(employee);
-            await _writeRepository.SaveAsync();
-
+            await _service.RemovePermanentlyEmployeeAsync(request.Id);
+            
             return new RemovePermanentlyEmployeeCommandResponse
             {
                 Message = "İşçi uğurla silinmişdir"

@@ -143,6 +143,7 @@ namespace KovserHediyyeler.Persistence.ServiceRegistrations
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IDepartmentService, DepartmentService>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IProductPostService, ProductPostService>();
             services.AddScoped<IProductDeleteService, ProductDeleteService>();
