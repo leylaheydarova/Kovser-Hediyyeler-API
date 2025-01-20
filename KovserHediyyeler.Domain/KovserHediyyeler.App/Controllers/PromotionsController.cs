@@ -39,7 +39,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             var request = new GetSinglePromotionQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);
@@ -50,7 +50,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             var request = new GetPromotionExpireDateQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.ExpireDate);

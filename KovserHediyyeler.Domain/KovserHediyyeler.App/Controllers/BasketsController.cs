@@ -28,7 +28,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             var request = new GetBasketQueryRequest
             {
-                Id = customerId
+                CustomerId = customerId
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);
@@ -96,7 +96,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             var request = new GetTotalPriceQueryRequest
             {
-                Id = customerId
+                CustomerId = customerId
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.TotalPrice);
@@ -107,7 +107,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             var request = new GetTotalCountQueryRequest
             {
-                Id = customerId
+                CustomerId = customerId
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.TotalCount);

@@ -1,9 +1,9 @@
-﻿using KovserHedieyyeler.Application.Features.Queries;
-using MediatR;
+﻿using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Queries.Baskets.GetBasket
 {
-    public class GetBasketQueryRequest : GetSingleQueryRequest, IRequest<GetBasketQueryResponse>
+    public class GetBasketQueryRequest : IRequest<GetBasketQueryResponse>
     {
+        public string CustomerId { get; set; }
     }
 }

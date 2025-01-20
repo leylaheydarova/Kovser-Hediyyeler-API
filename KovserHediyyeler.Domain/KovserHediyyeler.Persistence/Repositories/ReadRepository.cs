@@ -44,7 +44,7 @@ namespace KovserHediyyeler.Persistence.Repositories
             return query;
         }
 
-        public async Task<T> GetByIdAsync(string id, bool isTracking, params string[] includes)
+        public async Task<T> GetByIdAsync(Guid id, bool isTracking, params string[] includes)
         {
             var query = Table.AsQueryable();
             if (isTracking == false)

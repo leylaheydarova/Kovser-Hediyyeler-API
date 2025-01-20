@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Queries.Baskets.GetBasket
 
         public async Task<GetBasketQueryResponse> Handle(GetBasketQueryRequest request, CancellationToken cancellationToken)
         {
-            var dto = await _service.GetBasketAsync(request.Id);
+            var dto = await _service.GetBasketAsync(request.CustomerId);
             return new GetBasketQueryResponse
             {
                 Dto = dto

@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Queries.Baskets.GetTotalPrice
 
         public async Task<GetTotalPriceQueryResponse> Handle(GetTotalPriceQueryRequest request, CancellationToken cancellationToken)
         {
-            var price = await _service.GetTotalPriceAsync(request.Id);
+            var price = await _service.GetTotalPriceAsync(request.CustomerId);
             return new GetTotalPriceQueryResponse
             {
                 TotalPrice = price

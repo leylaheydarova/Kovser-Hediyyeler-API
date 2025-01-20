@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Queries.WishLists
 
         public async Task<GetWishListQueryResponse> Handle(GetWishListQueryRequest request, CancellationToken cancellationToken)
         {
-            var dto = await _service.GetWishListAsync(request.Id);
+            var dto = await _service.GetWishListAsync(request.CustomerId);
             return new GetWishListQueryResponse
             {
                 Dto = dto

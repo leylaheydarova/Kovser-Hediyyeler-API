@@ -3,13 +3,13 @@ using KovserHedieyyeler.Application.Features.Commands.Shops.Create.CreateShopAdd
 using KovserHedieyyeler.Application.Features.Commands.Shops.Delete.Permanently.RemoveShop;
 using KovserHedieyyeler.Application.Features.Commands.Shops.Delete.Permanently.RemoveShopAddress;
 using KovserHedieyyeler.Application.Features.Commands.Shops.Delete.Temporarily;
-using KovserHedieyyeler.Application.Features.Commands.Shops.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Shops.Update.UpdateShop.Update;
 using KovserHedieyyeler.Application.Features.Commands.Shops.Update.UpdateShop.UpdateTotal;
 using KovserHedieyyeler.Application.Features.Commands.Shops.Update.UpdateShopAddress;
 using KovserHedieyyeler.Application.Features.Queries.Shops.GetAll.GetAllShopAddresses;
 using KovserHedieyyeler.Application.Features.Queries.Shops.GetAll.GetAllShops;
 using KovserHedieyyeler.Application.Features.Queries.Shops.GetSingle;
+using KovserHediyyeler.Application.Features.Commands.Shops.Update.Recover;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -61,7 +61,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new GetSingleShopQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
 
             var response = await _mediator.Send(request);
@@ -74,7 +74,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new DeleteTemporarilyShopCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
 
             var response = await _mediator.Send(request);
@@ -87,7 +87,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RemovePermanentlyShopCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
 
             var response = await _mediator.Send(request);
@@ -100,7 +100,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RemoveShopAddressCommandRequest
             {
-                Id = id,
+                Id = Guid.Parse(id),
             };
 
             var response = await _mediator.Send(request);
@@ -113,7 +113,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RecoverShopCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
 
             var response = await _mediator.Send(request);

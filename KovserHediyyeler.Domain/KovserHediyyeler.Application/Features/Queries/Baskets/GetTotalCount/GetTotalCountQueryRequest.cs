@@ -1,9 +1,9 @@
-﻿using KovserHedieyyeler.Application.Features;
-using MediatR;
+﻿using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Queries.Baskets.GetTotalCount
 {
-    public class GetTotalCountQueryRequest : IdRequest, IRequest<GetTotalCountQueryResponse>
+    public class GetTotalCountQueryRequest : IRequest<GetTotalCountQueryResponse>
     {
+        public string CustomerId { get; set; }
     }
 }

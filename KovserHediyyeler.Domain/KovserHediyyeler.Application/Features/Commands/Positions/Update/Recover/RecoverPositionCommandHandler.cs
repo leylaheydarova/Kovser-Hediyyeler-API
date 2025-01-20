@@ -1,27 +1,21 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Positions;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHediyyeler.Application.Features.Commands.Positions.Update.Recover
 {
     public class RecoverPositionCommandHandler : IRequestHandler<RecoverPositionCommandRequest, RecoverPositionCommandResponse>
     {
-        readonly IPositionReadRepository _readRepository;
-        readonly IPositionWriteRepository _writeRepository;
+        readonly IPositionService _service;
 
-        public RecoverPositionCommandHandler(IPositionReadRepository readRepository, IPositionWriteRepository writeRepository)
+        public RecoverPositionCommandHandler(IPositionService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<RecoverPositionCommandResponse> Handle(RecoverPositionCommandRequest request, CancellationToken cancellationToken)
         {
-            Position position = await _readRepository.GetWhereAsync(p => p.isDeleted && p.ID.ToString() == request.Id, true);
-            if (position == null) throw new NotFoundException("vəzifə");
-            _writeRepository.RecoverData(position);
-            await _writeRepository.SaveAsync();
+            await _service.RecoverPositionDataAsync(request.Id);
+
             return new RecoverPositionCommandResponse
             {
                 Message = "Vəzifə məlumatları uğurla bərpa edilmişdir!"

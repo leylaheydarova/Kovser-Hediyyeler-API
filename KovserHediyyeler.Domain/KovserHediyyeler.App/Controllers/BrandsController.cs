@@ -2,12 +2,12 @@
 using KovserHedieyyeler.Application.Features.Commands.Brands.Create;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Delete.Temporarily;
-using KovserHedieyyeler.Application.Features.Commands.Brands.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Update.Update;
 using KovserHedieyyeler.Application.Features.Commands.Brands.Update.UpdateAll;
 using KovserHedieyyeler.Application.Features.Queries.Brands.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Brands.GetSingle;
 using KovserHediyyeler.Application.Features.Commands.Brands.Delete.Clear;
+using KovserHediyyeler.Application.Features.Commands.Brands.Update.Recover;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -62,7 +62,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             DeleteTemporarilyBrandCommandRequest request = new DeleteTemporarilyBrandCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             DeleteTemporarilyBrandCommandResponse response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -75,7 +75,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             var request = new RemovePermanentlyBrandCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -97,7 +97,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             var request = new RecoverCategoryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

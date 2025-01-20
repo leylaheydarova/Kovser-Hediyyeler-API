@@ -8,7 +8,6 @@ using KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanentl
 using KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveProducts;
 using KovserHedieyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveProperty;
 using KovserHedieyyeler.Application.Features.Commands.Products.Delete.Temporarily;
-using KovserHedieyyeler.Application.Features.Commands.Products.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Products.Update.UpdateProductImages;
 using KovserHedieyyeler.Application.Features.Commands.Products.Update.UpdateProductProperties;
 using KovserHedieyyeler.Application.Features.Commands.Products.Update.UpdateProducts;
@@ -23,6 +22,7 @@ using KovserHediyyeler.Application.Features.Commands.Products.Create.AddSizeToPr
 using KovserHediyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveColor;
 using KovserHediyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveProductShop;
 using KovserHediyyeler.Application.Features.Commands.Products.Delete.Permanently.RemoveSize;
+using KovserHediyyeler.Application.Features.Commands.Products.Update.Recover;
 using KovserHediyyeler.Application.Features.Commands.Products.Update.UpdateProductColor;
 using KovserHediyyeler.Application.Features.Commands.Products.Update.UpdateProductSize;
 using KovserHediyyeler.Application.Features.Queries.Products.GetAll.GetAllCategoryProducts;
@@ -142,7 +142,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new GetSingleProductQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);
@@ -153,7 +153,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new GetSingleProductPropertyQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);
@@ -164,7 +164,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new GetSingleColorQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);
@@ -175,7 +175,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new GetSingleSizeQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);
@@ -187,7 +187,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new DeleteTemporarilyProductCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -199,7 +199,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RecoverProductCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -211,7 +211,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RemovePermanentlyProductCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -223,7 +223,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RemoveProductImageCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -235,7 +235,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RemoveProductPropertyCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -268,7 +268,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new UpdateProductCommandRequest
             {
-                Id = id,
+                Id = Guid.Parse(id),
                 Dto = dto
             };
             var response = await _mediator.Send(request);
@@ -281,7 +281,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new UpdateProductPropertyCommandRequest
             {
-                Id = id,
+                Id = Guid.Parse(id),
                 Dto = dto
             };
             var response = await _mediator.Send(request);
@@ -294,7 +294,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new UpdateProductImageCommandRequest
             {
-                Id = id,
+                Id = Guid.Parse(id),
                 Dto = dto
             };
             var response = await _mediator.Send(request);

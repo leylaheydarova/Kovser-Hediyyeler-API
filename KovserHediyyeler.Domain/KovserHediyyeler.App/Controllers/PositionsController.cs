@@ -3,7 +3,6 @@ using KovserHedieyyeler.Application.Features.Commands.Positions.Create;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Delete.Permanently;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Delete.Temporarily;
 using KovserHedieyyeler.Application.Features.Commands.Positions.Update.Update;
-using KovserHedieyyeler.Application.Features.Commands.Positions.Update.UpdateTotalPosition;
 using KovserHedieyyeler.Application.Features.Queries.Positions.GetAll;
 using KovserHedieyyeler.Application.Features.Queries.Positions.GetSingle;
 using KovserHediyyeler.Application.Features.Commands.Positions.Update.Recover;
@@ -47,7 +46,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new GetSinglePositionQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);
@@ -59,7 +58,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new DeleteTemporarilyPositionCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -71,7 +70,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RemovePermanentlyPositionCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -79,7 +78,7 @@ namespace Kovser.Hediyyeler.App.Controllers
 
         // [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Total Position", Menu = AuthorizeDefinitionConstants.Positions)]
         [HttpPut]
-        public async Task<IActionResult> UpdateTotalAsync(UpdateTotalPositionCommandRequest request)
+        public async Task<IActionResult> UpdateAsync(UpdatePositionCommandRequest request)
         {
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
@@ -87,23 +86,15 @@ namespace Kovser.Hediyyeler.App.Controllers
 
         // [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Recover Deleted Position", Menu = AuthorizeDefinitionConstants.Positions)]
         [HttpPatch("RecoverData/{id}")]
-        public async Task<IActionResult> RecoverDataAsync(RecoverPositionCommandRequest request)
+        public async Task<IActionResult> RecoverDataAsync(string id)
         {
+            var request = new RecoverPositionCommandRequest
+            {
+                Id = Guid.Parse(id)
+            }
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }
 
-        // [AuthorizeDefinition(ActionType = ActionType.Updating, Definition = "Update Position", Menu = AuthorizeDefinitionConstants.Positions)]
-        [HttpPatch]
-        public async Task<IActionResult> UpdateAsync(string id, PositionUpdateDto dto)
-        {
-            var request = new UpdatePositionCommandRequest
-            {
-                Id = id,
-                Dto = dto
-            };
-            var response = await _mediator.Send(request);
-            return StatusCode(response.StatusCode, response.Message);
-        }
     }
 }

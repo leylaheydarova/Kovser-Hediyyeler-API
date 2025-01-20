@@ -122,7 +122,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             if (dto == null) throw new BadRequestException();
             UpdateTotalCategoryCommandRequest request = new UpdateTotalCategoryCommandRequest
             {
-                Id = id,
+                Id = Guid.Parse(id)
                 Dto = dto
             };
             UpdateTotalCategoryCommandResponse response = await _mediator.Send(request);

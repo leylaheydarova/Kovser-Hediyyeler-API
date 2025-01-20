@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Queries.Baskets.GetTotalCount
 
         public async Task<GetTotalCountQueryResponse> Handle(GetTotalCountQueryRequest request, CancellationToken cancellationToken)
         {
-            var count = await _service.GetTotalItemCountAsync(request.Id);
+            var count = await _service.GetTotalItemCountAsync(request.CustomerId);
             return new GetTotalCountQueryResponse
             {
                 TotalCount = count

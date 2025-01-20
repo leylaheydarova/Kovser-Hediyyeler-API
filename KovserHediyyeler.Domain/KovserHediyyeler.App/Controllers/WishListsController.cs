@@ -23,7 +23,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             var request = new GetWishListQueryRequest
             {
-                Id = customerId
+                CustomerId = customerId
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);

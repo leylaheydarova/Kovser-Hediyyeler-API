@@ -1,27 +1,21 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Positions;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Positions.Delete.Temporarily
 {
     public class DeleteTemporarilyPositionCommandHandler : IRequestHandler<DeleteTemporarilyPositionCommandRequest, DeleteTemporarilyPositionCommandResponse>
     {
-        readonly IPositionReadRepository _readRepository;
-        readonly IPositionWriteRepository _writeRepository;
+        readonly IPositionService _service;
 
-        public DeleteTemporarilyPositionCommandHandler(IPositionReadRepository readRepository, IPositionWriteRepository writeRepository)
+        public DeleteTemporarilyPositionCommandHandler(IPositionService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<DeleteTemporarilyPositionCommandResponse> Handle(DeleteTemporarilyPositionCommandRequest request, CancellationToken cancellationToken)
         {
-            Position position = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, true);
-            if (position == null) throw new NotFoundException("vəzifə");
-            _writeRepository.DeleteTemporarily(position);
-            await _writeRepository.SaveAsync();
+            await _service.DeleteTemporarilyPositionAsync(request.Id);
+
             return new DeleteTemporarilyPositionCommandResponse
             {
                 Message = "Vəzifə müvəqqəti silindi"

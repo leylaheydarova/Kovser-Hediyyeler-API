@@ -2,13 +2,13 @@
 using KovserHedieyyeler.Application.Features.Commands.Employees.Create.CreateEmployeeAddress;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployee;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Delete.Temporarily;
-using KovserHedieyyeler.Application.Features.Commands.Employees.Recover;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmployeeAddress;
 using KovserHedieyyeler.Application.Features.Commands.Employees.Update.UpdateEmployees.UpdateEmployee;
 using KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAllEmployeeAddresses;
 using KovserHedieyyeler.Application.Features.Queries.Employees.GetAll.GetAllEmployees;
 using KovserHedieyyeler.Application.Features.Queries.Employees.GetSingle;
 using KovserHediyyeler.Application.Features.Commands.Employees.Delete.Permanently.RemoveEmployeeAddress;
+using KovserHediyyeler.Application.Features.Commands.Employees.Update.Recover;
 using KovserHediyyeler.Application.Features.Commands.Employees.Update.UpdateEmployees.UpdateTotalEmployee;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -75,7 +75,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new DeleteTemporarilyEmployeeCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
 
             var response = await _mediator.Send(request);
@@ -88,7 +88,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RemovePermanentlyEmployeeCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
 
             var response = await _mediator.Send(request);
@@ -101,7 +101,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RemoveAddressCommandRequest
             {
-                Id = id,
+                Id = Guid.Parse(id),
             };
 
             var response = await _mediator.Send(request);
@@ -114,7 +114,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new RecoverEmployeeCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
 
             var response = await _mediator.Send(request);
