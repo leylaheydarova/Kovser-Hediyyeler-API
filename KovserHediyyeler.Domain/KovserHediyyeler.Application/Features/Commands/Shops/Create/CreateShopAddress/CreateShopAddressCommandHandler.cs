@@ -1,34 +1,20 @@
-﻿using KovserHediyyeler.Application.Repositories.Addresses;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Shops.Create.CreateShopAddress
 {
     public class CreateShopAddressCommandHandler : IRequestHandler<CreateShopAddressCommandRequest, CreateShopAddressCommandResponse>
     {
-        readonly IAddressWriteRepository _repository;
+        readonly IShopService _service;
 
-        public CreateShopAddressCommandHandler(IAddressWriteRepository repository)
+        public CreateShopAddressCommandHandler(IShopService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<CreateShopAddressCommandResponse> Handle(CreateShopAddressCommandRequest request, CancellationToken cancellationToken)
         {
-            Address address = new Address
-            {
-                City = request.Dto.City,
-                Region = request.Dto.Region,
-                District = request.Dto.District == null ? "" : request.Dto.District,
-                Street = request.Dto.Street,
-                Home = request.Dto.Home,
-                PostalCode = request.Dto.PostalCode,
-                IsCurrentAddress = request.Dto.IsCurrentAddress,
-                ShopID = Guid.Parse(request.ShopId)
-            };
-
-            await _repository.AddAsync(address);
-            await _repository.SaveAsync();
+            await _service.CreateShopAddressAsync(request.Dto, request.ShopId);
 
             return new CreateShopAddressCommandResponse
             {

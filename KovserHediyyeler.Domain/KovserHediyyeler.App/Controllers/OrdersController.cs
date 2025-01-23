@@ -77,7 +77,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             var request = new GetSingleOrderQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Dto);
@@ -88,7 +88,7 @@ namespace KovserHediyyeler.App.Controllers
         {
             var request = new CancelOrderCommandRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);

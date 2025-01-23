@@ -5,6 +5,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Shops.Update.UpdateSho
 {
     public class UpdateShopAddressCommandRequest : UpdateCommandRequest<AddressUpdateDto>, IRequest<UpdateShopAddressCommandResponse>
     {
-        public string ShopID { get; set; }
+        public string ShopId { get; set; }
     }
 }

@@ -1,30 +1,20 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Shops;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Shops.Update.UpdateShop.UpdateTotal
 {
     public class UpdateTotalShopCommandHandler : IRequestHandler<UpdateTotalShopCommandRequest, UpdateTotalShopCommandResponse>
     {
-        IShopReadRepository _readRepository;
-        IShopWriteRepository _writeRepository;
+        readonly IShopService _service;
 
-        public UpdateTotalShopCommandHandler(IShopReadRepository readRepository, IShopWriteRepository writeRepository)
+        public UpdateTotalShopCommandHandler(IShopService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
+            _service = service;
         }
 
         public async Task<UpdateTotalShopCommandResponse> Handle(UpdateTotalShopCommandRequest request, CancellationToken cancellationToken)
         {
-            KovserHediyyeler.Domain.Models.Shop shop = await _readRepository.GetWhereAsync(sh => !sh.isDeleted && sh.ID.ToString() == request.Id, true);
-            if (shop == null) throw new NotFoundException("mağaza");
-            shop.Name = request.Dto.Name;
-            shop.Description = request.Dto.Description;
-            shop.Phone = request.Dto.Phone;
-
-            _writeRepository.Update(shop);
-            await _writeRepository.SaveAsync();
+            await _service.UpdateTotalShopAsync(request.Dto, request.Id);
 
             return new UpdateTotalShopCommandResponse
             {

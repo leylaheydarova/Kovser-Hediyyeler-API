@@ -62,7 +62,7 @@ namespace Kovser.Hediyyeler.App.Controllers
         {
             var request = new GetSingleEmployeeQueryRequest
             {
-                Id = id
+                Id = Guid.Parse(id)
             };
 
             var response = await _mediator.Send(request);

@@ -91,7 +91,7 @@ namespace Kovser.Hediyyeler.App.Controllers
             var request = new RecoverPositionCommandRequest
             {
                 Id = Guid.Parse(id)
-            }
+            };
             var response = await _mediator.Send(request);
             return StatusCode(response.StatusCode, response.Message);
         }

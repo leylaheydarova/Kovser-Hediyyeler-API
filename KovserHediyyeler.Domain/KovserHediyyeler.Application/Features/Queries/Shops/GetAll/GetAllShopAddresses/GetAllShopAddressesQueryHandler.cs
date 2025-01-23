@@ -1,42 +1,25 @@
-﻿using KovserHedieyyeler.Application.DTOs.Addresses;
-using KovserHediyyeler.Application.Repositories.Addresses;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace KovserHedieyyeler.Application.Features.Queries.Shops.GetAll.GetAllShopAddresses
 {
     public class GetAllShopAddressesQueryHandler : IRequestHandler<GetAllShopAddressesQueryRequest, GetAllShopAddressesQueryResponse>
     {
-        readonly IAddressReadRepository _repository;
+        readonly IShopService _service;
 
-        public GetAllShopAddressesQueryHandler(IAddressReadRepository repository)
+        public GetAllShopAddressesQueryHandler(IShopService service)
         {
-            _repository = repository;
+            _service = service;
         }
 
         public async Task<GetAllShopAddressesQueryResponse> Handle(GetAllShopAddressesQueryRequest request, CancellationToken cancellationToken)
         {
-            var query = _repository.GetAllWhere(x => !x.isDeleted && x.ShopID.ToString() == request.ShopId, false);
-            int totalCount = query.Count();
-            List<AddressGetDto> dtos = new List<AddressGetDto>();
-            dtos = await query.Skip(request.Page * request.Size)
-                .Take(request.Size)
-                .Select(x => new AddressGetDto
-                {
-                    Id = x.ID.ToString(),
-                    City = x.City.ToString(),
-                    Region = x.Region,
-                    District = x.District,
-                    Street = x.Street,
-                    Home = x.Home,
-                    PostalCode = x.PostalCode,
-                    IsCurrentAddress = x.IsCurrentAddress
-                }).ToListAsync();
+            var dtos = await _service.GetAllShopAddressesAsync(request.Page, request.Size, request.ShopId);
 
             return new GetAllShopAddressesQueryResponse
             {
                 Datas = dtos,
-                TotalCount = totalCount
+                TotalCount = dtos.Count()
             };
         }
     }

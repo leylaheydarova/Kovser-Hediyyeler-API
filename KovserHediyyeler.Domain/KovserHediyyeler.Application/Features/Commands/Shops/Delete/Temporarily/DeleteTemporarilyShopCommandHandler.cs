@@ -1,34 +1,20 @@
-﻿using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Addresses;
-using KovserHediyyeler.Application.Repositories.Shops;
-using KovserHediyyeler.Domain.Models;
+﻿using KovserHediyyeler.Application.Abstractions;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Shops.Delete.Temporarily
 {
     public class DeleteTemporarilyShopCommandHandler : IRequestHandler<DeleteTemporarilyShopCommandRequest, DeleteTemporarilyShopCommandResponse>
     {
-        IShopReadRepository _readRepository;
-        IShopWriteRepository _writeRepository;
-        IAddressWriteRepository _addressWriteRepository;
+        readonly IShopService _service;
 
-        public DeleteTemporarilyShopCommandHandler(IShopReadRepository readRepository, IShopWriteRepository writeRepository, IAddressWriteRepository addressWriteRepository)
+        public DeleteTemporarilyShopCommandHandler(IShopService service)
         {
-            _readRepository = readRepository;
-            _writeRepository = writeRepository;
-            _addressWriteRepository = addressWriteRepository;
+            _service = service;
         }
 
         public async Task<DeleteTemporarilyShopCommandResponse> Handle(DeleteTemporarilyShopCommandRequest request, CancellationToken cancellationToken)
         {
-            Shop shop = await _readRepository.GetWhereAsync(sh => !sh.isDeleted && sh.ID.ToString() == request.Id, true);
-            if (shop == null) throw new NotFoundException("mağaza");
-            foreach (var address in shop.Addresses)
-            {
-                _addressWriteRepository.DeleteTemporarily(address);
-            }
-            _writeRepository.DeleteTemporarily(shop);
-            await _writeRepository.SaveAsync();
+            await _service.DeleteTemporarilyShopAsync(request.Id);
 
             return new DeleteTemporarilyShopCommandResponse
             {
