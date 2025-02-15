@@ -7,6 +7,7 @@ using KovserHediyyeler.Application.Repositories.Addresses;
 using KovserHediyyeler.Application.Repositories.Shops;
 using KovserHediyyeler.Domain.Enums;
 using KovserHediyyeler.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace KovserHediyyeler.Persistence.Services
 {
@@ -92,7 +93,7 @@ namespace KovserHediyyeler.Persistence.Services
             using var transaction = await _shopWriteRepository.BeginTransactionAsync();
             try
             {
-                Shop shop = await _readRepository.GetWhereAsync(sh => !sh.isDeleted && sh.ID == id, true, "Addresses");
+                Shop shop = await _shopReadRepository.GetWhereAsync(sh => !sh.isDeleted && sh.ID == id, true, "Addresses");
                 if (shop == null) throw new NotFoundException("mağaza");
                 foreach (var address in shop.Addresses)
                 {
@@ -189,7 +190,7 @@ namespace KovserHediyyeler.Persistence.Services
             using var transaction = await _shopWriteRepository.BeginTransactionAsync();
             try
             {
-                Shop shop = await _readRepository.GetWhereAsync(sh => sh.isDeleted && sh.ID == id, true, "Addresses");
+                Shop shop = await _shopReadRepository.GetWhereAsync(sh => sh.isDeleted && sh.ID == id, true, "Addresses");
                 if (shop == null) throw new NotFoundException("mağaza");
                 foreach (var address in shop.Addresses)
                 {

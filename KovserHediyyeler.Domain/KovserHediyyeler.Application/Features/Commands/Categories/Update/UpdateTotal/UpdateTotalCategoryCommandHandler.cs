@@ -1,7 +1,4 @@
 ﻿using KovserHediyyeler.Application.Abstractions;
-using KovserHediyyeler.Application.Exceptions.NotFoundExceptions;
-using KovserHediyyeler.Application.Repositories.Categories;
-using KovserHediyyeler.Domain.Models;
 using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Categories.Update.TotalUpdate
@@ -17,8 +14,8 @@ namespace KovserHedieyyeler.Application.Features.Commands.Categories.Update.Tota
 
         public async Task<UpdateTotalCategoryCommandResponse> Handle(UpdateTotalCategoryCommandRequest request, CancellationToken cancellationToken)
         {
-           
-            _service.UpdateTotalCategoryAsync(request.Dto, request.Id)
+
+            _service.UpdateTotalCategoryAsync(request.Dto, request.Id);
             return new UpdateTotalCategoryCommandResponse
             {
                 Message = "Kateqoriya məlumatları uğurla yeniləndi"

@@ -58,7 +58,7 @@ namespace KovserHediyyeler.Persistence.Repositories
                     query = query.Include(include);
                 }
             }
-            T? entity = await query.FirstOrDefaultAsync(x => x.ID.ToString() == id);
+            T? entity = await query.FirstOrDefaultAsync(x => x.ID == id);
             return entity;
         }
 

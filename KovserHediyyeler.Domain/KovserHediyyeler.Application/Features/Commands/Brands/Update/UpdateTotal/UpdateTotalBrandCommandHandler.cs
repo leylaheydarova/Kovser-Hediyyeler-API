@@ -25,7 +25,7 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update.UpdateAl
         public async Task<UpdateTotalBrandCommandResponse> Handle(UpdateTotalBrandCommandRequest request, CancellationToken cancellationToken)
         {
             var id = request.Id.ToString();
-            Brand brand = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == request.Id, true);
+            Brand brand = await _readRepository.GetWhereAsync(x => !x.isDeleted && x.ID == request.Id, true);
 
             return new UpdateTotalBrandCommandResponse
             {
