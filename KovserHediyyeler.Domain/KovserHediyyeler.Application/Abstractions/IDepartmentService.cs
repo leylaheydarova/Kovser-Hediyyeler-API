@@ -6,17 +6,17 @@ namespace KovserHediyyeler.Application.Abstractions
     public interface IDepartmentService
     {
         public Task CreateDepartmentAsync(DepartmentCommandDto dto);
-        public Task CreateDepartmentSocialMediaAsync(SocialMediaCommandDto dto, string DepartmentId);
-        public Task DeleteTemporarilyDepartment(string id);
-        public Task RemovePermanentlyDepartmentAsync(string id);
-        public Task RemovePermanentlyDepartmentSocialMediaAsync(string id);
-        public Task RecoverDepartmentAsync(string id);
-        public Task UpdateTotalDepartmentAsync(DepartmentCommandDto dto, string id);
-        public Task UpdateDepartmentAsync(DepartmentUpdateDto dto, string id);
-        public Task UpdateDepartmentSocialMediaAsync(SocialMediaUpdateDto dto, string id);
+        public Task CreateDepartmentSocialMediaAsync(SocialMediaCommandDto dto, Guid DepartmentId);
+        public Task DeleteTemporarilyDepartment(Guid id);
+        public Task RemovePermanentlyDepartmentAsync(Guid id);
+        public Task RemovePermanentlyDepartmentSocialMediaAsync(Guid id);
+        public Task RecoverDepartmentAsync(Guid id);
+        public Task UpdateTotalDepartmentAsync(DepartmentCommandDto dto, Guid id);
+        public Task UpdateDepartmentAsync(DepartmentUpdateDto dto, Guid id);
+        public Task UpdateDepartmentSocialMediaAsync(SocialMediaUpdateDto dto, Guid id);
 
         public Task<List<DepartmentGetAllDto>> GetAllDepartments(int page, int size);
-        public Task<List<SocialMediaGetDto>> GetAllDepartmentSocialMedias(string DepartmentId);
-        public Task<DepartmentGetSingleDto> GetSingleDepartment(string id);
+        public Task<List<SocialMediaGetDto>> GetAllDepartmentSocialMedias(Guid DepartmentId);
+        public Task<DepartmentGetSingleDto> GetSingleDepartment(Guid id);
     }
 }

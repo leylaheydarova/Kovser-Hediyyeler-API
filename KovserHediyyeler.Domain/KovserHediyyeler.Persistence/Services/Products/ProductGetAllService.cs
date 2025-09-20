@@ -69,10 +69,10 @@ namespace KovserHediyyeler.Persistence.Services.Products
                 .ToListAsync();
         }
 
-        public async Task<List<ProductImageGetDto>> GetAllProductImagesAsync(int page, int size, string productId)
+        public async Task<List<ProductImageGetDto>> GetAllProductImagesAsync(int page, int size, Guid productId)
         {
             var query = _productImageFileReadRepository
-                .GetAllWhere(x => x.ProductID.ToString() == productId, false)
+                .GetAllWhere(x => x.ProductID == productId, false)
                 .Select(x => new ProductImageGetDto
                 {
                     Id = x.ID.ToString(),
@@ -84,10 +84,10 @@ namespace KovserHediyyeler.Persistence.Services.Products
             return await PaginateAsync(query, page, size);
         }
 
-        public async Task<List<ProductPropertyGetDto>> GetAllProductPropertiesAsync(int page, int size, string productId)
+        public async Task<List<ProductPropertyGetDto>> GetAllProductPropertiesAsync(int page, int size, Guid productId)
         {
             var query = _productPropertyReadRepository
-                .GetAllWhere(x => !x.isDeleted && x.ProductID.ToString() == productId, false)
+                .GetAllWhere(x => !x.isDeleted && x.ProductID == productId, false)
                 .Select(x => new ProductPropertyGetDto
                 {
                     Id = x.ID.ToString(),
@@ -104,23 +104,23 @@ namespace KovserHediyyeler.Persistence.Services.Products
             return await PaginateAsync(query, page, size);
         }
 
-        public async Task<List<ProductGetAllDto>> GetAllFilteredProductsAsync(int page, int size, string BrandIdOrCategoryIdOrDepartmentIdOrShopId)
+        public async Task<List<ProductGetAllDto>> GetAllFilteredProductsAsync(int page, int size, Guid BrandIdOrCategoryIdOrDepartmentIdOrShopId)
         {
             var query = GetFilteredProductsQuery(
                 x => !x.isDeleted &&
-                     (x.BrandID.ToString() == BrandIdOrCategoryIdOrDepartmentIdOrShopId ||
-                      x.CategoryID.ToString() == BrandIdOrCategoryIdOrDepartmentIdOrShopId ||
-                      x.DepartmentID.ToString() == BrandIdOrCategoryIdOrDepartmentIdOrShopId ||
-                      x.Shops.Any(sh => sh.ID.ToString() == BrandIdOrCategoryIdOrDepartmentIdOrShopId))
+                     (x.BrandID == BrandIdOrCategoryIdOrDepartmentIdOrShopId ||
+                      x.CategoryID == BrandIdOrCategoryIdOrDepartmentIdOrShopId ||
+                      x.DepartmentID == BrandIdOrCategoryIdOrDepartmentIdOrShopId ||
+                      x.Shops.Any(sh => sh.ID == BrandIdOrCategoryIdOrDepartmentIdOrShopId))
             );
 
             return await PaginateAsync(query, page, size);
         }
 
-        public async Task<List<ProductColorGetDto>> GetAllProductColorsAsync(int page, int size, string productId)
+        public async Task<List<ProductColorGetDto>> GetAllProductColorsAsync(int page, int size, Guid productId)
         {
             var query = _productColorReadRepository
-               .GetAllWhere(x => !x.isDeleted && x.ProductID.ToString() == productId, false)
+               .GetAllWhere(x => !x.isDeleted && x.ProductID == productId, false)
                .Select(x => new ProductColorGetDto
                {
                    Id = x.ID.ToString(),
@@ -130,10 +130,10 @@ namespace KovserHediyyeler.Persistence.Services.Products
             return await PaginateAsync(query, page, size);
         }
 
-        public async Task<List<ProductSizeGetDto>> GetAllProductSizesAsync(int page, int size, string productId)
+        public async Task<List<ProductSizeGetDto>> GetAllProductSizesAsync(int page, int size, Guid productId)
         {
             var query = _productSizeReadRepository
-               .GetAllWhere(x => !x.isDeleted && x.ProductID.ToString() == productId, false)
+               .GetAllWhere(x => !x.isDeleted && x.ProductID == productId, false)
                .Select(x => new ProductSizeGetDto
                {
                    Id = x.ID.ToString(),

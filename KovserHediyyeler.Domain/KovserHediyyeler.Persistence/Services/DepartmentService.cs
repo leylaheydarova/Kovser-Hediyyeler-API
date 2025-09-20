@@ -34,9 +34,9 @@ namespace KovserHediyyeler.Persistence.Services
             _accessor = accessor;
         }
 
-        private async Task<T> GetEntityAsync<T>(IReadRepository<T> repository, string id, bool trackChanges = true) where T : BaseEntity
+        private async Task<T> GetEntityAsync<T>(IReadRepository<T> repository, Guid id, bool trackChanges = true) where T : BaseEntity
         {
-            T entity = await repository.GetWhereAsync(x => x.ID.ToString() == id, trackChanges);
+            T entity = await repository.GetWhereAsync(x => x.ID == id, trackChanges);
             if (entity == null)
             {
                 if (typeof(T) == typeof(Department))
@@ -87,7 +87,7 @@ namespace KovserHediyyeler.Persistence.Services
             await _writeRepository.SaveAsync();
         }
 
-        public async Task CreateDepartmentSocialMediaAsync(SocialMediaCommandDto dto, string DepartmentId)
+        public async Task CreateDepartmentSocialMediaAsync(SocialMediaCommandDto dto, Guid DepartmentId)
         {
             var socialMedia = new SocialMedia
             {
@@ -95,13 +95,13 @@ namespace KovserHediyyeler.Persistence.Services
                 Name = dto.Name,
                 NickName = dto.NickName,
                 URL = dto.URL,
-                DepartmentID = Guid.Parse(DepartmentId)
+                DepartmentID = DepartmentId
             };
             await _smWriteRepository.AddAsync(socialMedia);
             await _smWriteRepository.SaveAsync();
         }
 
-        public async Task DeleteTemporarilyDepartment(string id)
+        public async Task DeleteTemporarilyDepartment(Guid id)
         {
             var department = await GetEntityAsync(_readRepository, id);
             foreach (var socialMedia in department.SocialMedias)
@@ -132,13 +132,9 @@ namespace KovserHediyyeler.Persistence.Services
             return dtos;
         }
 
-        public async Task<List<SocialMediaGetDto>> GetAllDepartmentSocialMedias(string DepartmentId)
+        public async Task<List<SocialMediaGetDto>> GetAllDepartmentSocialMedias(Guid DepartmentId)
         {
-            if (!Guid.TryParse(DepartmentId, out var departmentId))
-            {
-                throw new NotFoundException("şöbə");
-            }
-            var query = _smReadRepository.GetAllWhere(x => !x.isDeleted && x.DepartmentID == departmentId, false);
+            var query = _smReadRepository.GetAllWhere(x => !x.isDeleted && x.DepartmentID == DepartmentId, false);
             query = query.Include(sm => sm.Department);
             if (!query.Any()) throw new NotFoundException("şöbə");
             List<SocialMediaGetDto> dtos = new List<SocialMediaGetDto>();
@@ -153,7 +149,7 @@ namespace KovserHediyyeler.Persistence.Services
             return dtos;
         }
 
-        public async Task<DepartmentGetSingleDto> GetSingleDepartment(string id)
+        public async Task<DepartmentGetSingleDto> GetSingleDepartment(Guid id)
         {
             Department department = await GetEntityAsync(_readRepository, id);
             DepartmentGetSingleDto dto = new DepartmentGetSingleDto
@@ -176,7 +172,7 @@ namespace KovserHediyyeler.Persistence.Services
             return dto;
         }
 
-        public async Task RecoverDepartmentAsync(string id)
+        public async Task RecoverDepartmentAsync(Guid id)
         {
             Department department = await _readRepository.GetWhereAsync(x => x.isDeleted && x.ID == Guid.Parse(id), true);
             foreach (var socialMedia in department.SocialMedias)
@@ -190,7 +186,7 @@ namespace KovserHediyyeler.Persistence.Services
             await _writeRepository.SaveAsync();
         }
 
-        public async Task RemovePermanentlyDepartmentAsync(string id)
+        public async Task RemovePermanentlyDepartmentAsync(Guid id)
         {
             Department department = await _readRepository.GetWhereAsync(x => x.ID == Guid.Parse(id), true, "SocialMedias");
             if (department == null) throw new NotFoundException("şöbə");
@@ -205,14 +201,14 @@ namespace KovserHediyyeler.Persistence.Services
             await _writeRepository.SaveAsync();
         }
 
-        public async Task RemovePermanentlyDepartmentSocialMediaAsync(string id)
+        public async Task RemovePermanentlyDepartmentSocialMediaAsync(Guid id)
         {
             SocialMedia socialMedia = await GetEntityAsync(_smReadRepository, id, true);
             _smWriteRepository.RemovePermanently(socialMedia);
             await _smWriteRepository.SaveAsync();
         }
 
-        public async Task UpdateDepartmentAsync(DepartmentUpdateDto dto, string id)
+        public async Task UpdateDepartmentAsync(DepartmentUpdateDto dto, Guid id)
         {
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;
@@ -229,7 +225,7 @@ namespace KovserHediyyeler.Persistence.Services
             await _writeRepository.SaveAsync();
         }
 
-        public async Task UpdateDepartmentSocialMediaAsync(SocialMediaUpdateDto dto, string id)
+        public async Task UpdateDepartmentSocialMediaAsync(SocialMediaUpdateDto dto, Guid id)
         {
             var socialMedia = await GetEntityAsync(_smReadRepository, id);
             socialMedia.NickName = dto.NickName != null ? dto.NickName : socialMedia.NickName;
@@ -240,7 +236,7 @@ namespace KovserHediyyeler.Persistence.Services
             await _smWriteRepository.SaveAsync();
         }
 
-        public async Task UpdateTotalDepartmentAsync(DepartmentCommandDto dto, string id)
+        public async Task UpdateTotalDepartmentAsync(DepartmentCommandDto dto, Guid id)
         {
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;

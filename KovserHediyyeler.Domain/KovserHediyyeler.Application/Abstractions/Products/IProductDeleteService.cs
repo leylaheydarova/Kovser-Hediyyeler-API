@@ -2,14 +2,14 @@
 {
     public interface IProductDeleteService
     {
-        public Task RemovePermanentlyProductAsync(string id);
-        public Task RemovePermanentlyProductImageFileAsync(string id);
-        public Task RemovePermanentlyProductPropertyAsync(string id);
-        public Task RemovePermanentlyProductShopAsync(string prodcutId, string shopId);
-        public Task RemovePermanentlyProductColorAsync(string id);
-        public Task RemovePermanentlyProductSizeAsync(string id);
-        public Task DeleteTemporarilyProductAsync(string id);
-        public Task RecoverProductDataAsync(string id);
+        public Task RemovePermanentlyProductAsync(Guid id);
+        public Task RemovePermanentlyProductImageFileAsync(Guid id);
+        public Task RemovePermanentlyProductPropertyAsync(Guid id);
+        public Task RemovePermanentlyProductShopAsync(Guid prodcutId, Guid shopId);
+        public Task RemovePermanentlyProductColorAsync(Guid id);
+        public Task RemovePermanentlyProductSizeAsync(Guid id);
+        public Task DeleteTemporarilyProductAsync(Guid id);
+        public Task RecoverProductDataAsync(Guid id);
 
     }
 }

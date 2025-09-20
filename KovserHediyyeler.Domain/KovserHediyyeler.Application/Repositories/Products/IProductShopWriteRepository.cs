@@ -2,6 +2,6 @@
 {
     public interface IProductShopWriteRepository
     {
-        public Task RemovePermanentlyProductShopAsync(string productId, string shopId);
+        public Task RemovePermanentlyProductShopAsync(Guid productId, Guid shopId);
     }
 }

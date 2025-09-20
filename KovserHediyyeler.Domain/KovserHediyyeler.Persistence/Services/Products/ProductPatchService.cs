@@ -43,9 +43,9 @@ namespace KovserHediyyeler.Persistence.Services.Products
             _accessor = accessor;
         }
 
-        public async Task UpdateProductAsync(string id, ProductPutDto dto)
+        public async Task UpdateProductAsync(Guid id, ProductPutDto dto)
         {
-            Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
+            Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID == id, true);
             if (product == null) throw new NotFoundException("məhsul");
             double? discountprice = 0;
             if (dto.Price != null)
@@ -74,11 +74,11 @@ namespace KovserHediyyeler.Persistence.Services.Products
             await _productWriteRepository.SaveAsync();
         }
 
-        public async Task UpdateProductImageFileAsync(string id, ProductImageCommandDto dto)
+        public async Task UpdateProductImageFileAsync(Guid id, ProductImageCommandDto dto)
         {
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;
-            ProductImageFile image = await _productImageFileReadRepository.GetWhereAsync(x => x.ID.ToString() == id, true);
+            ProductImageFile image = await _productImageFileReadRepository.GetWhereAsync(x => x.ID == id, true);
             if (image == null) throw new NotFoundException("məhsul şəkli");
             image.FileName = dto.file != null ? dto.file.UploadFile(_env.WebRootPath, FilePaths.ProuctImageFilePath) : image.FileName != null ? image.FileName : ConstantPaths.DefaultImage;
             image.Path = dto.file != null
@@ -90,9 +90,9 @@ namespace KovserHediyyeler.Persistence.Services.Products
             await _productImageFileWriteRepository.SaveAsync();
         }
 
-        public async Task UpdateProductPropertyAsync(string id, ProductPropertyCommandDto dto)
+        public async Task UpdateProductPropertyAsync(Guid id, ProductPropertyCommandDto dto)
         {
-            ProductProperty property = await _productPropertyReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true);
+            ProductProperty property = await _productPropertyReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID == id, true);
             if (property == null) throw new NotFoundException("məhsul xüsusiyyəti");
             property.Name = dto.Name != null ? dto.Name : property.Name;
             property.Value = dto.Value != null ? dto.Value : property.Value;
@@ -102,16 +102,16 @@ namespace KovserHediyyeler.Persistence.Services.Products
 
         }
 
-        public async Task UpdateProductColorAsync(string id, string? colorName, int colorStock)
+        public async Task UpdateProductColorAsync(Guid id, string? colorName, int colorStock)
         {
             using var transaction = await _productWriteRepository.BeginTransactionAsync();
             try
             {
-                var color = await _productColorReadRepository.GetWhereAsync(c => c.ID.ToString() == id && !c.isDeleted, true, "Product");
+                var color = await _productColorReadRepository.GetWhereAsync(c => c.ID == id && !c.isDeleted, true, "Product");
                 if (color == null) throw new NotFoundException("məhsul rəngi");
                 var tempStock = color.ColorStock; //ilkin stok dəyəri
                 color.ColorName = colorName != null ? colorName : color.ColorName;
-                color.ColorStock = colorStock != 0 ? colorStock :color.ColorStock;
+                color.ColorStock = colorStock != 0 ? colorStock : color.ColorStock;
                 color.Product.Stock += color.ColorStock - tempStock;//çünki color-da olan ilkin stok dəyəri çıxmalı, yeni stock dəyəri toplanmalıdır.
                 _productColorWriteRepository.Update(color);
                 _productWriteRepository.Update(color.Product);
@@ -126,12 +126,12 @@ namespace KovserHediyyeler.Persistence.Services.Products
             }
         }
 
-        public async Task UpdateProductSizeAsync(string id, string? sizeName, int sizeStock)
+        public async Task UpdateProductSizeAsync(Guid id, string? sizeName, int sizeStock)
         {
             using var transaction = await _productWriteRepository.BeginTransactionAsync();
             try
             {
-                var size = await _productSizeReadRepository.GetWhereAsync(c => c.ID.ToString() == id && !c.isDeleted, true, "Product");
+                var size = await _productSizeReadRepository.GetWhereAsync(c => c.ID == id && !c.isDeleted, true, "Product");
                 if (size == null) throw new NotFoundException("məhsul ölçüsü");
                 var tempStock = size.SizeStock; //ilkin stok dəyəri
                 size.SizeName = sizeName != null ? sizeName : size.SizeName;

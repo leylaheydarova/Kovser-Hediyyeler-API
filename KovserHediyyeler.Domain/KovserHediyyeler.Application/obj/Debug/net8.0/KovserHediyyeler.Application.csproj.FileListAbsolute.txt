@@ -30,3 +30,12 @@ C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kov
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\refint\KovserHediyyeler.Application.dll
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.pdb
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\ref\KovserHediyyeler.Application.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.csproj.AssemblyReference.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.AssemblyInfoInputs.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.AssemblyInfo.cs
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.csproj.CoreCompileInputs.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.sourcelink.json
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\refint\KovserHediyyeler.Application.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.pdb

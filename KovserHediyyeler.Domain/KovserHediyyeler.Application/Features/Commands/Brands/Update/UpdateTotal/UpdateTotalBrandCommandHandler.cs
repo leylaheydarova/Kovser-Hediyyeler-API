@@ -1,8 +1,6 @@
 ﻿using KovserHediyyeler.Application.Repositories.Brands;
 using KovserHediyyeler.Domain.Models;
 using MediatR;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 
 
 namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update.UpdateAll
@@ -10,16 +8,11 @@ namespace KovserHedieyyeler.Application.Features.Commands.Brands.Update.UpdateAl
     public class UpdateTotalBrandCommandHandler : IRequestHandler<UpdateTotalBrandCommandRequest, UpdateTotalBrandCommandResponse>
     {
         readonly IBrandReadRepository _readRepository;
-        readonly IBrandWriteRepository _writeRepository;
-        readonly IWebHostEnvironment _env;
-        readonly IHttpContextAccessor _accessor;
 
-        public UpdateTotalBrandCommandHandler(IBrandReadRepository readRepository, IBrandWriteRepository writeRepository, IWebHostEnvironment env, IHttpContextAccessor accessor)
+
+        public UpdateTotalBrandCommandHandler(IBrandReadRepository readRepository)
         {
             _readRepository = readRepository;
-            _writeRepository = writeRepository;
-            _env = env;
-            _accessor = accessor;
         }
 
         public async Task<UpdateTotalBrandCommandResponse> Handle(UpdateTotalBrandCommandRequest request, CancellationToken cancellationToken)

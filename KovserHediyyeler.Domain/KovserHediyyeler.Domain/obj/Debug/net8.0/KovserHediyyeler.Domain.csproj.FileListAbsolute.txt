@@ -28,3 +28,18 @@ C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kov
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.pdb
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.genruntimeconfig.cache
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\ref\KovserHediyyeler.Domain.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\bin\Debug\net8.0\KovserHediyyeler.Domain.deps.json
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\bin\Debug\net8.0\KovserHediyyeler.Domain.runtimeconfig.json
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\bin\Debug\net8.0\KovserHediyyeler.Domain.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\bin\Debug\net8.0\KovserHediyyeler.Domain.pdb
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.csproj.AssemblyReference.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.AssemblyInfoInputs.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.AssemblyInfo.cs
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.csproj.CoreCompileInputs.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.sourcelink.json
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\refint\KovserHediyyeler.Domain.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.pdb
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\KovserHediyyeler.Domain.genruntimeconfig.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Domain\obj\Debug\net8.0\ref\KovserHediyyeler.Domain.dll

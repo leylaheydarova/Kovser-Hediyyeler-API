@@ -14,13 +14,13 @@ namespace KovserHediyyeler.Persistence.Repositories.Products
             _context = context;
         }
 
-        public async Task RemovePermanentlyProductShopAsync(string productId, string shopId)
+        public async Task RemovePermanentlyProductShopAsync(Guid productId, Guid shopId)
         {
 
             var productShop = await _context.Set<Dictionary<string, object>>("ProductShop")
                                     .FirstOrDefaultAsync(ps =>
-                                        ps["ProductID"].ToString() == productId &&
-                                        ps["ShopID"].ToString() == shopId);
+                                        ps["ProductID"].ToString() == productId.ToString() &&
+                                        ps["ShopID"].ToString() == shopId.ToString());
 
             if (productShop == null)
                 throw new InvalidInputException("əlaqə");

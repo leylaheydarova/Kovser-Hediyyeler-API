@@ -7,9 +7,9 @@ namespace KovserHediyyeler.Application.Abstractions.Products
 {
     public interface IProductGetSingleService
     {
-        public Task<ProductGetSingleDto> GetSingleProductAsync(string id);
-        public Task<ProductPropertyGetDto> GetSingleProductPropertyAsync(string id);
-        public Task<ProductColorGetDto> GetSingleProductColorAsync(string id);
-        public Task<ProductSizeGetDto> GetSingleProductSizeAsync(string id);
+        public Task<ProductGetSingleDto> GetSingleProductAsync(Guid id);
+        public Task<ProductPropertyGetDto> GetSingleProductPropertyAsync(Guid id);
+        public Task<ProductColorGetDto> GetSingleProductColorAsync(Guid id);
+        public Task<ProductSizeGetDto> GetSingleProductSizeAsync(Guid id);
     }
 }

@@ -27,7 +27,7 @@ namespace KovserHediyyeler.Persistence.Services
             _accessor = accessor;
         }
 
-        private async Task<Promotion> GetPromotionAsync(string id, bool tracking)
+        private async Task<Promotion> GetPromotionAsync(Guid id, bool tracking)
         {
             var promotion = await _readRepository.GetWhereAsync(p => p.ID.ToString() == id, tracking);
             if (promotion == null) throw new NotFoundException("uyğun kampaniya məhsulu");
@@ -73,13 +73,13 @@ namespace KovserHediyyeler.Persistence.Services
             return dtos;
         }
 
-        public async Task<DateTime> GetExpireDateAsync(string id)
+        public async Task<DateTime> GetExpireDateAsync(Guid id)
         {
             var promotion = await GetPromotionAsync(id, false);
             return promotion.ExpireDate;
         }
 
-        public async Task<PromotionGetSingleDto> GetSingleAsync(string id)
+        public async Task<PromotionGetSingleDto> GetSingleAsync(Guid id)
         {
             var promotion = await GetPromotionAsync(id, false);
             var dto = new PromotionGetSingleDto
@@ -123,14 +123,14 @@ namespace KovserHediyyeler.Persistence.Services
             return dto;
         }
 
-        public async Task RemovePermanentAsync(string id)
+        public async Task RemovePermanentAsync(Guid id)
         {
             var promotion = await GetPromotionAsync(id, true);
             _writeRepository.RemovePermanently(promotion);
             await _writeRepository.SaveAsync();
         }
 
-        public async Task UpdateAsync(PromotionPatchDto dto, string id)
+        public async Task UpdateAsync(PromotionPatchDto dto, Guid id)
         {
             var promotion = await GetPromotionAsync(id, true);
             var scheme = _accessor.HttpContext.Request.Scheme;

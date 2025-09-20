@@ -27,9 +27,9 @@ namespace KovserHediyyeler.Persistence.Services
             _accessor = accessor;
         }
 
-        private async Task<Brand> GetBrandAsync(string id, bool tracking)
+        private async Task<Brand> GetBrandAsync(Guid id, bool tracking)
         {
-            Brand brand = await _readRepository.GetWhereAsync(b => b.ID.ToString() == id, tracking);
+            Brand brand = await _readRepository.GetWhereAsync(b => b.ID == id, tracking);
             if (brand == null) throw new NotFoundException("brend");
             return brand;
         }
@@ -52,7 +52,7 @@ namespace KovserHediyyeler.Persistence.Services
             await _writeRepository.SaveAsync();
         }
 
-        public async Task DeleteTemporarilyAsync(string id)
+        public async Task DeleteTemporarilyAsync(Guid id)
         {
             var brand = await GetBrandAsync(id, true);
             _writeRepository.DeleteTemporarily(brand);
@@ -78,7 +78,7 @@ namespace KovserHediyyeler.Persistence.Services
             return dtos;
         }
 
-        public async Task<BrandGetDto> GetSingleAsync(string id)
+        public async Task<BrandGetDto> GetSingleAsync(Guid id)
         {
             var brand = await GetBrandAsync(id, false);
             var dto = new BrandGetDto
@@ -92,15 +92,15 @@ namespace KovserHediyyeler.Persistence.Services
             return dto;
         }
 
-        public async Task RecoverDataAsync(string id)
+        public async Task RecoverDataAsync(Guid id)
         {
-            Brand brand = await _readRepository.GetWhereAsync(b => b.isDeleted && b.ID.ToString() == id, true);
+            Brand brand = await _readRepository.GetWhereAsync(b => b.isDeleted && b.ID == id, true);
             if (brand == null) throw new BadRequestException();
             _writeRepository.RecoverData(brand);
             await _writeRepository.SaveAsync();
         }
 
-        public async Task RemovePermanentAsync(string id)
+        public async Task RemovePermanentAsync(Guid id)
         {
             var brand = await GetBrandAsync(id, true);
 
@@ -108,7 +108,7 @@ namespace KovserHediyyeler.Persistence.Services
             await _writeRepository.SaveAsync();
         }
 
-        public async Task UpdateAsync(BrandUpdateDto dto, string id)
+        public async Task UpdateAsync(BrandUpdateDto dto, Guid id)
         {
             var brand = await GetBrandAsync(id, true);
             var scheme = _accessor.HttpContext.Request.Scheme;
@@ -124,7 +124,7 @@ namespace KovserHediyyeler.Persistence.Services
             await _writeRepository.SaveAsync();
         }
 
-        public async Task UpdateTotalAsync(BrandCommandDto dto, string id)
+        public async Task UpdateTotalAsync(BrandCommandDto dto, Guid id)
         {
             var brand = await GetBrandAsync(id, true);
             var scheme = _accessor.HttpContext.Request.Scheme;

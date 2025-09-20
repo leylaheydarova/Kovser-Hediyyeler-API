@@ -7,10 +7,10 @@ namespace KovserHediyyeler.Application.Abstractions.Products
     public interface IProductPostService
     {
         public Task CreateProductAsync(ProductPostDto dto);
-        public Task CreateProductImageAsync(string productId, ProductImageCommandDto dto);
-        public Task CreateProductPropertyAsync(string productId, ProductPropertyCommandDto dto);
-        public Task AddProductShopAsync(string productId, string shopId);
-        public Task AddColorToProductAsync(string productId, string colorName, int colorStock);
-        public Task AddSizeToProductAsync(string productId, string sizeName, int sizeStock);
+        public Task CreateProductImageAsync(Guid productId, ProductImageCommandDto dto);
+        public Task CreateProductPropertyAsync(Guid productId, ProductPropertyCommandDto dto);
+        public Task AddProductShopAsync(Guid productId, Guid shopId);
+        public Task AddColorToProductAsync(Guid productId, string colorName, int colorStock);
+        public Task AddSizeToProductAsync(Guid productId, string sizeName, int sizeStock);
     }
 }

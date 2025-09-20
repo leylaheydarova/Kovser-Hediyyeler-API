@@ -34,9 +34,9 @@ namespace KovserHediyyeler.Persistence.Services.Products
             _productShopWriteRepository = productShopWriteRepository;
         }
 
-        public async Task DeleteTemporarilyProductAsync(string id)
+        public async Task DeleteTemporarilyProductAsync(Guid id)
         {
-            Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, true, "Properties");
+            Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID == id, true, "Properties");
             if (product == null) throw new NotFoundException("mağaza");
             foreach (var property in product.Properties)
             {
@@ -51,9 +51,9 @@ namespace KovserHediyyeler.Persistence.Services.Products
             await _productWriteRepository.SaveAsync();
         }
 
-        public async Task RecoverProductDataAsync(string id)
+        public async Task RecoverProductDataAsync(Guid id)
         {
-            Product product = await _productReadRepository.GetWhereAsync(x => x.isDeleted && x.ID.ToString() == id, true, "Properties");
+            Product product = await _productReadRepository.GetWhereAsync(x => x.isDeleted && x.ID == id, true, "Properties");
             if (product == null) throw new NotFoundException("məhsul");
 
             foreach (var property in product.Properties)
@@ -69,9 +69,9 @@ namespace KovserHediyyeler.Persistence.Services.Products
             await _productPropertyWriteRepository.SaveAsync();
         }
 
-        public async Task RemovePermanentlyProductAsync(string id)
+        public async Task RemovePermanentlyProductAsync(Guid id)
         {
-            Product product = await _productReadRepository.GetWhereAsync(p => p.ID.ToString() == id, true, "Images", "Properties");
+            Product product = await _productReadRepository.GetWhereAsync(p => p.ID == id, true, "Images", "Properties");
 
             if (product == null) throw new NotFoundException("məhsul");
             foreach (var image in product.Images)
@@ -90,38 +90,38 @@ namespace KovserHediyyeler.Persistence.Services.Products
             await _productWriteRepository.SaveAsync();
         }
 
-        public async Task RemovePermanentlyProductImageFileAsync(string id)
+        public async Task RemovePermanentlyProductImageFileAsync(Guid id)
         {
-            ProductImageFile image = await _productImageFileReadRepository.GetWhereAsync(x => x.ID.ToString() == id, true);
+            ProductImageFile image = await _productImageFileReadRepository.GetWhereAsync(x => x.ID == id, true);
             if (image == null) throw new NotFoundException("məhsul şəkli");
             _productImageFileWriteRepository.RemovePermanently(image);
             await _productImageFileWriteRepository.SaveAsync();
         }
 
-        public async Task RemovePermanentlyProductPropertyAsync(string id)
+        public async Task RemovePermanentlyProductPropertyAsync(Guid id)
         {
-            ProductProperty property = await _productPropertyReadRepository.GetWhereAsync(x => x.ID.ToString() == id, true);
+            ProductProperty property = await _productPropertyReadRepository.GetWhereAsync(x => x.ID == id, true);
             if (property == null) throw new NotFoundException("məhsul xüsusiyyəti");
             _productPropertyWriteRepository.RemovePermanently(property);
             await _productPropertyWriteRepository.SaveAsync();
         }
 
-        public async Task RemovePermanentlyProductShopAsync(string prodcutId, string shopId)
+        public async Task RemovePermanentlyProductShopAsync(Guid prodcutId, Guid shopId)
         {
             await _productShopWriteRepository.RemovePermanentlyProductShopAsync(prodcutId, shopId);
         }
 
-        public async Task RemovePermanentlyProductColorAsync(string id)
+        public async Task RemovePermanentlyProductColorAsync(Guid id)
         {
-            var color = await _productColorReadRepository.GetWhereAsync(c => c.ID.ToString() == id && !c.isDeleted, true);
+            var color = await _productColorReadRepository.GetWhereAsync(c => c.ID == id && !c.isDeleted, true);
             if (color == null) throw new NotFoundException("rəng");
             _productColorWriteRepository.RemovePermanently(color);
             await _productColorWriteRepository.SaveAsync();
         }
 
-        public async Task RemovePermanentlyProductSizeAsync(string id)
+        public async Task RemovePermanentlyProductSizeAsync(Guid id)
         {
-            var size = await _productSizeReadRepository.GetWhereAsync(s => s.ID.ToString() == id && !s.isDeleted, true);
+            var size = await _productSizeReadRepository.GetWhereAsync(s => s.ID == id && !s.isDeleted, true);
             if (size == null) throw new NotFoundException("ölçü");
             _productSizeWriteRepository.RemovePermanently(size);
             await _productSizeWriteRepository.SaveAsync();

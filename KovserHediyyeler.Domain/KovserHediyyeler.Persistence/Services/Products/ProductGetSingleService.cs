@@ -26,7 +26,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
             _productSizeReadRepository = productSizeReadRepository;
         }
 
-        public async Task<ProductGetSingleDto> GetSingleProductAsync(string id)
+        public async Task<ProductGetSingleDto> GetSingleProductAsync(Guid id)
         {
             Product product = await _productReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(id), false,
                 "Category",
@@ -98,7 +98,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
             return dto;
         }
 
-        public async Task<ProductPropertyGetDto> GetSingleProductPropertyAsync(string id)
+        public async Task<ProductPropertyGetDto> GetSingleProductPropertyAsync(Guid id)
         {
             var property = await _productPropertyReadRepository.GetWhereAsync(x => !x.isDeleted && x.ID.ToString() == id, false);
             if (property == null) throw new NotFoundException("məhsul xüsusiyyəti");
@@ -111,7 +111,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
             return dto;
         }
 
-        public async Task<ProductColorGetDto> GetSingleProductColorAsync(string id)
+        public async Task<ProductColorGetDto> GetSingleProductColorAsync(Guid id)
         {
             var color = await _productColorReadRepository.GetByIdAsync(id, false);
             if (color == null) throw new NotFoundException("rəng");
@@ -124,7 +124,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
             return dto;
         }
 
-        public async Task<ProductSizeGetDto> GetSingleProductSizeAsync(string id)
+        public async Task<ProductSizeGetDto> GetSingleProductSizeAsync(Guid id)
         {
             var size = await _productSizeReadRepository.GetByIdAsync(id, false);
             if (size == null) throw new NotFoundException("ölçü");

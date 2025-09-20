@@ -50,25 +50,19 @@ namespace KovserHediyyeler.Persistence.Services.Products
             _accessor = accessor;
         }
 
-        async Task<Product> GetProductAsync(string id, bool tracking)
+        async Task<Product> GetProductAsync(Guid id, bool tracking)
         {
-            var product = await _productReadRepository.GetWhereAsync(p => p.ID.ToString() == id && !p.isDeleted, tracking);
+            var product = await _productReadRepository.GetWhereAsync(p => p.ID == id && !p.isDeleted, tracking);
             if (product == null) throw new NotFoundException("məhsul");
             return product;
         }
 
-        public async Task AddProductShopAsync(string productId, string shopId)
+        public async Task AddProductShopAsync(Guid productId, Guid shopId)
         {
-            if (!Guid.TryParse(productId, out Guid productGuid))
-                throw new InvalidInputException("məhsul");
-
-            if (!Guid.TryParse(shopId, out Guid shopGuid))
-                throw new InvalidInputException("mağaza");
-
-            var product = await _productReadRepository.GetWhereAsync(p => p.ID == productGuid && !p.isDeleted, true);
+            var product = await _productReadRepository.GetWhereAsync(p => p.ID == productId && !p.isDeleted, true);
             if (product == null) throw new NotFoundException("məhsul");
 
-            var shop = await _shopReadRepository.GetWhereAsync(s => s.ID == shopGuid && !s.isDeleted, true);
+            var shop = await _shopReadRepository.GetWhereAsync(s => s.ID == shopId && !s.isDeleted, true);
             if (shop == null) throw new NotFoundException("mağaza");
 
             shop.Products.Add(product);
@@ -177,7 +171,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
                     }
                     else throw new InvalidInputException("mağaza");
                 }
-               
+
                 product.Stock += product.Colors.Sum(c => c.ColorStock) + product.Sizes.Sum(s => s.SizeStock);
 
                 category.Products.Add(product);
@@ -207,7 +201,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
             }
         }
 
-        public async Task CreateProductImageAsync(string productId, ProductImageCommandDto dto)
+        public async Task CreateProductImageAsync(Guid productId, ProductImageCommandDto dto)
         {
             var scheme = _accessor.HttpContext.Request.Scheme;
             var host = _accessor.HttpContext.Request.Host;
@@ -225,7 +219,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
             await _productImageFileWriteRepository.SaveAsync();
         }
 
-        public async Task CreateProductPropertyAsync(string productId, ProductPropertyCommandDto dto)
+        public async Task CreateProductPropertyAsync(Guid productId, ProductPropertyCommandDto dto)
         {
             var product = await GetProductAsync(productId, false);
             var property = new ProductProperty
@@ -239,7 +233,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
             await _productPropertyWriteRepository.SaveAsync();
         }
 
-        public async Task AddColorToProductAsync(string productId, string colorName, int colorStock)
+        public async Task AddColorToProductAsync(Guid productId, string colorName, int colorStock)
         {
             var product = await GetProductAsync(productId, false);
             var color = new ProductColor
@@ -252,7 +246,7 @@ namespace KovserHediyyeler.Persistence.Services.Products
             await _productColorWriteRepository.SaveAsync();
         }
 
-        public async Task AddSizeToProductAsync(string productId, string sizeName, int sizeStock)
+        public async Task AddSizeToProductAsync(Guid productId, string sizeName, int sizeStock)
         {
             var product = await GetProductAsync(productId, false);
             var size = new ProductSize
