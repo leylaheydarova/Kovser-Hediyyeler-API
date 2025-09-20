@@ -4,7 +4,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Products.Delete.Permane
 {
     public class RemoveProductShopCommandRequest : IRequest<RemoveProductShopCommandResponse>
     {
-        public string ProductId { get; set; }
-        public string ShoptId { get; set; }
+        public Guid ProductId { get; set; }
+        public Guid ShoptId { get; set; }
     }
 }

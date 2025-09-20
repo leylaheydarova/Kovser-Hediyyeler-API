@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Orders.ChangeStatus.Ord
 
         public async Task<ChangeOrderStatusCommandResponse> Handle(ChangeOrderStatusCommandRequest request, CancellationToken cancellationToken)
         {
-            await _service.ChangeOrderStatusAsync(Guid.Parse(request.Id), request.Status);
+            await _service.ChangeOrderStatusAsync(request.Id, request.Status);
             return new ChangeOrderStatusCommandResponse
             {
                 Message = "Sifarişin statusu uğurla dəyişdi!"

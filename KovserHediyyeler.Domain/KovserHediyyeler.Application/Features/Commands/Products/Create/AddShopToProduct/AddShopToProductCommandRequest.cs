@@ -4,7 +4,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Products.Create.AddShop
 {
     public class AddShopToProductCommandRequest : IRequest<AddShopToProductCommandResponse>
     {
-        public string ProductId { get; set; }
-        public string ShopId { get; set; }
+        public Guid ProductId { get; set; }
+        public Guid ShopId { get; set; }
     }
 }

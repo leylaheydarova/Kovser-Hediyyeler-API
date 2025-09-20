@@ -3,8 +3,8 @@ using MediatR;
 
 namespace KovserHedieyyeler.Application.Features.Commands.Products.Create.CreateProductImage
 {
-    public class CreateProductImageCommandRequest:CreateCommandRequest<ProductImageCommandDto>, IRequest<CreateProductImageCommandResponse>
+    public class CreateProductImageCommandRequest : CreateCommandRequest<ProductImageCommandDto>, IRequest<CreateProductImageCommandResponse>
     {
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
     }
 }

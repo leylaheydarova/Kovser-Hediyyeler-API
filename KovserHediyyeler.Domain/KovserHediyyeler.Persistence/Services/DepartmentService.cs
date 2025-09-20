@@ -174,7 +174,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task RecoverDepartmentAsync(Guid id)
         {
-            Department department = await _readRepository.GetWhereAsync(x => x.isDeleted && x.ID == Guid.Parse(id), true);
+            Department department = await _readRepository.GetWhereAsync(x => x.isDeleted && x.ID == id, true);
             foreach (var socialMedia in department.SocialMedias)
             {
                 if (socialMedia.DepartmentID == department.ID)
@@ -188,7 +188,7 @@ namespace KovserHediyyeler.Persistence.Services
 
         public async Task RemovePermanentlyDepartmentAsync(Guid id)
         {
-            Department department = await _readRepository.GetWhereAsync(x => x.ID == Guid.Parse(id), true, "SocialMedias");
+            Department department = await _readRepository.GetWhereAsync(x => x.ID == id, true, "SocialMedias");
             if (department == null) throw new NotFoundException("şöbə");
             foreach (var socialMedia in department.SocialMedias)
             {

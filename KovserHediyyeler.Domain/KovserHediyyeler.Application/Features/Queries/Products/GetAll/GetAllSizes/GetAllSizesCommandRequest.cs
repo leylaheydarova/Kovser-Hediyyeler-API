@@ -5,6 +5,6 @@ namespace KovserHediyyeler.Application.Features.Queries.Products.GetAll.GetAllSi
 {
     public class GetAllSizesCommandRequest : GetAllQueryRequest, IRequest<GetAllSizesCommandResponse>
     {
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
     }
 }

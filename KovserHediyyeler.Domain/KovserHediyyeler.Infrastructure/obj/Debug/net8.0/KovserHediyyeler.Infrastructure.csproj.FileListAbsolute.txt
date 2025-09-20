@@ -34,3 +34,21 @@ C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kov
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\refint\KovserHediyyeler.Infrastructure.dll
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\KovserHediyyeler.Infrastructure.pdb
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\ref\KovserHediyyeler.Infrastructure.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\bin\Debug\net8.0\KovserHediyyeler.Infrastructure.deps.json
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\bin\Debug\net8.0\KovserHediyyeler.Infrastructure.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\bin\Debug\net8.0\KovserHediyyeler.Infrastructure.pdb
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\bin\Debug\net8.0\KovserHediyyeler.Application.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\bin\Debug\net8.0\KovserHediyyeler.Domain.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\bin\Debug\net8.0\KovserHediyyeler.Application.pdb
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\bin\Debug\net8.0\KovserHediyyeler.Domain.pdb
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\KovserHediyyeler.Infrastructure.csproj.AssemblyReference.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\KovserHediyyeler.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\KovserHediyyeler.Infrastructure.AssemblyInfoInputs.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\KovserHediyyeler.Infrastructure.AssemblyInfo.cs
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\KovserHediyyeler.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\KovserHediyyeler.Infrastructure.sourcelink.json
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\KovserHe.4B847CE7.Up2Date
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\KovserHediyyeler.Infrastructure.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\refint\KovserHediyyeler.Infrastructure.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\KovserHediyyeler.Infrastructure.pdb
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Infrastructure\obj\Debug\net8.0\ref\KovserHediyyeler.Infrastructure.dll

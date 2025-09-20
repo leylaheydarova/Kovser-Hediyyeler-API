@@ -4,7 +4,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Products.Create.AddColo
 {
     public class AddColorCommandRequest : IRequest<AddColorCommandResponse>
     {
-        public string ProductId { get; set; }
+        public Guid ProductId { get; set; }
         public string ColorName { get; set; }
         public int ColorStock { get; set; }
     }

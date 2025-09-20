@@ -166,12 +166,12 @@ namespace KovserHediyyeler.Persistence.Services
             return userRoles.ToArray();
         }
 
-        public async Task RemoveUserAddressAsync(string userIdOrEmail, string addressId)
+        public async Task RemoveUserAddressAsync(string userIdOrEmail, Guid addressId)
         {
             var webUser = await _userManager.Users
                 .Include(u => u.Addresses)
                 .FirstOrDefaultAsync(u => u.Id == userIdOrEmail || u.Email == userIdOrEmail);
-            var address = webUser.Addresses.FirstOrDefault(a => a.ID == Guid.Parse(addressId) && !a.isDeleted);
+            var address = webUser.Addresses.FirstOrDefault(a => a.ID == addressId && !a.isDeleted);
             if (address == null) throw new NotFoundException("ünvan");
             _addressRepository.RemovePermanently(address);
             await _addressRepository.SaveAsync();
@@ -231,12 +231,12 @@ namespace KovserHediyyeler.Persistence.Services
             await _userManager.UpdateAsync(webUser);
         }
 
-        public async Task UpdateUserAddressAsync(string userIdOrEmail, string addressId, AddressUpdateDto dto)
+        public async Task UpdateUserAddressAsync(string userIdOrEmail, Guid addressId, AddressUpdateDto dto)
         {
             var webUser = await _userManager.Users
                 .Include(u => u.Addresses)
                 .FirstOrDefaultAsync(u => u.Id == userIdOrEmail || u.Email == userIdOrEmail);
-            var address = webUser.Addresses.FirstOrDefault(a => a.ID == Guid.Parse(addressId) && !a.isDeleted);
+            var address = webUser.Addresses.FirstOrDefault(a => a.ID == addressId && !a.isDeleted);
             address.City = dto.City != null ? (City)dto.City : address.City;
             address.Region = dto.Region != null ? dto.Region : address.Region;
             address.District = dto.District != null ? dto.District : address.District != null ? address.District : "";

@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Queries.Orders.GetSingle.Order
 
         public async Task<GetSingleOrderQueryResponse> Handle(GetSingleOrderQueryRequest request, CancellationToken cancellationToken)
         {
-            var dto = await _service.GetSingleOrderAsync(Guid.Parse(request.Id));
+            var dto = await _service.GetSingleOrderAsync(request.Id);
             return new GetSingleOrderQueryResponse
             {
                 Dto = dto

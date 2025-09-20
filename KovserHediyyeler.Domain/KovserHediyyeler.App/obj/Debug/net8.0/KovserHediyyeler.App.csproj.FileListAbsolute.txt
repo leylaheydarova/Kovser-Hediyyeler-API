@@ -336,3 +336,15 @@ C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kov
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHe.387CE46D.Up2Date
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.genruntimeconfig.cache
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\ref\KovserHediyyeler.App.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.csproj.AssemblyReference.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.AssemblyInfoInputs.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.AssemblyInfo.cs
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.csproj.CoreCompileInputs.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.MvcApplicationPartsAssemblyInfo.cs
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.MvcApplicationPartsAssemblyInfo.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.sourcelink.json
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\refint\KovserHediyyeler.App.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.App\obj\Debug\net8.0\KovserHediyyeler.App.pdb

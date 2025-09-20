@@ -15,7 +15,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Roles.Delete
 
         public async Task<DeleteRoleCommandResponse> Handle(DeleteRoleCommandRequest request, CancellationToken cancellationToken)
         {
-            var result = await _service.DeleteRole(request.Id);
+            var result = await _service.DeleteRole(request.Id.ToString());
             if (!result) throw new FailException();
             return new DeleteRoleCommandResponse
             {

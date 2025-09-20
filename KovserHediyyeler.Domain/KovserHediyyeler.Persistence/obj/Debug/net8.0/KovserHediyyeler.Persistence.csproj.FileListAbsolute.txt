@@ -38,3 +38,12 @@ C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kov
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\KovserHe.795C28AD.Up2Date
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\KovserHediyyeler.Persistence.genruntimeconfig.cache
 C:\Users\User\Desktop\Learning Programming\Student\Jed Academy\Final Project\Kovser Hediyyeler Back\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\ref\KovserHediyyeler.Persistence.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\KovserHediyyeler.Persistence.csproj.AssemblyReference.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\KovserHediyyeler.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\KovserHediyyeler.Persistence.AssemblyInfoInputs.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\KovserHediyyeler.Persistence.AssemblyInfo.cs
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\KovserHediyyeler.Persistence.csproj.CoreCompileInputs.cache
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\KovserHediyyeler.Persistence.sourcelink.json
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\KovserHediyyeler.Persistence.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\refint\KovserHediyyeler.Persistence.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Persistence\obj\Debug\net8.0\KovserHediyyeler.Persistence.pdb

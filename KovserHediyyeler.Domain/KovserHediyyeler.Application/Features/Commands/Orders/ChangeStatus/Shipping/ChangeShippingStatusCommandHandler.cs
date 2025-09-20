@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Orders.ChangeStatus.Shi
 
         public async Task<ChangeShippingStatusCommandResponse> Handle(ChangeShippingStatusCommandRequest request, CancellationToken cancellationToken)
         {
-            await _service.ChangeShippingStatusAsync(Guid.Parse(request.Id), request.Status);
+            await _service.ChangeShippingStatusAsync(request.Id, request.Status);
             return new ChangeShippingStatusCommandResponse
             {
                 Message = "Çatdırılma statusu uğurla dəyişdi!"

@@ -5,6 +5,6 @@ namespace KovserHediyyeler.Application.Features.Queries.Products.GetAll.GetAllCa
 {
     public class GetAllFilteredProductsQueryRequest : GetAllQueryRequest, IRequest<GetAllFilteredProductsQueryResponse>
     {
-        public string BrandIdOrCategoryIdOrDepartmentIdOrShopId { get; set; }
+        public Guid BrandIdOrCategoryIdOrDepartmentIdOrShopId { get; set; }
     }
 }

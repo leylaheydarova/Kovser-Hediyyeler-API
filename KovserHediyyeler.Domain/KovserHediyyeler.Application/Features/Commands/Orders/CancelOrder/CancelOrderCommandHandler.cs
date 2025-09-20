@@ -15,7 +15,7 @@ namespace KovserHediyyeler.Application.Features.Commands.Orders.CancelOrder
 
         public async Task<CancelOrderCommandResponse> Handle(CancelOrderCommandRequest request, CancellationToken cancellationToken)
         {
-            var result = await _service.CancelOrderAsync(Guid.Parse(request.Id));
+            var result = await _service.CancelOrderAsync(request.Id);
             if (!result) throw new BadRequestException();
             return new CancelOrderCommandResponse
             {

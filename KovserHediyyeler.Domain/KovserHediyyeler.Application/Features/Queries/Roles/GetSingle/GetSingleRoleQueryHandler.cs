@@ -14,7 +14,7 @@ namespace KovserHediyyeler.Application.Features.Queries.Roles.GetSingle
 
         public async Task<GetSingleRoleQueryResponse> Handle(GetSingleRoleQueryRequest request, CancellationToken cancellationToken)
         {
-            var dto = await _service.GetRoleById(request.Id);
+            var dto = await _service.GetRoleById(request.Id.ToString());
             return new GetSingleRoleQueryResponse
             {
                 Dto = dto

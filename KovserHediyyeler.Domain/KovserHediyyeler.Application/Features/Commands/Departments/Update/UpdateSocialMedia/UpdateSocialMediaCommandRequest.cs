@@ -5,6 +5,6 @@ namespace KovserHedieyyeler.Application.Features.Commands.Departments.Update.Upd
 {
     public class UpdateSocialMediaCommandRequest : UpdateCommandRequest<SocialMediaUpdateDto>, IRequest<UpdateSocialMediaCommandResponse>
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

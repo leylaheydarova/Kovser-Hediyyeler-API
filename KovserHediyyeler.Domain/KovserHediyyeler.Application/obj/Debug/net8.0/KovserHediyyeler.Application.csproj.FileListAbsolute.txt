@@ -39,3 +39,10 @@ D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserH
 D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.dll
 D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\refint\KovserHediyyeler.Application.dll
 D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHediyyeler.Application.pdb
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\bin\Debug\net8.0\KovserHediyyeler.Application.deps.json
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\bin\Debug\net8.0\KovserHediyyeler.Application.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\bin\Debug\net8.0\KovserHediyyeler.Application.pdb
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\bin\Debug\net8.0\KovserHediyyeler.Domain.dll
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\bin\Debug\net8.0\KovserHediyyeler.Domain.pdb
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\KovserHe.AE12384F.Up2Date
+D:\Programming\Development\Kovser-Hediyyeler-API\KovserHediyyeler.Domain\KovserHediyyeler.Application\obj\Debug\net8.0\ref\KovserHediyyeler.Application.dll

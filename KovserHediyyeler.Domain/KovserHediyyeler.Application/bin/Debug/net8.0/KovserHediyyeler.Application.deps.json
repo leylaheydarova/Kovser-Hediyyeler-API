@@ -259,7 +259,10 @@
           "Microsoft.Extensions.Identity.Stores": "8.0.11"
         },
         "runtime": {
-          "KovserHediyyeler.Domain.dll": {}
+          "KovserHediyyeler.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

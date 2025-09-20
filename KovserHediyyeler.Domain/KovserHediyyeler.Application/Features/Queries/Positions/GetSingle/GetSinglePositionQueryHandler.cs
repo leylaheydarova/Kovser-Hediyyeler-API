@@ -17,7 +17,7 @@ namespace KovserHedieyyeler.Application.Features.Queries.Positions.GetSingle
 
         public async Task<GetSinglePositionQueryResponse> Handle(GetSinglePositionQueryRequest request, CancellationToken cancellationToken)
         {
-            Position position = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == Guid.Parse(request.Id), false);
+            Position position = await _repository.GetWhereAsync(x => !x.isDeleted && x.ID == request.Id, false);
             if (position == null) throw new NotFoundException("vəzifə");
             PositionGetDto dto = new PositionGetDto
             {

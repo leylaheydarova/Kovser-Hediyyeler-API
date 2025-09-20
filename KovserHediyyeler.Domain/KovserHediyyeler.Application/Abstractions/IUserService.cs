@@ -17,9 +17,9 @@ namespace KovserHediyyeler.Application.Abstractions
         public Task<UserResponse> CreateUserAsync(RegisterDto dto);//done
         public Task<UserResponse> CreateModeratorAsync(ModeratorDto dto, string role);//done
         Task AddAddressToUserAsync(string userIdOrEmail, AddressCommandDto dto);//done
-        Task RemoveUserAddressAsync(string userIdOrEmail, string addressId);//done
+        Task RemoveUserAddressAsync(string userIdOrEmail, Guid addressId);//done
         Task UpdateUserAsync(string userIdOrEmail, UserDto dto);//done
-        Task UpdateUserAddressAsync(string userIdOrEmail, string addressId, AddressUpdateDto dto);//done
+        Task UpdateUserAddressAsync(string userIdOrEmail, Guid addressId, AddressUpdateDto dto);//done
         Task RemoveAccountAsync(string userIdOrEmail);//done
         Task AddRolesToUserAsync(string userIdOrEmail, string[] roles);//done
         Task UpdateUserRoleAsync(string userIdOrEmail, string existingRole, string newRole);//done
